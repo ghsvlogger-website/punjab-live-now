@@ -77,26 +77,9 @@
 
         .main-grid { display: grid; grid-template-columns: 2.1fr 1fr; gap: 28px; }
 
-        /* Clean & Fixed Spotlight Media Card */
         .spotlight-card { background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: 0 6px 20px rgba(0,0,0,0.05); margin-bottom: 28px; }
-        
-        .spotlight-media { 
-            position: relative; 
-            width: 100%; 
-            background: #f1f5f9; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            border-bottom: 1px solid #e2e8f0;
-        }
-        
-        .spotlight-media img { 
-            width: 100%; 
-            max-height: 480px; 
-            object-fit: contain; 
-            display: block; 
-        }
-
+        .spotlight-media { position: relative; width: 100%; background: #f1f5f9; display: flex; justify-content: center; align-items: center; border-bottom: 1px solid #e2e8f0; }
+        .spotlight-media img { width: 100%; max-height: 480px; object-fit: contain; display: block; }
         .media-badge { position: absolute; top: 16px; left: 16px; background: rgba(185, 28, 28, 0.95); color: #fff; font-family: 'Oswald', sans-serif; font-size: 0.85rem; padding: 5px 12px; border-radius: 6px; font-weight: 700; letter-spacing: 0.5px; box-shadow: 0 2px 6px rgba(0,0,0,0.25); z-index: 2; }
         
         .spotlight-body { padding: 26px; }
@@ -115,6 +98,11 @@
         .cards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
         .story-card { background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 12px rgba(0,0,0,0.03); transition: all 0.2s; }
         .story-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+        
+        /* Video Embed Card Format */
+        .video-card-full { grid-column: span 2; padding: 16px; }
+        .video-wrapper { display: flex; justify-content: center; width: 100%; margin-top: 10px; }
+
         .story-img-wrap { position: relative; height: 180px; background: #0f172a; overflow: hidden; }
         .story-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
         .story-content { padding: 18px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between; }
@@ -136,6 +124,8 @@
         @media (max-width: 900px) {
             .main-grid { grid-template-columns: 1fr; }
             .cards-grid { grid-template-columns: 1fr; }
+            .video-card-full { grid-column: span 1; }
+            .spotlight-media img { max-height: 280px; }
             .brand-name h1 { font-size: 2rem; }
             .header-actions { width: 100%; justify-content: center; }
         }
@@ -217,6 +207,7 @@
 
     <div class="main-grid">
         <div>
+            <!-- Spotlight Lead Story -->
             <div class="spotlight-card">
                 <div class="spotlight-media">
                     <span class="media-badge">FACT CHECK / INVESTIGATION</span>
@@ -232,7 +223,7 @@
                     </div>
 
                     <div class="spotlight-meta">
-                        <span style="font-size: 0.85rem; color: #64748b; font-weight: 600;">📍 ਗੁਰੂਹਰਸਹਾਏ / ਵਿਦੇਸ਼</span>
+                        <span style="font-size: 0.85rem; color: #64748b; font-weight: 600;">#GuruHarsahai #MalaysiaCase #FactCheck</span>
                         <a href="https://api.whatsapp.com/send?text=ਮਿਥੁਨ ਦੀ ਤਸਵੀਰ ਨੇ ਖੜ੍ਹੇ ਕੀਤੇ ਸਵਾਲ, AI ਜਾਂ ਸੱਚੀ ਤਸਵੀਰ?: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="share-pill">
                             📲 WhatsApp 'ਤੇ ਰਿਪੋਰਟ ਸ਼ੇਅਰ ਕਰੋ
                         </a>
@@ -240,8 +231,33 @@
                 </div>
             </div>
 
-            <div class="section-heading">ਹੋਰ ਪ੍ਰਮੁੱਖ ਖ਼ਬਰਾਂ</div>
+            <div class="section-heading">ਹੋਰ ਪ੍ਰਮੁੱਖ ਖ਼ਬਰਾਂ ਤੇ ਵੀਡੀਓ ਰਿਪੋਰਟਾਂ</div>
             <div class="cards-grid">
+                <!-- ਖ਼ਬਰ 1: ਜਮਸ਼ੇਦਪੁਰ CNG ਹਾਦਸਾ + ਲਾਈਵ ਵੀਡੀਓ ਪਲੇਅਰ -->
+                <div class="story-card video-card-full">
+                    <div class="story-content" style="padding: 0 0 14px 0;">
+                        <h3 class="story-title" style="font-size: 1.3rem;">🚨 ਜਮਸ਼ੇਦਪੁਰ ’ਚ ਅਚਾਨਕ ਫੱਟਿਆ CNG ਨੋਜ਼ਲ, ਦੇਖੋ ਮੌਕੇ ਦਾ ਹਾਲ!</h3>
+                        <p class="story-desc">ਜਮਸ਼ੇਦਪੁਰ: CNG ਪਾਈਪ ਦੇ ਨੋਜ਼ਲ ਦੇ ਅਚਾਨਕ ਫੱਟਣ ਕਾਰਨ ਮੌਕੇ ’ਤੇ ਹਫੜਾ-ਦਫੜੀ ਮਚ ਗਈ। ਘਟਨਾ ਦੀ ਪੂਰੀ ਲਾਈਵ ਵੀਡੀਓ ਹੇਠਾਂ ਦੇਖੋ:</p>
+                    </div>
+                    
+                    <div class="video-wrapper">
+                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DcudRnRSzTC/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:8px; margin: 0 auto; width:100%; max-width:540px;">
+                            <div style="padding:16px;">
+                                <a href="https://www.instagram.com/reel/DcudRnRSzTC/?utm_source=ig_embed&amp;utm_campaign=loading" style="background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
+                                    <p style="color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; text-align:center;">View on Instagram</p>
+                                </a>
+                            </div>
+                        </blockquote>
+                    </div>
+
+                    <div style="margin-top: 14px; display: flex; justify-content: flex-end;">
+                        <a href="https://api.whatsapp.com/send?text=ਜਮਸ਼ੇਦਪੁਰ CNG ਨੋਜ਼ਲ ਵੀਡੀਓ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="share-pill" style="font-size: 0.85rem;">
+                            📲 ਵੀਡੀਓ ਸ਼ੇਅਰ ਕਰੋ
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ਖ਼ਬਰ 2: ਪਹਿਲੀ ਗਰਾਊਂਡ ਰਿਪੋਰਟ -->
                 <div class="story-card">
                     <div class="story-img-wrap">
                         <img src="malaysianews1.jpg" alt="ਮਲੇਸ਼ੀਆ ਮਾਮਲਾ ਗਰਾਊਂਡ ਰਿਪੋਰਟ">
@@ -257,6 +273,66 @@
                     </div>
                 </div>
 
+                <!-- ਖ਼ਬਰ 3: ਚੰਨੀ ਤੇ ਰਾਹੁਲ ਗਾਂਧੀ ਵਿਵਾਦ -->
                 <div class="story-card">
                     <div class="story-img-wrap">
-                        <img src="jmshedpurnewscng.jpg" alt="ਜਮਸ਼ੇਦਪੁਰ CNG ਨੋਜ਼ਲ ਹਾਦਸਾ" onerror="this.src='nepal
+                        <img src="rahulchanni.jpg" alt="ਚਰਨਜੀਤ ਚੰਨੀ" onerror="this.src='news1_cropperd.jpg'">
+                    </div>
+                    <div class="story-content">
+                        <div>
+                            <h3 class="story-title">🔥 ਚੰਨੀ ਵੱਲੋਂ ਤਰਸੇਮ ਲਾਲ ਦੀ ਪੋਸਟ ਸ਼ੇਅਰ ਕਰਨ ’ਤੇ ਸਿਆਸੀ ਚਰਚਾ</h3>
+                            <p class="story-desc">ਸਾਬਕਾ ਮੁੱਖ ਮੰਤਰੀ ਵੱਲੋਂ ਪੋਸਟ ਸ਼ੇਅਰ ਕਰਨ ਤੋਂ ਬਾਅਦ ਕਾਂਗਰਸ ਅਤੇ ਪੰਜਾਬ ਸਿਆਸਤ ਵਿੱਚ ਚਰਚਾਵਾਂ ਤੇਜ਼।</p>
+                        </div>
+                        <a href="https://api.whatsapp.com/send?text=ਚੰਨੀ ਤਰਸੇਮ ਲਾਲ ਪੋਸਟ ਵਿਵਾਦ: https://ghsvlogger-website.github.io/punjab-live-now/punjab.html" target="_blank" class="share-pill" style="font-size: 0.8rem; padding: 6px 12px; margin-top: 10px;">
+                            📲 ਸ਼ੇਅਰ ਕਰੋ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar -->
+        <div class="sidebar-container">
+            <div class="sidebar-card">
+                <div class="sidebar-header">
+                    <span>🎬 PLN ਵੀਡੀਓ ਬੁਲੇਟਿਨ</span>
+                </div>
+                
+                <div style="display: flex; justify-content: center; overflow: hidden; border-radius: 8px;">
+                    <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DcqoUntyBJY/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:8px; margin: 0; width:100%; min-width:280px;">
+                        <div style="padding:16px;">
+                            <a href="https://www.instagram.com/reel/DcqoUntyBJY/?utm_source=ig_embed&amp;utm_campaign=loading" style="background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
+                                <p style="color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; text-align:center;">View on Instagram</p>
+                            </a>
+                        </div>
+                    </blockquote>
+                </div>
+
+                <a href="https://www.instagram.com/punjablivenow/reels/" target="_blank" class="insta-btn-pro">
+                    🎥 Instagram 'ਤੇ ਸਾਰੀਆਂ ਰੀਲਾਂ ਦੇਖੋ
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-social-links">
+        <a href="https://www.youtube.com/@punjablivenow" target="_blank">YouTube</a>
+        <a href="https://www.facebook.com/profile.php?id=61562360634592" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/punjablivenow" target="_blank">Instagram</a>
+    </div>
+    <p style="font-size: 0.9rem; color: #64748b;">&copy; 2026 Punjab Live Now (PLN) Media Network. ਸਾਰੇ ਹੱਕ ਰਾਖਵੇਂ ਹਨ।</p>
+</footer>
+
+<!-- Instagram Auto-Process Script -->
+<script async src="//www.instagram.com/embed.js"></script>
+<script>
+    window.addEventListener('load', function() {
+        if (window.instgrm) {
+            window.instgrm.Embeds.process();
+        }
+    });
+</script>
+</body>
+</html>
