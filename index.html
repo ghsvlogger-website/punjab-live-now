@@ -1,627 +1,77 @@
 <!DOCTYPE html>
 <html lang="pa">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Punjab Live Now | ਪੰਜਾਬ ਦੀ ਹਰ ਖ਼ਬਰ ਸਭ ਤੋਂ ਪਹਿਲਾਂ</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gurmukhi:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:'Noto Sans Gurmukhi',sans-serif;
-    background:#f4f5f7;
-    color:#171717;
-}
-
-.container{
-    width:92%;
-    max-width:1250px;
-    margin:auto;
-}
-
-/* TOP BAR */
-.topbar{
-    background:#111;
-    color:white;
-    font-size:14px;
-    padding:7px 0;
-}
-
-.topbar .container{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-/* HEADER */
-header{
-    background:white;
-    border-bottom:1px solid #ddd;
-}
-
-.header-main{
-    min-height:85px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
-.logo-box{
-    width:58px;
-    height:58px;
-    border-radius:12px;
-    background:#d71920;
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:900;
-    font-size:22px;
-}
-
-.logo-text h1{
-    font-size:25px;
-    font-weight:800;
-    color:#d71920;
-}
-
-.logo-text p{
-    font-size:12px;
-    color:#555;
-}
-
-/* SOCIAL */
-.social{
-    display:flex;
-    gap:8px;
-}
-
-.social a{
-    text-decoration:none;
-    color:white;
-    padding:8px 12px;
-    border-radius:6px;
-    font-size:13px;
-    background:#222;
-}
-
-/* NAVIGATION */
-nav{
-    background:#d71920;
-}
-
-.nav-menu{
-    display:flex;
-    list-style:none;
-    overflow-x:auto;
-}
-
-.nav-menu li a{
-    display:block;
-    color:white;
-    text-decoration:none;
-    padding:12px 17px;
-    font-size:15px;
-    font-weight:600;
-    white-space:nowrap;
-}
-
-.nav-menu li a:hover{
-    background:#b71117;
-}
-
-/* BREAKING */
-.breaking{
-    background:white;
-    margin-top:15px;
-    border-radius:8px;
-    overflow:hidden;
-    display:flex;
-    align-items:center;
-    border:1px solid #ddd;
-}
-
-.breaking-title{
-    background:#d71920;
-    color:white;
-    padding:10px 17px;
-    font-weight:800;
-    white-space:nowrap;
-}
-
-.breaking-text{
-    padding:8px 15px;
-    font-size:14px;
-}
-
-/* HERO */
-.hero{
-    margin-top:18px;
-    display:grid;
-    grid-template-columns:2fr 1fr;
-    gap:18px;
-}
-
-.main-story{
-    position:relative;
-    min-height:390px;
-    border-radius:12px;
-    overflow:hidden;
-    background:linear-gradient(135deg,#222,#555);
-    display:flex;
-    align-items:flex-end;
-}
-
-.main-story-content{
-    padding:28px;
-    color:white;
-    width:100%;
-    background:linear-gradient(transparent,rgba(0,0,0,.9));
-}
-
-.tag{
-    display:inline-block;
-    background:#d71920;
-    color:white;
-    padding:5px 10px;
-    border-radius:4px;
-    font-size:12px;
-    font-weight:bold;
-    margin-bottom:8px;
-}
-
-.main-story h2{
-    font-size:30px;
-    line-height:1.35;
-}
-
-/* SIDE STORIES */
-.side-stories{
-    display:grid;
-    gap:15px;
-}
-
-.story{
-    background:white;
-    border-radius:10px;
-    padding:18px;
-    border:1px solid #ddd;
-}
-
-.story h3{
-    font-size:18px;
-    line-height:1.45;
-    margin-top:8px;
-}
-
-/* SECTION */
-.section{
-    margin-top:25px;
-}
-
-.section-title{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    margin-bottom:15px;
-    border-bottom:3px solid #d71920;
-    padding-bottom:8px;
-}
-
-.section-title h2{
-    font-size:23px;
-}
-
-.section-title a{
-    color:#d71920;
-    text-decoration:none;
-    font-size:14px;
-}
-
-/* NEWS GRID */
-.news-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-}
-
-.news-card{
-    background:white;
-    border-radius:10px;
-    overflow:hidden;
-    border:1px solid #ddd;
-    transition:.2s;
-}
-
-.news-card:hover{
-    transform:translateY(-3px);
-    box-shadow:0 5px 18px rgba(0,0,0,.12);
-}
-
-.news-image{
-    height:180px;
-    background:linear-gradient(135deg,#555,#999);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:white;
-    font-size:18px;
-    font-weight:bold;
-}
-
-.news-content{
-    padding:15px;
-}
-
-.news-content h3{
-    font-size:17px;
-    line-height:1.5;
-}
-
-.date{
-    color:#777;
-    font-size:12px;
-    margin-top:10px;
-}
-
-/* CATEGORIES */
-.categories{
-    display:grid;
-    grid-template-columns:repeat(6,1fr);
-    gap:10px;
-}
-
-.category{
-    background:white;
-    border:1px solid #ddd;
-    border-radius:8px;
-    text-align:center;
-    padding:15px 8px;
-    text-decoration:none;
-    color:#222;
-    font-weight:600;
-}
-
-.category:hover{
-    background:#d71920;
-    color:white;
-}
-
-/* VIDEO */
-.video-box{
-    background:#111;
-    border-radius:10px;
-    min-height:280px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:white;
-    font-size:20px;
-}
-
-/* FOOTER */
-footer{
-    margin-top:40px;
-    background:#111;
-    color:white;
-    padding:35px 0 20px;
-}
-
-.footer-grid{
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr;
-    gap:30px;
-}
-
-footer h3{
-    color:#fff;
-    margin-bottom:12px;
-}
-
-footer p,
-footer li{
-    color:#bbb;
-    font-size:14px;
-    line-height:1.8;
-}
-
-footer ul{
-    list-style:none;
-}
-
-.copyright{
-    border-top:1px solid #333;
-    margin-top:25px;
-    padding-top:15px;
-    text-align:center;
-    color:#888;
-    font-size:13px;
-}
-
-/* MOBILE */
-@media(max-width:800px){
-
-    .topbar .container{
-        flex-direction:column;
-        gap:3px;
-    }
-
-    .header-main{
-        min-height:75px;
-    }
-
-    .logo-box{
-        width:48px;
-        height:48px;
-        font-size:18px;
-    }
-
-    .logo-text h1{
-        font-size:20px;
-    }
-
-    .social a{
-        padding:6px 8px;
-        font-size:11px;
-    }
-
-    .hero{
-        grid-template-columns:1fr;
-    }
-
-    .main-story{
-        min-height:300px;
-    }
-
-    .main-story h2{
-        font-size:23px;
-    }
-
-    .news-grid{
-        grid-template-columns:1fr;
-    }
-
-    .categories{
-        grid-template-columns:repeat(3,1fr);
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr;
-    }
-
-    .breaking{
-        display:block;
-    }
-
-    .breaking-title{
-        display:block;
-    }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punjab Live Now (PLN) - ਤਾਜ਼ਾ ਖ਼ਬਰਾਂ</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, sans-serif; }
+        body { background-color: #f4f6f9; color: #333; }
+        header { background: #b30000; color: #fff; padding: 20px; text-align: center; }
+        header h1 { font-size: 2.2rem; }
+        nav { background: #222; padding: 10px; text-align: center; }
+        nav a { color: #fff; text-decoration: none; margin: 0 15px; font-weight: bold; }
+        nav a:hover { color: #ffcc00; }
+        .container { max-width: 1100px; margin: 20px auto; padding: 0 15px; }
+        .breaking-bar { background: #ffcc00; padding: 10px; font-weight: bold; border-radius: 4px; margin-bottom: 20px; }
+        .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { background: #fff; border-radius: 6px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .card img { width: 100%; height: 180px; object-fit: cover; }
+        .card-body { padding: 15px; }
+        .card-body h3 { font-size: 1.2rem; margin-bottom: 10px; color: #b30000; }
+        .card-body p { font-size: 0.95rem; line-height: 1.5; color: #555; }
+        footer { background: #111; color: #aaa; text-align: center; padding: 20px; margin-top: 40px; }
+    </style>
 </head>
-
 <body>
 
-<!-- TOP BAR -->
-<div class="topbar">
-<div class="container">
-<span>ਪੰਜਾਬ ਦੀ ਹਰ ਖ਼ਬਰ ਸਭ ਤੋਂ ਪਹਿਲਾਂ</span>
-<span>Punjab Live Now</span>
-</div>
-</div>
-
-<!-- HEADER -->
 <header>
-<div class="container header-main">
-
-<div class="logo">
-<div class="logo-box">PLN</div>
-
-<div class="logo-text">
-<h1>Punjab Live Now</h1>
-<p>ਪੰਜਾਬ ਦੀ ਹਰ ਖ਼ਬਰ ਸਭ ਤੋਂ ਪਹਿਲਾਂ</p>
-</div>
-</div>
-
-<div class="social">
-<a href="#">YouTube</a>
-<a href="#">Instagram</a>
-<a href="#">Facebook</a>
-</div>
-
-</div>
+    <h1>PUNJAB LIVE NOW (PLN)</h1>
+    <p>ਪੰਜਾਬ ਦੀ ਹਰ ਖ਼ਬਰ ਸਭ ਤੋਂ ਪਹਿਲਾਂ ਤੇ ਸਭ ਤੋਂ ਸਟੀਕ</p>
 </header>
 
-<!-- NAV -->
 <nav>
-<div class="container">
-<ul class="nav-menu">
-<li><a href="#">ਹੋਮ</a></li>
-<li><a href="#">ਬ੍ਰੇਕਿੰਗ ਨਿਊਜ਼</a></li>
-<li><a href="#">ਪੰਜਾਬ</a></li>
-<li><a href="#">ਕ੍ਰਾਈਮ</a></li>
-<li><a href="#">ਐਕਸੀਡੈਂਟ</a></li>
-<li><a href="#">ਪਾਲੀਟਿਕਸ</a></li>
-<li><a href="#">ਮੌਸਮ</a></li>
-<li><a href="#">ਵਾਇਰਲ</a></li>
-<li><a href="#">ਵੀਡੀਓ</a></li>
-</ul>
-</div>
+    <a href="#">ਮੁੱਖ ਪੰਨਾ</a>
+    <a href="#">ਪੰਜਾਬ</a>
+    <a href="#">ਸਿਆਸਤ</a>
+    <a href="#">ਕ੍ਰਾਈਮ</a>
+    <a href="#">ਵੀਡੀਓਜ਼</a>
 </nav>
 
 <div class="container">
+    <div class="breaking-bar">
+        🔴 Breaking News: ਪੰਜਾਬ ਲਾਈਵ ਨਾਓ (PLN) ਦੀ ਅਧਿਕਾਰਿਤ ਵੈੱਬਸਾਈਟ ਲਾਈਵ!
+    </div>
 
-<!-- BREAKING NEWS -->
-<div class="breaking">
-<div class="breaking-title">🔴 BREAKING NEWS</div>
-<div class="breaking-text">
-ਪੰਜਾਬ ਨਾਲ ਜੁੜੀਆਂ ਤਾਜ਼ਾ ਅਤੇ ਮਹੱਤਵਪੂਰਨ ਖ਼ਬਰਾਂ ਲਈ Punjab Live Now ਨਾਲ ਜੁੜੇ ਰਹੋ।
-</div>
-</div>
+    <div class="news-grid">
+        <div class="card">
+            <img src="https://picsum.photos/400/200?random=1" alt="News">
+            <div class="card-body">
+                <h3>ਵੱਡੀ ਖ਼ਬਰ ਦਾ ਸਿਰਲੇਖ ਇੱਥੇ ਆਵੇਗਾ</h3>
+                <p>ਪੰਜਾਬ ਦੀਆਂ ਤਾਜ਼ਾ ਘਟਨਾਵਾਂ ਅਤੇ ਅੱਪਡੇਟਸ ਬਾਰੇ ਪੂਰੀ ਜਾਣਕਾਰੀ ਇੱਥੇ ਪੜ੍ਹੋ...</p>
+            </div>
+        </div>
 
-<!-- HERO -->
-<section class="hero">
+        <div class="card">
+            <img src="https://picsum.photos/400/200?random=2" alt="News">
+            <div class="card-body">
+                <h3>ਖੇਡਾਂ ਅਤੇ ਸੱਭਿਆਚਾਰਕ ਅੱਪਡੇਟਸ</h3>
+                <p>ਸੂਬੇ ਭਰ ਦੀਆਂ ਖੇਡ ਸਰਗਰਮੀਆਂ ਬਾਰੇ ਵਿਸ਼ੇਸ਼ ਰਿਪੋਰਟ...</p>
+            </div>
+        </div>
 
-<div class="main-story">
-<div class="main-story-content">
-<span class="tag">TOP NEWS</span>
-<h2>ਪੰਜਾਬ ਦੀ ਹਰ ਵੱਡੀ ਖ਼ਬਰ ਅਤੇ ਤਾਜ਼ਾ ਅਪਡੇਟ ਸਭ ਤੋਂ ਪਹਿਲਾਂ ਪੜ੍ਹੋ Punjab Live Now 'ਤੇ</h2>
-</div>
-</div>
-
-<div class="side-stories">
-
-<div class="story">
-<span class="tag">ਪੰਜਾਬ</span>
-<h3>ਪੰਜਾਬ ਨਾਲ ਜੁੜੀ ਹਰ ਤਾਜ਼ਾ ਖ਼ਬਰ ਹੁਣ ਇੱਕੋ ਥਾਂ 'ਤੇ</h3>
-</div>
-
-<div class="story">
-<span class="tag">ਵਾਇਰਲ</span>
-<h3>ਸੋਸ਼ਲ ਮੀਡੀਆ 'ਤੇ ਤੇਜ਼ੀ ਨਾਲ ਵਾਇਰਲ ਹੋ ਰਹੀਆਂ ਖ਼ਬਰਾਂ</h3>
-</div>
-
-<div class="story">
-<span class="tag">ਵੀਡੀਓ</span>
-<h3>ਦੇਖੋ ਪੰਜਾਬ ਦੀਆਂ ਤਾਜ਼ਾ ਅਤੇ ਅਹਿਮ ਵੀਡੀਓ ਖ਼ਬਰਾਂ</h3>
+        <div class="card">
+            <img src="https://picsum.photos/400/200?random=3" alt="News">
+            <div class="card-body">
+                <h3>ਵਿਸ਼ੇਸ਼ ਵੀਡੀਓ ਰਿਪੋਰਟ</h3>
+                <p>ਗਰਾਊਂਡ ਜ਼ੀਰੋ ਤੋਂ PLN ਦੀ ਟੀਮ ਵੱਲੋਂ ਤਿਆਰ ਕੀਤੀ ਗਈ ਖਾਸ ਗੱਲਬਾਤ...</p>
+            </div>
+        </div>
+    </div>
 </div>
 
-</div>
-</section>
-
-<!-- LATEST NEWS -->
-<section class="section">
-
-<div class="section-title">
-<h2>📰 ਤਾਜ਼ਾ ਖ਼ਬਰਾਂ</h2>
-<a href="#">ਸਾਰੀਆਂ ਖ਼ਬਰਾਂ →</a>
-</div>
-
-<div class="news-grid">
-
-<div class="news-card">
-<div class="news-image">NEWS IMAGE</div>
-<div class="news-content">
-<span class="tag">ਪੰਜਾਬ</span>
-<h3>ਪੰਜਾਬ ਦੀ ਅੱਜ ਦੀ ਸਭ ਤੋਂ ਵੱਡੀ ਖ਼ਬਰ, ਜਾਣੋ ਪੂਰਾ ਮਾਮਲਾ</h3>
-<p class="date">ਅੱਜ • Punjab Live Now</p>
-</div>
-</div>
-
-<div class="news-card">
-<div class="news-image">NEWS IMAGE</div>
-<div class="news-content">
-<span class="tag">ਕ੍ਰਾਈਮ</span>
-<h3>ਪੁਲਿਸ ਵੱਲੋਂ ਵੱਡੀ ਕਾਰਵਾਈ, ਮਾਮਲੇ ਦੀ ਜਾਂਚ ਜਾਰੀ</h3>
-<p class="date">ਅੱਜ • Punjab Live Now</p>
-</div>
-</div>
-
-<div class="news-card">
-<div class="news-image">NEWS IMAGE</div>
-<div class="news-content">
-<span class="tag">ਵਾਇਰਲ</span>
-<h3>ਵੀਡੀਓ ਸੋਸ਼ਲ ਮੀਡੀਆ 'ਤੇ ਹੋ ਰਹੀ ਤੇਜ਼ੀ ਨਾਲ ਵਾਇਰਲ</h3>
-<p class="date">ਅੱਜ • Punjab Live Now</p>
-</div>
-</div>
-
-</div>
-</section>
-
-<!-- CATEGORIES -->
-<section class="section">
-
-<div class="section-title">
-<h2>📍 ਖ਼ਬਰਾਂ ਦੀਆਂ ਸ਼੍ਰੇਣੀਆਂ</h2>
-</div>
-
-<div class="categories">
-<a class="category" href="#">ਪੰਜਾਬ</a>
-<a class="category" href="#">ਕ੍ਰਾਈਮ</a>
-<a class="category" href="#">ਐਕਸੀਡੈਂਟ</a>
-<a class="category" href="#">ਪਾਲੀਟਿਕਸ</a>
-<a class="category" href="#">ਮੌਸਮ</a>
-<a class="category" href="#">ਵਾਇਰਲ</a>
-</div>
-
-</section>
-
-<!-- VIDEO -->
-<section class="section">
-
-<div class="section-title">
-<h2>🎥 Latest Videos</h2>
-<a href="#">YouTube →</a>
-</div>
-
-<div class="video-box">
-▶️ Punjab Live Now — Latest Video News
-</div>
-
-</section>
-
-</div>
-
-<!-- FOOTER -->
 <footer>
-
-<div class="container">
-
-<div class="footer-grid">
-
-<div>
-<h3>Punjab Live Now</h3>
-<p>
-ਪੰਜਾਬ ਦੀ ਹਰ ਖ਼ਬਰ ਸਭ ਤੋਂ ਪਹਿਲਾਂ।  
-ਤਾਜ਼ਾ ਖ਼ਬਰਾਂ, ਬ੍ਰੇਕਿੰਗ ਨਿਊਜ਼, ਵੀਡੀਓ ਅਤੇ ਲੋਕਲ ਅਪਡੇਟ ਲਈ PLN ਨਾਲ ਜੁੜੇ ਰਹੋ।
-</p>
-</div>
-
-<div>
-<h3>ਮਹੱਤਵਪੂਰਨ</h3>
-<ul>
-<li>ਹੋਮ</li>
-<li>ਤਾਜ਼ਾ ਖ਼ਬਰਾਂ</li>
-<li>ਵੀਡੀਓ</li>
-<li>ਸਾਡੇ ਬਾਰੇ</li>
-</ul>
-</div>
-
-<div>
-<h3>Follow Us</h3>
-<ul>
-<li>YouTube</li>
-<li>Instagram</li>
-<li>Facebook</li>
-</ul>
-</div>
-
-</div>
-
-<div class="copyright">
-© 2026 Punjab Live Now (PLN). All Rights Reserved.
-</div>
-
-</div>
-
+    <p>&copy; 2026 Punjab Live Now (PLN). ਸਾਰੇ ਹੱਕ ਰਾਖਵੇਂ ਹਨ।</p>
 </footer>
 
 </body>
