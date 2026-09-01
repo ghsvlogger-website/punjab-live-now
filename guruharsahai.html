@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ਗੁਰੂਹਰਸਹਾਏ ਖ਼ਬਰਾਂ - Punjab Live Now (PLN)</title>
     
+    <!-- Top-Tier News Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Mukta+Mahee:wght@500;600;700;800&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
@@ -32,7 +33,7 @@
         .top-social a { color: #cbd5e1; text-decoration: none; margin-left: 14px; font-weight: 600; }
 
         /* Header */
-        header { background: linear-gradient(135deg, #b91c1c 0%, #7f1d1d 100%); color: #fff; padding: 18px 0; box-shadow: 0 4px 20px rgba(185, 28, 28, 0.25); border-bottom: 3px solid var(--accent); }
+        header { background: linear-gradient(135deg, #b91c1c 0%, #7f1d1d 100%); color: #fff; padding: 16px 0; box-shadow: 0 4px 20px rgba(185, 28, 28, 0.25); border-bottom: 3px solid var(--accent); }
         .header-inner { max-width: 1240px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px; }
         .brand-cluster { display: flex; align-items: center; gap: 16px; text-decoration: none; color: #fff; }
         .brand-logo { width: 68px; height: 68px; border-radius: 50%; border: 3px solid var(--accent); object-fit: cover; background: #fff; }
@@ -40,9 +41,21 @@
         .brand-name h1 span { color: var(--accent); }
         .brand-name p { font-family: 'Mukta Mahee', sans-serif; font-size: 0.95rem; color: #fef08a; font-weight: 600; margin-top: 4px; }
 
-        .header-actions { display: flex; align-items: center; gap: 10px; }
-        .ad-contact-btn { background: #fff; color: var(--primary); font-family: 'Mukta Mahee', sans-serif; font-weight: 700; font-size: 0.92rem; padding: 8px 16px; border-radius: 50px; text-decoration: none; border: 2px solid var(--accent); }
-        .live-tv-btn { background: var(--accent); color: #000; font-family: 'Oswald', sans-serif; font-size: 0.95rem; font-weight: 700; padding: 8px 18px; border-radius: 50px; text-decoration: none; }
+        /* Full Pro Header Action Buttons */
+        .header-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .head-btn { font-family: 'Mukta Mahee', sans-serif; font-weight: 700; font-size: 0.88rem; padding: 7px 14px; border-radius: 50px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; transition: all 0.2s; box-shadow: 0 2px 6px rgba(0,0,0,0.15); }
+        
+        .btn-reporter { background: #1e1b4b; color: var(--accent); border: 1.5px solid #818cf8; }
+        .btn-reporter:hover { background: #312e81; color: #fff; }
+        
+        .btn-ad { background: #fff; color: var(--primary); border: 2px solid var(--accent); }
+        .btn-ad:hover { background: var(--accent); color: #000; }
+        
+        .btn-live { background: var(--accent); color: #000; font-family: 'Oswald', sans-serif; font-size: 0.92rem; font-weight: 700; }
+        .btn-live:hover { background: #ffe066; }
+
+        .btn-wa { background: #25D366; color: #fff; }
+        .btn-wa:hover { background: #1ebc57; }
 
         /* Navigation */
         nav { background: #0f172a; position: sticky; top: 0; z-index: 999; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
@@ -59,20 +72,30 @@
         /* News Layout */
         .main-grid { display: grid; grid-template-columns: 2.1fr 1fr; gap: 28px; }
 
-        /* Pro News Card with Auto-Fit Images */
+        /* Spotlight Frame - Perfect Fit */
         .spotlight-card { background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: 0 6px 20px rgba(0,0,0,0.05); margin-bottom: 28px; }
-        .spotlight-media { position: relative; width: 100%; background: #000; overflow: hidden; }
         
-        /* Fixed: Fully Visible & Scaled Images */
-        .spotlight-media img { 
+        .spotlight-media-wrap { 
+            position: relative; 
             width: 100%; 
+            background: #111827; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            padding: 10px 0;
+            overflow: hidden; 
+        }
+        
+        .spotlight-media-wrap img { 
+            max-width: 100%; 
             height: auto; 
             max-height: 480px; 
             object-fit: contain; 
             display: block; 
-            background-color: #0d1117;
+            border-radius: 6px;
         }
-        .media-badge { position: absolute; top: 16px; left: 16px; background: rgba(185, 28, 28, 0.95); color: #fff; font-family: 'Oswald', sans-serif; font-size: 0.85rem; padding: 5px 12px; border-radius: 6px; font-weight: 700; box-shadow: 0 2px 6px rgba(0,0,0,0.3); }
+
+        .media-badge { position: absolute; top: 16px; left: 16px; background: rgba(185, 28, 28, 0.95); color: #fff; font-family: 'Oswald', sans-serif; font-size: 0.85rem; padding: 5px 12px; border-radius: 6px; font-weight: 700; box-shadow: 0 2px 6px rgba(0,0,0,0.3); z-index: 2; }
         
         .spotlight-body { padding: 24px; }
         .spotlight-title { font-family: 'Mukta Mahee', sans-serif; font-size: 1.5rem; font-weight: 800; color: #0f172a; line-height: 1.35; margin-bottom: 12px; }
@@ -93,6 +116,7 @@
         @media (max-width: 900px) {
             .main-grid { grid-template-columns: 1fr; }
             .brand-name h1 { font-size: 2rem; }
+            .header-actions { width: 100%; justify-content: center; }
         }
     </style>
 </head>
@@ -121,12 +145,20 @@
                 <p>ਸਭ ਤੋਂ ਪਹਿਲਾਂ, ਸਭ ਤੋਂ ਸਟੀਕ | Voice of Punjab</p>
             </div>
         </a>
+        
+        <!-- Action Buttons -->
         <div class="header-actions">
-            <a href="https://api.whatsapp.com/send?text=ਮੈਂ ਪੰਜਾਬ ਲਾਈਵ ਨਾਓ 'ਤੇ ਇਸ਼ਤਿਹਾਰ / ਖ਼ਬਰ ਲਗਵਾਉਣ ਸੰਬੰਧੀ ਗੱਲਬਾਤ ਕਰਨੀ ਚਾਹੁੰਦਾ/ਚਾਹੁੰਦੀ ਹਾਂ।" target="_blank" class="ad-contact-btn">
+            <a href="https://api.whatsapp.com/send?text=ਸਤਿ ਸ਼੍ਰੀ ਅਕਾਲ ਜੀ, ਮੈਂ Punjab Live Now (PLN) ਦਾ ਰਿਪੋਰਟਰ ਬਣਨ ਲਈ ਸੰਪਰਕ ਕਰ ਰਿਹਾ/ਰਹੀ ਹਾਂ।" target="_blank" class="head-btn btn-reporter">
+                🎤 ਰਿਪੋਰਟਰ ਬਣੋ
+            </a>
+            <a href="https://api.whatsapp.com/send?text=ਮੈਂ ਪੰਜਾਬ ਲਾਈਵ ਨਾਓ 'ਤੇ ਇਸ਼ਤਿਹਾਰ / ਖ਼ਬਰ ਲਗਵਾਉਣ ਸੰਬੰਧੀ ਗੱਲਬਾਤ ਕਰਨੀ ਚਾਹੁੰਦਾ/ਚਾਹੁੰਦੀ ਹਾਂ।" target="_blank" class="head-btn btn-ad">
                 📢 ਇਸ਼ਤਿਹਾਰ / ਖ਼ਬਰ ਦਿਓ
             </a>
-            <a href="https://www.youtube.com/@punjablivenow" target="_blank" class="live-tv-btn">
+            <a href="https://www.youtube.com/@punjablivenow" target="_blank" class="head-btn btn-live">
                 ▶ LIVE TV
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=919876543210" target="_blank" class="head-btn btn-wa">
+                💬 ਹੈਲਪਲਾਈਨ
             </a>
         </div>
     </div>
@@ -151,8 +183,9 @@
 
     <div class="main-grid">
         <div>
+            <!-- ਖ਼ਬਰ 1: ਐਸਪੀ ਕੁਲਦੀਪ ਸਿੰਘ ਬਰਾੜ -->
             <div class="spotlight-card">
-                <div class="spotlight-media">
+                <div class="spotlight-media-wrap">
                     <span class="media-badge">ਵਿਸ਼ੇਸ਼ ਸਨਮਾਨ / ਮਾਣ ਵਾਲਾ ਪਲ</span>
                     <img src="policeghs1.jpg" alt="ਐਸਪੀ ਕੁਲਦੀਪ ਸਿੰਘ ਬਰਾੜ">
                 </div>
@@ -170,8 +203,9 @@
                 </div>
             </div>
 
+            <!-- ਖ਼ਬਰ 2: ਸੀਵਰੇਜ ਸਫ਼ਾਈ -->
             <div class="spotlight-card">
-                <div class="spotlight-media">
+                <div class="spotlight-media-wrap">
                     <span class="media-badge">ਸ਼ਹਿਰੀ ਸਮੱਸਿਆ / ਵਿਕਾਸ</span>
                     <img src="ghs1_news.jpg" alt="ਸੀਵਰੇਜ ਸਫ਼ਾਈ ਗੁਰੂਹਰਸਹਾਏ">
                 </div>
@@ -190,6 +224,7 @@
             </div>
         </div>
 
+        <!-- Sidebar -->
         <div>
             <div class="sidebar-card">
                 <div class="sidebar-header">
