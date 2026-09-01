@@ -77,11 +77,27 @@
 
         .main-grid { display: grid; grid-template-columns: 2.1fr 1fr; gap: 28px; }
 
-        .spotlight-card { background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: 0 6px 20px rgba(0,0,0,0.05); margin-bottom: 28px; transition: transform 0.2s; }
-        .spotlight-card:hover { transform: translateY(-3px); }
-        .spotlight-media { position: relative; width: 100%; max-height: 440px; background: #0b0f19; overflow: hidden; display: flex; justify-content: center; align-items: center; }
-        .spotlight-media img { width: 100%; height: auto; max-height: 440px; object-fit: contain; }
-        .media-badge { position: absolute; top: 16px; left: 16px; background: rgba(185, 28, 28, 0.95); color: #fff; font-family: 'Oswald', sans-serif; font-size: 0.85rem; padding: 5px 12px; border-radius: 6px; font-weight: 700; letter-spacing: 0.5px; backdrop-filter: blur(4px); }
+        /* Clean & Fixed Spotlight Media Card */
+        .spotlight-card { background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: 0 6px 20px rgba(0,0,0,0.05); margin-bottom: 28px; }
+        
+        .spotlight-media { 
+            position: relative; 
+            width: 100%; 
+            background: #f1f5f9; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .spotlight-media img { 
+            width: 100%; 
+            max-height: 480px; 
+            object-fit: contain; 
+            display: block; 
+        }
+
+        .media-badge { position: absolute; top: 16px; left: 16px; background: rgba(185, 28, 28, 0.95); color: #fff; font-family: 'Oswald', sans-serif; font-size: 0.85rem; padding: 5px 12px; border-radius: 6px; font-weight: 700; letter-spacing: 0.5px; box-shadow: 0 2px 6px rgba(0,0,0,0.25); z-index: 2; }
         
         .spotlight-body { padding: 26px; }
         .spotlight-title { font-family: 'Mukta Mahee', sans-serif; font-size: 1.6rem; font-weight: 800; color: #0f172a; line-height: 1.35; margin-bottom: 14px; }
@@ -120,7 +136,6 @@
         @media (max-width: 900px) {
             .main-grid { grid-template-columns: 1fr; }
             .cards-grid { grid-template-columns: 1fr; }
-            .spotlight-media { height: 260px; }
             .brand-name h1 { font-size: 2rem; }
             .header-actions { width: 100%; justify-content: center; }
         }
@@ -202,7 +217,6 @@
 
     <div class="main-grid">
         <div>
-            <!-- ਨਵੀਂ ਲੀਡ ਸਟੋਰੀ: ਮਿਥੁਨ ਤਸਵੀਰ ਵਿਸ਼ਲੇਸ਼ਣ -->
             <div class="spotlight-card">
                 <div class="spotlight-media">
                     <span class="media-badge">FACT CHECK / INVESTIGATION</span>
@@ -218,7 +232,7 @@
                     </div>
 
                     <div class="spotlight-meta">
-                        <span style="font-size: 0.85rem; color: #64748b; font-weight: 600;">#GuruHarsahai #MalaysiaCase #FactCheck</span>
+                        <span style="font-size: 0.85rem; color: #64748b; font-weight: 600;">📍 ਗੁਰੂਹਰਸਹਾਏ / ਵਿਦੇਸ਼</span>
                         <a href="https://api.whatsapp.com/send?text=ਮਿਥੁਨ ਦੀ ਤਸਵੀਰ ਨੇ ਖੜ੍ਹੇ ਕੀਤੇ ਸਵਾਲ, AI ਜਾਂ ਸੱਚੀ ਤਸਵੀਰ?: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="share-pill">
                             📲 WhatsApp 'ਤੇ ਰਿਪੋਰਟ ਸ਼ੇਅਰ ਕਰੋ
                         </a>
@@ -228,7 +242,6 @@
 
             <div class="section-heading">ਹੋਰ ਪ੍ਰਮੁੱਖ ਖ਼ਬਰਾਂ</div>
             <div class="cards-grid">
-                <!-- ਪਹਿਲੀ ਰਿਪੋਰਟ -->
                 <div class="story-card">
                     <div class="story-img-wrap">
                         <img src="malaysianews1.jpg" alt="ਮਲੇਸ਼ੀਆ ਮਾਮਲਾ ਗਰਾਊਂਡ ਰਿਪੋਰਟ">
@@ -244,89 +257,6 @@
                     </div>
                 </div>
 
-                <!-- ਖ਼ਬਰ 2: ਜਮਸ਼ੇਦਪੁਰ CNG ਹਾਦਸਾ -->
                 <div class="story-card">
                     <div class="story-img-wrap">
-                        <img src="jmshedpurnewscng.jpg" alt="ਜਮਸ਼ੇਦਪੁਰ CNG ਨੋਜ਼ਲ ਹਾਦਸਾ" onerror="this.src='nepalnews1.jpg'">
-                    </div>
-                    <div class="story-content">
-                        <div>
-                            <h3 class="story-title">🚨 ਜਮਸ਼ੇਦਪੁਰ ’ਚ ਅਚਾਨਕ ਫੱਟਿਆ CNG ਨੋਜ਼ਲ, ਦੇਖੋ ਮੌਕੇ ਦਾ ਹਾਲ!</h3>
-                            <p class="story-desc">CNG ਪਾਈਪ ਦਾ ਨੋਜ਼ਲ ਫੱਟਣ ਕਾਰਨ ਮੌਕੇ ’ਤੇ ਮਚੀ ਹਫੜਾ-ਦਫੜੀ। ਲਾਈਵ ਵੀਡੀਓ ਰਿਪੋਰਟ ਉਪਲਬਧ।</p>
-                        </div>
-                        <a href="https://api.whatsapp.com/send?text=ਜਮਸ਼ੇਦਪੁਰ ’ਚ ਅਚਾਨਕ ਫੱਟਿਆ CNG ਨੋਜ਼ਲ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="share-pill" style="font-size: 0.8rem; padding: 6px 12px; margin-top: 10px;">
-                            📲 ਸ਼ੇਅਰ ਕਰੋ
-                        </a>
-                    </div>
-                </div>
-
-                <!-- ਖ਼ਬਰ 3: ਚੰਨੀ ਤੇ ਰਾਹੁਲ ਗਾਂਧੀ ਵਿਵਾਦ -->
-                <div class="story-card">
-                    <div class="story-img-wrap">
-                        <img src="rahulchanni.jpg" alt="ਚਰਨਜੀਤ ਚੰਨੀ" onerror="this.src='news1_cropperd.jpg'">
-                    </div>
-                    <div class="story-content">
-                        <div>
-                            <h3 class="story-title">🔥 ਚੰਨੀ ਵੱਲੋਂ ਤਰਸੇਮ ਲਾਲ ਦੀ ਪੋਸਟ ਸ਼ੇਅਰ ਕਰਨ ’ਤੇ ਸਿਆਸੀ ਚਰਚਾ</h3>
-                            <p class="story-desc">ਸਾਬਕਾ ਮੁੱਖ ਮੰਤਰੀ ਵੱਲੋਂ ਪੋਸਟ ਸ਼ੇਅਰ ਕਰਨ ਤੋਂ ਬਾਅਦ ਕਾਂਗਰਸ ਅਤੇ ਪੰਜਾਬ ਸਿਆਸਤ ਵਿੱਚ ਚਰਚਾਵਾਂ ਤੇਜ਼।</p>
-                        </div>
-                        <a href="https://api.whatsapp.com/send?text=ਚੰਨੀ ਤਰਸੇਮ ਲਾਲ ਪੋਸਟ ਵਿਵਾਦ: https://ghsvlogger-website.github.io/punjab-live-now/punjab.html" target="_blank" class="share-pill" style="font-size: 0.8rem; padding: 6px 12px; margin-top: 10px;">
-                            📲 ਸ਼ੇਅਰ ਕਰੋ
-                        </a>
-                    </div>
-                </div>
-
-                <!-- ਖ਼ਬਰ 4: ਸੁਖਬੀਰ ਬਾਦਲ ਮੁਲਾਕਾਤ -->
-                <div class="story-card">
-                    <div class="story-img-wrap">
-                        <img src="news1_cropperd.jpg" alt="ਸੁਖਬੀਰ ਬਾਦਲ">
-                    </div>
-                    <div class="story-content">
-                        <div>
-                            <h3 class="story-title">ਸੁਖਬੀਰ ਸਿੰਘ ਬਾਦਲ ਨੇ PM ਮੋਦੀ ਨਾਲ ਕੀਤੀ ਅਹਿਮ ਮੁਲਾਕਾਤ</h3>
-                            <p class="story-desc">ਭਾਜਪਾ-ਅਕਾਲੀ ਦਲ ਦੇ ਸੰਭਾਵੀ ਗਠਜੋੜ ਦੀਆਂ ਅਟਕਲਾਂ ਦਰਮਿਆਨ ਪੰਜਾਬ ਸਿਆਸਤ 'ਚ ਨਵੀਂ ਹਲਚਲ।</p>
-                        </div>
-                        <a href="https://api.whatsapp.com/send?text=ਸੁਖਬੀਰ ਮੋਦੀ ਮੁਲਾਕਾਤ: https://ghsvlogger-website.github.io/punjab-live-now/punjab.html" target="_blank" class="share-pill" style="font-size: 0.8rem; padding: 6px 12px; margin-top: 10px;">
-                            📲 ਸ਼ੇਅਰ ਕਰੋ
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="sidebar-container">
-            <div class="sidebar-card">
-                <div class="sidebar-header">
-                    <span>🎬 ਤਾਜ਼ਾ ਵੀਡੀਓ ਰਿਪੋਰਟ</span>
-                </div>
-                
-                <div style="display: flex; justify-content: center; overflow: hidden; border-radius: 8px;">
-                    <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DcudRnRSzTC/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:8px; margin: 0; width:100%; min-width:280px;">
-                        <div style="padding:16px;">
-                            <a href="https://www.instagram.com/reel/DcudRnRSzTC/?utm_source=ig_embed&amp;utm_campaign=loading" style="background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
-                                <p style="color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; text-align:center;">View on Instagram</p>
-                            </a>
-                        </div>
-                    </blockquote>
-                </div>
-
-                <a href="https://www.instagram.com/punjablivenow/reels/" target="_blank" class="insta-btn-pro">
-                    🎥 Instagram 'ਤੇ ਸਾਰੀਆਂ ਰੀਲਾਂ ਦੇਖੋ
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<footer>
-    <div class="footer-social-links">
-        <a href="https://www.youtube.com/@punjablivenow" target="_blank">YouTube</a>
-        <a href="https://www.facebook.com/profile.php?id=61562360634592" target="_blank">Facebook</a>
-        <a href="https://www.instagram.com/punjablivenow" target="_blank">Instagram</a>
-    </div>
-    <p style="font-size: 0.9rem; color: #64748b;">&copy; 2026 Punjab Live Now (PLN) Media Network. ਸਾਰੇ ਹੱਕ ਰਾਖਵੇਂ ਹਨ।</p>
-</footer>
-
-<script async src="//www.instagram.com/embed.js"></script>
-</body>
-</html>
+                        <img src="jmshedpurnewscng.jpg" alt="ਜਮਸ਼ੇਦਪੁਰ CNG ਨੋਜ਼ਲ ਹਾਦਸਾ" onerror="this.src='nepal
