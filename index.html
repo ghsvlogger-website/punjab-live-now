@@ -3,139 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Punjab Live Now (PLN) - ਤਾਜ਼ਾ ਖ਼ਬਰਾਂ</title>
+    <title>Punjab Live Now (PLN) - ਪੰਜਾਬ ਦੀ ਆਵਾਜ਼</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, sans-serif; }
-        body { background-color: #f0f2f5; color: #222; }
+        body { background-color: #f4f6f8; color: #222; }
         
-        /* Header & Logo Styling */
-        header { background: #b30000; color: #fff; padding: 15px 20px; border-bottom: 3px solid #800000; }
-        .header-container { max-width: 1150px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 15px; flex-wrap: wrap; text-align: center; }
-        .header-logo { width: 65px; height: 65px; border-radius: 50%; object-fit: cover; border: 2px solid #ffcc00; background: #fff; }
-        .header-text h1 { font-size: 2.2rem; letter-spacing: 1px; margin: 0; line-height: 1.1; }
-        .header-text p { font-size: 0.95rem; margin-top: 4px; opacity: 0.95; color: #fff; }
+        /* Professional Header */
+        header { background: linear-gradient(135deg, #b30000 0%, #800000 100%); color: #fff; padding: 15px 0; border-bottom: 3px solid #ffcc00; }
+        .header-wrap { max-width: 1200px; margin: 0 auto; padding: 0 15px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+        .brand-box { display: flex; align-items: center; gap: 15px; text-decoration: none; color: #fff; }
+        .brand-logo { width: 55px; height: 55px; border-radius: 50%; border: 2px solid #ffcc00; object-fit: cover; background: #fff; }
+        .brand-title h1 { font-size: 1.8rem; font-weight: 800; letter-spacing: 0.5px; }
+        .brand-title p { font-size: 0.85rem; color: #ffeb99; font-weight: 500; }
         
-        nav { background: #1a1a1a; padding: 12px; text-align: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
-        nav a { color: #fff; text-decoration: none; margin: 0 14px; font-weight: 600; font-size: 0.95rem; }
-        nav a:hover { color: #ffcc00; }
-        .container { max-width: 1150px; margin: 25px auto; padding: 0 15px; }
-        .breaking-bar { background: #ffcc00; padding: 12px 16px; font-weight: bold; border-radius: 6px; margin-bottom: 25px; color: #000; font-size: 0.95rem; border-left: 5px solid #d4a000; }
+        /* Navigation */
+        nav { background: #111; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+        .nav-wrap { max-width: 1200px; margin: 0 auto; display: flex; overflow-x: auto; white-space: nowrap; }
+        .nav-wrap a { color: #eee; text-decoration: none; padding: 12px 18px; font-size: 0.95rem; font-weight: 600; display: inline-block; transition: 0.2s; }
+        .nav-wrap a:hover, .nav-wrap a.active { background: #b30000; color: #fff; }
         
-        /* Featured Post Layout */
-        .featured-card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.06); display: flex; flex-wrap: wrap; margin-bottom: 35px; border: 1px solid #e1e4e8; }
-        .featured-img-box { flex: 1 1 380px; max-width: 450px; background: #e9ecef; overflow: hidden; }
-        .featured-img-box img { width: 100%; height: 100%; min-height: 380px; max-height: 480px; object-fit: cover; object-position: top center; display: block; }
-        .featured-content { flex: 2 1 400px; padding: 25px; display: flex; flex-direction: column; justify-content: space-between; }
-        .featured-content h2 { font-size: 1.45rem; color: #b30000; line-height: 1.4; margin-bottom: 15px; }
-        .featured-content p { font-size: 0.98rem; line-height: 1.65; color: #333; margin-bottom: 12px; }
-        .disclaimer { font-size: 0.85rem; color: #555; background: #f8f9fa; padding: 10px 12px; border-radius: 4px; margin: 12px 0; border-left: 3px solid #b30000; }
+        /* Layout Grid */
+        .container { max-width: 1200px; margin: 20px auto; padding: 0 15px; }
+        .breaking-bar { background: #ffcc00; color: #000; padding: 10px 15px; font-weight: bold; border-radius: 4px; margin-bottom: 20px; font-size: 0.9rem; display: flex; align-items: center; gap: 10px; }
         
-        /* News Grid Layout */
-        .section-title { font-size: 1.3rem; margin-bottom: 15px; color: #111; border-bottom: 2px solid #b30000; padding-bottom: 6px; display: inline-block; }
-        .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
-        .card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 3px 10px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between; border: 1px solid #e1e4e8; }
-        .card img { width: 100%; height: 210px; object-fit: cover; }
-        .card-body { padding: 18px; }
-        .card-body h3 { font-size: 1.15rem; margin-bottom: 10px; color: #b30000; line-height: 1.4; }
-        .card-body p { font-size: 0.92rem; line-height: 1.55; color: #444; margin-bottom: 15px; }
+        .main-layout { display: grid; grid-template-columns: 2.2fr 1fr; gap: 25px; }
+        
+        /* Left Column - Big Stories */
+        .featured-box { background: #fff; border-radius: 6px; overflow: hidden; border: 1px solid #e1e4e8; margin-bottom: 25px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
+        .featured-box img { width: 100%; height: 320px; object-fit: cover; object-position: top; }
+        .featured-content { padding: 20px; }
+        .tag-crime { background: #b30000; color: #fff; font-size: 0.75rem; padding: 3px 8px; border-radius: 3px; font-weight: bold; text-transform: uppercase; }
+        .featured-content h2 { font-size: 1.4rem; color: #111; margin: 10px 0; line-height: 1.35; }
+        .featured-content p { font-size: 0.95rem; line-height: 1.6; color: #444; margin-bottom: 12px; }
+        .disclaimer { font-size: 0.8rem; background: #f8f9fa; border-left: 3px solid #b30000; padding: 8px 12px; color: #666; margin: 12px 0; }
+        
+        /* Grid Stories */
+        .sub-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .news-card { background: #fff; border-radius: 6px; overflow: hidden; border: 1px solid #e1e4e8; display: flex; flex-direction: column; justify-content: space-between; }
+        .news-card img { width: 100%; height: 160px; object-fit: cover; }
+        .card-body { padding: 15px; }
+        .card-body h3 { font-size: 1.05rem; color: #111; margin-bottom: 8px; line-height: 1.35; }
+        .card-body p { font-size: 0.88rem; color: #555; line-height: 1.5; margin-bottom: 12px; }
+        
+        /* Right Sidebar (Instagram & Live Updates) */
+        .sidebar-box { background: #fff; border-radius: 6px; border: 1px solid #e1e4e8; padding: 15px; margin-bottom: 20px; }
+        .side-title { font-size: 1.1rem; color: #b30000; border-bottom: 2px solid #b30000; padding-bottom: 6px; margin-bottom: 15px; }
         
         /* Buttons */
-        .share-btn { display: inline-block; background-color: #25D366; color: white; padding: 8px 14px; border-radius: 4px; text-decoration: none; font-size: 0.88rem; font-weight: bold; width: fit-content; }
-        .share-btn:hover { background-color: #1ebc57; }
-        .insta-box { text-align: center; padding: 10px; }
+        .share-btn { display: inline-block; background: #25D366; color: white; padding: 7px 12px; border-radius: 4px; text-decoration: none; font-size: 0.82rem; font-weight: bold; width: fit-content; }
+        .share-btn:hover { background: #1ebc57; }
         
-        footer { background: #111; color: #aaa; text-align: center; padding: 30px 15px; margin-top: 50px; }
-        .social-links a { color: #ffcc00; text-decoration: none; margin: 0 12px; font-weight: bold; font-size: 0.95rem; }
+        /* Footer */
+        footer { background: #111; color: #888; text-align: center; padding: 30px 15px; margin-top: 40px; border-top: 4px solid #b30000; }
+        .footer-links a { color: #ffcc00; text-decoration: none; margin: 0 10px; font-weight: 600; font-size: 0.9rem; }
+        
+        @media (max-width: 850px) {
+            .main-layout { grid-template-columns: 1fr; }
+            .sub-grid { grid-template-columns: 1fr; }
+            .featured-box img { height: 230px; }
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="header-container">
-        <!-- PLN Channel Logo -->
-        <img src="channel_logo1.png" alt="PLN Logo" class="header-logo">
-        <div class="header-text">
-            <h1>PUNJAB LIVE NOW (PLN)</h1>
-            <p>ਪੰਜਾਬ ਦੀ ਹਰ ਖ਼ਬਰ ਸਭ ਤੋਂ ਪਹਿਲਾਂ ਤੇ ਸਭ ਤੋਂ ਸਟੀਕ</p>
-        </div>
+    <div class="header-wrap">
+        <a href="index.html" class="brand-box">
+            <img src="channel_logo1.png" alt="PLN Logo" class="brand-logo" onerror="this.style.display='none'">
+            <div class="brand-title">
+                <h1>PUNJAB LIVE NOW</h1>
+                <p>ਸਭ ਤੋਂ ਪਹਿਲਾਂ, ਸਭ ਤੋਂ ਸਟੀਕ | Punjab News Portal</p>
+            </div>
+        </a>
     </div>
 </header>
 
 <nav>
-    <a href="index.html">ਮੁੱਖ ਪੰਨਾ</a>
-    <a href="#">ਪੰਜਾਬ</a>
-    <a href="#">ਗੁਰੂਹਰਸਹਾਏ</a>
-    <a href="#">ਸਿਆਸਤ</a>
-    <a href="#">ਵਿਦੇਸ਼</a>
-    <a href="#">ਕ੍ਰਾਈਮ</a>
+    <div class="nav-wrap">
+        <a href="index.html" class="active">ਮੁੱਖ ਪੰਨਾ</a>
+        <a href="index.html">ਪੰਜਾਬ</a>
+        <a href="index.html">ਗੁਰੂਹਰਸਹਾਏ</a>
+        <a href="index.html">ਸਿਆਸਤ</a>
+        <a href="index.html">ਵਿਦੇਸ਼</a>
+        <a href="index.html">ਕ੍ਰਾਈਮ</a>
+    </div>
 </nav>
 
 <div class="container">
     <div class="breaking-bar">
-        🔴 Breaking News: ਮਲੇਸ਼ੀਆ 'ਚ ਗੁਰੂਹਰਸਹਾਏ ਦੇ ਨੌਜਵਾਨ ਦੀ ਸ਼ੱਕੀ ਮੌਤ—ਪਰਿਵਾਰ ਨੇ ਲਗਾਏ ਗੰਭੀਰ ਦੋਸ਼!
+        <span>🔴 BREAKING:</span>
+        <span>ਮਲੇਸ਼ੀਆ 'ਚ ਗੁਰੂਹਰਸਹਾਏ ਦੇ ਨੌਜਵਾਨ ਦੀ ਸ਼ੱਕੀ ਮੌਤ—ਪਰਿਵਾਰ ਵੱਲੋਂ ਕਤਲ ਦੇ ਗੰਭੀਰ ਦੋਸ਼!</span>
     </div>
 
-    <!-- ਮੁੱਖ ਖ਼ਬਰ -->
-    <div class="featured-card">
-        <div class="featured-img-box">
-            <img src="malaysianews1.jpg" alt="ਮਲੇਸ਼ੀਆ ਮਾਮਲਾ">
-        </div>
-        <div class="featured-content">
-            <div>
-                <h2>🚨 ਮਲੇਸ਼ੀਆ ’ਚ ਗੁਰੂਹਰਸਹਾਏ ਦੇ ਨੌਜਵਾਨ ਦੀ ਮੌਤ—ਕਤਲ ਜਾਂ ਖੁਦਕੁਸ਼ੀ? ਪਰਿਵਾਰ ਨੇ ਖੜ੍ਹੇ ਕੀਤੇ ਗੰਭੀਰ ਸਵਾਲ</h2>
-                <p><strong>ਗੁਰੂਹਰਸਹਾਏ (Punjab Live Now):</strong> ਮਲੇਸ਼ੀਆ ਤੋਂ ਇੱਕ ਬੇਹੱਦ ਗੰਭੀਰ ਮਾਮਲਾ ਸਾਹਮਣੇ ਆਇਆ ਹੈ। ਗੁਰੂਹਰਸਹਾਏ ਦੀ ਬਸਤੀ ਗੁਰੂ ਕਰਮ ਸਿੰਘ ਵਾਲੀ ਦੇ ਰਹਿਣ ਵਾਲੇ ਮਿਥੁਨ ਦੀ ਮੌਤ ਹੋ ਗਈ ਹੈ। ਪਰਿਵਾਰ ਵੱਲੋਂ ਇਸ ਮੌਤ ਨੂੰ ਲੈ ਕੇ ਕਈ ਗੰਭੀਰ ਸਵਾਲ ਖੜ੍ਹੇ ਕੀਤੇ ਜਾ ਰਹੇ ਹਨ।</p>
-                <p>ਪਰਿਵਾਰ ਮੁਤਾਬਕ, ਇੱਕ ਲੜਕੀ ਕਰੀਬ 8 ਮਹੀਨੇ ਪਹਿਲਾਂ ਮਿਥੁਨ ਨੂੰ ਮਲੇਸ਼ੀਆ ਲੈ ਕੇ ਗਈ ਸੀ। ਦੋਸ਼ ਹੈ ਕਿ ਬਾਅਦ ਵਿੱਚ ਲੜਕੀ ਦੀ ਆਪਣੇ ਨਵੇਂ ਸਾਥੀ ਨਾਲ ਮਿਥੁਨ ਨੂੰ ਲੈ ਕੇ ਲੜਾਈ ਹੋਈ। ਪਰਿਵਾਰ ਦਾ ਦਾਅਵਾ ਹੈ ਕਿ ਲੜਾਈ ਦੌਰਾਨ ਮਿਥੁਨ ਨੂੰ ਗੰਭੀਰ ਸੱਟਾਂ ਲੱਗੀਆਂ ਅਤੇ ਉਸ ਦੀ ਮੌਤ ਹੋ ਗਈ। ਘਟਨਾ ਤੋਂ ਬਾਅਦ ਪਰਿਵਾਰ ਨੂੰ ਫੋਨ ਕਰਕੇ ਖੁਦਕੁਸ਼ੀ ਦੀ ਗੱਲ ਕਹੀ ਗਈ ਅਤੇ ਬਾਅਦ ਵਿੱਚ ਫਾਹੇ ਨਾਲ ਲਟਕਦੀ ਤਸਵੀਰ ਭੇਜੀ ਗਈ।</p>
-                <p>ਪਰਿਵਾਰ ਨੇ ਦਾਅਵਾ ਕੀਤਾ ਕਿ ਤਸਵੀਰ ਵਿੱਚ ਮਿਥੁਨ ਦੇ ਪੈਰ ਜ਼ਮੀਨ ਨੂੰ ਲੱਗੇ ਹੋਏ ਸਨ, ਸਰੀਰ 'ਤੇ ਨੀਲ ਦੇ ਨਿਸ਼ਾਨ ਸਨ ਅਤੇ ਗਲੇ ਵਿੱਚ ਪਾਈ ਰੱਸੀ ਵੀ ਪਤਲੀ ਸੀ। ਇਸ ਤੋਂ ਇਲਾਵਾ ਪਰਿਵਾਰ ਨੇ ਦੋਸ਼ ਲਗਾਇਆ ਹੈ ਕਿ ਮੀਡੀਆ ਵਿੱਚ ਖ਼ਬਰ ਆਉਣ ਤੋਂ ਬਾਅਦ ਉਨ੍ਹਾਂ ਨੂੰ ਧਮਕੀਆਂ ਮਿਲ ਰਹੀਆਂ ਹਨ ਕਿ ਵੀਡੀਓ ਡਿਲੀਟ ਕਰਵਾਓ, ਨਹੀਂ ਤਾਂ ਮ੍ਰਿਤਕ ਦੇਹ ਨਹੀਂ ਭੇਜੀ ਜਾਵੇਗੀ।</p>
-                <div class="disclaimer">
-                    ⚠️ <strong>ਨੋਟ:</strong> ਇਹ ਖ਼ਬਰ ਪਰਿਵਾਰ ਵੱਲੋਂ ਲਗਾਏ ਗਏ ਦੋਸ਼ਾਂ ਅਤੇ ਦਿੱਤੀਆਂ ਜਾਣਕਾਰੀਆਂ ’ਤੇ ਆਧਾਰਿਤ ਹੈ। ਕਿਸੇ ਵੀ ਵਿਅਕਤੀ ਨੂੰ ਦੋਸ਼ੀ ਕਰਾਰ ਦੇਣਾ ਜਾਂ ਕਤਲ ਦੀ ਪੁਸ਼ਟੀ ਕਰਨਾ ਜਾਂਚ ਪੂਰੀ ਹੋਣ ਤੋਂ ਪਹਿਲਾਂ ਉਚਿਤ ਨਹੀਂ ਹੈ। ਅਸਲ ਸੱਚ ਪੁਲਿਸ ਜਾਂਚ ਅਤੇ ਪੋਸਟਮਾਰਟਮ ਰਿਪੋਰਟ ਤੋਂ ਹੀ ਸਾਹਮਣੇ ਆਵੇਗਾ।
+    <div class="main-layout">
+        <!-- ਖੱਬਾ ਪਾਸਾ: ਵੱਡੀਆਂ ਖ਼ਬਰਾਂ -->
+        <div>
+            <!-- ਮੁੱਖ ਖ਼ਬਰ -->
+            <div class="featured-box">
+                <img src="malaysianews1.jpg" alt="ਮਲੇਸ਼ੀਆ ਮਾਮਲਾ">
+                <div class="featured-content">
+                    <span class="tag-crime">ਵਿਦੇਸ਼ / ਕ੍ਰਾਈਮ</span>
+                    <h2>🚨 ਮਲੇਸ਼ੀਆ ’ਚ ਗੁਰੂਹਰਸਹਾਏ ਦੇ ਨੌਜਵਾਨ ਦੀ ਮੌਤ—ਕਤਲ ਜਾਂ ਖੁਦਕੁਸ਼ੀ? ਪਰਿਵਾਰ ਨੇ ਖੜ੍ਹੇ ਕੀਤੇ ਗੰਭੀਰ ਸਵਾਲ</h2>
+                    <p><strong>ਗੁਰੂਹਰਸਹਾਏ (Punjab Live Now):</strong> ਮਲੇਸ਼ੀਆ ਤੋਂ ਇੱਕ ਬੇਹੱਦ ਗੰਭੀਰ ਮਾਮਲਾ ਸਾਹਮਣੇ ਆਇਆ ਹੈ। ਗੁਰੂਹਰਸਹਾਏ ਦੀ ਬਸਤੀ ਗੁਰੂ ਕਰਮ ਸਿੰਘ ਵਾਲੀ ਦੇ ਰਹਿਣ ਵਾਲੇ ਮਿਥੁਨ ਦੀ ਸ਼ੱਕੀ ਹਾਲਾਤਾਂ ਵਿੱਚ ਮੌਤ ਹੋ ਗਈ ਹੈ। ਪਰਿਵਾਰ ਵੱਲੋਂ ਇਸ ਨੂੰ ਖੁਦਕੁਸ਼ੀ ਨਹੀਂ ਸਗੋਂ ਕਤਲ ਦੱਸਿਆ ਜਾ ਰਿਹਾ ਹੈ।</p>
+                    <p>ਪਰਿਵਾਰ ਮੁਤਾਬਕ ਇੱਕ ਲੜਕੀ ਉਸਨੂੰ ਮਲੇਸ਼ੀਆ ਲੈ ਕੇ ਗਈ ਸੀ, ਜਿੱਥੇ ਆਪਸੀ ਝਗੜੇ ਦੌਰਾਨ ਮਿਥੁਨ ਨੂੰ ਸੱਟਾਂ ਲੱਗਣ ਕਾਰਨ ਉਸਦੀ ਮੌਤ ਹੋਈ। ਪਰਿਵਾਰ ਨੇ ਲਾਸ਼ ਦੀਆਂ ਤਸਵੀਰਾਂ 'ਤੇ ਸਵਾਲ ਚੁੱਕਦਿਆਂ ਦੋਸ਼ ਲਗਾਇਆ ਹੈ ਕਿ ਮਾਮਲਾ ਮੀਡੀਆ 'ਚ ਆਉਣ ਤੋਂ ਬਾਅਦ ਉਨ੍ਹਾਂ ਨੂੰ ਵੀਡੀਓ ਡਿਲੀਟ ਕਰਵਾਉਣ ਲਈ ਧਮਕੀਆਂ ਮਿਲ ਰਹੀਆਂ ਹਨ।</p>
+                    <div class="disclaimer">
+                        ⚠️ <strong>ਨੋਟ:</strong> ਇਹ ਖ਼ਬਰ ਪਰਿਵਾਰ ਦੇ ਬਿਆਨਾਂ 'ਤੇ ਆਧਾਰਿਤ ਹੈ। ਕਿਸੇ ਵੀ ਵਿਅਕਤੀ 'ਤੇ ਦੋਸ਼ ਜਾਂਚ ਪੂਰੀ ਹੋਣ ਅਤੇ ਪੋਸਟਮਾਰਟਮ ਰਿਪੋਰਟ ਤੋਂ ਬਾਅਦ ਹੀ ਸਾਬਤ ਹੋਵੇਗਾ।
+                    </div>
+                    <a href="https://api.whatsapp.com/send?text=ਮਲੇਸ਼ੀਆ 'ਚ ਗੁਰੂਹਰਸਹਾਏ ਦੇ ਨੌਜਵਾਨ ਦੀ ਮੌਤ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="share-btn">📲 WhatsApp 'ਤੇ ਸ਼ੇਅਰ ਕਰੋ</a>
                 </div>
             </div>
-            <a href="https://api.whatsapp.com/send?text=ਮਲੇਸ਼ੀਆ 'ਚ ਗੁਰੂਹਰਸਹਾਏ ਦੇ ਨੌਜਵਾਨ ਦੀ ਮੌਤ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="share-btn">📲 WhatsApp 'ਤੇ ਪੂਰੀ ਖ਼ਬਰ ਸ਼ੇਅਰ ਕਰੋ</a>
-        </div>
-    </div>
 
-    <!-- ਹੋਰ ਖ਼ਬਰਾਂ ਤੇ ਵੀਡੀਓ -->
-    <h3 class="section-title">ਹੋਰ ਤਾਜ਼ਾ ਖ਼ਬਰਾਂ ਤੇ ਵੀਡੀਓਜ਼</h3>
-    
-    <div class="news-grid">
-        <!-- Instagram Video Card -->
-        <div class="card">
-            <div class="card-body insta-box">
-                <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DcqoUntyBJY/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-                    <div style="padding:16px;">
-                        <a href="https://www.instagram.com/reel/DcqoUntyBJY/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
-                            <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">View on Instagram</p>
-                        </a>
+            <!-- ਹੇਠਲੀਆਂ 2 ਖ਼ਬਰਾਂ -->
+            <div class="sub-grid">
+                <!-- ਪੰਜਾਬ ਸਿਆਸਤ -->
+                <div class="news-card">
+                    <img src="news1_cropperd.jpg" alt="ਸੁਖਬੀਰ ਬਾਦਲ ਮੁਲਾਕਾਤ">
+                    <div class="card-body">
+                        <h3>ਪੰਜਾਬ ਵਿਧਾਨ ਸਭਾ ਚੋਣਾਂ 2027: ਸੁਖਬੀਰ ਸਿੰਘ ਬਾਦਲ ਨੇ PM ਮੋਦੀ ਨਾਲ ਕੀਤੀ ਅਹਿਮ ਮੁਲਾਕਾਤ</h3>
+                        <p>ਭਾਜਪਾ ਅਤੇ ਸ਼੍ਰੋਮਣੀ ਅਕਾਲੀ ਦਲ ਦੇ ਸੰਭਾਵੀ ਗਠਜੋੜ ਦੀਆਂ ਅਟਕਲਾਂ ਦਰਮਿਆਨ ਸਿਆਸੀ ਹਲਚਲ ਤੇਜ਼ ਹੋਈ।</p>
+                        <a href="https://api.whatsapp.com/send?text=ਸੁਖਬੀਰ ਮੋਦੀ ਮੁਲਾਕਾਤ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="share-btn">📲 ਸ਼ੇਅਰ ਕਰੋ</a>
                     </div>
-                </blockquote>
-                <a href="https://api.whatsapp.com/send?text=ਇੰਸਟਾਗ੍ਰਾਮ ਵੀਡੀਓ ਰਿਪੋਰਟ ਦੇਖੋ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="share-btn" style="margin-top:10px;">📲 ਵੀਡੀਓ ਸ਼ੇਅਰ ਕਰੋ</a>
+                </div>
+
+                <!-- ਨੇਪਾਲ ਹੜ੍ਹ -->
+                <div class="news-card">
+                    <img src="nepalnews1.jpg" alt="ਨੇਪਾਲ ਹੜ੍ਹ">
+                    <div class="card-body">
+                        <h3>ਨੇਪਾਲ ਹੜ੍ਹ: ਮਰਨ ਵਾਲਿਆਂ ਦੀ ਗਿਣਤੀ 584 ਹੋਈ, 320 ਭਾਰਤੀਆਂ ਦੀ ਭਾਲ ਜਾਰੀ</h3>
+                        <p>ਨੇਪਾਲ 'ਚ ਭਾਰੀ ਮੀਂਹ ਅਤੇ ਹੜ੍ਹਾਂ ਕਾਰਨ ਭਾਰੀ ਤਬਾਹੀ। ਬਚਾਅ ਕਾਰਜਾਂ ਲਈ ਫ਼ੌਜ ਅਤੇ ਰਾਹਤ ਟੀਮਾਂ ਤਾਇਨਾਤ।</p>
+                        <a href="https://api.whatsapp.com/send?text=ਨੇਪਾਲ ਹੜ੍ਹ ਅੱਪਡੇਟ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="share-btn">📲 ਸ਼ੇਅਰ ਕਰੋ</a>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- ਖ਼ਬਰ 2: ਪੰਜਾਬ ਸਿਆਸਤ -->
-        <div class="card">
-            <img src="news1_cropperd.jpg" alt="ਸੁਖਬੀਰ ਬਾਦਲ ਮੁਲਾਕਾਤ">
-            <div class="card-body">
-                <h3>ਪੰਜਾਬ ਵਿਧਾਨ ਸਭਾ ਚੋਣਾਂ 2027 ਤੋਂ ਪਹਿਲਾਂ ਭਾਜਪਾ-ਅਕਾਲੀ ਦਲ ਗਠਜੋੜ ਦੀ ਚਰਚਾ ਦਰਮਿਆਨ ਸੁਖਬੀਰ ਸਿੰਘ ਬਾਦਲ ਵੱਲੋਂ PM ਮੋਦੀ ਨਾਲ ਮੁਲਾਕਾਤ</h3>
-                <p>ਪੰਜਾਬ ਦੀਆਂ ਤਾਜ਼ਾ ਸਿਆਸੀ ਸਰਗਰਮੀਆਂ ਅਤੇ ਆਉਣ ਵਾਲੀਆਂ ਚੋਣਾਂ ਦੇ ਸੰਭਾਵੀ ਸਮੀਕਰਨਾਂ ਬਾਰੇ ਵਿਸ਼ੇਸ਼ ਰਿਪੋਰਟ।</p>
-                <a href="https://api.whatsapp.com/send?text=ਪੜ੍ਹੋ ਤਾਜ਼ਾ ਖ਼ਬਰ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="share-btn">📲 WhatsApp 'ਤੇ ਸ਼ੇਅਰ ਕਰੋ</a>
-            </div>
-        </div>
-
-        <!-- ਖ਼ਬਰ 3: ਨੇਪਾਲ ਹੜ੍ਹ -->
-        <div class="card">
-            <img src="nepalnews1.jpg" alt="ਨੇਪਾਲ ਹੜ੍ਹ">
-            <div class="card-body">
-                <h3>ਨੇਪਾਲ ਹੜ੍ਹਾਂ ਕਾਰਨ ਮਰਨ ਵਾਲਿਆਂ ਦੀ ਗਿਣਤੀ 584 ਹੋਈ, 2,482 ਲੋਕ ਲਾਪਤਾ</h3>
-                <p>ਨੇਪਾਲ ਵਿੱਚ ਕੁਦਰਤੀ ਆਫ਼ਤ ਕਾਰਨ ਭਾਰੀ ਤਬਾਹੀ। ਬਚਾਅ ਕਾਰਜ ਜਾਰੀ ਹਨ ਅਤੇ ਲਾਪਤਾ 320 ਭਾਰਤੀਆਂ ਦੀ ਭਾਲ ਲਈ ਸਰਚ ਅਭਿਆਨ ਤੇਜ਼ ਕੀਤਾ ਗਿਆ ਹੈ।</p>
-                <a href="https://api.whatsapp.com/send?text=ਪੜ੍ਹੋ ਤਾਜ਼ਾ ਖ਼ਬਰ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="share-btn">📲 WhatsApp 'ਤੇ ਸ਼ੇਅਰ ਕਰੋ</a>
+        <!-- ਸੱਜਾ ਪਾਸਾ: Instagram ਰੀਲ ਅਤੇ ਵੀਡੀਓਜ਼ -->
+        <div>
+            <div class="sidebar-box">
+                <h3 class="side-title">📱 PLN Instagram ਵੀਡੀਓ</h3>
+                <div style="display: flex; justify-content: center;">
+                    <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DcqoUntyBJY/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:none; margin: 0; width:100%; min-width:280px;">
+                        <div style="padding:16px;">
+                            <a href="https://www.instagram.com/reel/DcqoUntyBJY/?utm_source=ig_embed&amp;utm_campaign=loading" style="background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
+                                <p style="color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; text-align:center;">View on Instagram</p>
+                            </a>
+                        </div>
+                    </blockquote>
+                </div>
+                <div style="text-align: center; margin-top: 10px;">
+                    <a href="https://api.whatsapp.com/send?text=ਇੰਸਟਾਗ੍ਰਾਮ ਵੀਡੀਓ ਦੇਖੋ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="share-btn">📲 ਵੀਡੀਓ ਸ਼ੇਅਰ ਕਰੋ</a>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 <footer>
-    <div class="social-links" style="margin-bottom: 12px;">
+    <div class="footer-links" style="margin-bottom: 15px;">
         <a href="https://www.youtube.com/@punjablivenow" target="_blank">YouTube</a> |
         <a href="https://facebook.com" target="_blank">Facebook</a> |
         <a href="https://www.instagram.com/punjablivenow" target="_blank">Instagram</a>
