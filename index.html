@@ -246,7 +246,7 @@
             text-overflow: ellipsis;
         }
 
-        /* Commercial Advertisements */
+        /* Advertisements */
         .ad-label {
             font-size: 0.72rem;
             color: #94a3b8;
@@ -396,6 +396,42 @@
             padding: 4px 10px;
             border-radius: 3px;
             font-weight: 800;
+            z-index: 10;
+        }
+
+        /* 3-Photo Grid for Nepal News */
+        .nepal-gallery-grid {
+            display: grid;
+            grid-template-columns: 1.8fr 1fr;
+            gap: 4px;
+            background: #020617;
+            border-bottom: 1px solid var(--border-light);
+        }
+        .gallery-main-photo {
+            position: relative;
+            height: 380px;
+            background: #000;
+        }
+        .gallery-main-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .gallery-sub-photos {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            height: 380px;
+        }
+        .gallery-sub-photo-item {
+            position: relative;
+            height: 50%;
+            background: #000;
+        }
+        .gallery-sub-photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .article-body { padding: 24px; }
@@ -560,6 +596,8 @@
         @media (max-width: 900px) {
             .grid-structure { grid-template-columns: 1fr; }
             .dual-grid { grid-template-columns: 1fr; }
+            .nepal-gallery-grid { grid-template-columns: 1fr; }
+            .gallery-main-photo, .gallery-sub-photos { height: 260px; }
             .brand-text h1 { font-size: 2rem; }
             .header-actions { width: 100%; justify-content: center; }
             .top-bar-inner { justify-content: center; text-align: center; }
@@ -573,7 +611,7 @@
         <div class="meta-cluster">
             <span class="live-tag"><span class="live-dot"></span> LIVE 24x7</span>
             <span class="loc-tag">📍 ਗੁਰੂ ਹਰਸਹਾਏ (ਪੰਜਾਬ)</span>
-            <span class="time-tag" id="liveDateTime">ਮੰਗਲਵਾਰ, 1 ਸਤੰਬਰ 2026 | 09:01 PM</span>
+            <span class="time-tag" id="liveDateTime">ਮੰਗਲਵਾਰ, 1 ਸਤੰਬਰ 2026 | 09:10 PM</span>
         </div>
         <div class="top-social-bar">
             Follow: 
@@ -625,7 +663,7 @@
 <div class="container">
     <div class="ticker-bar">
         <span class="ticker-badge">BREAKING NEWS</span>
-        <span class="ticker-title">🚨 ਗੁਰਦਾਸਪੁਰ: ਬੱਬੇਹਾਲੀ ਅੱਡੇ ’ਤੇ ਪੁਲਿਸ ਕਾਂਸਟੇਬਲ ਨਾਲ ਕਥਿਤ ਮਾਰਕੁੱਟ, ਮਾਮਲਾ ਜਾਂਚ ਅਧੀਨ</span>
+        <span class="ticker-title">🌊 ਨੇਪਾਲ ’ਚ ਕੁਦਰਤ ਦਾ ਕਹਿਰ! ਫਲੈਸ਼ ਫਲੱਡ ਕਾਰਨ ਭਾਰੀ ਤਬਾਹੀ | ਰਾਹਤ ਕਾਰਜ ਜਾਰੀ</span>
     </div>
 
     <!-- Ad 1: Immigration Banner -->
@@ -643,8 +681,8 @@
     <div class="regional-bar">
         <div class="regional-title">📍 ਖੇਤਰੀ ਕਵਰੇਜ (Regional News Coverage)</div>
         <div class="pill-cluster">
-            <a href="punjab.html" class="pill-btn">ਗੁਰਦਾਸਪੁਰ</a>
             <a href="guruharsahai.html" class="pill-btn">ਗੁਰੂਹਰਸਹਾਏ</a>
+            <a href="punjab.html" class="pill-btn">ਗੁਰਦਾਸਪੁਰ</a>
             <a href="punjab.html" class="pill-btn">ਫ਼ਿਰੋਜ਼ਪੁਰ</a>
             <a href="punjab.html" class="pill-btn">ਮਮਦੋਟ</a>
             <a href="punjab.html" class="pill-btn">ਜ਼ੀਰਾ</a>
@@ -655,19 +693,33 @@
 
     <div class="grid-structure">
         <div>
-            <!-- FRONT LEAD STORY: ਗੁਰਦਾਸਪੁਰ ਪੁਲਿਸ ਕਾਂਸਟੇਬਲ ਮਾਮਲਾ -->
+            <!-- FRONT LEAD STORY 1: ਨੇਪਾਲ ਹੜ੍ਹ 3-ਤਸਵੀਰਾਂ ਵਾਲੀ ਖ਼ਬਰ -->
             <div class="news-article-card">
-                <div class="article-media-box">
-                    <span class="article-tag">BREAKING EXCLUSIVE</span>
-                    <img src="gurdaspurnews1.jpg" alt="ਗੁਰਦਾਸਪੁਰ ਪੁਲਿਸ ਕਾਂਸਟੇਬਲ ਮਾਮਲਾ" onerror="this.src='news1_cropperd.jpg'">
+                <div style="position: relative;">
+                    <span class="article-tag" style="background:#0284c7;">GLOBAL / FLASH FLOOD</span>
+                    
+                    <div class="nepal-gallery-grid">
+                        <div class="gallery-main-photo">
+                            <img src="nepalnews1.jpg" alt="ਨੇਪਾਲ ਹੜ੍ਹ ਤਸਵੀਰ 1" onerror="this.src='jmshedpurnewscng.jpg'">
+                        </div>
+                        <div class="gallery-sub-photos">
+                            <div class="gallery-sub-photo-item">
+                                <img src="nepalnews2.jpg" alt="ਨੇਪਾਲ ਹੜ੍ਹ ਤਸਵੀਰ 2" onerror="this.src='nepalnews1.jpg'">
+                            </div>
+                            <div class="gallery-sub-photo-item">
+                                <img src="nepalnews3.jpg" alt="ਨੇਪਾਲ ਹੜ੍ਹ ਤਸਵੀਰ 3" onerror="this.src='nepalnews1.jpg'">
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="article-body">
-                    <h2 class="article-title">🚨 ਬੱਬੇਹਾਲੀ ਅੱਡੇ ’ਤੇ ਪੁਲਿਸ ਕਾਂਸਟੇਬਲ ਨਾਲ ਕਥਿਤ ਮਾਰਕੁੱਟ, ਮਾਮਲਾ ਜਾਂਚ ਅਧੀਨ</h2>
-                    <p class="article-text"><strong>ਗੁਰਦਾਸਪੁਰ (Punjab Live Now):</strong> ਗੁਰਦਾਸਪੁਰ ਦੇ ਬੱਬੇਹਾਲੀ ਅੱਡੇ ’ਤੇ ਪੰਜਾਬ ਪੁਲਿਸ ਦੇ ਕਾਂਸਟੇਬਲ ਨਾਲ ਕਥਿਤ ਤੌਰ ’ਤੇ ਮਾਰਕੁੱਟ ਹੋਣ ਦਾ ਮਾਮਲਾ ਸਾਹਮਣੇ ਆਇਆ ਹੈ। ਦੱਸਿਆ ਜਾ ਰਿਹਾ ਹੈ ਕਿ ਕਿਸੇ ਗੱਲ ਨੂੰ ਲੈ ਕੇ ਹੋਏ ਵਿਵਾਦ ਦੌਰਾਨ ਕਾਂਸਟੇਬਲ ਨਾਲ ਹੱਥੋਪਾਈ ਕੀਤੀ ਗਈ। ਮਾਮਲੇ ਦੀ ਪੂਰੀ ਜਾਣਕਾਰੀ ਅਤੇ ਮਾਰਕੁੱਟ ਦੇ ਕਾਰਨਾਂ ਸਬੰਧੀ ਅਧਿਕਾਰਤ ਪੁਸ਼ਟੀ ਹਾਲੇ ਸਾਹਮਣੇ ਨਹੀਂ ਆਈ। ਪੁਲਿਸ ਵੱਲੋਂ ਮਾਮਲੇ ਦੀ ਗੰਭੀਰਤਾ ਨਾਲ ਜਾਂਚ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ।</p>
+                    <h2 class="article-title">🌊 ਨੇਪਾਲ ’ਚ ਕੁਦਰਤ ਦਾ ਕਹਿਰ! ਤਬਾਹੀ ਦੀਆਂ ਤਸਵੀਰਾਂ ਨੇ ਦਿਖਾਇਆ ਪਾਣੀ ਨੇ ਕੀ ਹਾਲ ਕੀਤਾ</h2>
+                    <p class="article-text"><strong>ਕਾਠਮੰਡੂ / ਪੰਜਾਬ (Punjab Live Now):</strong> ਨੇਪਾਲ ’ਚ ਆਈ ਭਿਆਨਕ ਫਲੈਸ਼ ਫਲੱਡ ਨੇ ਕਈ ਇਲਾਕਿਆਂ ’ਚ ਭਾਰੀ ਤਬਾਹੀ ਮਚਾਈ ਹੈ। ਸਾਹਮਣੇ ਆਈਆਂ ਤਸਵੀਰਾਂ ’ਚ ਘਰਾਂ, ਸੜਕਾਂ ਅਤੇ ਆਲੇ-ਦੁਆਲੇ ਦੇ ਇਲਾਕਿਆਂ ’ਚ ਪਾਣੀ ਤੇ ਮਲਬੇ ਦਾ ਮੰਜ਼ਰ ਦੇਖਣ ਨੂੰ ਮਿਲ ਰਿਹਾ ਹੈ। ਪ੍ਰਭਾਵਿਤ ਖੇਤਰਾਂ ਵਿੱਚ ਰਾਹਤ ਅਤੇ ਬਚਾਅ ਕਾਰਜ ਤੇਜ਼ੀ ਨਾਲ ਜਾਰੀ ਹਨ।</p>
                     
                     <div class="article-action-row">
-                        <span style="font-size:0.88rem; color:#64748b; font-weight:700;">📍 ਬੱਬੇਹਾਲੀ ਅੱਡਾ, ਗੁਰਦਾਸਪੁਰ</span>
-                        <a href="https://api.whatsapp.com/send?text=ਬੱਬੇਹਾਲੀ ਅੱਡੇ ’ਤੇ ਪੁਲਿਸ ਕਾਂਸਟੇਬਲ ਨਾਲ ਕਥਿਤ ਮਾਰਕੁੱਟ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="action-link action-link-wa">
+                        <span style="font-size:0.88rem; color:#64748b; font-weight:700;">📸 3 ਐਕਸਕਲੂਸਿਵ ਫੋਟੋ ਰਿਪੋਰਟ</span>
+                        <a href="https://api.whatsapp.com/send?text=ਨੇਪਾਲ ’ਚ ਕੁਦਰਤ ਦਾ ਕਹਿਰ! ਤਬਾਹੀ ਦੀਆਂ ਤਸਵੀਰਾਂ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="action-link action-link-wa">
                             📲 WhatsApp 'ਤੇ ਸ਼ੇਅਰ ਕਰੋ
                         </a>
                     </div>
@@ -688,7 +740,26 @@
                 </div>
             </div>
 
-            <!-- Story 2: ਮਲੇਸ਼ੀਆ ਜਾਂਚ -->
+            <!-- Lead Story 2: ਗੁਰਦਾਸਪੁਰ ਪੁਲਿਸ ਮਾਮਲਾ -->
+            <div class="news-article-card">
+                <div class="article-media-box">
+                    <span class="article-tag">PUNJAB CRIME REPORT</span>
+                    <img src="gurdaspurnews1.jpg" alt="ਗੁਰਦਾਸਪੁਰ ਪੁਲਿਸ ਕਾਂਸਟੇਬਲ ਮਾਮਲਾ" onerror="this.src='news1_cropperd.jpg'">
+                </div>
+                <div class="article-body">
+                    <h2 class="article-title">🚨 ਬੱਬੇਹਾਲੀ ਅੱਡੇ ’ਤੇ ਪੁਲਿਸ ਕਾਂਸਟੇਬਲ ਨਾਲ ਕਥਿਤ ਮਾਰਕੁੱਟ, ਮਾਮਲਾ ਜਾਂਚ ਅਧੀਨ</h2>
+                    <p class="article-text"><strong>ਗੁਰਦਾਸਪੁਰ (Punjab Live Now):</strong> ਗੁਰਦਾਸਪੁਰ ਦੇ ਬੱਬੇਹਾਲੀ ਅੱਡੇ ’ਤੇ ਪੰਜਾਬ ਪੁਲਿਸ ਦੇ ਕਾਂਸਟੇਬਲ ਨਾਲ ਕਥਿਤ ਤੌਰ ’ਤੇ ਮਾਰਕੁੱਟ ਹੋਣ ਦਾ ਮਾਮਲਾ ਸਾਹਮਣੇ ਆਇਆ ਹੈ। ਦੱਸਿਆ ਜਾ ਰਿਹਾ ਹੈ ਕਿ ਕਿਸੇ ਗੱਲ ਨੂੰ ਲੈ ਕੇ ਹੋਏ ਵਿਵਾਦ ਦੌਰਾਨ ਕਾਂਸਟੇਬਲ ਨਾਲ ਹੱਥੋਪਾਈ ਕੀਤੀ ਗਈ। ਮਾਮਲੇ ਦੀ ਜਾਂਚ ਜਾਰੀ ਹੈ।</p>
+                    
+                    <div class="article-action-row">
+                        <span style="font-size:0.88rem; color:#64748b; font-weight:700;">📍 ਬੱਬੇਹਾਲੀ ਅੱਡਾ, ਗੁਰਦਾਸਪੁਰ</span>
+                        <a href="https://api.whatsapp.com/send?text=ਬੱਬੇਹਾਲੀ ਅੱਡੇ ’ਤੇ ਪੁਲਿਸ ਕਾਂਸਟੇਬਲ ਨਾਲ ਕਥਿਤ ਮਾਰਕੁੱਟ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="action-link action-link-wa">
+                            📲 WhatsApp 'ਤੇ ਸ਼ੇਅਰ ਕਰੋ
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lead Story 3: ਮਲੇਸ਼ੀਆ ਜਾਂਚ -->
             <div class="news-article-card">
                 <div class="article-media-box">
                     <span class="article-tag">FACT CHECK / INVESTIGATION</span>
@@ -696,7 +767,7 @@
                 </div>
                 <div class="article-body">
                     <h2 class="article-title">🚨 ਮਿਥੁਨ ਦੀ ਤਸਵੀਰ ਨੇ ਖੜ੍ਹੇ ਕੀਤੇ ਸਵਾਲ, AI ਜਾਂ ਸੱਚੀ ਤਸਵੀਰ?</h2>
-                    <p class="article-text"><strong>ਮਲੇਸ਼ੀਆ / ਗੁਰੂਹਰਸਹਾਏ (Punjab Live Now):</strong> ਮਿਥੁਨ ਨਾਲ ਜੁੜੀ ਇੱਕ ਤਸਵੀਰ ਸੋਸ਼ਲ ਮੀਡੀਆ ’ਤੇ ਸਾਹਮਣੇ ਆਉਣ ਤੋਂ ਬਾਅਦ ਕਈ ਗੰਭੀਰ ਸਵਾਲ ਖੜ੍ਹੇ ਹੋ ਰਹੇ ਹਨ। ਤਸਵੀਰ ਵਿੱਚ ਪੈਰਾਂ ਦੀਆਂ ਚੱਪਲਾਂ ਅਤੇ ਬੈਠਣ-ਖੜ੍ਹੇ ਹੋਣ ਦੀ ਸਥਿਤੀ ਵਿੱਚ ਫਰਕ ਸਾਫ਼ ਨਜ਼ਰ ਆਉਂਦਾ ਹੈ, ਜਿਸ ਕਾਰਨ AI ਜਾਂ ਐਡੀਟਿੰਗ ਦਾ ਸ਼ੱਕ ਜਤਾਇਆ ਜਾ ਰਿਹਾ ਹੈ। ਪੁਸ਼ਟੀ ਲਈ ਅਧਿਕਾਰਤ ਜਾਂਚ ਦੀ ਉਡੀਕ ਹੈ।</p>
+                    <p class="article-text"><strong>ਮਲੇਸ਼ੀਆ / ਗੁਰੂਹਰਸਹਾਏ (Punjab Live Now):</strong> ਮਿਥੁਨ ਨਾਲ ਜੁੜੀ ਇੱਕ ਤਸਵੀਰ ਸੋਸ਼ਲ ਮੀਡੀਆ ’ਤੇ ਸਾਹਮਣੇ ਆਉਣ ਤੋਂ ਬਾਅਦ ਕਈ ਗੰਭੀਰ ਸਵਾਲ ਖੜ੍ਹੇ ਹੋ ਰਹੇ ਹਨ। ਤਸਵੀਰ ਵਿੱਚ ਪੈਰਾਂ ਦੀਆਂ ਚੱਪਲਾਂ ਅਤੇ ਬੈਠਣ-ਖੜ੍ਹੇ ਹੋਣ ਦੀ ਸਥਿਤੀ ਵਿੱਚ ਫਰਕ ਸਾਫ਼ ਨਜ਼ਰ ਆਉਂਦਾ ਹੈ, ਜਿਸ ਕਾਰਨ AI ਜਾਂ ਐਡੀਟਿੰਗ ਦਾ ਸ਼ੱਕ ਜਤਾਇਆ ਜਾ ਰਿਹਾ ਹੈ।</p>
                     
                     <div class="article-action-row">
                         <a href="malaysia-case.html" class="action-link action-link-dark">
@@ -709,30 +780,26 @@
                 </div>
             </div>
 
-            <!-- Story 3: ਜਮਸ਼ੇਦਪੁਰ CNG -->
-            <div class="news-article-card">
-                <div class="article-media-box">
-                    <span class="article-tag" style="background:#031926;">EXCLUSIVE NATIONAL NEWS</span>
-                    <img src="jmshedpurnewscng.jpg" alt="ਜਮਸ਼ੇਦਪੁਰ CNG ਨੋਜ਼ਲ ਹਾਦਸਾ" onerror="this.src='nepalnews1.jpg'">
-                </div>
-                <div class="article-body">
-                    <h2 class="article-title">👉 ਜਮਸ਼ੇਦਪੁਰ ’ਚ ਅਚਾਨਕ ਫੱਟਿਆ CNG ਨੋਜ਼ਲ, ਦੇਖੋ ਮੌਕੇ ਦਾ ਹਾਲ!</h2>
-                    <p class="article-text"><strong>ਜਮਸ਼ੇਦਪੁਰ (Punjab Live Now):</strong> ਜਮਸ਼ੇਦਪੁਰ ਵਿੱਚ CNG ਪਾਈਪ ਦੇ ਨੋਜ਼ਲ ਦੇ ਅਚਾਨਕ ਫੱਟਣ ਦੀ ਵੱਡੀ ਘਟਨਾ ਸਾਹਮਣੇ ਆਈ ਹੈ। ਘਟਨਾ ਤੋਂ ਬਾਅਦ ਮੌਕੇ ’ਤੇ ਭਾਰੀ ਹਫੜਾ-ਦਫੜੀ ਮਚ ਗਈ। ਲਾਈਵ ਵੀਡੀਓ ਰਿਪੋਰਟ ਦੇਖਣ ਲਈ ਵੀਡੀਓ ਹੱਬ ਖੋਲ੍ਹੋ।</p>
-
-                    <div class="article-action-row">
-                        <a href="videos.html" class="action-link action-link-dark">
-                            🎬 ਵੀਡੀਓ ਦੇਖੋ (Video Hub) ➔
-                        </a>
-                        <a href="https://api.whatsapp.com/send?text=ਜਮਸ਼ੇਦਪੁਰ ’ਚ ਅਚਾਨਕ ਫੱਟਿਆ CNG ਨੋਜ਼ਲ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="action-link action-link-wa">
-                            📲 WhatsApp 'ਤੇ ਸ਼ੇਅਰ ਕਰੋ
-                        </a>
-                    </div>
-                </div>
-            </div>
-
             <!-- Secondary Grid -->
             <div class="section-separator">ਹੋਰ ਪ੍ਰਮੁੱਖ ਖ਼ਬਰਾਂ</div>
             <div class="dual-grid">
+                <!-- ਜਮਸ਼ੇਦਪੁਰ CNG -->
+                <div class="mini-card">
+                    <div class="mini-card-media"><img src="jmshedpurnewscng.jpg" alt="ਜਮਸ਼ੇਦਪੁਰ CNG"></div>
+                    <div class="mini-card-body">
+                        <div>
+                            <span style="color:var(--brand-red); font-size:0.8rem; font-weight:800; text-transform:uppercase;">📍 ਜਮਸ਼ੇਦਪੁਰ</span>
+                            <h3 class="mini-card-title">ਜਮਸ਼ੇਦਪੁਰ ’ਚ ਅਚਾਨਕ ਫੱਟਿਆ CNG ਨੋਜ਼ਲ, ਦੇਖੋ ਮੌਕੇ ਦਾ ਹਾਲ!</h3>
+                            <p class="mini-card-desc">CNG ਪਾਈਪ ਦੇ ਨੋਜ਼ਲ ਫੱਟਣ ਕਾਰਨ ਮੌਕੇ 'ਤੇ ਮਚੀ ਭਾਜੜ। ਲਾਈਵ ਵੀਡੀਓ ਰਿਪੋਰਟ ਦੇਖੋ।</p>
+                        </div>
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:10px;">
+                            <a href="videos.html" class="action-link action-link-dark" style="font-size:0.82rem; padding:6px 12px;">ਵੀਡੀਓ ➔</a>
+                            <a href="https://api.whatsapp.com/send?text=ਜਮਸ਼ੇਦਪੁਰ CNG ਹਾਦਸਾ: https://ghsvlogger-website.github.io/punjab-live-now/videos.html" target="_blank" class="action-link action-link-wa" style="font-size:0.82rem; padding:6px 12px;">📲</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ਮਲੇਸ਼ੀਆ ਪਹਿਲੀ ਖ਼ਬਰ -->
                 <div class="mini-card">
                     <div class="mini-card-media"><img src="malaysianews1.jpg" alt="ਮਲੇਸ਼ੀਆ ਮਾਮਲਾ"></div>
                     <div class="mini-card-body">
@@ -744,20 +811,6 @@
                         <div style="display:flex; justify-content:space-between; align-items:center; margin-top:10px;">
                             <a href="malaysia-case.html" class="action-link action-link-dark" style="font-size:0.82rem; padding:6px 12px;">ਪੜ੍ਹੋ ➔</a>
                             <a href="https://api.whatsapp.com/send?text=ਮਲੇਸ਼ੀਆ ਮਾਮਲਾ: https://ghsvlogger-website.github.io/punjab-live-now/malaysia-case.html" target="_blank" class="action-link action-link-wa" style="font-size:0.82rem; padding:6px 12px;">📲</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mini-card">
-                    <div class="mini-card-media"><img src="rahulchanni.jpg" alt="ਚਰਨਜੀਤ ਚੰਨੀ" onerror="this.src='news1_cropperd.jpg'"></div>
-                    <div class="mini-card-body">
-                        <div>
-                            <span style="color:var(--brand-red); font-size:0.8rem; font-weight:800; text-transform:uppercase;">📍 ਸਿਆਸਤ</span>
-                            <h3 class="mini-card-title">🔥 ਚੰਨੀ ਵੱਲੋਂ ਤਰਸੇਮ ਲਾਲ ਦੀ ਪੋਸਟ ਸ਼ੇਅਰ ਕਰਨ ’ਤੇ ਸਿਆਸੀ ਚਰਚਾ</h3>
-                            <p class="mini-card-desc">ਸਾਬਕਾ ਮੁੱਖ ਮੰਤਰੀ ਵੱਲੋਂ ਪੋਸਟ ਸ਼ੇਅਰ ਕਰਨ ਤੋਂ ਬਾਅਦ ਕਾਂਗਰਸ ਅਤੇ ਪੰਜਾਬ ਸਿਆਸਤ ਵਿੱਚ ਚਰਚਾਵਾਂ ਤੇਜ਼।</p>
-                        </div>
-                        <div style="display:flex; justify-content:flex-end; margin-top:10px;">
-                            <a href="https://api.whatsapp.com/send?text=ਚੰਨੀ ਤਰਸੇਮ ਲਾਲ ਪੋਸਟ ਵਿਵਾਦ: https://ghsvlogger-website.github.io/punjab-live-now/punjab.html" target="_blank" class="action-link action-link-wa" style="font-size:0.82rem; padding:6px 12px;">📲 ਸ਼ੇਅਰ ਕਰੋ</a>
                         </div>
                     </div>
                 </div>
