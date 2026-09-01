@@ -13,17 +13,18 @@
         nav a { color: #fff; text-decoration: none; margin: 0 15px; font-weight: bold; }
         nav a:hover { color: #ffcc00; }
         .container { max-width: 1100px; margin: 20px auto; padding: 0 15px; }
-        .breaking-bar { background: #ffcc00; padding: 10px; font-weight: bold; border-radius: 4px; margin-bottom: 20px; }
+        .breaking-bar { background: #ffcc00; padding: 10px; font-weight: bold; border-radius: 4px; margin-bottom: 20px; color: #000; }
         .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .card { background: #fff; border-radius: 6px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-        .card img { width: 100%; height: 180px; object-fit: cover; }
+        .card { background: #fff; border-radius: 6px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .card img { width: 100%; height: 200px; object-fit: cover; }
         .card-body { padding: 15px; }
-        .card-body h3 { font-size: 1.2rem; margin-bottom: 10px; color: #b30000; }
-        .card-body p { font-size: 0.95rem; line-height: 1.5; color: #555; }
-        footer { background: #111; color: #aaa; text-align: center; padding: 20px; margin-top: 40px; }
-    <.share-btn { display: inline-block; background-color: #25D366; color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 0.85rem; font-weight: bold; margin-top: 10px; }
+        .card-body h3 { font-size: 1.15rem; margin-bottom: 10px; color: #b30000; line-height: 1.4; }
+        .card-body p { font-size: 0.95rem; line-height: 1.5; color: #444; margin-bottom: 15px; }
+        .share-btn { display: inline-block; background-color: #25D366; color: white; padding: 8px 12px; border-radius: 4px; text-decoration: none; font-size: 0.85rem; font-weight: bold; width: fit-content; }
         .share-btn:hover { background-color: #1ebc57; }
-        .social-links a { color: #ffcc00; text-decoration: none; margin: 0 10px; font-weight: bold; }/style>
+        footer { background: #111; color: #aaa; text-align: center; padding: 20px; margin-top: 40px; }
+        .social-links a { color: #ffcc00; text-decoration: none; margin: 0 10px; font-weight: bold; }
+    </style>
 </head>
 <body>
 
@@ -42,57 +43,48 @@
 
 <div class="container">
     <div class="breaking-bar">
-        🔴 Breaking News: Nepal Floods: ਨੇਪਾਲ ਹੜ੍ਹਾਂ ਕਾਰਨ ਮਰਨ ਵਾਲਿਆਂ ਦੀ ਗਿਣਤੀ 584 ਹੋਈ, 2,482 ਲੋਕ ਲਾਪਤਾ, 320 ਭਾਰਤੀਆਂ ਦੀ ਵੀ ਭਾਲ ਜਾਰੀ!
+        🔴 Breaking News: ਨੇਪਾਲ ਹੜ੍ਹਾਂ ਕਾਰਨ ਮਰਨ ਵਾਲਿਆਂ ਦੀ ਗਿਣਤੀ 584 ਹੋਈ, 2,482 ਲੋਕ ਲਾਪਤਾ!
     </div>
 
     <div class="news-grid">
+        <!-- ਖ਼ਬਰ 1 -->
         <div class="card">
-            <img src="news1_cropperd.jpg" alt="News">
+            <img src="news1_cropperd.jpg" alt="News 1">
             <div class="card-body">
-                <h3>ਪੰਜਾਬ ਵਿਧਾਨ ਸਭਾ ਚੋਣਾਂ 2027 ਤੋਂ ਪਹਿਲਾਂ ਭਾਜਪਾ-ਸ਼੍ਰੋਮਣੀ ਅਕਾਲੀ ਦਲ (SAD) ਵਿਚਕਾਰ ਸੰਭਾਵੀ ਗਠਜੋੜ ਦੀ ਨਵੀਂ ਚਰਚਾ ਦਰਮਿਆਨ ਸੁਖਬੀਰ ਸਿੰਘ ਬਾਦਲ ਨੇ ਪ੍ਰਧਾਨ ਮੰਤਰੀ ਮੋਦੀ ਨਾਲ ਮੁਲਾਕਾਤ ਕੀਤੀ।</h3>
-                <p>ਪੰਜਾਬ ਦੀਆਂ ਤਾਜ਼ਾ ਘਟਨਾਵਾਂ ਅਤੇ ਅੱਪਡੇਟਸ ਬਾਰੇ ਪੂਰੀ ਜਾਣਕਾਰੀ ਇੱਥੇ ਪੜ੍ਹੋ...</p>
-            <<a href="https://api.whatsapp.com/send?text=ਪੜ੍ਹੋ ਤਾਜ਼ਾ ਖ਼ਬਰ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="share-btn">📲 WhatsApp 'ਤੇ ਸ਼ੇਅਰ ਕਰੋ</a>/div>
-        </div>
-
-        <div class="card">
-            <img src="nepalnews1.jpg" alt="News">
-            <div class="card-body">
-                <h3> ਨੇਪਾਲ ਹੜ੍ਹਾਂ ਕਾਰਨ ਮਰਨ ਵਾਲਿਆਂ ਦੀ ਗਿਣਤੀ 584 ਹੋਈ, 2,482 ਲੋਕ ਲਾਪਤਾ, 320 ਭਾਰਤੀਆਂ ਦੀ ਵੀ ਭਾਲ ਜਾਰੀ!</h3>
-                <p>Reporter-Madan Lal: ਸ਼ੁੱਕਰਵਾਰ ਸ਼ਾਮ ਤੱਕ, ਨੇਪਾਲ ਵਿੱਚ ਆਏ ਭਿਆਨਕ ਹੜ੍ਹਾਂ ਕਾਰਨ ਘੱਟੋ-ਘੱਟ 584 ਲੋਕਾਂ ਦੀ ਮੌਤ ਹੋ ਗਈ ਸੀ ਅਤੇ 2,482 ਲਾਪਤਾ ਸਨ। ਨੇਪਾਲ ਵਿੱਚ 579 ਮੌਤਾਂ ਅਤੇ 1,924 ਲਾਪਤਾ ਵਿਅਕਤੀਆਂ ਦੀ ਰਿਪੋਰਟ ਕੀਤੀ ਗਈ ਹੈ, ਜਦੋਂ ਕਿ ਤਿੱਬਤ ਵਿੱਚ 5 ਮੌਤਾਂ ਅਤੇ 558 ਲਾਪਤਾ ਵਿਅਕਤੀ ਦਰਜ ਕੀਤੇ ਗਏ ਹਨ। ਨੇਪਾਲ ਵਿੱਚ 320 ਭਾਰਤੀ ਨਾਗਰਿਕਾਂ ਨਾਲ ਇਸ ਵੇਲੇ ਸੰਪਰਕ ਟੁੱਟ ਗਿਆ ਹੈ।
-ਇਸ ਦੌਰਾਨ, ਚੀਨ-ਨੇਪਾਲ ਸਰਹੱਦ ਨੇੜੇ ਭਿਆਨਕ ਹੜ੍ਹ ਆਉਣ ਤੋਂ ਦੋ ਦਿਨ ਬਾਅਦ ਵੀ, ਈਸ਼ਾ ਫਾਊਂਡੇਸ਼ਨ ਦੇ 77 ਸ਼ਰਧਾਲੂਆਂ ਦੇ ਟਿਕਾਣੇ ਬਾਰੇ ਕੋਈ ਅਪਡੇਟ ਨਹੀਂ ਹੈ।
-ਇਹ 77 ਮੈਂਬਰੀ ਸਮੂਹ ਅਧਿਆਤਮਿਕ ਗੁਰੂ ਜੱਗੀ ਵਾਸੂਦੇਵ (ਸਦਗੁਰੂ) ਦੁਆਰਾ ਸਥਾਪਿਤ ਈਸ਼ਾ ਫਾਊਂਡੇਸ਼ਨ ਦੀ ਅਗਵਾਈ ਹੇਠ ਕੈਲਾਸ਼ ਮਾਨਸਰੋਵਰ ਯਾਤਰਾ 'ਤੇ ਸੀ। ਹੜ੍ਹ ਸ਼ੁਰੂ ਹੋਣ ਤੋਂ ਬਾਅਦ ਉਨ੍ਹਾਂ ਨਾਲ ਸੰਪਰਕ ਟੁੱਟ ਗਿਆ ਹੈ।
-ਨੇਪਾਲ ਹੜ੍ਹਾਂ ਵਿੱਚ ਮਰਨ ਵਾਲਿਆਂ ਦੀ ਗਿਣਤੀ 538
-ਪੁਲਿਸ ਦੇ ਅਨੁਸਾਰ, ਲਾਸ਼ਾਂ ਇਸ ਪ੍ਰਕਾਰ ਬਰਾਮਦ ਕੀਤੀਆਂ ਗਈਆਂ ਹਨ
-ਨਵਲਪਰਾਸੀ ਪੂਰਬ ਤੋਂ 134, ਚਿਤਵਨ ਤੋਂ 221, ਗੋਰਖਾ ਤੋਂ 46 ਅਤੇ ਨੁਵਾਕੋਟ ਤੋਂ 37। ਇਸ ਤੋਂ ਇਲਾਵਾ, ਧਾਡਿੰਗ ਤੋਂ 33 ਲਾਸ਼ਾਂ, ਤਾਨਾਹੂ ਤੋਂ 28, ਨਵਲਪਰਾਸੀ ਪੱਛਮ ਤੋਂ 27 ਅਤੇ ਰਸੁਵਾ ਤੋਂ 12 ਲਾਸ਼ਾਂ ਬਰਾਮਦ ਕੀਤੀਆਂ ਗਈਆਂ ਹਨ।
-ਸਥਿਤੀ ਅਜੇ ਵੀ ਸਥਿਰ ਹੈ
- ਨੇਪਾਲ ਪੁਲਿਸ ਦੇ ਅਨੁਸਾਰ, ਲਾਪਤਾ ਵਿਅਕਤੀਆਂ ਦੀ ਸੂਚੀ ਲੰਬੀ ਹੋ ਸਕਦੀ ਹੈ। ਸੁਰੰਗ ਵਿੱਚ ਖੋਜ ਕਾਰਜ ਜਾਰੀ ਹਨ, ਅਤੇ ਬਹੁਤ ਸਾਰੇ ਲੋਕ ਸੰਪਰਕ ਤੋਂ ਬਾਹਰ ਹਨ।
-ਇੱਕ ਬਿਆਨ ਵਿੱਚ ਕਿਹਾ ਗਿਆ ਹੈ ਕਿ ਖੋਜ ਅਤੇ ਬਚਾਅ ਕਾਰਜ ਘਟਨਾ ਦੇ ਤੀਜੇ ਦਿਨ ਵੀ ਜਾਰੀ ਰਹੇ, ਜਿਸ ਵਿੱਚ 7,451 ਸੁਰੱਖਿਆ ਕਰਮਚਾਰੀ 2,391 ਨੇਪਾਲੀ ਫੌਜ ਦੇ ਸੈਨਿਕਾਂ ਸਮੇਤ  ਤਾਇਨਾਤ ਕੀਤੇ ਗਏ ਸਨ।
-ਸ਼ੁੱਕਰਵਾਰ ਨੂੰ, ਇੱਕ ਅਸਥਿਰ ਬੈਰੀਅਰ ਝੀਲ ਭਰ ਜਾਣ ਅਤੇ ਭੋਟੇ ਕੋਸ਼ੀ ਨਦੀ ਵਿੱਚ ਪਾਣੀ ਦਾ ਇੱਕ ਤਾਜ਼ਾ ਵਾਧਾ ਹੋਣ ਤੋਂ ਬਾਅਦ ਬਚਾਅ ਟੀਮਾਂ ਨੂੰ ਪਿੱਛੇ ਹਟਣ ਲਈ ਮਜਬੂਰ ਹੋਣਾ ਪਿਆ। ਬਾਅਦ ਵਿੱਚ, ਇੱਕ ਹੋਰ ਬਰਫ਼ਬਾਰੀ ਨੇ ਲਗਭਗ 50,000 ਘਣ ਮੀਟਰ ਬਰਫ਼ ਅਤੇ ਮਲਬਾ ਹੇਠਾਂ ਡਿੱਗ ਗਿਆ। ਸੈਟੇਲਾਈਟ ਇਮੇਜਰੀ ਨੇ ਉੱਪਰ ਵੱਲ ਇੱਕ ਹੋਰ ਵੱਡੀ ਝੀਲ ਦੇ ਗਠਨ ਦਾ ਖੁਲਾਸਾ ਕੀਤਾ, ਜਿਸਦਾ ਕੋਈ ਦਿਖਾਈ ਦੇਣ ਵਾਲਾ ਰਸਤਾ ਨਹੀਂ ਜਾਪਦਾ ਹੈ। 77 ਪਰਿਵਾਰ ਜਵਾਬਾਂ ਦੀ ਉਡੀਕ ਕਰ ਰਹੇ ਹਨ
-ਈਸ਼ਾ ਫਾਊਂਡੇਸ਼ਨ ਦੀ ਮਾਂ ਗੰਭੀਰੀ ਨੇ ਕਿਹਾ ਕਿ ਪਿਛਲੇ ਦੋ ਦਿਨਾਂ ਤੋਂ 77 ਲਾਪਤਾ ਈਸ਼ਾ ਫਾਊਂਡੇਸ਼ਨ ਸ਼ਰਧਾਲੂਆਂ ਬਾਰੇ ਕੋਈ ਅਪਡੇਟ ਨਹੀਂ ਹੈ। ਬਚਾਅ ਟੀਮਾਂ ਜ਼ਮੀਨ 'ਤੇ ਮੌਜੂਦ ਹਨ, ਪਰ ਅਜੇ ਤੱਕ ਕੋਈ ਜਾਣਕਾਰੀ ਨਹੀਂ ਮਿਲੀ ਹੈ। ਉਸਨੇ ਦੱਸਿਆ ਕਿ 77 ਪਰਿਵਾਰ ਜਵਾਬਾਂ ਦੀ ਉਡੀਕ ਕਰ ਰਹੇ ਹਨ ਅਤੇ ਇਹ ਉਨ੍ਹਾਂ ਲਈ ਭਾਵਨਾਤਮਕ ਪ੍ਰੇਸ਼ਾਨੀ ਦਾ ਸਮਾਂ ਹੈ।
-ਸਦਗੁਰੂ ਸਹਾਇਤਾ ਪ੍ਰਦਾਨ ਕਰਨ ਲਈ ਗਿਰੋਂਗ (ਆਫ਼ਤ ਦਾ ਕੇਂਦਰ) ਦੀ ਯਾਤਰਾ ਕਰਨਾ ਚਾਹੁੰਦੇ ਸਨ ਪਰ ਉਨ੍ਹਾਂ ਨੂੰ ਲੋੜੀਂਦੀਆਂ ਪ੍ਰਵਾਨਗੀਆਂ ਨਹੀਂ ਮਿਲੀਆਂ। ਸਮੂਹ ਵਿੱਚ 19 ਦੇਸ਼ਾਂ ਦੇ ਭਾਗੀਦਾਰ ਸ਼ਾਮਲ ਹਨ। ਫਾਊਂਡੇਸ਼ਨ ਨੇ ਮਦਦ ਲੈਣ ਲਈ ਭਾਰਤ, ਚੀਨ ਅਤੇ ਨੇਪਾਲ ਦੇ ਦੂਤਾਵਾਸਾਂ ਅਤੇ ਮੰਤਰਾਲਿਆਂ ਨਾਲ ਸੰਪਰਕ ਕੀਤਾ ਹੈ।
-ਲਾਪਤਾ ਸ਼ਰਧਾਲੂਆਂ ਵਿੱਚ ਅਮਰੀਕਾ (22), ਕੈਨੇਡਾ (12), ਆਸਟ੍ਰੇਲੀਆ (11), ਯੂਕੇ (9), ਜਰਮਨੀ (4), ਫਰਾਂਸ (3), ਨੇਪਾਲ (3) ਅਤੇ ਹੋਰ ਦੇਸ਼ਾਂ ਦੇ ਵਿਅਕਤੀ ਸ਼ਾਮਲ ਹਨ।
-PUNJAB LIVE NOW
-...<<a href="https://api.whatsapp.com/send?text=ਪੜ੍ਹੋ ਤਾਜ਼ਾ ਖ਼ਬਰ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="share-btn">📲 WhatsApp 'ਤੇ ਸ਼ੇਅਰ ਕਰੋ</a>/p>
+                <h3>ਪੰਜਾਬ ਵਿਧਾਨ ਸਭਾ ਚੋਣਾਂ 2027 ਤੋਂ ਪਹਿਲਾਂ ਭਾਜਪਾ-ਅਕਾਲੀ ਦਲ ਵਿਚਕਾਰ ਸੰਭਾਵੀ ਗਠਜੋੜ ਦੀ ਨਵੀਂ ਚਰਚਾ ਦਰਮਿਆਨ ਸੁਖਬੀਰ ਸਿੰਘ ਬਾਦਲ ਨੇ ਪ੍ਰਧਾਨ ਮੰਤਰੀ ਮੋਦੀ ਨਾਲ ਮੁਲਾਕਾਤ ਕੀਤੀ</h3>
+                <p>ਪੰਜਾਬ ਦੀਆਂ ਤਾਜ਼ਾ ਸਿਆਸੀ ਘਟਨਾਵਾਂ ਅਤੇ ਅੱਪਡੇਟਸ ਬਾਰੇ ਪੂਰੀ ਜਾਣਕਾਰੀ ਇੱਥੇ ਪੜ੍ਹੋ...</p>
+                <a href="https://api.whatsapp.com/send?text=ਪੜ੍ਹੋ ਤਾਜ਼ਾ ਖ਼ਬਰ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="share-btn">📲 WhatsApp 'ਤੇ ਸ਼ੇਅਰ ਕਰੋ</a>
             </div>
         </div>
 
-        <div class="<div class="card">
-            <img src="https://picsum.photos/400/200?random=3" alt="News">
+        <!-- ਖ਼ਬਰ 2 -->
+        <div class="card">
+            <img src="nepalnews1.jpg" alt="News 2">
             <div class="card-body">
-                <h3>ਅੰਮ੍ਰਿਤਸਰ 'ਚ BSF ਤੇ ਪੁਲਿਸ ਦਾ ਵੱਡਾ ਐਕਸ਼ਨ: ਨਸ਼ਾ ਅਤੇ ਲੱਖਾਂ ਦੀ ਜਾਅਲੀ ਕਰੰਸੀ ਬਰਾਮਦ, 1 ਤਸਕਰ ਗ੍ਰਿਫ਼ਤਾਰ</h3>
-                <p>ਭਾਰਤ-ਪਾਕਿਸਤਾਨ ਸਰਹੱਦ ਨੇੜੇ ਚਲਾਈ ਗਈ ਮੁਹਿੰਮ ਦੌਰਾਨ 1 ਕਿਲੋ 54 ਗ੍ਰਾਮ ਨਸ਼ੀਲੇ ਪਦਾਰਥ ਅਤੇ 1.98 ਲੱਖ ਰੁਪਏ ਦੀ ਜਾਅਲੀ ਭਾਰਤੀ ਕਰੰਸੀ ਬਰਾਮਦ ਕੀਤੀ ਗਈ।</p>
+                <h3>ਨੇਪਾਲ ਹੜ੍ਹਾਂ ਕਾਰਨ ਮਰਨ ਵਾਲਿਆਂ ਦੀ ਗਿਣਤੀ 584 ਹੋਈ, 2,482 ਲੋਕ ਲਾਪਤਾ</h3>
+                <p>ਨੇਪਾਲ ਵਿੱਚ ਆਏ ਭਿਆਨਕ ਹੜ੍ਹਾਂ ਕਾਰਨ ਭਾਰੀ ਤਬਾਹੀ ਹੋਈ ਹੈ ਅਤੇ ਬਚਾਅ ਕਾਰਜ ਜਾਰੀ ਹਨ। 320 ਭਾਰਤੀਆਂ ਦੀ ਭਾਲ ਵੀ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ।</p>
+                <a href="https://api.whatsapp.com/send?text=ਪੜ੍ਹੋ ਤਾਜ਼ਾ ਖ਼ਬਰ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="share-btn">📲 WhatsApp 'ਤੇ ਸ਼ੇਅਰ ਕਰੋ</a>
             </div>
-        </div>">
-            <img src="https://picsum.photos/400/200?random=3" alt="News">
+        </div>
+
+        <!-- ਖ਼ਬਰ 3 -->
+        <div class="card">
+            <img src="https://picsum.photos/400/200?random=3" alt="News 3">
             <div class="card-body">
-                <h3>ਵਿਸ਼ੇਸ਼ ਵੀਡੀਓ ਰਿਪੋਰਟ</h3>
-                <p>ਗਰਾਊਂਡ ਜ਼ੀਰੋ ਤੋਂ PLN ਦੀ ਟੀਮ ਵੱਲੋਂ ਤਿਆਰ ਕੀਤੀ ਗਈ ਖਾਸ ਗੱਲਬਾਤ...</p>
+                <h3>ਅੰਮ੍ਰਿਤਸਰ 'ਚ BSF ਤੇ ਪੁਲਿਸ ਦਾ ਐਕਸ਼ਨ: ਨਸ਼ਾ ਅਤੇ ਲੱਖਾਂ ਦੀ ਜਾਅਲੀ ਕਰੰਸੀ ਬਰਾਮਦ, ਇੱਕ ਗ੍ਰਿਫ਼ਤਾਰ</h3>
+                <p>ਸਰਹੱਦ ਨੇੜੇ ਤਲਾਸ਼ੀ ਦੌਰਾਨ 1 ਕਿਲੋ 54 ਗ੍ਰਾਮ ਨਸ਼ੀਲੇ ਪਦਾਰਥ ਅਤੇ 1.98 ਲੱਖ ਰੁਪਏ ਦੀ ਜਾਅਲੀ ਕਰੰਸੀ ਬਰਾਮਦ ਕੀਤੀ ਗਈ।</p>
+                <a href="https://api.whatsapp.com/send?text=ਪੜ੍ਹੋ ਤਾਜ਼ਾ ਖ਼ਬਰ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="share-btn">📲 WhatsApp 'ਤੇ ਸ਼ੇਅਰ ਕਰੋ</a>
             </div>
         </div>
     </div>
 </div>
 
 <footer>
+    <div class="social-links" style="margin-bottom: 10px;">
+        <a href="https://youtube.com" target="_blank">YouTube</a> |
+        <a href="https://facebook.com" target="_blank">Facebook</a> |
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+    </div>
     <p>&copy; 2026 Punjab Live Now (PLN). ਸਾਰੇ ਹੱਕ ਰਾਖਵੇਂ ਹਨ।</p>
 </footer>
 
