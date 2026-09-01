@@ -42,7 +42,7 @@
             transition: all 0.2s ease;
         }
 
-        /* 1. Official Minimalist Top Bar */
+        /* 1. Official Top Strip */
         .top-bar {
             background: #0b0f19;
             color: #94a3b8;
@@ -101,7 +101,7 @@
         }
         .top-social-bar a:hover { color: #ffffff; }
 
-        /* 2. Official White Broadcast Header */
+        /* 2. Broadcast Header */
         header {
             background: #ffffff;
             border-bottom: 2px solid var(--border-light);
@@ -229,7 +229,7 @@
             display: flex;
             align-items: center;
             gap: 14px;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
             box-shadow: var(--shadow-sm);
         }
         .ticker-badge {
@@ -251,6 +251,91 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
+
+        /* ================== DUMMY AD STYLING ================== */
+        .ad-label {
+            font-size: 0.7rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: block;
+            margin-bottom: 4px;
+            text-align: right;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+        }
+
+        /* Top Leaderboard Ad */
+        .ad-leaderboard {
+            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+            color: #fff;
+            border-radius: 8px;
+            padding: 16px 22px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            border: 1.5px dashed #818cf8;
+            box-shadow: var(--shadow-sm);
+        }
+        .ad-lb-left h4 {
+            font-family: 'Baloo Paaji 2', sans-serif;
+            font-size: 1.35rem;
+            color: #facc15;
+            line-height: 1.2;
+        }
+        .ad-lb-left p {
+            font-size: 0.9rem;
+            color: #e0e7ff;
+            margin-top: 2px;
+        }
+        .ad-btn-call {
+            background: #facc15;
+            color: #000;
+            font-family: 'Noto Sans Gurmukhi', sans-serif;
+            font-weight: 800;
+            font-size: 0.9rem;
+            padding: 8px 18px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 2px 8px rgba(250,204,21,0.3);
+        }
+        .ad-btn-call:hover { background: #fff; }
+
+        /* Mid-Article Banner Ad */
+        .ad-mid-banner {
+            background: linear-gradient(135deg, #064e3b 0%, #047857 100%);
+            color: #fff;
+            border-radius: 8px;
+            padding: 18px 24px;
+            margin: 26px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            border: 1.5px dashed #34d399;
+        }
+
+        /* Sidebar Box Ads */
+        .ad-sidebar-box {
+            background: #fff;
+            border-radius: 8px;
+            padding: 16px;
+            border: 1.5px dashed #cbd5e1;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-sm);
+        }
+        .ad-box-boutique { background: #fffdf5; border-color: #fcd34d; }
+        .ad-box-kisan { background: #f0fdf4; border-color: #86efac; }
+        .ad-box-space { background: #f8fafc; border-color: #94a3b8; text-align: center; }
+
+        /* ====================================================== */
 
         .regional-bar {
             background: #ffffff;
@@ -306,9 +391,7 @@
             box-shadow: var(--shadow-sm);
             margin-bottom: 26px;
         }
-        .news-article-card:hover {
-            box-shadow: var(--shadow-md);
-        }
+        .news-article-card:hover { box-shadow: var(--shadow-md); }
         
         .article-media-box {
             position: relative;
@@ -449,13 +532,14 @@
         }
 
         /* Sidebar */
-        .sidebar-hub { display: flex; flex-direction: column; gap: 24px; }
+        .sidebar-hub { display: flex; flex-direction: column; gap: 15px; }
         .sidebar-card {
             background: #fff;
             border: 1px solid var(--border-light);
             border-radius: 8px;
             padding: 20px;
             box-shadow: var(--shadow-sm);
+            margin-bottom: 10px;
         }
         .sidebar-heading {
             font-family: 'Baloo Paaji 2', sans-serif;
@@ -517,7 +601,7 @@
         <div class="meta-cluster">
             <span class="live-tag"><span class="live-dot"></span> LIVE 24x7</span>
             <span class="loc-tag">📍 ਗੁਰੂ ਹਰਸਹਾਏ (ਪੰਜਾਬ)</span>
-            <span class="time-tag" id="liveDateTime">ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ...</span>
+            <span class="time-tag" id="liveDateTime">ਮੰਗਲਵਾਰ, 1 ਸਤੰਬਰ 2026 | 08:49 PM</span>
         </div>
         <div class="top-social-bar">
             Follow: 
@@ -528,7 +612,7 @@
     </div>
 </div>
 
-<!-- 2. Official News Agency Header -->
+<!-- 2. Header -->
 <header>
     <div class="header-inner">
         <a href="index.html" class="brand-link">
@@ -575,6 +659,20 @@
         <span class="ticker-title">🚨 ਜਮਸ਼ੇਦਪੁਰ ’ਚ ਅਚਾਨਕ ਫੱਟਿਆ CNG ਪਾਈਪ ਦਾ ਨੋਜ਼ਲ | ਮਲੇਸ਼ੀਆ ਮਾਮਲੇ 'ਚ ਤਸਵੀਰ ਨੂੰ ਲੈ ਕੇ ਵੱਡਾ ਖੁਲਾਸਾ!</span>
     </div>
 
+    <!-- DUMMY AD 1: Top Leaderboard Study Visa Ad -->
+    <div>
+        <span class="ad-label">SPONSORED ADVERTISEMENT</span>
+        <div class="ad-leaderboard">
+            <div class="ad-lb-left">
+                <h4>✈️ ਰੌਇਲ ਇਮੀਗ੍ਰੇਸ਼ਨ ਗੁਰੂਹਰਸਹਾਏ — ਕੈਨੇਡਾ ਤੇ ਆਸਟ੍ਰੇਲੀਆ ਸਟੱਡੀ ਵੀਜ਼ਾ</h4>
+                <p>ਬਿਨਾਂ IELTS ਵੀ ਅਪਲਾਈ ਕਰੋ | 100% ਵੀਜ਼ਾ ਸਕਸੈੱਸ ਰੇਟ | ਫੀਸ ਵੀਜ਼ਾ ਲੱਗਣ ਤੋਂ ਬਾਅਦ</p>
+            </div>
+            <a href="https://api.whatsapp.com/send?text=ਸਤਿ ਸ਼੍ਰੀ ਅਕਾਲ ਜੀ, ਮੈਂ ਵੀਜ਼ਾ ਜਾਣਕਾਰੀ ਲਈ ਸੰਪਰਕ ਕਰ ਰਿਹਾ ਹਾਂ।" target="_blank" class="ad-btn-call">
+                📞 ਹੁਣੇ ਸੰਪਰਕ ਕਰੋ
+            </a>
+        </div>
+    </div>
+
     <!-- Regional Coverage Filters -->
     <div class="regional-bar">
         <div class="regional-title">📍 ਖੇਤਰੀ ਕਵਰੇਜ (Regional News Coverage)</div>
@@ -610,6 +708,20 @@
                             📲 WhatsApp 'ਤੇ ਸ਼ੇਅਰ ਕਰੋ
                         </a>
                     </div>
+                </div>
+            </div>
+
+            <!-- DUMMY AD 2: Mid-Article Eye Hospital Camp Ad -->
+            <div>
+                <span class="ad-label">COMMUNITY ADVERTISEMENT</span>
+                <div class="ad-mid-banner">
+                    <div>
+                        <h4 style="font-family:'Baloo Paaji 2',sans-serif; font-size:1.3rem; color:#fef08a;">🏥 ਸੰਜੀਵਨੀ ਸੁਪਰ ਸਪੈਸ਼ਲਿਟੀ ਹਸਪਤਾਲ — ਅੱਖਾਂ ਦਾ ਮੁਫ਼ਤ ਚੈੱਕਅਪ ਕੈਂਪ</h4>
+                        <p style="font-size:0.9rem; color:#ecfdf5; margin-top:3px;">ਮੋਤੀਆਬਿੰਦ ਦੇ ਅਪਰੇਸ਼ਨ 'ਤੇ ਵਿਸ਼ੇਸ਼ ਛੋਟ | ਆਯੂਸ਼ਮਾਨ ਕਾਰਡ ਧਾਰਕਾਂ ਲਈ ਮੁਫ਼ਤ ਇਲਾਜ</p>
+                    </div>
+                    <a href="advertise.html" class="ad-btn-call" style="background:#fef08a; color:#064e3b;">
+                        📍 ਪਤਾ ਤੇ ਸਮਾਂ ਜਾਣੋ
+                    </a>
                 </div>
             </div>
 
@@ -676,10 +788,28 @@
                 <a href="videos.html" class="sidebar-btn">🎥 ਵੀਡੀਓਜ਼ ਸੈਕਸ਼ਨ ਖੋਲ੍ਹੋ ➔</a>
             </div>
 
-            <div class="sidebar-card">
-                <div class="sidebar-heading" style="color:var(--navy-dark);">📢 ਵਿਗਿਆਪਨ / ਕਵਰੇਜ</div>
-                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 12px;">ਆਪਣੇ ਕਾਰੋਬਾਰ ਦਾ ਇਸ਼ਤਿਹਾਰ ਦੇਣ ਜਾਂ ਆਪਣੇ ਇਲਾਕੇ ਦੀ ਖ਼ਬਰ ਲਗਵਾਉਣ ਲਈ ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ।</p>
-                <a href="advertise.html" class="sidebar-btn" style="background:var(--navy-dark);">ਸੰਪਰਕ ਫਾਰਮ ਖੋਲ੍ਹੋ ➔</a>
+            <!-- DUMMY AD 3: Sidebar Boutique Ad -->
+            <div class="ad-sidebar-box ad-box-boutique">
+                <span class="ad-label" style="text-align:left; color:#b45309;">FEATURED SPONSOR</span>
+                <h4 style="font-family:'Baloo Paaji 2',sans-serif; font-size:1.15rem; color:#92400e; margin-top:4px;">👗 ਗੋਲਡਨ ਬੁਟੀਕ ਤੇ ਕਲੌਥ ਹਾਊਸ</h4>
+                <p style="font-size:0.86rem; color:#78350f; margin:6px 0 10px 0;">ਵਿਆਹਾਂ ਦੇ ਫੈਂਸੀ ਸੂਟਾਂ, ਲਹਿੰਗਿਆਂ ਅਤੇ ਡਿਜ਼ਾਈਨਰ ਡਰੈੱਸਾਂ 'ਤੇ <strong>30% ਦੀ ਵਿਸ਼ੇਸ਼ ਛੋਟ</strong>।</p>
+                <span style="font-size:0.82rem; color:#b45309; font-weight:700;">📍 ਮੇਨ ਬਾਜ਼ਾਰ, ਗੁਰੂਹਰਸਹਾਏ</span>
+            </div>
+
+            <!-- DUMMY AD 4: Sidebar Agriculture Fertilizer Ad -->
+            <div class="ad-sidebar-box ad-box-kisan">
+                <span class="ad-label" style="text-align:left; color:#15803d;">AGRICULTURE PROMOTION</span>
+                <h4 style="font-family:'Baloo Paaji 2',sans-serif; font-size:1.15rem; color:#166534; margin-top:4px;">🌾 ਕਿਸਾਨ ਖਾਦ ਤੇ ਕੀਟਨਾਸ਼ਕ ਸਟੋਰ</h4>
+                <p style="font-size:0.86rem; color:#14532d; margin:6px 0 10px 0;">ਸਰਕਾਰੀ ਸਰਟੀਫਾਈਡ ਉੱਚ ਕੁਆਲਿਟੀ ਬੀਜ ਅਤੇ ਦਵਾਈਆਂ ਵਾਜਬ ਰੇਟਾਂ 'ਤੇ ਉਪਲਬਧ ਹਨ।</p>
+                <span style="font-size:0.82rem; color:#15803d; font-weight:700;">📞 98765-XXXXX | ਰੇਲਵੇ ਰੋਡ</span>
+            </div>
+
+            <!-- DUMMY AD 5: Space Available Booking Box -->
+            <div class="ad-sidebar-box ad-box-space">
+                <span class="ad-label" style="text-align:center;">ADVERTISE WITH US</span>
+                <h4 style="font-family:'Baloo Paaji 2',sans-serif; font-size:1.2rem; color:var(--navy-dark); margin-top:4px;">📢 ਇੱਥੇ ਆਪਣਾ ਇਸ਼ਤਿਹਾਰ ਲਗਵਾਓ</h4>
+                <p style="font-size:0.86rem; color:var(--text-meta); margin:6px 0 14px 0;">ਲੱਖਾਂ ਪੰਜਾਬੀ ਪਾਠਕਾਂ ਤੱਕ ਆਪਣਾ ਕਾਰੋਬਾਰ ਪਹੁੰਚਾਉਣ ਲਈ ਅੱਜ ਹੀ ਸਪੇਸ ਬੁੱਕ ਕਰੋ।</p>
+                <a href="advertise.html" class="sidebar-btn" style="background:var(--navy-dark); margin-top:0;">ਇਸ਼ਤਿਹਾਰ ਬੁੱਕ ਕਰੋ ➔</a>
             </div>
         </div>
     </div>
