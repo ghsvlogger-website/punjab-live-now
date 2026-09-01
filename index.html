@@ -5,26 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Punjab Live Now (PLN) - ਪੰਜਾਬ ਦਾ ਨੰਬਰ 1 ਡਿਜੀਟਲ ਨਿਊਜ਼ ਪੋਰਟਲ</title>
     
-    <!-- New Premium Punjabi & Global News Typography -->
+    <!-- Premium Punjabi & Global News Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@600;700;800&family=Noto+Sans+Gurmukhi:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;700;800&family=Cabinet+Grotesk:wght@800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@600;700;800&family=Noto+Sans+Gurmukhi:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --brand-red: #c8102e;
-            --brand-dark-red: #990011;
+            --brand-red: #d90429;
             --brand-navy: #090d16;
-            --brand-slate: #1e293b;
-            --brand-gold: #d97706;
+            --brand-gold: #ffb703;
+            --brand-gold-glow: #fb8500;
             --bg-canvas: #f8fafc;
             --card-surface: #ffffff;
             --text-heading: #090d16;
             --text-body: #334155;
             --text-meta: #64748b;
             --border-light: #e2e8f0;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
-            --shadow-md: 0 6px 20px rgba(9,13,22,0.07);
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 8px 24px rgba(9,13,22,0.08);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -36,13 +35,20 @@
             line-height: 1.65;
         }
 
-        /* 1. Top Editorial Strip */
+        a, button {
+            cursor: pointer !important;
+            position: relative;
+            z-index: 5;
+            transition: all 0.25s ease;
+        }
+
+        /* 1. Colorful Vibrant Top Strip */
         .top-strip {
-            background: var(--brand-navy);
-            color: #cbd5e1;
-            font-size: 0.84rem;
-            padding: 8px 0;
-            border-bottom: 2px solid var(--brand-red);
+            background: linear-gradient(90deg, #090d16 0%, #1e1b4b 50%, #090d16 100%);
+            color: #f1f5f9;
+            font-size: 0.86rem;
+            padding: 9px 0;
+            border-bottom: 2px solid var(--brand-gold);
             font-family: 'Noto Sans Gurmukhi', sans-serif;
         }
         .top-strip-inner {
@@ -65,44 +71,54 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            color: #ef4444;
+            background: #ef4444;
+            color: #ffffff;
+            padding: 3px 10px;
+            border-radius: 50px;
             font-weight: 800;
             font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.78rem;
             letter-spacing: 0.5px;
+            box-shadow: 0 0 10px rgba(239,68,68,0.5);
         }
         .live-pulse {
-            width: 8px;
-            height: 8px;
-            background: #ef4444;
+            width: 7px;
+            height: 7px;
+            background: #ffffff;
             border-radius: 50%;
-            box-shadow: 0 0 8px #ef4444;
-            animation: pulse-live 1.2s infinite;
+            animation: pulse-live 1.1s infinite;
         }
-        @keyframes pulse-live { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.3; transform: scale(0.85); } }
+        @keyframes pulse-live { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
 
         .loc-badge {
-            color: var(--brand-gold);
-            font-weight: 700;
-            background: rgba(217, 119, 6, 0.15);
-            padding: 2px 8px;
+            color: #000;
+            background: var(--brand-gold);
+            font-weight: 800;
+            padding: 3px 10px;
             border-radius: 4px;
+            box-shadow: 0 2px 6px rgba(255,183,3,0.3);
         }
-        .time-badge { color: #f1f5f9; font-weight: 600; }
+        .time-badge { color: #f8fafc; font-weight: 600; }
 
         .top-social-bar a {
-            color: #cbd5e1;
+            color: #f1f5f9;
             text-decoration: none;
             margin-left: 14px;
             font-weight: 700;
             font-family: 'Plus Jakarta Sans', sans-serif;
+            background: rgba(255,255,255,0.1);
+            padding: 4px 10px;
+            border-radius: 4px;
         }
-        .top-social-bar a:hover { color: var(--brand-gold); }
+        .top-social-bar a:hover { background: var(--brand-gold); color: #000; }
 
-        /* 2. Newspaper Master Header */
+        /* 2. Stunning Colorful Master Header */
         header {
-            background: #ffffff;
-            border-bottom: 1px solid var(--border-light);
-            padding: 18px 0;
+            background: linear-gradient(135deg, #990011 0%, #d90429 45%, #ff5400 100%);
+            border-bottom: 4px solid var(--brand-gold);
+            padding: 22px 0;
+            box-shadow: 0 10px 30px rgba(217, 4, 41, 0.25);
+            position: relative;
         }
         .header-inner {
             max-width: 1240px;
@@ -112,42 +128,48 @@
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
-            gap: 18px;
+            gap: 20px;
         }
         .brand-cluster {
             display: flex;
             align-items: center;
-            gap: 16px;
+            gap: 18px;
             text-decoration: none;
             color: inherit;
         }
         .brand-logo {
-            width: 72px;
-            height: 72px;
+            width: 78px;
+            height: 78px;
             border-radius: 50%;
-            border: 3px solid var(--brand-red);
+            border: 3.5px solid var(--brand-gold);
             object-fit: cover;
             background: #fff;
-            box-shadow: var(--shadow-sm);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.35);
         }
         .brand-text h1 {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 2.5rem;
+            font-size: 2.7rem;
             font-weight: 800;
             line-height: 1;
-            color: var(--brand-red);
+            color: #ffffff;
             letter-spacing: -0.5px;
             text-transform: uppercase;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
         }
-        .brand-text h1 span { color: var(--brand-navy); }
+        .brand-text h1 span { 
+            color: var(--brand-gold);
+            text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+        }
         .brand-text p {
             font-family: 'Noto Sans Gurmukhi', sans-serif;
-            font-size: 0.95rem;
-            color: var(--text-meta);
-            font-weight: 600;
-            margin-top: 4px;
+            font-size: 1rem;
+            color: #fff3bf;
+            font-weight: 700;
+            margin-top: 5px;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.25);
         }
 
+        /* High-Impact Header Buttons */
         .header-actions {
             display: flex;
             align-items: center;
@@ -156,35 +178,36 @@
         }
         .hd-btn {
             font-family: 'Noto Sans Gurmukhi', sans-serif;
-            font-weight: 700;
-            font-size: 0.9rem;
-            padding: 8px 16px;
-            border-radius: 6px;
+            font-weight: 800;
+            font-size: 0.92rem;
+            padding: 9px 18px;
+            border-radius: 50px;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            transition: 0.2s;
+            gap: 7px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
-        .btn-rep { background: #f1f5f9; color: var(--brand-slate); border: 1.5px solid var(--border-light); }
-        .btn-rep:hover { background: #e2e8f0; }
+        .btn-rep { background: #090d16; color: var(--brand-gold); border: 2px solid var(--brand-gold); }
+        .btn-rep:hover { background: #ffffff; color: #090d16; }
         
-        .btn-ad-give { background: #fee2e2; color: var(--brand-red); border: 1.5px solid #fca5a5; }
-        .btn-ad-give:hover { background: var(--brand-red); color: #fff; }
+        .btn-ad-give { background: #ffffff; color: var(--brand-red); border: 2px solid #ffffff; }
+        .btn-ad-give:hover { background: var(--brand-gold); color: #000; border-color: var(--brand-gold); }
 
-        .btn-live-stream { background: var(--brand-red); color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.92rem; font-weight: 800; }
-        .btn-live-stream:hover { background: var(--brand-dark-red); }
+        .btn-live-stream { background: var(--brand-gold); color: #000; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.95rem; font-weight: 800; }
+        .btn-live-stream:hover { background: #ffffff; color: var(--brand-red); }
 
-        .btn-wa-contact { background: #16a34a; color: #fff; }
-        .btn-wa-contact:hover { background: #15803d; }
+        .btn-wa-contact { background: #25D366; color: #fff; border: 2px solid #25D366; }
+        .btn-wa-contact:hover { background: #1ebc57; border-color: #1ebc57; }
 
-        /* 3. Primary Sticky Navigation */
+        /* 3. Colorful Gradient Navigation Bar */
         nav {
-            background: var(--brand-navy);
+            background: linear-gradient(90deg, #090d16 0%, #111827 100%);
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+            border-bottom: 2px solid rgba(255,255,255,0.1);
         }
         .nav-inner {
             max-width: 1240px;
@@ -199,19 +222,18 @@
             font-family: 'Noto Sans Gurmukhi', sans-serif;
             color: #f1f5f9;
             text-decoration: none;
-            padding: 13px 22px;
+            padding: 14px 24px;
             font-size: 1.05rem;
             font-weight: 700;
             border-right: 1px solid rgba(255,255,255,0.08);
             display: inline-block;
-            transition: background 0.2s;
         }
         .nav-inner a:hover, .nav-inner a.active {
-            background: var(--brand-red);
+            background: linear-gradient(135deg, var(--brand-red) 0%, #ff5400 100%);
             color: #ffffff;
         }
 
-        /* 4. Page Layout Structure */
+        /* 4. Content Area Layout */
         .container {
             max-width: 1240px;
             margin: 28px auto;
@@ -220,10 +242,10 @@
 
         .ticker-bar {
             background: #ffffff;
-            border: 1px solid var(--border-light);
+            border: 1px solid #fed7aa;
             border-left: 6px solid var(--brand-red);
-            border-radius: 6px;
-            padding: 10px 16px;
+            border-radius: 8px;
+            padding: 12px 18px;
             display: flex;
             align-items: center;
             gap: 14px;
@@ -231,11 +253,11 @@
             box-shadow: var(--shadow-sm);
         }
         .ticker-badge {
-            background: var(--brand-red);
+            background: linear-gradient(135deg, var(--brand-red) 0%, #ff5400 100%);
             color: #fff;
             font-family: 'Plus Jakarta Sans', sans-serif;
             font-size: 0.82rem;
-            padding: 4px 10px;
+            padding: 4px 12px;
             border-radius: 4px;
             font-weight: 800;
             letter-spacing: 0.5px;
@@ -243,7 +265,7 @@
         .ticker-title {
             font-family: 'Noto Sans Gurmukhi', sans-serif;
             font-weight: 700;
-            font-size: 1rem;
+            font-size: 1.02rem;
             color: var(--brand-navy);
             white-space: nowrap;
             overflow: hidden;
@@ -253,13 +275,13 @@
         .regional-bar {
             background: #ffffff;
             border: 1px solid var(--border-light);
-            border-radius: 8px;
+            border-radius: 10px;
             padding: 14px 18px;
             margin-bottom: 28px;
             box-shadow: var(--shadow-sm);
         }
         .regional-title {
-            font-size: 0.8rem;
+            font-size: 0.82rem;
             font-weight: 800;
             color: var(--text-meta);
             text-transform: uppercase;
@@ -274,15 +296,14 @@
         }
         .pill-btn {
             background: #f1f5f9;
-            color: var(--brand-slate);
-            padding: 6px 15px;
-            border-radius: 6px;
+            color: #1e293b;
+            padding: 7px 16px;
+            border-radius: 50px;
             font-family: 'Noto Sans Gurmukhi', sans-serif;
             font-size: 0.92rem;
             font-weight: 700;
             text-decoration: none;
             border: 1px solid var(--border-light);
-            transition: all 0.2s;
         }
         .pill-btn:hover {
             background: #fee2e2;
@@ -296,15 +317,15 @@
             gap: 30px;
         }
 
-        /* 5. Clean Article Cards with Baloo Paaji 2 Titles */
+        /* News Cards */
         .news-article-card {
             background: var(--card-surface);
             border: 1px solid var(--border-light);
-            border-radius: 10px;
+            border-radius: 12px;
             overflow: hidden;
             box-shadow: var(--shadow-sm);
             margin-bottom: 28px;
-            transition: box-shadow 0.2s, transform 0.2s;
+            transition: box-shadow 0.25s, transform 0.25s;
         }
         .news-article-card:hover {
             box-shadow: var(--shadow-md);
@@ -332,20 +353,20 @@
             position: absolute;
             top: 14px;
             left: 14px;
-            background: var(--brand-red);
+            background: linear-gradient(135deg, var(--brand-red) 0%, #ff5400 100%);
             color: #fff;
             font-family: 'Plus Jakarta Sans', sans-serif;
             font-size: 0.8rem;
-            padding: 4px 10px;
+            padding: 5px 12px;
             border-radius: 4px;
             font-weight: 800;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
 
         .article-body { padding: 26px; }
         .article-title {
             font-family: 'Baloo Paaji 2', 'Noto Sans Gurmukhi', sans-serif;
-            font-size: 1.75rem;
+            font-size: 1.8rem;
             font-weight: 800;
             color: var(--brand-navy);
             line-height: 1.35;
@@ -378,7 +399,6 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            transition: all 0.2s;
         }
         .action-link-dark { background: var(--brand-navy); color: #fff; }
         .action-link-dark:hover { background: var(--brand-red); }
@@ -410,13 +430,12 @@
         .mini-card {
             background: #fff;
             border: 1px solid var(--border-light);
-            border-radius: 8px;
+            border-radius: 10px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             box-shadow: var(--shadow-sm);
-            transition: all 0.2s;
         }
         .mini-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
         
@@ -452,17 +471,18 @@
             margin-bottom: 14px;
         }
 
+        /* Sidebar */
         .sidebar-hub { display: flex; flex-direction: column; gap: 26px; }
         .sidebar-card {
             background: #fff;
             border: 1px solid var(--border-light);
-            border-radius: 10px;
-            padding: 20px;
+            border-radius: 12px;
+            padding: 22px;
             box-shadow: var(--shadow-sm);
         }
         .sidebar-heading {
             font-family: 'Baloo Paaji 2', sans-serif;
-            font-size: 1.3rem;
+            font-size: 1.35rem;
             font-weight: 800;
             color: var(--brand-red);
             border-bottom: 2px solid #fee2e2;
@@ -471,27 +491,27 @@
         }
         .sidebar-btn {
             display: block;
-            background: var(--brand-red);
+            background: linear-gradient(135deg, var(--brand-red) 0%, #ff5400 100%);
             color: #fff;
             text-align: center;
             padding: 12px;
-            border-radius: 6px;
-            font-weight: 700;
+            border-radius: 50px;
+            font-weight: 800;
             font-size: 0.95rem;
             text-decoration: none;
             margin-top: 14px;
             font-family: 'Noto Sans Gurmukhi', sans-serif;
-            transition: background 0.2s;
+            box-shadow: 0 4px 12px rgba(217,4,41,0.25);
         }
-        .sidebar-btn:hover { background: var(--brand-dark-red); }
+        .sidebar-btn:hover { opacity: 0.95; }
 
         footer {
-            background: var(--brand-navy);
+            background: #090d16;
             color: #94a3b8;
             text-align: center;
             padding: 44px 16px;
             margin-top: 65px;
-            border-top: 4px solid var(--brand-red);
+            border-top: 4px solid var(--brand-gold);
         }
         .footer-nav { margin-bottom: 18px; }
         .footer-nav a {
@@ -507,7 +527,7 @@
         @media (max-width: 900px) {
             .grid-structure { grid-template-columns: 1fr; }
             .dual-grid { grid-template-columns: 1fr; }
-            .brand-text h1 { font-size: 2.1rem; }
+            .brand-text h1 { font-size: 2.2rem; }
             .header-actions { width: 100%; justify-content: center; }
             .top-strip-inner { justify-content: center; text-align: center; }
         }
@@ -515,16 +535,16 @@
 </head>
 <body>
 
-<!-- 1. Real-time Live Metadata Strip -->
+<!-- 1. Colorful Live Strip -->
 <div class="top-strip">
     <div class="top-strip-inner">
         <div class="meta-info-cluster">
             <span class="live-tag"><span class="live-pulse"></span> 24x7 LIVE DESK</span>
             <span class="loc-badge">📍 ਗੁਰੂ ਹਰਸਹਾਏ (ਪੰਜਾਬ)</span>
-            <span class="time-badge" id="liveDateTime">ਮੰਗਲਵਾਰ, 1 ਸਤੰਬਰ 2026 | 08:39 PM</span>
+            <span class="time-badge" id="liveDateTime">ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ...</span>
         </div>
         <div class="top-social-bar">
-            Follow Us: 
+            ਸੋਸ਼ਲ ਮੀਡੀਆ: 
             <a href="https://www.youtube.com/@punjablivenow" target="_blank">YouTube</a>
             <a href="https://www.instagram.com/punjablivenow" target="_blank">Instagram</a>
             <a href="https://www.facebook.com/profile.php?id=61562360634592" target="_blank">Facebook</a>
@@ -532,14 +552,14 @@
     </div>
 </div>
 
-<!-- 2. Master Newspaper Header -->
+<!-- 2. Royal Colorful Header -->
 <header>
     <div class="header-inner">
         <a href="index.html" class="brand-cluster">
             <img src="channel_logo1.png" alt="PLN Official Logo" class="brand-logo" onerror="this.style.display='none'">
             <div class="brand-text">
                 <h1>PUNJAB <span>LIVE NOW</span></h1>
-                <p>ਸਭ ਤੋਂ ਪਹਿਲਾਂ, ਸਭ ਤੋਂ ਸਟੀਕ | Voice of Punjab</p>
+                <p>ਸਭ ਤੋਂ ਪਹਿਲਾਂ, ਸਭ ਤੋਂ ਸਟੀਕ | The Voice of Punjab</p>
             </div>
         </a>
         
@@ -560,7 +580,7 @@
     </div>
 </header>
 
-<!-- 3. Primary Sticky Navigation -->
+<!-- 3. Navigation Bar -->
 <nav>
     <div class="nav-inner">
         <a href="index.html" class="active">ਮੁੱਖ ਪੰਨਾ</a>
@@ -680,8 +700,8 @@
                 <a href="videos.html" class="sidebar-btn">🎥 ਵੀਡੀਓਜ਼ ਸੈਕਸ਼ਨ ਖੋਲ੍ਹੋ ➔</a>
             </div>
 
-            <div class="sidebar-card" style="border-top: 3px solid var(--brand-gold);">
-                <div class="sidebar-heading" style="color:var(--brand-gold);">📢 ਵਿਗਿਆਪਨ / ਕਵਰੇਜ</div>
+            <div class="sidebar-card" style="border-top: 3.5px solid var(--brand-gold);">
+                <div class="sidebar-heading" style="color:#d97706;">📢 ਵਿਗਿਆਪਨ / ਕਵਰੇਜ</div>
                 <p style="font-size: 0.9rem; color: #475569; margin-bottom: 12px;">ਆਪਣੇ ਕਾਰੋਬਾਰ ਦਾ ਇਸ਼ਤਿਹਾਰ ਦੇਣ ਜਾਂ ਆਪਣੇ ਇਲਾਕੇ ਦੀ ਖ਼ਬਰ ਲਗਵਾਉਣ ਲਈ ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ।</p>
                 <a href="advertise.html" class="sidebar-btn" style="background:#090d16;">ਸੰਪਰਕ ਫਾਰਮ ਖੋਲ੍ਹੋ ➔</a>
             </div>
@@ -689,7 +709,7 @@
     </div>
 </div>
 
-<!-- 5. Editorial Footer -->
+<!-- 5. Footer -->
 <footer>
     <div class="footer-nav">
         <a href="index.html">ਮੁੱਖ ਪੰਨਾ</a>
