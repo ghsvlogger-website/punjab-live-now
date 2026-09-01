@@ -3,84 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Punjab Live Now (PLN) - ਪੰਜਾਬ ਦੀ ਆਵਾਜ਼</title>
+    <title>Punjab Live Now (PLN) - ਪੰਜਾਬ ਦਾ ਨੰਬਰ 1 ਡਿਜੀਟਲ ਨਿਊਜ਼ ਨੈੱਟਵਰਕ</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, sans-serif; }
-        body { background-color: #f0f2f5; color: #222; }
-        
-        /* Header */
-        header { background: linear-gradient(135deg, #b30000 0%, #800000 100%); color: #fff; padding: 15px 0; border-bottom: 3px solid #ffcc00; }
-        .header-wrap { max-width: 1200px; margin: 0 auto; padding: 0 15px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
-        .brand-box { display: flex; align-items: center; gap: 15px; text-decoration: none; color: #fff; }
-        .brand-logo { width: 55px; height: 55px; border-radius: 50%; border: 2px solid #ffcc00; object-fit: cover; background: #fff; }
-        .brand-title h1 { font-size: 1.8rem; font-weight: 800; letter-spacing: 0.5px; }
-        .brand-title p { font-size: 0.85rem; color: #ffeb99; font-weight: 500; }
-        
-        /* Nav */
-        nav { background: #111; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif; }
+        body { background-color: #eef1f5; color: #222; }
+
+        /* Top Utility Bar */
+        .top-bar { background: #111; color: #bbb; font-size: 0.8rem; padding: 6px 0; border-bottom: 1px solid #222; }
+        .top-bar-inner { max-width: 1200px; margin: 0 auto; padding: 0 15px; display: flex; justify-content: space-between; align-items: center; }
+        .top-links a { color: #ffcc00; text-decoration: none; margin-left: 12px; font-weight: 600; }
+
+        /* Main Pro Header */
+        header { background: #b30000; background: linear-gradient(180deg, #b80000 0%, #8b0000 100%); color: #fff; padding: 18px 0; border-bottom: 4px solid #ffcc00; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+        .header-wrap { max-width: 1200px; margin: 0 auto; padding: 0 15px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px; }
+        .brand-container { display: flex; align-items: center; gap: 18px; text-decoration: none; color: #fff; }
+        .brand-logo { width: 70px; height: 70px; border-radius: 50%; border: 3px solid #ffcc00; object-fit: cover; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+        .brand-text h1 { font-size: 2.3rem; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; font-family: 'Arial Black', sans-serif; line-height: 1; text-shadow: 2px 2px 4px rgba(0,0,0,0.4); }
+        .brand-text h1 span { color: #ffcc00; }
+        .brand-text p { font-size: 0.88rem; color: #fff; margin-top: 5px; font-weight: 500; letter-spacing: 0.5px; }
+
+        /* Header Right Action */
+        .header-action { display: flex; align-items: center; gap: 12px; }
+        .live-btn { background: #ffcc00; color: #000; font-weight: 800; padding: 8px 15px; border-radius: 20px; font-size: 0.85rem; text-decoration: none; display: flex; align-items: center; gap: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
+        .pulse { width: 9px; height: 9px; background: #b30000; border-radius: 50%; display: inline-block; }
+
+        /* Navigation */
+        nav { background: #1c1c1c; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
         .nav-wrap { max-width: 1200px; margin: 0 auto; display: flex; overflow-x: auto; white-space: nowrap; }
-        .nav-wrap a { color: #eee; text-decoration: none; padding: 12px 18px; font-size: 0.95rem; font-weight: 600; display: inline-block; transition: 0.2s; }
-        .nav-wrap a:hover, .nav-wrap a.active { background: #b30000; color: #fff; }
-        
-        /* Main Layout */
+        .nav-wrap a { color: #f0f0f0; text-decoration: none; padding: 13px 20px; font-size: 0.95rem; font-weight: 700; transition: 0.2s; border-right: 1px solid #2a2a2a; }
+        .nav-wrap a:hover, .nav-wrap a.active { background: #ffcc00; color: #000; }
+
+        /* Container & Ticker */
         .container { max-width: 1200px; margin: 20px auto; padding: 0 15px; }
-        .breaking-bar { background: #ffcc00; color: #000; padding: 10px 15px; font-weight: bold; border-radius: 4px; margin-bottom: 25px; font-size: 0.92rem; border-left: 5px solid #d4a000; }
+        .breaking-bar { background: #fff; border-left: 5px solid #b30000; padding: 10px 15px; font-weight: 700; border-radius: 4px; margin-bottom: 25px; font-size: 0.92rem; box-shadow: 0 2px 6px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 10px; border: 1px solid #e1e4e8; border-left-width: 5px; }
+        .breaking-label { background: #b30000; color: #fff; padding: 3px 8px; border-radius: 3px; font-size: 0.75rem; text-transform: uppercase; font-weight: 800; }
+
+        /* Layout Grid */
         .main-layout { display: grid; grid-template-columns: 2.1fr 1fr; gap: 25px; }
-        
-        /* Malaysia News Newsroom Frame */
+
+        /* Malaysia Lead News Pro Frame */
         .news-headline-card { background: #fff; border-radius: 8px; overflow: hidden; border: 1px solid #dcdfe4; box-shadow: 0 3px 10px rgba(0,0,0,0.05); margin-bottom: 25px; }
-        .news-headline-card .card-top { display: flex; flex-direction: row; flex-wrap: wrap; background: #fff; border-bottom: 1px solid #eee; }
-        .news-headline-card .img-container { flex: 1 1 260px; max-width: 320px; min-height: 280px; background: #000; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-        .news-headline-card .img-container img { width: 100%; height: 100%; object-fit: contain; max-height: 380px; display: block; }
-        .news-headline-card .content-container { flex: 2 1 340px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; }
+        .news-headline-card .card-top { display: flex; flex-direction: row; flex-wrap: wrap; }
+        .news-headline-card .img-container { flex: 1 1 280px; max-width: 320px; height: 380px; background: #000; overflow: hidden; }
+        .news-headline-card .img-container img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+        .news-headline-card .content-container { flex: 2 1 340px; padding: 22px; display: flex; flex-direction: column; justify-content: space-between; }
         .tag-badge { background: #b30000; color: #fff; font-size: 0.75rem; padding: 4px 8px; border-radius: 3px; font-weight: bold; display: inline-block; width: fit-content; margin-bottom: 10px; }
-        .news-headline-card h2 { font-size: 1.35rem; color: #b30000; line-height: 1.4; margin-bottom: 10px; }
+        .news-headline-card h2 { font-size: 1.35rem; color: #b30000; line-height: 1.4; margin-bottom: 12px; }
         .news-headline-card p { font-size: 0.95rem; line-height: 1.6; color: #333; margin-bottom: 10px; }
-        .disclaimer { font-size: 0.82rem; background: #f8f9fa; border-left: 3px solid #b30000; padding: 8px 12px; color: #666; margin: 10px 0; }
-        
+        .disclaimer { font-size: 0.82rem; background: #f8f9fa; border-left: 3px solid #b30000; padding: 8px 12px; color: #666; margin: 12px 0; }
+
         /* Grid Stories */
         .sub-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
         .news-card { background: #fff; border-radius: 6px; overflow: hidden; border: 1px solid #dcdfe4; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
         .news-card img { width: 100%; height: 170px; object-fit: cover; }
-        .card-body { padding: 15px; }
+        .card-body { padding: 16px; }
         .card-body h3 { font-size: 1.05rem; color: #111; margin-bottom: 8px; line-height: 1.35; }
         .card-body p { font-size: 0.88rem; color: #555; line-height: 1.5; margin-bottom: 12px; }
-        
+
         /* Sidebar & Instagram */
         .sidebar-box { background: #fff; border-radius: 6px; border: 1px solid #dcdfe4; padding: 15px; margin-bottom: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
-        .side-title { font-size: 1.1rem; color: #b30000; border-bottom: 2px solid #b30000; padding-bottom: 6px; margin-bottom: 15px; display: flex; align-items: center; justify-content: space-between; }
-        .insta-profile-btn { display: block; background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); color: white; text-align: center; padding: 10px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 0.9rem; margin-top: 15px; }
-        .insta-profile-btn:hover { opacity: 0.95; }
-        
+        .side-title { font-size: 1.1rem; color: #b30000; border-bottom: 2px solid #b30000; padding-bottom: 6px; margin-bottom: 15px; }
+        .insta-profile-btn { display: block; background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); color: white; text-align: center; padding: 11px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 0.9rem; margin-top: 15px; box-shadow: 0 2px 6px rgba(0,0,0,0.15); }
+
         /* Buttons */
         .share-btn { display: inline-block; background-color: #25D366; color: white; padding: 7px 12px; border-radius: 4px; text-decoration: none; font-size: 0.82rem; font-weight: bold; width: fit-content; }
         .share-btn:hover { background-color: #1ebc57; }
-        
+
         /* Footer */
-        footer { background: #111; color: #888; text-align: center; padding: 30px 15px; margin-top: 40px; border-top: 4px solid #b30000; }
-        .footer-links a { color: #ffcc00; text-decoration: none; margin: 0 10px; font-weight: 600; font-size: 0.9rem; }
-        
+        footer { background: #111; color: #888; text-align: center; padding: 35px 15px; margin-top: 50px; border-top: 4px solid #b30000; }
+        .footer-links a { color: #ffcc00; text-decoration: none; margin: 0 12px; font-weight: 600; font-size: 0.9rem; }
+
         @media (max-width: 850px) {
             .main-layout { grid-template-columns: 1fr; }
             .sub-grid { grid-template-columns: 1fr; }
-            .news-headline-card .img-container { max-width: 100%; min-height: 240px; }
+            .news-headline-card .img-container { max-width: 100%; height: 260px; }
+            .brand-text h1 { font-size: 1.7rem; }
         }
     </style>
 </head>
 <body>
 
+<!-- Top Mini Info Bar -->
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <div>📅 ਮੰਗਲਵਾਰ, 1 ਸਤੰਬਰ 2026 | ਗੁਰੂਹਰਸਹਾਏ / ਪੰਜਾਬ</div>
+        <div class="top-links">
+            Follow Us: 
+            <a href="https://www.youtube.com/@punjablivenow" target="_blank">YouTube</a>
+            <a href="https://www.instagram.com/punjablivenow" target="_blank">Instagram</a>
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+        </div>
+    </div>
+</div>
+
+<!-- Main Pro Header -->
 <header>
     <div class="header-wrap">
-        <a href="index.html" class="brand-box">
+        <a href="index.html" class="brand-container">
             <img src="channel_logo1.png" alt="PLN Logo" class="brand-logo" onerror="this.style.display='none'">
-            <div class="brand-title">
-                <h1>PUNJAB LIVE NOW</h1>
-                <p>ਸਭ ਤੋਂ ਪਹਿਲਾਂ, ਸਭ ਤੋਂ ਸਟੀਕ | Punjab News Portal</p>
+            <div class="brand-text">
+                <h1>PUNJAB <span>LIVE NOW</span></h1>
+                <p>ਪੰਜਾਬ ਦੀ ਆਵਾਜ਼ • ਸਭ ਤੋਂ ਪਹਿਲਾਂ, ਸਭ ਤੋਂ ਸਟੀਕ | 24x7 News Portal</p>
             </div>
         </a>
+        <div class="header-action">
+            <a href="https://www.youtube.com/@punjablivenow" target="_blank" class="live-btn">
+                <span class="pulse"></span> LIVE TV
+            </a>
+        </div>
     </div>
 </header>
 
+<!-- Navigation Menu -->
 <nav>
     <div class="nav-wrap">
         <a href="index.html" class="active">ਮੁੱਖ ਪੰਨਾ</a>
@@ -89,18 +123,20 @@
         <a href="index.html">ਸਿਆਸਤ</a>
         <a href="index.html">ਵਿਦੇਸ਼</a>
         <a href="index.html">ਕ੍ਰਾਈਮ</a>
+        <a href="index.html">ਵੀਡੀਓਜ਼</a>
     </div>
 </nav>
 
 <div class="container">
     <div class="breaking-bar">
-        🔴 BREAKING: ਮਲੇਸ਼ੀਆ 'ਚ ਗੁਰੂਹਰਸਹਾਏ ਦੇ ਨੌਜਵਾਨ ਦੀ ਸ਼ੱਕੀ ਮੌਤ—ਪਰਿਵਾਰ ਵੱਲੋਂ ਕਤਲ ਦੇ ਗੰਭੀਰ ਦੋਸ਼!
+        <span class="breaking-label">🔴 Breaking</span>
+        <span>ਮਲੇਸ਼ੀਆ 'ਚ ਗੁਰੂਹਰਸਹਾਏ ਦੇ ਨੌਜਵਾਨ ਦੀ ਸ਼ੱਕੀ ਮੌਤ—ਪਰਿਵਾਰ ਵੱਲੋਂ ਕਤਲ ਦੇ ਗੰਭੀਰ ਦੋਸ਼!</span>
     </div>
 
     <div class="main-layout">
-        <!-- ਖੱਬਾ ਪਾਸਾ: ਮੁੱਖ ਖ਼ਬਰ ਅਤੇ ਹੋਰ ਰਿਪੋਰਟਾਂ -->
+        <!-- ਖੱਬਾ ਪਾਸਾ -->
         <div>
-            <!-- ਮਲੇਸ਼ੀਆ ਵਾਲੀ ਮੁੱਖ ਖ਼ਬਰ (New Balanced Frame) -->
+            <!-- ਮਲੇਸ਼ੀਆ ਖ਼ਬਰ (Pro Frame) -->
             <div class="news-headline-card">
                 <div class="card-top">
                     <div class="img-container">
@@ -111,7 +147,7 @@
                             <span class="tag-badge">ਵਿਸ਼ੇਸ਼ ਰਿਪੋਰਟ / ਕ੍ਰਾਈਮ</span>
                             <h2>🚨 ਮਲੇਸ਼ੀਆ ’ਚ ਗੁਰੂਹਰਸਹਾਏ ਦੇ ਨੌਜਵਾਨ ਦੀ ਮੌਤ—ਕਤਲ ਜਾਂ ਖੁਦਕੁਸ਼ੀ? ਪਰਿਵਾਰ ਨੇ ਖੜ੍ਹੇ ਕੀਤੇ ਗੰਭੀਰ ਸਵਾਲ</h2>
                             <p><strong>ਗੁਰੂਹਰਸਹਾਏ (Punjab Live Now):</strong> ਮਲੇਸ਼ੀਆ ਤੋਂ ਇੱਕ ਬੇਹੱਦ ਗੰਭੀਰ ਮਾਮਲਾ ਸਾਹਮਣੇ ਆਇਆ ਹੈ। ਗੁਰੂਹਰਸਹਾਏ ਦੀ ਬਸਤੀ ਗੁਰੂ ਕਰਮ ਸਿੰਘ ਵਾਲੀ ਦੇ ਰਹਿਣ ਵਾਲੇ ਮਿਥੁਨ ਦੀ ਸ਼ੱਕੀ ਹਾਲਾਤਾਂ ਵਿੱਚ ਮੌਤ ਹੋ ਗਈ ਹੈ। ਪਰਿਵਾਰ ਵੱਲੋਂ ਇਸ ਨੂੰ ਖੁਦਕੁਸ਼ੀ ਨਹੀਂ ਸਗੋਂ ਕਤਲ ਦੱਸਿਆ ਜਾ ਰਿਹਾ ਹੈ।</p>
-                            <p>ਪਰਿਵਾਰ ਮੁਤਾਬਕ 8 ਮਹੀਨੇ ਪਹਿਲਾਂ ਇੱਕ ਲੜਕੀ ਉਸਨੂੰ ਮਲੇਸ਼ੀਆ ਲੈ ਕੇ ਗਈ ਸੀ, ਜਿੱਥੇ ਆਪਸੀ ਝਗੜੇ ਦੌਰਾਨ ਮਿਥੁਨ ਨੂੰ ਸੱਟਾਂ ਲੱਗਣ ਕਾਰਨ ਉਸਦੀ ਮੌਤ ਹੋਈ। ਪਰਿਵਾਰ ਨੇ ਮੌਕੇ ਦੀਆਂ ਤਸਵੀਰਾਂ 'ਤੇ ਸਵਾਲ ਚੁੱਕੇ ਹਨ ਅਤੇ ਦਾਅਵਾ ਕੀਤਾ ਹੈ ਕਿ ਮੀਡੀਆ 'ਚ ਖ਼ਬਰ ਆਉਣ ਤੋਂ ਬਾਅਦ ਉਨ੍ਹਾਂ ਨੂੰ ਧਮਕੀਆਂ ਮਿਲ ਰਹੀਆਂ ਹਨ।</p>
+                            <p>ਪਰਿਵਾਰ ਮੁਤਾਬਕ 8 ਮਹੀਨੇ ਪਹਿਲਾਂ ਇੱਕ ਲੜਕੀ ਉਸਨੂੰ ਮਲੇਸ਼ੀਆ ਲੈ ਕੇ ਗਈ ਸੀ, ਜਿੱਥੇ ਆਪਸੀ ਝਗੜੇ ਦੌਰਾਨ ਮਿਥੁਨ ਨੂੰ ਸੱਟਾਂ ਲੱਗਣ ਕਾਰਨ ਉਸਦੀ ਮੌਤ ਹੋਈ। ਪਰਿਵਾਰ ਨੇ ਮੌਕੇ ਦੀਆਂ ਤਸਵੀਰਾਂ 'ਤੇ ਸਵਾਲ ਚੁੱਕੇ ਹਨ ਅਤੇ ਦੋਸ਼ ਲਗਾਇਆ ਹੈ ਕਿ ਮੀਡੀਆ 'ਚ ਖ਼ਬਰ ਆਉਣ ਤੋਂ ਬਾਅਦ ਉਨ੍ਹਾਂ ਨੂੰ ਧਮਕੀਆਂ ਮਿਲ ਰਹੀਆਂ ਹਨ।</p>
                             <div class="disclaimer">
                                 ⚠️ <strong>ਨੋਟ:</strong> ਇਹ ਖ਼ਬਰ ਪਰਿਵਾਰ ਦੇ ਬਿਆਨਾਂ 'ਤੇ ਆਧਾਰਿਤ ਹੈ। ਕਿਸੇ ਵੀ ਵਿਅਕਤੀ 'ਤੇ ਦੋਸ਼ ਪੁਲਿਸ ਜਾਂਚ ਅਤੇ ਪੋਸਟਮਾਰਟਮ ਰਿਪੋਰਟ ਤੋਂ ਬਾਅਦ ਹੀ ਸਾਬਤ ਹੋਵੇਗਾ।
                             </div>
@@ -121,7 +157,7 @@
                 </div>
             </div>
 
-            <!-- ਹੇਠਲੀਆਂ 2 ਖ਼ਬਰਾਂ -->
+            <!-- ਹੇਠਲੀਆਂ ਖ਼ਬਰਾਂ -->
             <div class="sub-grid">
                 <!-- ਪੰਜਾਬ ਸਿਆਸਤ -->
                 <div class="news-card">
@@ -145,14 +181,13 @@
             </div>
         </div>
 
-        <!-- ਸੱਜਾ ਪਾਸਾ: Instagram ਵੀਡੀਓਜ਼ ਅਤੇ ਪੇਜ ਫੀਡ -->
+        <!-- ਸੱਜਾ ਪਾਸਾ: Instagram ਵੀਡੀਓ -->
         <div>
             <div class="sidebar-box">
                 <h3 class="side-title">
                     <span>📱 PLN ਵੀਡੀਓ ਰਿਪੋਰਟ</span>
                 </h3>
                 
-                <!-- ਤਾਜ਼ਾ ਰੀਲ -->
                 <div style="display: flex; justify-content: center;">
                     <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DcqoUntyBJY/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:none; margin: 0; width:100%; min-width:280px;">
                         <div style="padding:16px;">
@@ -163,9 +198,8 @@
                     </blockquote>
                 </div>
 
-                <!-- ਸਾਰੀਆਂ ਵੀਡੀਓਜ਼ ਦੇਖਣ ਲਈ ਆਫੀਸ਼ੀਅਲ ਬਟਨ -->
                 <a href="https://www.instagram.com/punjablivenow/reels/" target="_blank" class="insta-profile-btn">
-                    🎬 Instagram 'ਤੇ ਸਾਰੀਆਂ ਵੀਡੀਓਜ਼ / Reels ਦੇਖੋ
+                    🎬 Instagram 'ਤੇ ਸਾਰੀਆਂ ਵੀਡੀਓਜ਼ ਦੇਖੋ
                 </a>
             </div>
         </div>
