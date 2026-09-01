@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ਗੁਰੂਹਰਸਹਾਏ ਖ਼ਬਰਾਂ - Punjab Live Now (PLN)</title>
     
-    <!-- Top-Tier News Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Mukta+Mahee:wght@500;600;700;800&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
@@ -60,17 +59,26 @@
         /* News Layout */
         .main-grid { display: grid; grid-template-columns: 2.1fr 1fr; gap: 28px; }
 
-        /* News Cards */
+        /* Pro News Card with Auto-Fit Images */
         .spotlight-card { background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: 0 6px 20px rgba(0,0,0,0.05); margin-bottom: 28px; }
-        .spotlight-media { position: relative; height: 360px; background: #000; overflow: hidden; }
-        .spotlight-media img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; display: block; }
-        .media-badge { position: absolute; top: 16px; left: 16px; background: rgba(185, 28, 28, 0.95); color: #fff; font-family: 'Oswald', sans-serif; font-size: 0.85rem; padding: 5px 12px; border-radius: 6px; font-weight: 700; }
+        .spotlight-media { position: relative; width: 100%; background: #000; overflow: hidden; }
+        
+        /* Fixed: Fully Visible & Scaled Images */
+        .spotlight-media img { 
+            width: 100%; 
+            height: auto; 
+            max-height: 480px; 
+            object-fit: contain; 
+            display: block; 
+            background-color: #0d1117;
+        }
+        .media-badge { position: absolute; top: 16px; left: 16px; background: rgba(185, 28, 28, 0.95); color: #fff; font-family: 'Oswald', sans-serif; font-size: 0.85rem; padding: 5px 12px; border-radius: 6px; font-weight: 700; box-shadow: 0 2px 6px rgba(0,0,0,0.3); }
         
         .spotlight-body { padding: 24px; }
         .spotlight-title { font-family: 'Mukta Mahee', sans-serif; font-size: 1.5rem; font-weight: 800; color: #0f172a; line-height: 1.35; margin-bottom: 12px; }
         .spotlight-text { font-size: 0.96rem; line-height: 1.7; color: #475569; margin-bottom: 14px; }
         
-        .share-pill { background: #22c55e; color: #fff; font-family: 'Mukta Mahee', sans-serif; font-size: 0.88rem; font-weight: 700; padding: 8px 16px; border-radius: 50px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+        .share-pill { background: #22c55e; color: #fff; font-family: 'Mukta Mahee', sans-serif; font-size: 0.88rem; font-weight: 700; padding: 8px 16px; border-radius: 50px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; transition: 0.2s; }
         .share-pill:hover { background: #16a34a; }
 
         /* Right Sidebar */
@@ -84,7 +92,6 @@
 
         @media (max-width: 900px) {
             .main-grid { grid-template-columns: 1fr; }
-            .spotlight-media { height: 250px; }
             .brand-name h1 { font-size: 2rem; }
         }
     </style>
@@ -144,11 +151,10 @@
 
     <div class="main-grid">
         <div>
-            <!-- ਖ਼ਬਰ 1: ਐਸਪੀ ਕੁਲਦੀਪ ਸਿੰਘ ਬਰਾੜ ਸਨਮਾਨ -->
             <div class="spotlight-card">
                 <div class="spotlight-media">
                     <span class="media-badge">ਵਿਸ਼ੇਸ਼ ਸਨਮਾਨ / ਮਾਣ ਵਾਲਾ ਪਲ</span>
-                    <img src="policeghs1.jpg" alt="ਐਸਪੀ ਕੁਲਦੀਪ ਸਿੰਘ ਬਰਾੜ" onerror="this.src='ghs1_news.jpg'">
+                    <img src="policeghs1.jpg" alt="ਐਸਪੀ ਕੁਲਦੀਪ ਸਿੰਘ ਬਰਾੜ">
                 </div>
                 <div class="spotlight-body">
                     <h2 class="spotlight-title">📰 ਗੁਰੂ ਹਰਸਹਾਏ ਦੇ ਜਮਪਲ ਐਸਪੀ ਕੁਲਦੀਪ ਸਿੰਘ ਬਰਾੜ ਦਾ ਸਨਮਾਨ</h2>
@@ -164,7 +170,6 @@
                 </div>
             </div>
 
-            <!-- ਖ਼ਬਰ 2: ਸੀਵਰੇਜ ਦੀ ਸਫ਼ਾਈ -->
             <div class="spotlight-card">
                 <div class="spotlight-media">
                     <span class="media-badge">ਸ਼ਹਿਰੀ ਸਮੱਸਿਆ / ਵਿਕਾਸ</span>
@@ -185,7 +190,6 @@
             </div>
         </div>
 
-        <!-- Sidebar -->
         <div>
             <div class="sidebar-card">
                 <div class="sidebar-header">
