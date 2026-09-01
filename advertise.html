@@ -1,1 +1,154 @@
+<!DOCTYPE html>
+<html lang="pa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ਇਸ਼ਤਿਹਾਰ / ਖ਼ਬਰ ਦਿਓ - Punjab Live Now (PLN)</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Mukta+Mahee:wght@500;600;700;800&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
 
+    <style>
+        :root {
+            --primary: #c40000;
+            --primary-dark: #8f0000;
+            --accent: #ffcc00;
+            --dark-bg: #0d1117;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #f8fafc; color: var(--text-main); font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; }
+
+        .top-utility { background: var(--dark-bg); color: #94a3b8; font-size: 0.8rem; padding: 7px 0; border-bottom: 1px solid #1e293b; }
+        .top-utility-inner { max-width: 1240px; margin: 0 auto; padding: 0 16px; display: flex; justify-content: space-between; align-items: center; }
+        .live-dot { display: inline-flex; align-items: center; gap: 6px; color: #f87171; font-weight: 700; }
+        .dot { width: 8px; height: 8px; background: #ef4444; border-radius: 50%; box-shadow: 0 0 8px #ef4444; }
+
+        header { background: linear-gradient(135deg, #b91c1c 0%, #7f1d1d 100%); color: #fff; padding: 16px 0; border-bottom: 3px solid var(--accent); }
+        .header-inner { max-width: 1240px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px; }
+        .brand-cluster { display: flex; align-items: center; gap: 16px; text-decoration: none; color: #fff; }
+        .brand-logo { width: 68px; height: 68px; border-radius: 50%; border: 3px solid var(--accent); object-fit: cover; background: #fff; }
+        .brand-name h1 { font-family: 'Oswald', sans-serif; font-size: 2.5rem; font-weight: 700; letter-spacing: 1px; line-height: 1; text-transform: uppercase; }
+        .brand-name h1 span { color: var(--accent); }
+        .brand-name p { font-family: 'Mukta Mahee', sans-serif; font-size: 0.95rem; color: #fef08a; font-weight: 600; margin-top: 4px; }
+
+        nav { background: #0f172a; position: sticky; top: 0; z-index: 999; }
+        .nav-inner { max-width: 1240px; margin: 0 auto; display: flex; overflow-x: auto; white-space: nowrap; scrollbar-width: none; }
+        .nav-inner a { font-family: 'Mukta Mahee', sans-serif; color: #e2e8f0; text-decoration: none; padding: 14px 22px; font-size: 1.05rem; font-weight: 700; transition: all 0.2s; border-right: 1px solid #1e293b; }
+        .nav-inner a:hover, .nav-inner a.active { background: var(--primary); color: #fff; }
+
+        .container { max-width: 800px; margin: 35px auto; padding: 0 16px; }
+        
+        .form-card { background: #fff; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: 0 10px 30px rgba(0,0,0,0.06); padding: 35px 30px; }
+        .form-title { font-family: 'Mukta Mahee', sans-serif; font-size: 1.8rem; font-weight: 800; color: #0f172a; margin-bottom: 8px; text-align: center; }
+        .form-subtitle { font-family: 'Mukta Mahee', sans-serif; font-size: 1rem; color: var(--text-muted); text-align: center; margin-bottom: 25px; }
+
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-family: 'Mukta Mahee', sans-serif; font-weight: 700; font-size: 1rem; color: #334155; margin-bottom: 8px; }
+        .form-control { width: 100%; padding: 12px 16px; border-radius: 8px; border: 1.5px solid #cbd5e1; font-size: 0.95rem; font-family: inherit; transition: border-color 0.2s; outline: none; }
+        .form-control:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(196, 0, 0, 0.1); }
+        
+        .submit-btn { width: 100%; background: linear-gradient(135deg, #c40000 0%, #8f0000 100%); color: #fff; font-family: 'Mukta Mahee', sans-serif; font-weight: 800; font-size: 1.15rem; padding: 14px; border-radius: 8px; border: none; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 14px rgba(196, 0, 0, 0.25); }
+        .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(196, 0, 0, 0.35); }
+
+        .direct-wa-box { background: #f0fdf4; border: 1.5px solid #bbf7d0; border-radius: 12px; padding: 18px; margin-top: 25px; text-align: center; }
+        .direct-wa-btn { background: #22c55e; color: #fff; font-family: 'Mukta Mahee', sans-serif; font-weight: 700; text-decoration: none; padding: 10px 20px; border-radius: 50px; display: inline-flex; align-items: center; gap: 8px; margin-top: 10px; font-size: 0.95rem; }
+
+        footer { background: #090d16; color: #94a3b8; text-align: center; padding: 35px 16px; margin-top: 60px; border-top: 4px solid var(--primary); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+<div class="top-utility">
+    <div class="top-utility-inner">
+        <div class="live-dot"><span class="dot"></span> PUNJAB LIVE NOW BUSINESS DESK</div>
+        <div>ਸੰਪਰਕ: ghsvlogger@gmail.com</div>
+    </div>
+</div>
+
+<header>
+    <div class="header-inner">
+        <a href="index.html" class="brand-cluster">
+            <img src="channel_logo1.png" alt="PLN Logo" class="brand-logo" onerror="this.style.display='none'">
+            <div class="brand-name">
+                <h1>PUNJAB <span>LIVE NOW</span></h1>
+                <p>ਸਭ ਤੋਂ ਪਹਿਲਾਂ, ਸਭ ਤੋਂ ਸਟੀਕ | Voice of Punjab</p>
+            </div>
+        </a>
+    </div>
+</header>
+
+<nav>
+    <div class="nav-inner">
+        <a href="index.html">ਮੁੱਖ ਪੰਨਾ</a>
+        <a href="punjab.html">ਪੰਜਾਬ</a>
+        <a href="guruharsahai.html">ਗੁਰੂਹਰਸਹਾਏ</a>
+        <a href="advertise.html" class="active">ਇਸ਼ਤਿਹਾਰ ਦਿਓ</a>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="form-card">
+        <h2 class="form-title">📢 ਇਸ਼ਤਿਹਾਰ / ਪ੍ਰਮੋਸ਼ਨ ਬੁੱਕ ਕਰੋ</h2>
+        <p class="form-subtitle">ਆਪਣੇ ਕਾਰੋਬਾਰ, ਦੁਕਾਨ, ਸੰਸਥਾ ਜਾਂ ਇਵੈਂਟ ਦਾ ਇਸ਼ਤਿਹਾਰ ਪੰਜਾਬ ਭਰ ਦੇ ਲੱਖਾਂ ਲੋਕਾਂ ਤੱਕ ਪਹੁੰਚਾਓ।</p>
+
+        <!-- Form Connected directly to your Gmail -->
+        <form action="https://formsubmit.co/ghsvlogger@gmail.com" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="New Advertisement Request - Punjab Live Now!">
+            <input type="hidden" name="_template" value="table">
+            
+            <div class="form-group">
+                <label>ਤੁਹਾਡਾ ਪੂਰਾ ਨਾਮ (Full Name)*</label>
+                <input type="text" name="Name" class="form-control" placeholder="ਜਿਵੇਂ: ਗੁਰਪ੍ਰੀਤ ਸਿੰਘ" required>
+            </div>
+
+            <div class="form-group">
+                <label>ਮੋਬਾਈਲ / WhatsApp ਨੰਬਰ (Phone Number)*</label>
+                <input type="tel" name="Phone" class="form-control" placeholder="ਜਿਵੇਂ: 98765-43210" required>
+            </div>
+
+            <div class="form-group">
+                <label>ਤੁਹਾਡਾ ਸ਼ਹਿਰ / ਪਿੰਡ (City / Location)*</label>
+                <input type="text" name="City" class="form-control" placeholder="ਜਿਵੇਂ: ਗੁਰੂਹਰਸਹਾਏ, ਫ਼ਿਰੋਜ਼ਪੁਰ ਆਦਿ" required>
+            </div>
+
+            <div class="form-group">
+                <label>ਇਸ਼ਤਿਹਾਰ ਦੀ ਕਿਸਮ (Type of Advertisement)*</label>
+                <select name="Ad_Type" class="form-control" required>
+                    <option value="ਸੋਸ਼ਲ ਮੀਡੀਆ / ਰੀਲ ਪ੍ਰਮੋਸ਼ਨ">ਸੋਸ਼ਲ ਮੀਡੀਆ / ਰੀਲ ਪ੍ਰਮੋਸ਼ਨ (Instagram/Facebook)</option>
+                    <option value="ਵੈੱਬਸਾਈਟ ਬੈਨਰ">ਵੈੱਬਸਾਈਟ ਬੈਨਰ (Website Banner)</option>
+                    <option value="ਖ਼ਬਰ / ਪ੍ਰੈਸ ਨੋਟ">ਸਪੈਸ਼ਲ ਖ਼ਬਰ / ਪ੍ਰੈਸ ਨੋਟ (Press Note)</option>
+                    <option value="ਦੁਕਾਨ / ਕਾਰੋਬਾਰ ਦੀ ਵੀਡੀਓ ਕਵਰੇਜ">ਦੁਕਾਨ / ਕਾਰੋਬਾਰ ਦੀ ਲਾਈਵ ਵੀਡੀਓ ਕਵਰੇਜ</option>
+                    <option value="ਹੋਰ">ਹੋਰ (Other)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>ਇਸ਼ਤਿਹਾਰ ਸੰਬੰਧੀ ਵੇਰਵਾ (Details / Message)</label>
+                <textarea name="Message" class="form-control" rows="4" placeholder="ਆਪਣੇ ਕਾਰੋਬਾਰ ਜਾਂ ਇਸ਼ਤਿਹਾਰ ਬਾਰੇ ਕੁਝ ਲਾਈਨਾਂ ਲਿਖੋ..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">📩 ਬੇਨਤੀ ਦਰਜ ਕਰੋ (Submit Details)</button>
+        </form>
+
+        <div class="direct-wa-box">
+            <p style="font-family: 'Mukta Mahee', sans-serif; font-weight: 700; color: #166534;">ਸਿੱਧੀ ਤੁਰੰਤ ਗੱਲਬਾਤ ਕਰਨ ਲਈ:</p>
+            <a href="https://api.whatsapp.com/send?text=ਮੈਂ ਪੰਜਾਬ ਲਾਈਵ ਨਾਓ 'ਤੇ ਇਸ਼ਤਿਹਾਰ ਸੰਬੰਧੀ ਗੱਲਬਾਤ ਕਰਨੀ ਚਾਹੁੰਦਾ/ਚਾਹੁੰਦੀ ਹਾਂ।" target="_blank" class="direct-wa-btn">
+                📲 WhatsApp 'ਤੇ ਸਿੱਧਾ ਸੰਪਰਕ ਕਰੋ
+            </a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Punjab Live Now (PLN) Media Network. ਸਾਰੇ ਹੱਕ ਰਾਖਵੇਂ ਹਨ।</p>
+</footer>
+
+</body>
+</html>
