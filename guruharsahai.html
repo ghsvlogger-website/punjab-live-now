@@ -60,17 +60,18 @@
         /* News Layout */
         .main-grid { display: grid; grid-template-columns: 2.1fr 1fr; gap: 28px; }
 
-        /* Lead News Card */
+        /* News Cards */
         .spotlight-card { background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: 0 6px 20px rgba(0,0,0,0.05); margin-bottom: 28px; }
-        .spotlight-media { position: relative; height: 380px; background: #000; overflow: hidden; }
-        .spotlight-media img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+        .spotlight-media { position: relative; height: 360px; background: #000; overflow: hidden; }
+        .spotlight-media img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; display: block; }
         .media-badge { position: absolute; top: 16px; left: 16px; background: rgba(185, 28, 28, 0.95); color: #fff; font-family: 'Oswald', sans-serif; font-size: 0.85rem; padding: 5px 12px; border-radius: 6px; font-weight: 700; }
         
-        .spotlight-body { padding: 26px; }
-        .spotlight-title { font-family: 'Mukta Mahee', sans-serif; font-size: 1.55rem; font-weight: 800; color: #0f172a; line-height: 1.35; margin-bottom: 14px; }
-        .spotlight-text { font-size: 0.98rem; line-height: 1.7; color: #475569; margin-bottom: 16px; }
+        .spotlight-body { padding: 24px; }
+        .spotlight-title { font-family: 'Mukta Mahee', sans-serif; font-size: 1.5rem; font-weight: 800; color: #0f172a; line-height: 1.35; margin-bottom: 12px; }
+        .spotlight-text { font-size: 0.96rem; line-height: 1.7; color: #475569; margin-bottom: 14px; }
         
         .share-pill { background: #22c55e; color: #fff; font-family: 'Mukta Mahee', sans-serif; font-size: 0.88rem; font-weight: 700; padding: 8px 16px; border-radius: 50px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+        .share-pill:hover { background: #16a34a; }
 
         /* Right Sidebar */
         .sidebar-card { background: #fff; border-radius: 14px; border: 1px solid var(--border-color); padding: 20px; box-shadow: 0 4px 14px rgba(0,0,0,0.04); }
@@ -83,7 +84,7 @@
 
         @media (max-width: 900px) {
             .main-grid { grid-template-columns: 1fr; }
-            .spotlight-media { height: 260px; }
+            .spotlight-media { height: 250px; }
             .brand-name h1 { font-size: 2rem; }
         }
     </style>
@@ -143,18 +144,38 @@
 
     <div class="main-grid">
         <div>
-            <!-- ਸੀਵਰੇਜ ਵਾਲੀ ਖ਼ਬਰ -->
+            <!-- ਖ਼ਬਰ 1: ਐਸਪੀ ਕੁਲਦੀਪ ਸਿੰਘ ਬਰਾੜ ਸਨਮਾਨ -->
+            <div class="spotlight-card">
+                <div class="spotlight-media">
+                    <span class="media-badge">ਵਿਸ਼ੇਸ਼ ਸਨਮਾਨ / ਮਾਣ ਵਾਲਾ ਪਲ</span>
+                    <img src="policeghs1.jpg" alt="ਐਸਪੀ ਕੁਲਦੀਪ ਸਿੰਘ ਬਰਾੜ" onerror="this.src='ghs1_news.jpg'">
+                </div>
+                <div class="spotlight-body">
+                    <h2 class="spotlight-title">📰 ਗੁਰੂ ਹਰਸਹਾਏ ਦੇ ਜਮਪਲ ਐਸਪੀ ਕੁਲਦੀਪ ਸਿੰਘ ਬਰਾੜ ਦਾ ਸਨਮਾਨ</h2>
+                    <p class="spotlight-text"><strong>ਗੁਰੂ ਹਰਸਹਾਏ (Punjab Live Now):</strong> ਗੁਰੂ ਹਰਸਹਾਏ ਇਲਾਕੇ ਨਾਲ ਸਬੰਧਤ ਅਤੇ ਹਾਲ ਹੀ ਵਿੱਚ ਐਸਪੀ ਰੈਂਕ ’ਤੇ ਤਰੱਕੀ ਪ੍ਰਾਪਤ ਕਰਨ ਵਾਲੇ ਪੁਲਿਸ ਅਧਿਕਾਰੀ ਕੁਲਦੀਪ ਸਿੰਘ ਬਰਾੜ ਦਾ ਸਨਮਾਨ ਕੀਤਾ ਗਿਆ। ਇਸ ਮੌਕੇ ਐਸਐਸਪੀ ਬਠਿੰਡਾ ਵੱਲੋਂ ਉਨ੍ਹਾਂ ਨੂੰ ਸਨਮਾਨਿਤ ਕੀਤਾ ਗਿਆ।</p>
+                    <p class="spotlight-text">ਕੁਲਦੀਪ ਸਿੰਘ ਬਰਾੜ ਦੀ ਤਰੱਕੀ ’ਤੇ ਗੁਰੂ ਹਰਸਹਾਏ ਇਲਾਕੇ ਵਿੱਚ ਖੁਸ਼ੀ ਦਾ ਮਾਹੌਲ ਹੈ। ਇਲਾਕਾ ਵਾਸੀਆਂ ਵੱਲੋਂ ਉਨ੍ਹਾਂ ਦੀ ਇਸ ਉਪਲਬਧੀ ਨੂੰ ਇਲਾਕੇ ਲਈ ਬੇਹੱਦ ਮਾਣ ਵਾਲਾ ਪਲ ਦੱਸਿਆ ਜਾ ਰਿਹਾ ਹੈ।</p>
+                    
+                    <div style="margin-top: 15px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                        <span style="font-size: 0.85rem; color: #64748b; font-weight: 600;">#GuruHarsahai #PunjabPolice #SPKuldeepSinghBrar</span>
+                        <a href="https://api.whatsapp.com/send?text=ਗੁਰੂ ਹਰਸਹਾਏ ਦੇ ਜਮਪਲ ਐਸਪੀ ਕੁਲਦੀਪ ਸਿੰਘ ਬਰਾੜ ਦਾ ਸਨਮਾਨ: https://ghsvlogger-website.github.io/punjab-live-now/guruharsahai.html" target="_blank" class="share-pill">
+                            📲 WhatsApp 'ਤੇ ਸ਼ੇਅਰ ਕਰੋ
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ਖ਼ਬਰ 2: ਸੀਵਰੇਜ ਦੀ ਸਫ਼ਾਈ -->
             <div class="spotlight-card">
                 <div class="spotlight-media">
                     <span class="media-badge">ਸ਼ਹਿਰੀ ਸਮੱਸਿਆ / ਵਿਕਾਸ</span>
-                    <img src="ghs1_news.jpg" alt="ਸੀਵਰੇਜ ਸਫ਼ਾਈ ਗੁਰੂਹਰਸਹਾਏ" onerror="this.src='malaysianews1.jpg'">
+                    <img src="ghs1_news.jpg" alt="ਸੀਵਰੇਜ ਸਫ਼ਾਈ ਗੁਰੂਹਰਸਹਾਏ">
                 </div>
                 <div class="spotlight-body">
                     <h2 class="spotlight-title">📰 ਗੁਰੂਹਰਸਹਾਏ ਦੇ ਵਾਰਡ ਨੰਬਰ 14 ’ਚ ਸੀਵਰੇਜ ਦੀ ਸਫ਼ਾਈ ਦਾ ਕੰਮ ਸ਼ੁਰੂ</h2>
                     <p class="spotlight-text"><strong>ਗੁਰੂਹਰਸਹਾਏ (Punjab Live Now):</strong> ਵਾਰਡ ਨੰਬਰ 14 ਵਿੱਚ ਸੀਵਰੇਜ ਦੀ ਸਫ਼ਾਈ ਦਾ ਕੰਮ ਸ਼ੁਰੂ ਕਰ ਦਿੱਤਾ ਗਿਆ ਹੈ। ਇਲਾਕੇ ਵਿੱਚ ਸੀਵਰੇਜ ਦੀ ਸਮੱਸਿਆ ਨੂੰ ਲੈ ਕੇ ਲੋਕਾਂ ਵੱਲੋਂ ਲੰਬੇ ਸਮੇਂ ਤੋਂ ਸਫ਼ਾਈ ਦੀ ਮੰਗ ਕੀਤੀ ਜਾ ਰਹੀ ਸੀ।</p>
                     <p class="spotlight-text">ਹੁਣ ਸੀਵਰੇਜ ਲਾਈਨਾਂ ਦੀ ਸਫ਼ਾਈ ਸ਼ੁਰੂ ਹੋਣ ਨਾਲ ਇਲਾਕਾ ਵਾਸੀਆਂ ਨੂੰ ਰਾਹਤ ਮਿਲਣ ਦੀ ਉਮੀਦ ਹੈ। ਸਥਾਨਕ ਪੱਧਰ ’ਤੇ ਸੀਵਰੇਜ ਸਫ਼ਾਈ ਨਾਲ ਜੁੜਿਆ ਕੰਮ ਚੱਲ ਰਿਹਾ ਹੈ। ਪੰਜਾਬ ਵਾਟਰ ਸਪਲਾਈ ਐਂਡ ਸੀਵਰੇਜ ਬੋਰਡ ਵੱਲੋਂ ਸ਼ਹਿਰੀ ਖੇਤਰਾਂ ਵਿੱਚ ਸੀਵਰੇਜ ਪ੍ਰਣਾਲੀ ਦੀ ਦੇਖਭਾਲ ਅਤੇ ਸੰਚਾਲਨ ਨਾਲ ਸਬੰਧਤ ਕੰਮ ਕੀਤੇ ਜਾਂਦੇ ਹਨ। ਸਥਾਨਕ ਲੋਕਾਂ ਨੇ ਕੰਮ ਸ਼ੁਰੂ ਹੋਣ ’ਤੇ ਰਾਹਤ ਦੀ ਉਮੀਦ ਜਤਾਈ ਹੈ।</p>
                     
-                    <div style="margin-top: 20px; display: flex; justify-content: space-between; align-items: center;">
+                    <div style="margin-top: 15px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
                         <span style="font-size: 0.85rem; color: #64748b; font-weight: 600;">#GuruHarsahai #Ward14 #Sewerage</span>
                         <a href="https://api.whatsapp.com/send?text=ਗੁਰੂਹਰਸਹਾਏ ਦੇ ਵਾਰਡ ਨੰਬਰ 14 ’ਚ ਸੀਵਰੇਜ ਦੀ ਸਫ਼ਾਈ ਦਾ ਕੰਮ ਸ਼ੁਰੂ: https://ghsvlogger-website.github.io/punjab-live-now/guruharsahai.html" target="_blank" class="share-pill">
                             📲 WhatsApp 'ਤੇ ਸ਼ੇਅਰ ਕਰੋ
