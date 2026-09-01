@@ -5,53 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Punjab Live Now (PLN) - ਪੰਜਾਬ ਦਾ ਨੰਬਰ 1 ਡਿਜੀਟਲ ਨਿਊਜ਼ ਪੋਰਟਲ</title>
     
-    <!-- Professional News Typography -->
+    <!-- New Premium Punjabi & Global News Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Mukta+Mahee:wght@500;600;700;800&family=Cinzel:wght@700&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@600;700;800&family=Noto+Sans+Gurmukhi:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;700;800&family=Cabinet+Grotesk:wght@800;900&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --brand-red: #b91c1c;
-            --brand-dark: #0f172a;
-            --brand-slate: #334155;
+            --brand-red: #c8102e;
+            --brand-dark-red: #990011;
+            --brand-navy: #090d16;
+            --brand-slate: #1e293b;
             --brand-gold: #d97706;
             --bg-canvas: #f8fafc;
             --card-surface: #ffffff;
-            --text-heading: #0f172a;
+            --text-heading: #090d16;
             --text-body: #334155;
-            --text-muted: #64748b;
+            --text-meta: #64748b;
             --border-light: #e2e8f0;
-            --border-dark: #cbd5e1;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
-            --shadow-md: 0 4px 16px rgba(15,23,42,0.08);
-            --shadow-lg: 0 10px 25px rgba(15,23,42,0.12);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+            --shadow-md: 0 6px 20px rgba(9,13,22,0.07);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
             background-color: var(--bg-canvas); 
             color: var(--text-heading); 
-            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Noto Sans Gurmukhi', 'Plus Jakarta Sans', -apple-system, sans-serif;
             -webkit-font-smoothing: antialiased;
-            line-height: 1.6;
+            line-height: 1.65;
         }
 
-        a, button {
-            cursor: pointer !important;
-            position: relative;
-            z-index: 5;
-            transition: all 0.2s ease-in-out;
-        }
-
-        /* 1. Ultra-Clean Top Editorial Strip */
+        /* 1. Top Editorial Strip */
         .top-strip {
-            background: var(--brand-dark);
+            background: var(--brand-navy);
             color: #cbd5e1;
-            font-size: 0.82rem;
+            font-size: 0.84rem;
             padding: 8px 0;
             border-bottom: 2px solid var(--brand-red);
-            font-family: 'Mukta Mahee', sans-serif;
+            font-family: 'Noto Sans Gurmukhi', sans-serif;
         }
         .top-strip-inner {
             max-width: 1240px;
@@ -75,8 +67,7 @@
             gap: 6px;
             color: #ef4444;
             font-weight: 800;
-            text-transform: uppercase;
-            font-family: 'Oswald', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             letter-spacing: 0.5px;
         }
         .live-pulse {
@@ -92,7 +83,7 @@
         .loc-badge {
             color: var(--brand-gold);
             font-weight: 700;
-            background: rgba(217, 119, 6, 0.12);
+            background: rgba(217, 119, 6, 0.15);
             padding: 2px 8px;
             border-radius: 4px;
         }
@@ -103,7 +94,7 @@
             text-decoration: none;
             margin-left: 14px;
             font-weight: 700;
-            font-size: 0.84rem;
+            font-family: 'Plus Jakarta Sans', sans-serif;
         }
         .top-social-bar a:hover { color: var(--brand-gold); }
 
@@ -111,9 +102,7 @@
         header {
             background: #ffffff;
             border-bottom: 1px solid var(--border-light);
-            padding: 20px 0;
-            position: relative;
-            z-index: 20;
+            padding: 18px 0;
         }
         .header-inner {
             max-width: 1240px;
@@ -142,19 +131,19 @@
             box-shadow: var(--shadow-sm);
         }
         .brand-text h1 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 2.8rem;
-            font-weight: 700;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
             line-height: 1;
             color: var(--brand-red);
-            letter-spacing: 0.5px;
+            letter-spacing: -0.5px;
             text-transform: uppercase;
         }
-        .brand-text h1 span { color: var(--brand-dark); }
+        .brand-text h1 span { color: var(--brand-navy); }
         .brand-text p {
-            font-family: 'Mukta Mahee', sans-serif;
+            font-family: 'Noto Sans Gurmukhi', sans-serif;
             font-size: 0.95rem;
-            color: var(--text-muted);
+            color: var(--text-meta);
             font-weight: 600;
             margin-top: 4px;
         }
@@ -164,11 +153,9 @@
             align-items: center;
             gap: 10px;
             flex-wrap: wrap;
-            position: relative;
-            z-index: 25;
         }
         .hd-btn {
-            font-family: 'Mukta Mahee', sans-serif;
+            font-family: 'Noto Sans Gurmukhi', sans-serif;
             font-weight: 700;
             font-size: 0.9rem;
             padding: 8px 16px;
@@ -177,23 +164,23 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            box-shadow: var(--shadow-sm);
+            transition: 0.2s;
         }
-        .btn-rep { background: #f8fafc; color: #1e293b; border: 1.5px solid var(--border-dark); }
+        .btn-rep { background: #f1f5f9; color: var(--brand-slate); border: 1.5px solid var(--border-light); }
         .btn-rep:hover { background: #e2e8f0; }
         
         .btn-ad-give { background: #fee2e2; color: var(--brand-red); border: 1.5px solid #fca5a5; }
-        .btn-ad-give:hover { background: var(--brand-red); color: #fff; border-color: var(--brand-red); }
+        .btn-ad-give:hover { background: var(--brand-red); color: #fff; }
 
-        .btn-live-stream { background: var(--brand-red); color: #fff; font-family: 'Oswald', sans-serif; font-size: 0.95rem; }
-        .btn-live-stream:hover { background: #991b1b; }
+        .btn-live-stream { background: var(--brand-red); color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.92rem; font-weight: 800; }
+        .btn-live-stream:hover { background: var(--brand-dark-red); }
 
         .btn-wa-contact { background: #16a34a; color: #fff; }
         .btn-wa-contact:hover { background: #15803d; }
 
-        /* 3. Sticky Primary Navigation */
+        /* 3. Primary Sticky Navigation */
         nav {
-            background: var(--brand-dark);
+            background: var(--brand-navy);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -209,14 +196,15 @@
         }
         .nav-inner::-webkit-scrollbar { display: none; }
         .nav-inner a {
-            font-family: 'Mukta Mahee', sans-serif;
+            font-family: 'Noto Sans Gurmukhi', sans-serif;
             color: #f1f5f9;
             text-decoration: none;
-            padding: 14px 24px;
+            padding: 13px 22px;
             font-size: 1.05rem;
             font-weight: 700;
             border-right: 1px solid rgba(255,255,255,0.08);
             display: inline-block;
+            transition: background 0.2s;
         }
         .nav-inner a:hover, .nav-inner a.active {
             background: var(--brand-red);
@@ -228,44 +216,40 @@
             max-width: 1240px;
             margin: 28px auto;
             padding: 0 16px;
-            position: relative;
-            z-index: 10;
         }
 
-        /* Breaking News Bar */
         .ticker-bar {
             background: #ffffff;
             border: 1px solid var(--border-light);
             border-left: 6px solid var(--brand-red);
             border-radius: 6px;
-            padding: 11px 16px;
+            padding: 10px 16px;
             display: flex;
             align-items: center;
             gap: 14px;
-            margin-bottom: 26px;
+            margin-bottom: 24px;
             box-shadow: var(--shadow-sm);
         }
         .ticker-badge {
             background: var(--brand-red);
             color: #fff;
-            font-family: 'Oswald', sans-serif;
-            font-size: 0.85rem;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.82rem;
             padding: 4px 10px;
             border-radius: 4px;
-            font-weight: 700;
+            font-weight: 800;
             letter-spacing: 0.5px;
         }
         .ticker-title {
-            font-family: 'Mukta Mahee', sans-serif;
+            font-family: 'Noto Sans Gurmukhi', sans-serif;
             font-weight: 700;
-            font-size: 1.02rem;
-            color: var(--brand-dark);
+            font-size: 1rem;
+            color: var(--brand-navy);
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
         }
 
-        /* Regional Pill Hub */
         .regional-bar {
             background: #ffffff;
             border: 1px solid var(--border-light);
@@ -277,10 +261,11 @@
         .regional-title {
             font-size: 0.8rem;
             font-weight: 800;
-            color: var(--text-muted);
+            color: var(--text-meta);
             text-transform: uppercase;
             letter-spacing: 0.8px;
             margin-bottom: 10px;
+            font-family: 'Noto Sans Gurmukhi', sans-serif;
         }
         .pill-cluster {
             display: flex;
@@ -292,11 +277,12 @@
             color: var(--brand-slate);
             padding: 6px 15px;
             border-radius: 6px;
-            font-family: 'Mukta Mahee', sans-serif;
+            font-family: 'Noto Sans Gurmukhi', sans-serif;
             font-size: 0.92rem;
             font-weight: 700;
             text-decoration: none;
             border: 1px solid var(--border-light);
+            transition: all 0.2s;
         }
         .pill-btn:hover {
             background: #fee2e2;
@@ -304,14 +290,13 @@
             border-color: #fca5a5;
         }
 
-        /* 2-Column Grid Engine */
         .grid-structure {
             display: grid;
             grid-template-columns: 2.2fr 1fr;
             gap: 30px;
         }
 
-        /* News Cards: Main Story Cards */
+        /* 5. Clean Article Cards with Baloo Paaji 2 Titles */
         .news-article-card {
             background: var(--card-surface);
             border: 1px solid var(--border-light);
@@ -349,26 +334,26 @@
             left: 14px;
             background: var(--brand-red);
             color: #fff;
-            font-family: 'Oswald', sans-serif;
-            font-size: 0.82rem;
-            padding: 5px 12px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.8rem;
+            padding: 4px 10px;
             border-radius: 4px;
-            font-weight: 700;
+            font-weight: 800;
             box-shadow: 0 2px 6px rgba(0,0,0,0.3);
         }
 
         .article-body { padding: 26px; }
         .article-title {
-            font-family: 'Mukta Mahee', sans-serif;
-            font-size: 1.7rem;
+            font-family: 'Baloo Paaji 2', 'Noto Sans Gurmukhi', sans-serif;
+            font-size: 1.75rem;
             font-weight: 800;
-            color: var(--brand-dark);
+            color: var(--brand-navy);
             line-height: 1.35;
             margin-bottom: 14px;
         }
         .article-text {
             font-size: 1rem;
-            line-height: 1.75;
+            line-height: 1.8;
             color: var(--text-body);
             margin-bottom: 18px;
         }
@@ -384,7 +369,7 @@
         }
 
         .action-link {
-            font-family: 'Mukta Mahee', sans-serif;
+            font-family: 'Noto Sans Gurmukhi', sans-serif;
             font-size: 0.92rem;
             font-weight: 700;
             padding: 8px 18px;
@@ -393,18 +378,18 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
+            transition: all 0.2s;
         }
-        .action-link-dark { background: var(--brand-dark); color: #fff; }
+        .action-link-dark { background: var(--brand-navy); color: #fff; }
         .action-link-dark:hover { background: var(--brand-red); }
         .action-link-wa { background: #16a34a; color: #fff; }
         .action-link-wa:hover { background: #15803d; }
 
-        /* Secondary Grid Section */
         .section-separator {
-            font-family: 'Mukta Mahee', sans-serif;
-            font-size: 1.4rem;
+            font-family: 'Baloo Paaji 2', 'Noto Sans Gurmukhi', sans-serif;
+            font-size: 1.45rem;
             font-weight: 800;
-            color: var(--brand-dark);
+            color: var(--brand-navy);
             margin-bottom: 20px;
             display: flex;
             align-items: center;
@@ -431,6 +416,7 @@
             flex-direction: column;
             justify-content: space-between;
             box-shadow: var(--shadow-sm);
+            transition: all 0.2s;
         }
         .mini-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
         
@@ -452,21 +438,20 @@
             justify-content: space-between;
         }
         .mini-card-title {
-            font-family: 'Mukta Mahee', sans-serif;
-            font-size: 1.18rem;
+            font-family: 'Baloo Paaji 2', 'Noto Sans Gurmukhi', sans-serif;
+            font-size: 1.25rem;
             font-weight: 700;
             line-height: 1.4;
-            color: var(--brand-dark);
+            color: var(--brand-navy);
             margin-bottom: 8px;
         }
         .mini-card-desc {
-            font-size: 0.88rem;
+            font-size: 0.9rem;
             color: var(--text-muted);
             line-height: 1.6;
             margin-bottom: 14px;
         }
 
-        /* Sidebar Hub */
         .sidebar-hub { display: flex; flex-direction: column; gap: 26px; }
         .sidebar-card {
             background: #fff;
@@ -476,11 +461,10 @@
             box-shadow: var(--shadow-sm);
         }
         .sidebar-heading {
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.25rem;
-            font-weight: 700;
+            font-family: 'Baloo Paaji 2', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 800;
             color: var(--brand-red);
-            text-transform: uppercase;
             border-bottom: 2px solid #fee2e2;
             padding-bottom: 8px;
             margin-bottom: 16px;
@@ -496,12 +480,13 @@
             font-size: 0.95rem;
             text-decoration: none;
             margin-top: 14px;
+            font-family: 'Noto Sans Gurmukhi', sans-serif;
+            transition: background 0.2s;
         }
-        .sidebar-btn:hover { background: #991b1b; }
+        .sidebar-btn:hover { background: var(--brand-dark-red); }
 
-        /* Master Editorial Footer */
         footer {
-            background: var(--brand-dark);
+            background: var(--brand-navy);
             color: #94a3b8;
             text-align: center;
             padding: 44px 16px;
@@ -515,13 +500,14 @@
             margin: 0 14px;
             font-weight: 700;
             font-size: 0.95rem;
+            font-family: 'Noto Sans Gurmukhi', sans-serif;
         }
         .footer-nav a:hover { color: var(--brand-gold); }
 
         @media (max-width: 900px) {
             .grid-structure { grid-template-columns: 1fr; }
             .dual-grid { grid-template-columns: 1fr; }
-            .brand-text h1 { font-size: 2.2rem; }
+            .brand-text h1 { font-size: 2.1rem; }
             .header-actions { width: 100%; justify-content: center; }
             .top-strip-inner { justify-content: center; text-align: center; }
         }
@@ -535,10 +521,10 @@
         <div class="meta-info-cluster">
             <span class="live-tag"><span class="live-pulse"></span> 24x7 LIVE DESK</span>
             <span class="loc-badge">📍 ਗੁਰੂ ਹਰਸਹਾਏ (ਪੰਜਾਬ)</span>
-            <span class="time-badge" id="liveDateTime">ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ...</span>
+            <span class="time-badge" id="liveDateTime">ਮੰਗਲਵਾਰ, 1 ਸਤੰਬਰ 2026 | 08:39 PM</span>
         </div>
         <div class="top-social-bar">
-            ਸੋਸ਼ਲ ਮੀਡੀਆ: 
+            Follow Us: 
             <a href="https://www.youtube.com/@punjablivenow" target="_blank">YouTube</a>
             <a href="https://www.instagram.com/punjablivenow" target="_blank">Instagram</a>
             <a href="https://www.facebook.com/profile.php?id=61562360634592" target="_blank">Facebook</a>
@@ -553,7 +539,7 @@
             <img src="channel_logo1.png" alt="PLN Official Logo" class="brand-logo" onerror="this.style.display='none'">
             <div class="brand-text">
                 <h1>PUNJAB <span>LIVE NOW</span></h1>
-                <p>ਸਭ ਤੋਂ ਪਹਿਲਾਂ, ਸਭ ਤੋਂ ਸਟੀਕ | The Voice of Punjab</p>
+                <p>ਸਭ ਤੋਂ ਪਹਿਲਾਂ, ਸਭ ਤੋਂ ਸਟੀਕ | Voice of Punjab</p>
             </div>
         </a>
         
@@ -634,7 +620,7 @@
             <!-- Lead Story 2: ਜਮਸ਼ੇਦਪੁਰ CNG ਹਾਦਸਾ -->
             <div class="news-article-card">
                 <div class="article-media-box">
-                    <span class="article-tag" style="background:#0f172a;">EXCLUSIVE NATIONAL NEWS</span>
+                    <span class="article-tag" style="background:#090d16;">EXCLUSIVE NATIONAL NEWS</span>
                     <img src="jmshedpurnewscng.jpg" alt="ਜਮਸ਼ੇਦਪੁਰ CNG ਨੋਜ਼ਲ ਹਾਦਸਾ" onerror="this.src='nepalnews1.jpg'">
                 </div>
                 <div class="article-body">
@@ -697,7 +683,7 @@
             <div class="sidebar-card" style="border-top: 3px solid var(--brand-gold);">
                 <div class="sidebar-heading" style="color:var(--brand-gold);">📢 ਵਿਗਿਆਪਨ / ਕਵਰੇਜ</div>
                 <p style="font-size: 0.9rem; color: #475569; margin-bottom: 12px;">ਆਪਣੇ ਕਾਰੋਬਾਰ ਦਾ ਇਸ਼ਤਿਹਾਰ ਦੇਣ ਜਾਂ ਆਪਣੇ ਇਲਾਕੇ ਦੀ ਖ਼ਬਰ ਲਗਵਾਉਣ ਲਈ ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ।</p>
-                <a href="advertise.html" class="sidebar-btn" style="background:#0f172a;">ਸੰਪਰਕ ਫਾਰਮ ਖੋਲ੍ਹੋ ➔</a>
+                <a href="advertise.html" class="sidebar-btn" style="background:#090d16;">ਸੰਪਰਕ ਫਾਰਮ ਖੋਲ੍ਹੋ ➔</a>
             </div>
         </div>
     </div>
@@ -715,7 +701,6 @@
     <p style="font-size: 0.9rem; color: #94a3b8; margin-top: 10px;">&copy; 2026 Punjab Live Now (PLN) Media Network. All Rights Reserved.</p>
 </footer>
 
-<!-- Dynamic Punjabi Clock Script -->
 <script>
     function refreshLiveClock() {
         const now = new Date();
