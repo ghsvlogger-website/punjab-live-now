@@ -79,8 +79,8 @@
 
         .spotlight-card { background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: 0 6px 20px rgba(0,0,0,0.05); margin-bottom: 28px; transition: transform 0.2s; }
         .spotlight-card:hover { transform: translateY(-3px); }
-        .spotlight-media { position: relative; height: 380px; background: #000; overflow: hidden; }
-        .spotlight-media img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; filter: brightness(0.95); }
+        .spotlight-media { position: relative; width: 100%; max-height: 440px; background: #0b0f19; overflow: hidden; display: flex; justify-content: center; align-items: center; }
+        .spotlight-media img { width: 100%; height: auto; max-height: 440px; object-fit: contain; }
         .media-badge { position: absolute; top: 16px; left: 16px; background: rgba(185, 28, 28, 0.95); color: #fff; font-family: 'Oswald', sans-serif; font-size: 0.85rem; padding: 5px 12px; border-radius: 6px; font-weight: 700; letter-spacing: 0.5px; backdrop-filter: blur(4px); }
         
         .spotlight-body { padding: 26px; }
@@ -88,7 +88,7 @@
         .spotlight-text { font-size: 0.98rem; line-height: 1.7; color: #475569; margin-bottom: 16px; }
         .spotlight-meta { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #f1f5f9; padding-top: 16px; margin-top: 12px; }
         
-        .disclaimer-box { background: #f8fafc; border-left: 4px solid var(--primary); padding: 12px 16px; border-radius: 0 8px 8px 0; font-size: 0.85rem; color: #64748b; margin-bottom: 16px; }
+        .disclaimer-box { background: #f8fafc; border-left: 4px solid var(--primary); padding: 12px 16px; border-radius: 0 8px 8px 0; font-size: 0.88rem; color: #475569; margin-bottom: 16px; line-height: 1.6; }
         
         .share-pill { background: #22c55e; color: #fff; font-family: 'Mukta Mahee', sans-serif; font-size: 0.88rem; font-weight: 700; padding: 8px 16px; border-radius: 50px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 8px rgba(34, 197, 94, 0.3); transition: 0.2s; }
         .share-pill:hover { background: #16a34a; }
@@ -183,8 +183,8 @@
 
 <div class="container">
     <div class="breaking-ticker">
-        <span class="ticker-badge">BREAKING NEWS</span>
-        <span class="ticker-text">ਜਮਸ਼ੇਦਪੁਰ ’ਚ ਅਚਾਨਕ ਫੱਟਿਆ CNG ਪਾਈਪ ਦਾ ਨੋਜ਼ਲ, ਮੌਕੇ 'ਤੇ ਮਚੀ ਹਫੜਾ-ਦਫੜੀ!</span>
+        <span class="ticker-badge">SPECIAL INVESTIGATION</span>
+        <span class="ticker-text">ਮਲੇਸ਼ੀਆ ਮਾਮਲਾ: ਮਿਥੁਨ ਦੀ ਵਾਇਰਲ ਤਸਵੀਰ ਨੇ ਖੜ੍ਹੇ ਕੀਤੇ ਗੰਭੀਰ ਸਵਾਲ—AI ਜਾਂ ਸੱਚੀ ਤਸਵੀਰ?</span>
     </div>
 
     <div class="location-hub">
@@ -202,24 +202,25 @@
 
     <div class="main-grid">
         <div>
+            <!-- ਨਵੀਂ ਲੀਡ ਸਟੋਰੀ: ਮਿਥੁਨ ਤਸਵੀਰ ਵਿਸ਼ਲੇਸ਼ਣ -->
             <div class="spotlight-card">
                 <div class="spotlight-media">
-                    <span class="media-badge">EXCLUSIVE GROUND REPORT</span>
-                    <img src="malaysianews1.jpg" alt="ਮਲੇਸ਼ੀਆ ਮਾਮਲਾ">
+                    <span class="media-badge">FACT CHECK / INVESTIGATION</span>
+                    <img src="malaysianews2.jpg" alt="ਮਿਥੁਨ ਤਸਵੀਰ ਵਿਵਾਦ ਮਲੇਸ਼ੀਆ" onerror="this.src='malaysianews1.jpg'">
                 </div>
                 <div class="spotlight-body">
-                    <h2 class="spotlight-title">🚨 ਮਲੇਸ਼ੀਆ ’ਚ ਗੁਰੂਹਰਸਹਾਏ ਦੇ ਨੌਜਵਾਨ ਦੀ ਮੌਤ—ਕਤਲ ਜਾਂ ਖੁਦਕੁਸ਼ੀ? ਪਰਿਵਾਰ ਨੇ ਖੜ੍ਹੇ ਕੀਤੇ ਗੰਭੀਰ ਸਵਾਲ</h2>
-                    <p class="spotlight-text"><strong>ਗੁਰੂਹਰਸਹਾਏ (Punjab Live Now):</strong> ਮਲੇਸ਼ੀਆ ਤੋਂ ਇੱਕ ਬੇਹੱਦ ਗੰਭੀਰ ਮਾਮਲਾ ਸਾਹਮਣੇ ਆਇਆ ਹੈ। ਗੁਰੂਹਰਸਹਾਏ ਦੀ ਬਸਤੀ ਗੁਰੂ ਕਰਮ ਸਿੰਘ ਵਾਲੀ ਦੇ ਰਹਿਣ ਵਾਲੇ ਮਿਥੁਨ ਦੀ ਸ਼ੱਕੀ ਹਾਲਾਤਾਂ ਵਿੱਚ ਮੌਤ ਹੋ ਗਈ ਹੈ। ਪਰਿਵਾਰ ਵੱਲੋਂ ਇਸ ਨੂੰ ਖੁਦਕੁਸ਼ੀ ਨਹੀਂ ਸਗੋਂ ਕਤਲ ਦੱਸਿਆ ਜਾ ਰਿਹਾ ਹੈ।</p>
-                    <p class="spotlight-text">ਪਰਿਵਾਰ ਮੁਤਾਬਕ 8 ਮਹੀਨੇ ਪਹਿਲਾਂ ਇੱਕ ਲੜਕੀ ਉਸਨੂੰ ਮਲੇਸ਼ੀਆ ਲੈ ਕੇ ਗਈ ਸੀ, ਜਿੱਥੇ ਆਪਸੀ ਝਗੜੇ ਦੌਰਾਨ ਮਿਥੁਨ ਨੂੰ ਸੱਟਾਂ ਲੱਗਣ ਕਾਰਨ ਉਸਦੀ ਮੌਤ ਹੋਈ। ਪਰਿਵਾਰ ਨੇ ਮੌਕੇ ਦੀਆਂ ਤਸਵੀਰਾਂ 'ਤੇ ਸਵਾਲ ਚੁੱਕੇ ਹਨ ਅਤੇ ਦੋਸ਼ ਲਗਾਇਆ ਹੈ ਕਿ ਮੀਡੀਆ 'ਚ ਖ਼ਬਰ ਆਉਣ ਤੋਂ ਬਾਅਦ ਉਨ੍ਹਾਂ ਨੂੰ ਧਮਕੀਆਂ ਮਿਲ ਰਹੀਆਂ ਹਨ।</p>
+                    <h2 class="spotlight-title">🚨 ਮਿਥੁਨ ਦੀ ਤਸਵੀਰ ਨੇ ਖੜ੍ਹੇ ਕੀਤੇ ਸਵਾਲ, AI ਜਾਂ ਸੱਚੀ ਤਸਵੀਰ?</h2>
+                    <p class="spotlight-text"><strong>ਮਲੇਸ਼ੀਆ / ਗੁਰੂਹਰਸਹਾਏ (Punjab Live Now):</strong> ਮਿਥੁਨ ਨਾਲ ਜੁੜੀ ਇੱਕ ਤਸਵੀਰ ਸੋਸ਼ਲ ਮੀਡੀਆ ’ਤੇ ਸਾਹਮਣੇ ਆਉਣ ਤੋਂ ਬਾਅਦ ਕਈ ਗੰਭੀਰ ਸਵਾਲ ਖੜ੍ਹੇ ਹੋ ਰਹੇ ਹਨ। ਤਸਵੀਰ ਨੂੰ ਧਿਆਨ ਨਾਲ ਦੇਖਣ ’ਤੇ ਪਹਿਲਾਂ ਸਾਹਮਣੇ ਆਈ ਤਸਵੀਰ ਅਤੇ ਨਵੀਂ ਤਸਵੀਰ ਵਿੱਚ ਪੈਰਾਂ ਦੀਆਂ ਚੱਪਲਾਂ ਅਤੇ ਬੈਠਣ-ਖੜ੍ਹੇ ਹੋਣ ਦੀ ਸਥਿਤੀ ਵਿੱਚ ਫਰਕ ਸਾਫ਼ ਨਜ਼ਰ ਆਉਂਦਾ ਹੈ।</p>
+                    <p class="spotlight-text">ਇਨ੍ਹਾਂ ਤਬਦੀਲੀਆਂ ਕਾਰਨ ਇਹ ਸ਼ੱਕ ਜਤਾਇਆ ਜਾ ਰਿਹਾ ਹੈ ਕਿ ਤਸਵੀਰ AI (Artificial Intelligence) ਨਾਲ ਤਿਆਰ ਜਾਂ ਐਡਿਟ ਕੀਤੀ ਹੋ ਸਕਦੀ ਹੈ। ਹਾਲਾਂਕਿ, ਸਿਰਫ਼ ਤਸਵੀਰ ਵਿੱਚ ਫਰਕ ਹੋਣ ਦੇ ਆਧਾਰ ’ਤੇ ਇਸ ਨੂੰ AI ਤਸਵੀਰ ਜਾਂ ਮੌਤ ਦੀ ਪੁਸ਼ਟੀ ਨਹੀਂ ਮੰਨਿਆ ਜਾ ਸਕਦਾ।</p>
                     
                     <div class="disclaimer-box">
-                        ⚠️ <strong>ਜਾਂਚ ਨੋਟ:</strong> ਇਹ ਖ਼ਬਰ ਪਰਿਵਾਰ ਦੇ ਬਿਆਨਾਂ 'ਤੇ ਆਧਾਰਿਤ ਹੈ। ਕਿਸੇ ਵੀ ਵਿਅਕਤੀ 'ਤੇ ਦੋਸ਼ ਪੁਲਿਸ ਜਾਂਚ ਅਤੇ ਪੋਸਟਮਾਰਟਮ ਰਿਪੋਰਟ ਤੋਂ ਬਾਅਦ ਹੀ ਸਾਬਤ ਹੋਵੇਗਾ।
+                        🔍 <strong>ਮੁੱਖ ਸਵਾਲ:</strong> ਮਿਥੁਨ ਨਾਲ ਅਸਲ ਵਿੱਚ ਕੀ ਹੋਇਆ? ਤਸਵੀਰ ਸੱਚੀ ਹੈ, AI ਹੈ ਜਾਂ ਕੋਈ ਹੋਰ ਮਾਮਲਾ? ਇਸ ਦੀ ਪੁਸ਼ਟੀ ਲਈ ਭਰੋਸੇਯੋਗ ਅਧਿਕਾਰਤ ਜਾਂਚ ਰਿਪੋਰਟ ਦੀ ਉਡੀਕ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ।
                     </div>
 
                     <div class="spotlight-meta">
-                        <span style="font-size: 0.85rem; color: #64748b; font-weight: 600;">📍 ਗੁਰੂਹਰਸਹਾਏ / ਵਿਦੇਸ਼</span>
-                        <a href="https://api.whatsapp.com/send?text=ਮਲੇਸ਼ੀਆ 'ਚ ਗੁਰੂਹਰਸਹਾਏ ਦੇ ਨੌਜਵਾਨ ਦੀ ਮੌਤ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="share-pill">
-                            📲 WhatsApp 'ਤੇ ਪੂਰੀ ਖ਼ਬਰ ਸ਼ੇਅਰ ਕਰੋ
+                        <span style="font-size: 0.85rem; color: #64748b; font-weight: 600;">#GuruHarsahai #MalaysiaCase #FactCheck</span>
+                        <a href="https://api.whatsapp.com/send?text=ਮਿਥੁਨ ਦੀ ਤਸਵੀਰ ਨੇ ਖੜ੍ਹੇ ਕੀਤੇ ਸਵਾਲ, AI ਜਾਂ ਸੱਚੀ ਤਸਵੀਰ?: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="share-pill">
+                            📲 WhatsApp 'ਤੇ ਰਿਪੋਰਟ ਸ਼ੇਅਰ ਕਰੋ
                         </a>
                     </div>
                 </div>
@@ -227,6 +228,23 @@
 
             <div class="section-heading">ਹੋਰ ਪ੍ਰਮੁੱਖ ਖ਼ਬਰਾਂ</div>
             <div class="cards-grid">
+                <!-- ਪਹਿਲੀ ਰਿਪੋਰਟ -->
+                <div class="story-card">
+                    <div class="story-img-wrap">
+                        <img src="malaysianews1.jpg" alt="ਮਲੇਸ਼ੀਆ ਮਾਮਲਾ ਗਰਾਊਂਡ ਰਿਪੋਰਟ">
+                    </div>
+                    <div class="story-content">
+                        <div>
+                            <h3 class="story-title">ਮਲੇਸ਼ੀਆ ’ਚ ਗੁਰੂਹਰਸਹਾਏ ਦੇ ਨੌਜਵਾਨ ਦੀ ਮੌਤ—ਕਤਲ ਜਾਂ ਖੁਦਕੁਸ਼ੀ?</h3>
+                            <p class="story-desc">ਪਰਿਵਾਰ ਵੱਲੋਂ ਕਤਲ ਦੇ ਗੰਭੀਰ ਦੋਸ਼ ਅਤੇ ਉੱਚ ਪੱਧਰੀ ਜਾਂਚ ਦੀ ਮੰਗ। ਪੜ੍ਹੋ ਪਹਿਲੀ ਗਰਾਊਂਡ ਰਿਪੋਰਟ।</p>
+                        </div>
+                        <a href="https://api.whatsapp.com/send?text=ਮਲੇਸ਼ੀਆ ਮਾਮਲਾ ਗਰਾਊਂਡ ਰਿਪੋਰਟ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="share-pill" style="font-size: 0.8rem; padding: 6px 12px; margin-top: 10px;">
+                            📲 ਸ਼ੇਅਰ ਕਰੋ
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ਖ਼ਬਰ 2: ਜਮਸ਼ੇਦਪੁਰ CNG ਹਾਦਸਾ -->
                 <div class="story-card">
                     <div class="story-img-wrap">
                         <img src="jmshedpurnewscng.jpg" alt="ਜਮਸ਼ੇਦਪੁਰ CNG ਨੋਜ਼ਲ ਹਾਦਸਾ" onerror="this.src='nepalnews1.jpg'">
@@ -234,7 +252,7 @@
                     <div class="story-content">
                         <div>
                             <h3 class="story-title">🚨 ਜਮਸ਼ੇਦਪੁਰ ’ਚ ਅਚਾਨਕ ਫੱਟਿਆ CNG ਨੋਜ਼ਲ, ਦੇਖੋ ਮੌਕੇ ਦਾ ਹਾਲ!</h3>
-                            <p class="story-desc">ਜਮਸ਼ੇਦਪੁਰ: CNG ਪਾਈਪ ਦੇ ਨੋਜ਼ਲ ਦੇ ਅਚਾਨਕ ਫੱਟਣ ਕਾਰਨ ਮੌਕੇ ’ਤੇ ਹਫੜਾ-ਦਫੜੀ ਮਚ ਗਈ। ਘਟਨਾ ਦੀ ਲਾਈਵ ਵੀਡੀਓ ਵੀਡੀਓ ਬੁਲੇਟਿਨ ਵਿੱਚ ਦੇਖੋ।</p>
+                            <p class="story-desc">CNG ਪਾਈਪ ਦਾ ਨੋਜ਼ਲ ਫੱਟਣ ਕਾਰਨ ਮੌਕੇ ’ਤੇ ਮਚੀ ਹਫੜਾ-ਦਫੜੀ। ਲਾਈਵ ਵੀਡੀਓ ਰਿਪੋਰਟ ਉਪਲਬਧ।</p>
                         </div>
                         <a href="https://api.whatsapp.com/send?text=ਜਮਸ਼ੇਦਪੁਰ ’ਚ ਅਚਾਨਕ ਫੱਟਿਆ CNG ਨੋਜ਼ਲ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="share-pill" style="font-size: 0.8rem; padding: 6px 12px; margin-top: 10px;">
                             📲 ਸ਼ੇਅਰ ਕਰੋ
@@ -242,46 +260,33 @@
                     </div>
                 </div>
 
-                <div class="story-card">
-                    <div class="story-img-wrap">
-                        <img src="news1_cropperd.jpg" alt="ਸੁਖਬੀਰ ਬਾਦਲ">
-                    </div>
-                    <div class="story-content">
-                        <div>
-                            <h3 class="story-title">ਪੰਜਾਬ ਵਿਧਾਨ ਸਭਾ ਚੋਣਾਂ 2027: ਸੁਖਬੀਰ ਸਿੰਘ ਬਾਦਲ ਨੇ PM ਮੋਦੀ ਨਾਲ ਕੀਤੀ ਮੁਲਾਕਾਤ</h3>
-                            <p class="story-desc">ਭਾਜਪਾ ਅਤੇ ਸ਼੍ਰੋਮਣੀ ਅਕਾਲੀ ਦਲ ਦੇ ਸੰਭਾਵੀ ਗਠਜੋੜ ਦੀਆਂ ਅਟਕਲਾਂ ਦਰਮਿਆਨ ਸਿਆਸੀ ਹਲਚਲ ਤੇਜ਼ ਹੋਈ।</p>
-                        </div>
-                        <a href="https://api.whatsapp.com/send?text=ਸੁਖਬੀਰ ਮੋਦੀ ਮੁਲਾਕਾਤ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="share-pill" style="font-size: 0.8rem; padding: 6px 12px; margin-top: 10px;">
-                            📲 ਸ਼ੇਅਰ ਕਰੋ
-                        </a>
-                    </div>
-                </div>
-
+                <!-- ਖ਼ਬਰ 3: ਚੰਨੀ ਤੇ ਰਾਹੁਲ ਗਾਂਧੀ ਵਿਵਾਦ -->
                 <div class="story-card">
                     <div class="story-img-wrap">
                         <img src="rahulchanni.jpg" alt="ਚਰਨਜੀਤ ਚੰਨੀ" onerror="this.src='news1_cropperd.jpg'">
                     </div>
                     <div class="story-content">
                         <div>
-                            <h3 class="story-title">🔥 ਚੰਨੀ ਵੱਲੋਂ ਅੰਮ੍ਰਿਤਪਾਲ ਸਿੰਘ ਦੇ ਪਿਤਾ ਤਰਸੇਮ ਲਾਲ ਦੀ ਪੋਸਟ ਸ਼ੇਅਰ ਕਰਨ ’ਤੇ ਸਿਆਸੀ ਚਰਚਾ</h3>
-                            <p class="story-desc">ਸਾਬਕਾ ਮੁੱਖ ਮੰਤਰੀ ਵੱਲੋਂ ਪੋਸਟ ਸ਼ੇਅਰ ਕਰਨ ਤੋਂ ਬਾਅਦ ਕਾਂਗਰਸ ਅਤੇ ਪੰਜਾਬ ਸਿਆਸਤ ਵਿੱਚ ਚਰਚਾਵਾਂ ਤੇਜ਼ ਹੋਈਆਂ।</p>
+                            <h3 class="story-title">🔥 ਚੰਨੀ ਵੱਲੋਂ ਤਰਸੇਮ ਲਾਲ ਦੀ ਪੋਸਟ ਸ਼ੇਅਰ ਕਰਨ ’ਤੇ ਸਿਆਸੀ ਚਰਚਾ</h3>
+                            <p class="story-desc">ਸਾਬਕਾ ਮੁੱਖ ਮੰਤਰੀ ਵੱਲੋਂ ਪੋਸਟ ਸ਼ੇਅਰ ਕਰਨ ਤੋਂ ਬਾਅਦ ਕਾਂਗਰਸ ਅਤੇ ਪੰਜਾਬ ਸਿਆਸਤ ਵਿੱਚ ਚਰਚਾਵਾਂ ਤੇਜ਼।</p>
                         </div>
-                        <a href="https://api.whatsapp.com/send?text=ਚੰਨੀ ਤਰਸੇਮ ਲਾਲ ਪੋਸਟ ਵਿਵਾਦ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="share-pill" style="font-size: 0.8rem; padding: 6px 12px; margin-top: 10px;">
+                        <a href="https://api.whatsapp.com/send?text=ਚੰਨੀ ਤਰਸੇਮ ਲਾਲ ਪੋਸਟ ਵਿਵਾਦ: https://ghsvlogger-website.github.io/punjab-live-now/punjab.html" target="_blank" class="share-pill" style="font-size: 0.8rem; padding: 6px 12px; margin-top: 10px;">
                             📲 ਸ਼ੇਅਰ ਕਰੋ
                         </a>
                     </div>
                 </div>
 
+                <!-- ਖ਼ਬਰ 4: ਸੁਖਬੀਰ ਬਾਦਲ ਮੁਲਾਕਾਤ -->
                 <div class="story-card">
                     <div class="story-img-wrap">
-                        <img src="nepalnews1.jpg" alt="ਨੇਪਾਲ ਹੜ੍ਹ">
+                        <img src="news1_cropperd.jpg" alt="ਸੁਖਬੀਰ ਬਾਦਲ">
                     </div>
                     <div class="story-content">
                         <div>
-                            <h3 class="story-title">ਨੇਪਾਲ ਹੜ੍ਹ: ਮਰਨ ਵਾਲਿਆਂ ਦੀ ਗਿਣਤੀ 584 ਹੋਈ, 320 ਭਾਰਤੀਆਂ ਦੀ ਭਾਲ ਜਾਰੀ</h3>
-                            <p class="story-desc">ਨੇਪਾਲ ਵਿੱਚ ਭਾਰੀ ਬਾਰਿਸ਼ ਅਤੇ ਹੜ੍ਹਾਂ ਕਾਰਨ ਭਾਰੀ ਤਬਾਹੀ। ਬਚਾਅ ਕਾਰਜਾਂ ਲਈ ਫ਼ੌਜ ਅਤੇ ਰਾਹਤ ਟੀਮਾਂ ਤਾਇਨਾਤ।</p>
+                            <h3 class="story-title">ਸੁਖਬੀਰ ਸਿੰਘ ਬਾਦਲ ਨੇ PM ਮੋਦੀ ਨਾਲ ਕੀਤੀ ਅਹਿਮ ਮੁਲਾਕਾਤ</h3>
+                            <p class="story-desc">ਭਾਜਪਾ-ਅਕਾਲੀ ਦਲ ਦੇ ਸੰਭਾਵੀ ਗਠਜੋੜ ਦੀਆਂ ਅਟਕਲਾਂ ਦਰਮਿਆਨ ਪੰਜਾਬ ਸਿਆਸਤ 'ਚ ਨਵੀਂ ਹਲਚਲ।</p>
                         </div>
-                        <a href="https://api.whatsapp.com/send?text=ਨੇਪਾਲ ਹੜ੍ਹ ਅੱਪਡੇਟ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="share-pill" style="font-size: 0.8rem; padding: 6px 12px; margin-top: 10px;">
+                        <a href="https://api.whatsapp.com/send?text=ਸੁਖਬੀਰ ਮੋਦੀ ਮੁਲਾਕਾਤ: https://ghsvlogger-website.github.io/punjab-live-now/punjab.html" target="_blank" class="share-pill" style="font-size: 0.8rem; padding: 6px 12px; margin-top: 10px;">
                             📲 ਸ਼ੇਅਰ ਕਰੋ
                         </a>
                     </div>
