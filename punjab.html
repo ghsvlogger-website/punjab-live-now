@@ -53,16 +53,20 @@
 
         .container { max-width: 1240px; margin: 24px auto; padding: 0 16px; }
         .category-header { background: #fff; border-radius: 12px; border: 1px solid var(--border-color); border-left: 6px solid var(--primary); padding: 16px 20px; margin-bottom: 25px; }
-        .category-header h2 { font-family: 'Mukta Mahee', sans-serif; font-size: 1.5rem; font-weight: 800; }
+        .category-header h2 { font-family: 'Mukta Mahee', sans-serif; font-size: 1.5rem; font-weight: 800; color: #0f172a; }
 
         .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
-        .news-card { background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); display: flex; flex-direction: column; justify-content: space-between; }
-        .news-card img { width: 100%; height: 200px; object-fit: cover; }
-        .card-body { padding: 18px; }
-        .card-body h3 { font-family: 'Mukta Mahee', sans-serif; font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; }
-        .card-body p { font-size: 0.9rem; color: #555; line-height: 1.6; margin-bottom: 15px; }
+        .news-card { background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 12px rgba(0,0,0,0.03); transition: all 0.2s; }
+        .news-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+        .card-img-wrap { width: 100%; height: 210px; background: #111827; overflow: hidden; display: flex; justify-content: center; align-items: center; }
+        .card-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
         
-        .share-btn { display: inline-block; background-color: #25D366; color: white; padding: 7px 14px; border-radius: 4px; text-decoration: none; font-size: 0.85rem; font-weight: bold; }
+        .card-body { padding: 18px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between; }
+        .card-body h3 { font-family: 'Mukta Mahee', sans-serif; font-size: 1.18rem; font-weight: 700; margin-bottom: 10px; line-height: 1.4; color: #0f172a; }
+        .card-body p { font-size: 0.9rem; color: #475569; line-height: 1.6; margin-bottom: 15px; }
+        
+        .share-btn { display: inline-block; background-color: #25D366; color: white; padding: 7px 14px; border-radius: 50px; text-decoration: none; font-size: 0.85rem; font-weight: 700; font-family: 'Mukta Mahee', sans-serif; width: fit-content; transition: 0.2s; }
+        .share-btn:hover { background-color: #16a34a; }
 
         footer { background: #090d16; color: #94a3b8; text-align: center; padding: 40px 16px; margin-top: 60px; border-top: 4px solid var(--primary); }
         .footer-links a { color: var(--accent); text-decoration: none; margin: 0 12px; font-weight: 600; font-size: 0.9rem; }
@@ -134,20 +138,44 @@
     </div>
 
     <div class="news-grid">
+        <!-- ਨਵੀਂ ਖ਼ਬਰ: ਚੰਨੀ ਤੇ ਤਰਸੇਮ ਲਾਲ ਪੋਸਟ -->
         <div class="news-card">
-            <img src="news1_cropperd.jpg" alt="ਸੁਖਬੀਰ ਬਾਦਲ ਮੁਲਾਕਾਤ">
+            <div class="card-img-wrap">
+                <img src="rahulgandhi1.jpg" alt="ਚਰਨਜੀਤ ਚੰਨੀ ਸਿਆਸੀ ਚਰਚਾ" onerror="this.src='news1_cropperd.jpg'">
+            </div>
             <div class="card-body">
-                <h3>ਪੰਜਾਬ ਵਿਧਾਨ ਸਭਾ ਚੋਣਾਂ 2027: ਸੁਖਬੀਰ ਸਿੰਘ ਬਾਦਲ ਨੇ PM ਮੋਦੀ ਨਾਲ ਕੀਤੀ ਅਹਿਮ ਮੁਲਾਕਾਤ</h3>
-                <p>ਭਾਜਪਾ ਅਤੇ ਸ਼੍ਰੋਮਣੀ ਅਕਾਲੀ ਦਲ ਦੇ ਸੰਭਾਵੀ ਗਠਜੋੜ ਦੀਆਂ ਅਟਕਲਾਂ ਦਰਮਿਆਨ ਸਿਆਸੀ ਹਲਚਲ ਤੇਜ਼। ਪੰਜਾਬ ਦੇ ਤਾਜ਼ਾ ਸਿਆਸੀ ਸਮੀਕਰਨਾਂ ਬਾਰੇ ਵਿਸ਼ੇਸ਼ ਰਿਪੋਰਟ।</p>
+                <div>
+                    <h3>🔥 ਚੰਨੀ ਵੱਲੋਂ ਅੰਮ੍ਰਿਤਪਾਲ ਸਿੰਘ ਦੇ ਪਿਤਾ ਤਰਸੇਮ ਲਾਲ ਦੀ ਪੋਸਟ ਸ਼ੇਅਰ ਕਰਨ ’ਤੇ ਸਿਆਸੀ ਚਰਚਾ</h3>
+                    <p>ਚੰਡੀਗੜ੍ਹ: ਪੰਜਾਬ ਦੇ ਸਾਬਕਾ ਮੁੱਖ ਮੰਤਰੀ ਚਰਨਜੀਤ ਸਿੰਘ ਚੰਨੀ ਵੱਲੋਂ ਅੰਮ੍ਰਿਤਪਾਲ ਸਿੰਘ ਦੇ ਪਿਤਾ ਤਰਸੇਮ ਲਾਲ ਦੀ ਪੋਸਟ ਸ਼ੇਅਰ ਕਰਨ ਤੋਂ ਬਾਅਦ ਸਿਆਸੀ ਹਲਕਿਆਂ ਵਿੱਚ ਚਰਚਾ ਤੇਜ਼। ਰਾਹੁਲ ਗਾਂਧੀ ਦੇ ਪੇਜ ਦੀਆਂ ਰੀਲਾਂ ਸ਼ੇਅਰ ਨਾ ਕਰਨ ਨਾਲ ਵੀ ਜੋੜਿਆ ਜਾ ਰਿਹਾ ਹੈ ਇਹ ਮਾਮਲਾ।</p>
+                </div>
+                <a href="https://api.whatsapp.com/send?text=ਚੰਨੀ ਵੱਲੋਂ ਤਰਸੇਮ ਲਾਲ ਦੀ ਪੋਸਟ ਸ਼ੇਅਰ ਕਰਨ ’ਤੇ ਸਿਆਸੀ ਚਰਚਾ: https://ghsvlogger-website.github.io/punjab-live-now/punjab.html" target="_blank" class="share-btn">📲 WhatsApp 'ਤੇ ਸ਼ੇਅਰ ਕਰੋ</a>
+            </div>
+        </div>
+
+        <!-- ਖ਼ਬਰ 2: ਸੁਖਬੀਰ ਬਾਦਲ ਮੁਲਾਕਾਤ -->
+        <div class="news-card">
+            <div class="card-img-wrap">
+                <img src="news1_cropperd.jpg" alt="ਸੁਖਬੀਰ ਬਾਦਲ ਮੁਲਾਕਾਤ">
+            </div>
+            <div class="card-body">
+                <div>
+                    <h3>ਪੰਜਾਬ ਵਿਧਾਨ ਸਭਾ ਚੋਣਾਂ 2027: ਸੁਖਬੀਰ ਸਿੰਘ ਬਾਦਲ ਨੇ PM ਮੋਦੀ ਨਾਲ ਕੀਤੀ ਅਹਿਮ ਮੁਲਾਕਾਤ</h3>
+                    <p>ਭਾਜਪਾ ਅਤੇ ਸ਼੍ਰੋਮਣੀ ਅਕਾਲੀ ਦਲ ਦੇ ਸੰਭਾਵੀ ਗਠਜੋੜ ਦੀਆਂ ਅਟਕਲਾਂ ਦਰਮਿਆਨ ਸਿਆਸੀ ਹਲਚਲ ਤੇਜ਼। ਪੰਜਾਬ ਦੇ ਤਾਜ਼ਾ ਸਿਆਸੀ ਸਮੀਕਰਨਾਂ ਬਾਰੇ ਵਿਸ਼ੇਸ਼ ਰਿਪੋਰਟ।</p>
+                </div>
                 <a href="https://api.whatsapp.com/send?text=ਪੜ੍ਹੋ ਖ਼ਬਰ: https://ghsvlogger-website.github.io/punjab-live-now/punjab.html" target="_blank" class="share-btn">📲 WhatsApp 'ਤੇ ਸ਼ੇਅਰ ਕਰੋ</a>
             </div>
         </div>
 
+        <!-- ਖ਼ਬਰ 3: ਮਲੇਸ਼ੀਆ ਮਾਮਲਾ -->
         <div class="news-card">
-            <img src="malaysianews1.jpg" alt="ਮਲੇਸ਼ੀਆ ਮਾਮਲਾ">
+            <div class="card-img-wrap">
+                <img src="malaysianews1.jpg" alt="ਮਲੇਸ਼ੀਆ ਮਾਮਲਾ">
+            </div>
             <div class="card-body">
-                <h3>ਮਲੇਸ਼ੀਆ ’ਚ ਗੁਰੂਹਰਸਹਾਏ ਦੇ ਨੌਜਵਾਨ ਦੀ ਮੌਤ—ਪਰਿਵਾਰ ਵੱਲੋਂ ਕਤਲ ਦੇ ਦੋਸ਼</h3>
-                <p>ਗੁਰੂਹਰਸਹਾਏ ਦੇ ਨੌਜਵਾਨ ਮਿਥੁਨ ਦੀ ਮਲੇਸ਼ੀਆ ਵਿੱਚ ਸ਼ੱਕੀ ਮੌਤ। ਪਰਿਵਾਰ ਨੇ ਮਾਮਲੇ ਦੀ ਉੱਚ ਪੱਧਰੀ ਜਾਂਚ ਦੀ ਮੰਗ ਕੀਤੀ।</p>
+                <div>
+                    <h3>ਮਲੇਸ਼ੀਆ ’ਚ ਗੁਰੂਹਰਸਹਾਏ ਦੇ ਨੌਜਵਾਨ ਦੀ ਮੌਤ—ਪਰਿਵਾਰ ਵੱਲੋਂ ਕਤਲ ਦੇ ਦੋਸ਼</h3>
+                    <p>ਗੁਰੂਹਰਸਹਾਏ ਦੇ ਨੌਜਵਾਨ ਮਿਥੁਨ ਦੀ ਮਲੇਸ਼ੀਆ ਵਿੱਚ ਸ਼ੱਕੀ ਮੌਤ। ਪਰਿਵਾਰ ਨੇ ਮਾਮਲੇ ਦੀ ਉੱਚ ਪੱਧਰੀ ਜਾਂਚ ਦੀ ਮੰਗ ਕੀਤੀ।</p>
+                </div>
                 <a href="https://api.whatsapp.com/send?text=ਪੜ੍ਹੋ ਖ਼ਬਰ: https://ghsvlogger-website.github.io/punjab-live-now/punjab.html" target="_blank" class="share-btn">📲 WhatsApp 'ਤੇ ਸ਼ੇਅਰ ਕਰੋ</a>
             </div>
         </div>
