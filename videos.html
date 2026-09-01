@@ -1,1 +1,119 @@
+<!DOCTYPE html>
+<html lang="pa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ਵੀਡੀਓਜ਼ - Punjab Live Now (PLN)</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Mukta+Mahee:wght@500;600;700;800&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
 
+    <style>
+        :root {
+            --primary: #c40000;
+            --primary-dark: #8f0000;
+            --accent: #ffcc00;
+            --dark-bg: #0d1117;
+            --border-color: #e2e8f0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #f8fafc; color: #1e293b; font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; }
+
+        .top-utility { background: var(--dark-bg); color: #94a3b8; font-size: 0.8rem; padding: 7px 0; border-bottom: 1px solid #1e293b; }
+        .top-utility-inner { max-width: 1240px; margin: 0 auto; padding: 0 16px; display: flex; justify-content: space-between; align-items: center; }
+        .live-dot { display: inline-flex; align-items: center; gap: 6px; color: #f87171; font-weight: 700; }
+        .dot { width: 8px; height: 8px; background: #ef4444; border-radius: 50%; box-shadow: 0 0 8px #ef4444; }
+
+        header { background: linear-gradient(135deg, #b91c1c 0%, #7f1d1d 100%); color: #fff; padding: 16px 0; border-bottom: 3px solid var(--accent); box-shadow: 0 4px 20px rgba(185, 28, 28, 0.25); }
+        .header-inner { max-width: 1240px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px; }
+        .brand-cluster { display: flex; align-items: center; gap: 16px; text-decoration: none; color: #fff; }
+        .brand-logo { width: 68px; height: 68px; border-radius: 50%; border: 3px solid var(--accent); object-fit: cover; background: #fff; }
+        .brand-name h1 { font-family: 'Oswald', sans-serif; font-size: 2.5rem; font-weight: 700; letter-spacing: 1px; line-height: 1; text-transform: uppercase; }
+        .brand-name h1 span { color: var(--accent); }
+        .brand-name p { font-family: 'Mukta Mahee', sans-serif; font-size: 0.95rem; color: #fef08a; font-weight: 600; margin-top: 4px; }
+
+        .header-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .head-btn { font-family: 'Mukta Mahee', sans-serif; font-weight: 700; font-size: 0.88rem; padding: 7px 14px; border-radius: 50px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+        .btn-reporter { background: #1e1b4b; color: var(--accent); border: 1.5px solid #818cf8; }
+        .btn-ad { background: #fff; color: var(--primary); border: 2px solid var(--accent); }
+        .btn-live { background: var(--accent); color: #000; font-family: 'Oswald', sans-serif; }
+        .btn-wa { background: #25D366; color: #fff; }
+
+        nav { background: #0f172a; position: sticky; top: 0; z-index: 999; }
+        .nav-inner { max-width: 1240px; margin: 0 auto; display: flex; overflow-x: auto; white-space: nowrap; scrollbar-width: none; }
+        .nav-inner a { font-family: 'Mukta Mahee', sans-serif; color: #e2e8f0; text-decoration: none; padding: 14px 22px; font-size: 1.05rem; font-weight: 700; border-right: 1px solid #1e293b; }
+        .nav-inner a:hover, .nav-inner a.active { background: var(--primary); color: #fff; }
+
+        .container { max-width: 1240px; margin: 24px auto; padding: 0 16px; }
+        .category-header { background: #fff; border-radius: 12px; border: 1px solid var(--border-color); border-left: 6px solid var(--primary); padding: 16px 20px; margin-bottom: 25px; }
+        .category-header h2 { font-family: 'Mukta Mahee', sans-serif; font-size: 1.5rem; font-weight: 800; }
+
+        .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; }
+        .video-box { background: #fff; border-radius: 14px; border: 1px solid var(--border-color); padding: 18px; box-shadow: 0 4px 14px rgba(0,0,0,0.04); display: flex; flex-direction: column; justify-content: space-between; }
+        .video-title { font-family: 'Mukta Mahee', sans-serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 12px; color: #0f172a; }
+
+        footer { background: #090d16; color: #94a3b8; text-align: center; padding: 40px 16px; margin-top: 60px; border-top: 4px solid var(--primary); }
+    </style>
+</head>
+<body>
+
+<div class="top-utility">
+    <div class="top-utility-inner">
+        <div class="live-dot"><span class="dot"></span> PLN ਵੀਡੀਓ ਹੱਬ</div>
+        <div>24x7 Digital Video Desk</div>
+    </div>
+</div>
+
+<header>
+    <div class="header-inner">
+        <a href="index.html" class="brand-cluster">
+            <img src="channel_logo1.png" alt="PLN Logo" class="brand-logo" onerror="this.style.display='none'">
+            <div class="brand-name">
+                <h1>PUNJAB <span>LIVE NOW</span></h1>
+                <p>ਸਭ ਤੋਂ ਪਹਿਲਾਂ, ਸਭ ਤੋਂ ਸਟੀਕ | Voice of Punjab</p>
+            </div>
+        </a>
+        <div class="header-actions">
+            <a href="https://api.whatsapp.com/send?text=ਸਤਿ ਸ਼੍ਰੀ ਅਕਾਲ ਜੀ, ਮੈਂ Punjab Live Now (PLN) ਦਾ ਰਿਪੋਰਟਰ ਬਣਨ ਲਈ ਸੰਪਰਕ ਕਰ ਰਿਹਾ/ਰਹੀ ਹਾਂ।" target="_blank" class="head-btn btn-reporter">🎤 ਰਿਪੋਰਟਰ ਬਣੋ</a>
+            <a href="advertise.html" class="head-btn btn-ad">📢 ਇਸ਼ਤਿਹਾਰ ਦਿਓ</a>
+            <a href="https://www.youtube.com/@punjablivenow" target="_blank" class="head-btn btn-live">▶ LIVE TV</a>
+        </div>
+    </div>
+</header>
+
+<nav>
+    <div class="nav-inner">
+        <a href="index.html">ਮੁੱਖ ਪੰਨਾ</a>
+        <a href="punjab.html">ਪੰਜਾਬ</a>
+        <a href="guruharsahai.html">ਗੁਰੂਹਰਸਹਾਏ</a>
+        <a href="videos.html" class="active">ਵੀਡੀਓਜ਼</a>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="category-header">
+        <h2>🎬 ਪੰਜਾਬ ਲਾਈਵ ਨਾਓ (PLN) ਵਿਸ਼ੇਸ਼ ਵੀਡੀਓ ਰਿਪੋਰਟਾਂ</h2>
+    </div>
+
+    <div class="video-grid">
+        <div class="video-box">
+            <h3 class="video-title">🚨 ਜਮਸ਼ੇਦਪੁਰ ’ਚ ਅਚਾਨਕ ਫੱਟਿਆ CNG ਨੋਜ਼ਲ, ਦੇਖੋ ਮੌਕੇ ਦਾ ਹਾਲ!</h3>
+            <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DcudRnRSzTC/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:8px; margin: 0 auto; width:100%;"></blockquote>
+        </div>
+
+        <div class="video-box">
+            <h3 class="video-title">🎤 ਮਲੇਸ਼ੀਆ ਮਾਮਲਾ: ਗਰਾਊਂਡ ਰਿਪੋਰਟ ਤੇ ਪਰਿਵਾਰ ਦੇ ਖ਼ੁਲਾਸੇ</h3>
+            <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DcqoUntyBJY/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:8px; margin: 0 auto; width:100%;"></blockquote>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Punjab Live Now (PLN) Media Network. ਸਾਰੇ ਹੱਕ ਰਾਖਵੇਂ ਹਨ।</p>
+</footer>
+
+<script async src="//www.instagram.com/embed.js"></script>
+</body>
+</html>
