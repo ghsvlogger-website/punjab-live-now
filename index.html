@@ -5,62 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Punjab Live Now (PLN) - ਪੰਜਾਬ ਦਾ ਨੰਬਰ 1 ਡਿਜੀਟਲ ਨਿਊਜ਼ ਨੈੱਟਵਰਕ</title>
     
-    <!-- Modern Pro Typography -->
+    <!-- Top Editorial Punjabi & English Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Mukta+Mahee:wght@500;600;700;800&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --brand-primary: #b91c1c;
-            --brand-gradient: linear-gradient(135deg, #b91c1c 0%, #881337 50%, #4c0519 100%);
-            --accent-gold: #f59e0b;
-            --accent-gold-light: #fef3c7;
-            --navy-dark: #0f172a;
-            --navy-surface: #1e293b;
-            --bg-canvas: #f1f5f9;
-            --card-surface: #ffffff;
-            --text-dark: #0f172a;
-            --text-body: #334155;
-            --text-muted: #64748b;
-            --border-subtle: #e2e8f0;
-            --radius-md: 12px;
-            --radius-lg: 16px;
-            --shadow-card: 0 4px 20px -2px rgba(15, 23, 42, 0.08);
-            --shadow-hover: 0 12px 28px -4px rgba(15, 23, 42, 0.14);
+            --news-red: #c8102e;
+            --news-dark-red: #900018;
+            --news-black: #111827;
+            --news-slate: #1f2937;
+            --news-gold: #f59e0b;
+            --news-bg: #f3f4f6;
+            --card-bg: #ffffff;
+            --text-heading: #111827;
+            --text-paragraph: #374151;
+            --text-meta: #6b7280;
+            --border-line: #e5e7eb;
+            --border-dark: #d1d5db;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
-            background-color: var(--bg-canvas); 
-            color: var(--text-dark); 
-            font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; 
+            background-color: var(--news-bg); 
+            color: var(--text-heading); 
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-font-smoothing: antialiased;
             line-height: 1.6;
         }
 
-        /* Top Utility Bar */
-        .top-bar {
-            background: var(--navy-dark);
-            color: #94a3b8;
+        /* Top Newspaper Bar */
+        .top-strip {
+            background: var(--news-black);
+            color: #d1d5db;
             font-size: 0.82rem;
-            padding: 8px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding: 7px 0;
+            border-bottom: 2px solid var(--news-red);
         }
-        .top-bar-inner {
-            max-width: 1240px;
+        .top-strip-inner {
+            max-width: 1260px;
             margin: 0 auto;
             padding: 0 16px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        .live-tag {
+        .live-badge {
             display: inline-flex;
             align-items: center;
-            gap: 7px;
-            color: #f87171;
-            font-weight: 700;
-            font-size: 0.8rem;
+            gap: 6px;
+            color: #ef4444;
+            font-weight: 800;
+            text-transform: uppercase;
             letter-spacing: 0.5px;
         }
         .live-dot {
@@ -69,29 +66,27 @@
             background: #ef4444;
             border-radius: 50%;
             box-shadow: 0 0 8px #ef4444;
-            animation: pulse-dot 1.4s infinite;
+            animation: pulse 1.2s infinite;
         }
-        @keyframes pulse-dot { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(0.85); } }
-        
-        .top-social-links a {
-            color: #cbd5e1;
+        @keyframes pulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(0.85); } }
+
+        .social-follow a {
+            color: #e5e7eb;
             text-decoration: none;
-            margin-left: 14px;
+            margin-left: 15px;
             font-weight: 600;
             transition: color 0.2s;
         }
-        .top-social-links a:hover { color: var(--accent-gold); }
+        .social-follow a:hover { color: var(--news-gold); }
 
-        /* Master Branding Header */
+        /* Main Editorial Header */
         header {
-            background: var(--brand-gradient);
-            color: #fff;
+            background: #ffffff;
+            border-bottom: 1px solid var(--border-line);
             padding: 16px 0;
-            box-shadow: 0 4px 25px rgba(185, 28, 28, 0.2);
-            border-bottom: 3px solid var(--accent-gold);
         }
         .header-inner {
-            max-width: 1240px;
+            max-width: 1260px;
             margin: 0 auto;
             padding: 0 16px;
             display: flex;
@@ -103,78 +98,78 @@
         .brand-link {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 16px;
             text-decoration: none;
-            color: #fff;
+            color: inherit;
         }
         .brand-logo {
-            width: 66px;
-            height: 66px;
+            width: 68px;
+            height: 68px;
             border-radius: 50%;
-            border: 3px solid var(--accent-gold);
-            background: #fff;
+            border: 2.5px solid var(--news-red);
             object-fit: cover;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         .brand-titles h1 {
             font-family: 'Oswald', sans-serif;
-            font-size: 2.4rem;
+            font-size: 2.6rem;
             font-weight: 700;
             letter-spacing: 1px;
             line-height: 1;
+            color: var(--news-red);
             text-transform: uppercase;
         }
-        .brand-titles h1 span { color: var(--accent-gold); }
+        .brand-titles h1 span { color: var(--news-black); }
         .brand-titles p {
             font-family: 'Mukta Mahee', sans-serif;
             font-size: 0.95rem;
-            color: var(--accent-gold-light);
+            color: var(--text-meta);
             font-weight: 600;
             margin-top: 4px;
         }
 
-        /* Action Buttons */
-        .header-actions {
+        /* Professional Header Buttons */
+        .header-buttons {
             display: flex;
             align-items: center;
             gap: 8px;
             flex-wrap: wrap;
         }
-        .header-btn {
+        .h-btn {
             font-family: 'Mukta Mahee', sans-serif;
             font-weight: 700;
             font-size: 0.88rem;
-            padding: 7px 15px;
-            border-radius: 50px;
+            padding: 7px 16px;
+            border-radius: 6px;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
             gap: 6px;
             transition: all 0.2s;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
         }
-        .btn-reporter { background: #1e1b4b; color: #a5b4fc; border: 1px solid #6366f1; }
-        .btn-reporter:hover { background: #312e81; color: #fff; }
+        .btn-reporter { background: #eef2ff; color: #4338ca; border: 1px solid #c7d2fe; }
+        .btn-reporter:hover { background: #4338ca; color: #fff; }
         
-        .btn-ad { background: #ffffff; color: var(--brand-primary); border: 2px solid var(--accent-gold); }
-        .btn-ad:hover { background: var(--accent-gold); color: #000; }
+        .btn-ad { background: #fff1f2; color: var(--news-red); border: 1px solid #fecdd3; }
+        .btn-ad:hover { background: var(--news-red); color: #fff; }
         
-        .btn-live-tv { background: var(--accent-gold); color: #000; font-family: 'Oswald', sans-serif; font-size: 0.92rem; }
-        .btn-live-tv:hover { background: #fbbf24; }
+        .btn-live { background: var(--news-red); color: #fff; font-family: 'Oswald', sans-serif; }
+        .btn-live:hover { background: var(--news-dark-red); }
 
-        .btn-wa-help { background: #22c55e; color: #fff; }
-        .btn-wa-help:hover { background: #16a34a; }
+        .btn-wa { background: #22c55e; color: #fff; }
+        .btn-wa:hover { background: #16a34a; }
 
         /* Navigation Menu */
         nav {
-            background: var(--navy-dark);
+            background: var(--news-black);
             position: sticky;
             top: 0;
             z-index: 999;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         .nav-inner {
-            max-width: 1240px;
+            max-width: 1260px;
             margin: 0 auto;
             display: flex;
             overflow-x: auto;
@@ -184,353 +179,338 @@
         .nav-inner::-webkit-scrollbar { display: none; }
         .nav-inner a {
             font-family: 'Mukta Mahee', sans-serif;
-            color: #cbd5e1;
+            color: #f3f4f6;
             text-decoration: none;
-            padding: 14px 22px;
+            padding: 13px 22px;
             font-size: 1.05rem;
             font-weight: 700;
-            border-right: 1px solid rgba(255,255,255,0.06);
-            transition: all 0.2s;
+            border-right: 1px solid rgba(255,255,255,0.08);
+            transition: background 0.2s;
         }
         .nav-inner a:hover, .nav-inner a.active {
-            background: var(--brand-primary);
+            background: var(--news-red);
             color: #ffffff;
         }
 
         /* Container Layout */
         .container {
-            max-width: 1240px;
-            margin: 26px auto;
+            max-width: 1260px;
+            margin: 24px auto;
             padding: 0 16px;
         }
 
-        /* Breaking Banner */
-        .breaking-bar {
-            background: #fff;
-            border-radius: var(--radius-md);
-            border: 1px solid #fed7aa;
-            border-left: 6px solid var(--brand-primary);
+        /* Breaking News Bar */
+        .breaking-strip {
+            background: #ffffff;
+            border: 1px solid var(--border-line);
+            border-left: 5px solid var(--news-red);
             padding: 10px 16px;
             display: flex;
             align-items: center;
             gap: 14px;
             margin-bottom: 24px;
-            box-shadow: 0 2px 10px rgba(185, 28, 28, 0.05);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
-        .breaking-badge {
-            background: var(--brand-primary);
+        .breaking-tag {
+            background: var(--news-red);
             color: #fff;
             font-family: 'Oswald', sans-serif;
             font-size: 0.85rem;
-            padding: 4px 10px;
-            border-radius: 6px;
+            padding: 3px 9px;
+            border-radius: 4px;
             font-weight: 700;
             letter-spacing: 0.5px;
         }
-        .breaking-text {
+        .breaking-content {
             font-family: 'Mukta Mahee', sans-serif;
             font-weight: 700;
             font-size: 1.02rem;
-            color: var(--text-dark);
+            color: var(--news-black);
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
         }
 
-        /* Regional Filter Hub */
-        .region-hub {
-            background: #fff;
-            border: 1px solid var(--border-subtle);
-            border-radius: var(--radius-md);
+        /* Regional Cities Hub */
+        .city-hub {
+            background: #ffffff;
+            border: 1px solid var(--border-line);
+            border-radius: 8px;
             padding: 12px 18px;
             margin-bottom: 26px;
         }
-        .region-head {
+        .city-hub-title {
             font-size: 0.8rem;
             font-weight: 800;
-            color: var(--text-muted);
+            color: var(--text-meta);
             text-transform: uppercase;
-            letter-spacing: 0.7px;
+            letter-spacing: 0.8px;
             margin-bottom: 8px;
         }
-        .pill-cluster {
+        .city-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
         }
-        .city-pill {
-            background: #f8fafc;
-            color: var(--text-body);
-            padding: 6px 14px;
-            border-radius: 50px;
+        .city-tag-btn {
+            background: #f9fafb;
+            color: var(--text-paragraph);
+            padding: 5px 14px;
+            border-radius: 4px;
             font-family: 'Mukta Mahee', sans-serif;
             font-size: 0.92rem;
             font-weight: 700;
             text-decoration: none;
-            border: 1px solid var(--border-subtle);
+            border: 1px solid var(--border-line);
             transition: all 0.2s;
         }
-        .city-pill:hover, .city-pill.active {
+        .city-tag-btn:hover, .city-tag-btn.active {
             background: #fee2e2;
-            color: var(--brand-primary);
+            color: var(--news-red);
             border-color: #fca5a5;
         }
 
         /* 2-Column Master Grid */
         .main-layout {
             display: grid;
-            grid-template-columns: 2.1fr 1fr;
+            grid-template-columns: 2.2fr 1fr;
             gap: 28px;
         }
 
-        /* Spotlight Lead Story Card */
-        .spotlight-card {
-            background: var(--card-surface);
-            border-radius: var(--radius-lg);
+        /* Pro News Cards */
+        .news-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-line);
+            border-radius: 8px;
             overflow: hidden;
-            border: 1px solid var(--border-subtle);
-            box-shadow: var(--shadow-card);
-            margin-bottom: 28px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            margin-bottom: 26px;
+            transition: box-shadow 0.2s;
         }
-        .spotlight-media {
+        .news-card:hover {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+        
+        .card-media {
             position: relative;
-            background: #0b0f19;
+            background: #000;
+            width: 100%;
+            max-height: 480px;
+            overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
-            border-bottom: 1px solid var(--border-subtle);
         }
-        .spotlight-media img {
+        .card-media img {
             width: 100%;
-            max-height: 460px;
+            height: auto;
+            max-height: 480px;
             object-fit: contain;
             display: block;
         }
-        .spotlight-tag {
+        .card-badge {
             position: absolute;
-            top: 16px;
-            left: 16px;
-            background: rgba(185, 28, 28, 0.95);
+            top: 14px;
+            left: 14px;
+            background: var(--news-red);
             color: #fff;
             font-family: 'Oswald', sans-serif;
-            font-size: 0.85rem;
-            padding: 5px 12px;
-            border-radius: 6px;
+            font-size: 0.82rem;
+            padding: 4px 10px;
+            border-radius: 4px;
             font-weight: 700;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            letter-spacing: 0.5px;
         }
-        .spotlight-body { padding: 26px; }
-        .spotlight-title {
+
+        .card-body { padding: 24px; }
+        .card-title {
             font-family: 'Mukta Mahee', sans-serif;
             font-size: 1.65rem;
             font-weight: 800;
-            color: var(--text-dark);
+            color: var(--news-black);
             line-height: 1.35;
-            margin-bottom: 14px;
+            margin-bottom: 12px;
         }
-        .spotlight-text {
+        .card-desc {
             font-size: 0.98rem;
             line-height: 1.75;
-            color: var(--text-body);
+            color: var(--text-paragraph);
             margin-bottom: 16px;
         }
-        .fact-notice {
-            background: #f8fafc;
-            border-left: 4px solid var(--brand-primary);
+        
+        .fact-box {
+            background: #f9fafb;
+            border-left: 4px solid var(--news-red);
             padding: 12px 16px;
-            border-radius: 0 8px 8px 0;
-            font-size: 0.88rem;
-            color: var(--text-body);
+            font-size: 0.9rem;
+            color: var(--text-paragraph);
             margin-bottom: 16px;
         }
-        .spotlight-foot {
+
+        .card-footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-top: 1px solid #f1f5f9;
+            border-top: 1px solid var(--border-line);
             padding-top: 16px;
             flex-wrap: wrap;
             gap: 10px;
         }
 
-        /* Action Buttons on Cards */
-        .btn-pill {
-            background: #22c55e;
-            color: #fff;
+        .btn-action {
             font-family: 'Mukta Mahee', sans-serif;
             font-size: 0.88rem;
             font-weight: 700;
             padding: 7px 16px;
-            border-radius: 50px;
+            border-radius: 4px;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            box-shadow: 0 2px 8px rgba(34, 197, 94, 0.25);
             transition: all 0.2s;
         }
-        .btn-pill:hover { background: #16a34a; transform: translateY(-1px); }
-        .btn-pill-dark { background: var(--navy-dark); color: #fff; }
-        .btn-pill-dark:hover { background: var(--brand-primary); }
+        .btn-action-primary { background: var(--news-black); color: #fff; }
+        .btn-action-primary:hover { background: var(--news-red); }
+        .btn-action-wa { background: #22c55e; color: #fff; }
+        .btn-action-wa:hover { background: #16a34a; }
 
-        /* Secondary Grid Section */
-        .grid-header {
+        /* Secondary 2-Card Grid */
+        .section-header {
             font-family: 'Mukta Mahee', sans-serif;
             font-size: 1.35rem;
             font-weight: 800;
-            color: var(--text-dark);
+            color: var(--news-black);
             margin-bottom: 18px;
             display: flex;
             align-items: center;
             gap: 12px;
         }
-        .grid-header::after {
+        .section-header::after {
             content: "";
             flex: 1;
             height: 2px;
-            background: var(--border-subtle);
+            background: var(--border-line);
         }
 
-        .cards-grid {
+        .news-grid-two {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 22px;
+            gap: 20px;
         }
-        .story-card {
+        .grid-card {
             background: #fff;
-            border-radius: var(--radius-md);
+            border: 1px solid var(--border-line);
+            border-radius: 8px;
             overflow: hidden;
-            border: 1px solid var(--border-subtle);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            box-shadow: var(--shadow-card);
             transition: all 0.2s;
         }
-        .story-card:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-hover);
-        }
-        .story-img-wrap {
-            position: relative;
-            height: 180px;
-            background: #0f172a;
+        .grid-card:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(0,0,0,0.06); }
+        
+        .grid-card-media {
+            height: 190px;
+            background: #111827;
             overflow: hidden;
         }
-        .story-img-wrap img {
+        .grid-card-media img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        .story-body {
-            padding: 18px;
+        .grid-card-body {
+            padding: 16px;
             display: flex;
             flex-direction: column;
             flex-grow: 1;
             justify-content: space-between;
         }
-        .story-title {
+        .grid-card-title {
             font-family: 'Mukta Mahee', sans-serif;
             font-size: 1.15rem;
             font-weight: 700;
             line-height: 1.4;
-            color: var(--text-dark);
-            margin-bottom: 10px;
+            color: var(--news-black);
+            margin-bottom: 8px;
         }
-        .story-desc {
+        .grid-card-text {
             font-size: 0.88rem;
-            color: var(--text-muted);
+            color: var(--text-meta);
             line-height: 1.6;
-            margin-bottom: 14px;
+            margin-bottom: 12px;
         }
 
-        /* Jamshedpur Full Video Box */
-        .jamshedpur-box {
-            grid-column: span 2;
-            background: #ffffff;
-            border: 1.5px solid #fed7aa;
-            border-radius: var(--radius-lg);
-            padding: 22px;
-            margin-bottom: 10px;
-            box-shadow: var(--shadow-card);
-        }
-        .jamshedpur-box-inner {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 20px;
-            align-items: center;
-        }
-
-        /* Sidebar */
+        /* Right Sidebar */
         .sidebar { display: flex; flex-direction: column; gap: 24px; }
-        .sidebar-card {
+        .sidebar-box {
             background: #fff;
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--border-subtle);
+            border: 1px solid var(--border-line);
+            border-radius: 8px;
             padding: 18px;
-            box-shadow: var(--shadow-card);
         }
         .sidebar-title {
             font-family: 'Oswald', sans-serif;
             font-size: 1.25rem;
             font-weight: 700;
-            color: var(--brand-primary);
+            color: var(--news-red);
             text-transform: uppercase;
             border-bottom: 2px solid #fee2e2;
             padding-bottom: 8px;
             margin-bottom: 16px;
         }
-        .sidebar-btn {
+        .sidebar-action-btn {
             display: block;
-            background: var(--brand-gradient);
+            background: var(--news-red);
             color: #fff;
             text-align: center;
-            padding: 12px;
-            border-radius: 8px;
+            padding: 11px;
+            border-radius: 6px;
             font-weight: 700;
             font-size: 0.95rem;
             text-decoration: none;
             margin-top: 14px;
+            transition: background 0.2s;
         }
+        .sidebar-action-btn:hover { background: var(--news-dark-red); }
 
         /* Master Footer */
         footer {
-            background: var(--navy-dark);
-            color: #94a3b8;
+            background: var(--news-black);
+            color: #9ca3af;
             text-align: center;
             padding: 40px 16px;
             margin-top: 60px;
-            border-top: 4px solid var(--brand-primary);
+            border-top: 4px solid var(--news-red);
         }
-        .footer-social-links { margin-bottom: 18px; }
-        .footer-social-links a {
-            color: var(--accent-gold);
+        .footer-links { margin-bottom: 16px; }
+        .footer-links a {
+            color: #f3f4f6;
             text-decoration: none;
             margin: 0 14px;
             font-weight: 700;
             font-size: 0.95rem;
         }
+        .footer-links a:hover { color: var(--news-gold); }
 
         @media (max-width: 900px) {
             .main-layout { grid-template-columns: 1fr; }
-            .cards-grid { grid-template-columns: 1fr; }
-            .jamshedpur-box { grid-column: span 1; }
-            .jamshedpur-box-inner { grid-template-columns: 1fr; }
-            .brand-titles h1 { font-size: 2rem; }
-            .header-actions { width: 100%; justify-content: center; }
+            .news-grid-two { grid-template-columns: 1fr; }
+            .brand-titles h1 { font-size: 2.1rem; }
+            .header-buttons { width: 100%; justify-content: center; }
         }
     </style>
 </head>
 <body>
 
-<!-- Top Bar -->
-<div class="top-bar">
-    <div class="top-bar-inner">
-        <div class="live-tag">
+<!-- Top Newspaper Bar -->
+<div class="top-strip">
+    <div class="top-strip-inner">
+        <div class="live-badge">
             <span class="live-dot"></span> 24x7 LIVE PUNJAB NEWS NETWORK
         </div>
-        <div class="top-social-links">
-            Follow Us: 
+        <div class="social-follow">
+            Follow: 
             <a href="https://www.youtube.com/@punjablivenow" target="_blank">YouTube</a>
             <a href="https://www.instagram.com/punjablivenow" target="_blank">Instagram</a>
             <a href="https://www.facebook.com/profile.php?id=61562360634592" target="_blank">Facebook</a>
@@ -538,7 +518,7 @@
     </div>
 </div>
 
-<!-- Header -->
+<!-- Main Header -->
 <header>
     <div class="header-inner">
         <a href="index.html" class="brand-link">
@@ -549,24 +529,24 @@
             </div>
         </a>
         
-        <div class="header-actions">
-            <a href="https://api.whatsapp.com/send?text=ਸਤਿ ਸ਼੍ਰੀ ਅਕਾਲ ਜੀ, ਮੈਂ Punjab Live Now (PLN) ਦਾ ਰਿਪੋਰਟਰ ਬਣਨ ਲਈ ਸੰਪਰਕ ਕਰ ਰਿਹਾ/ਰਹੀ ਹਾਂ।" target="_blank" class="header-btn btn-reporter">
+        <div class="header-buttons">
+            <a href="https://api.whatsapp.com/send?text=ਸਤਿ ਸ਼੍ਰੀ ਅਕਾਲ ਜੀ, ਮੈਂ Punjab Live Now (PLN) ਦਾ ਰਿਪੋਰਟਰ ਬਣਨ ਲਈ ਸੰਪਰਕ ਕਰ ਰਿਹਾ/ਰਹੀ ਹਾਂ।" target="_blank" class="h-btn btn-reporter">
                 🎤 ਰਿਪੋਰਟਰ ਬਣੋ
             </a>
-            <a href="advertise.html" class="header-btn btn-ad">
-                📢 ਇਸ਼ਤਿਹਾਰ / ਖ਼ਬਰ ਦਿਓ
+            <a href="advertise.html" class="h-btn btn-ad">
+                📢 ਇਸ਼ਤਿਹਾਰ ਦਿਓ
             </a>
-            <a href="https://www.youtube.com/@punjablivenow" target="_blank" class="header-btn btn-live-tv">
+            <a href="https://www.youtube.com/@punjablivenow" target="_blank" class="h-btn btn-live">
                 ▶ LIVE TV
             </a>
-            <a href="https://api.whatsapp.com/send?phone=919876543210" target="_blank" class="header-btn btn-wa-help">
+            <a href="https://api.whatsapp.com/send?phone=919876543210" target="_blank" class="h-btn btn-wa">
                 💬 ਹੈਲਪਲਾਈਨ
             </a>
         </div>
     </div>
 </header>
 
-<!-- Main Nav -->
+<!-- Main Navigation -->
 <nav>
     <div class="nav-inner">
         <a href="index.html" class="active">ਮੁੱਖ ਪੰਨਾ</a>
@@ -579,141 +559,140 @@
 </nav>
 
 <div class="container">
-    <!-- Breaking Ticker -->
-    <div class="breaking-bar">
-        <span class="breaking-badge">BREAKING NEWS</span>
-        <span class="breaking-text">🚨 ਜਮਸ਼ੇਦਪੁਰ ’ਚ ਅਚਾਨਕ ਫੱਟਿਆ CNG ਪਾਈਪ ਦਾ ਨੋਜ਼ਲ | ਮਲੇਸ਼ੀਆ ਮਾਮਲੇ 'ਚ ਤਸਵੀਰ ਨੂੰ ਲੈ ਕੇ ਵੱਡਾ ਖੁਲਾਸਾ!</span>
+    <!-- Breaking News Ticker -->
+    <div class="breaking-strip">
+        <span class="breaking-tag">BREAKING NEWS</span>
+        <span class="breaking-content">🚨 ਜਮਸ਼ੇਦਪੁਰ ’ਚ ਅਚਾਨਕ ਫੱਟਿਆ CNG ਪਾਈਪ ਦਾ ਨੋਜ਼ਲ | ਮਲੇਸ਼ੀਆ ਮਾਮਲੇ 'ਚ ਤਸਵੀਰ ਨੂੰ ਲੈ ਕੇ ਵੱਡਾ ਖੁਲਾਸਾ!</span>
     </div>
 
-    <!-- Regional Filters -->
-    <div class="region-hub">
-        <div class="region-head">📍 ਖੇਤਰੀ ਕਵਰੇਜ (Regional News)</div>
-        <div class="pill-cluster">
-            <a href="guruharsahai.html" class="city-pill">ਗੁਰੂਹਰਸਹਾਏ</a>
-            <a href="punjab.html" class="city-pill">ਫ਼ਿਰੋਜ਼ਪੁਰ</a>
-            <a href="punjab.html" class="city-pill">ਮਮਦੋਟ</a>
-            <a href="punjab.html" class="city-pill">ਜ਼ੀਰਾ</a>
-            <a href="punjab.html" class="city-pill">ਮੱਖੂ</a>
-            <a href="punjab.html" class="city-pill">ਘੱਲ ਖੁਰਦ</a>
-            <a href="punjab.html" class="city-pill">ਸਮੁੱਚਾ ਪੰਜਾਬ</a>
+    <!-- Regional Coverage Filters -->
+    <div class="city-hub">
+        <div class="city-hub-title">📍 ਖੇਤਰੀ ਕਵਰੇਜ (Regional News Coverage)</div>
+        <div class="city-tags">
+            <a href="guruharsahai.html" class="city-tag-btn">ਗੁਰੂਹਰਸਹਾਏ</a>
+            <a href="punjab.html" class="city-tag-btn">ਫ਼ਿਰੋਜ਼ਪੁਰ</a>
+            <a href="punjab.html" class="city-tag-btn">ਮਮਦੋਟ</a>
+            <a href="punjab.html" class="city-tag-btn">ਜ਼ੀਰਾ</a>
+            <a href="punjab.html" class="city-tag-btn">ਮੱਖੂ</a>
+            <a href="punjab.html" class="city-tag-btn">ਘੱਲ ਖੁਰਦ</a>
+            <a href="punjab.html" class="city-tag-btn">ਸਮੁੱਚਾ ਪੰਜਾਬ</a>
         </div>
     </div>
 
-    <!-- Main 2-Col Grid -->
+    <!-- Main Grid -->
     <div class="main-layout">
         <div>
-            <!-- Spotlight Lead: ਮਿਥੁਨ ਤਸਵੀਰ ਜਾਂਚ ਰਿਪੋਰਟ -->
-            <div class="spotlight-card">
-                <div class="spotlight-media">
-                    <span class="spotlight-tag">FACT CHECK / INVESTIGATION</span>
+            <!-- Lead Story 1: ਮਿਥੁਨ ਤਸਵੀਰ ਜਾਂਚ -->
+            <div class="news-card">
+                <div class="card-media">
+                    <span class="card-badge">FACT CHECK / INVESTIGATION</span>
                     <img src="malaysianews2.jpg" alt="ਮਿਥੁਨ ਤਸਵੀਰ ਵਿਵਾਦ ਮਲੇਸ਼ੀਆ" onerror="this.src='malaysianews1.jpg'">
                 </div>
-                <div class="spotlight-body">
-                    <h2 class="spotlight-title">🚨 ਮਿਥੁਨ ਦੀ ਤਸਵੀਰ ਨੇ ਖੜ੍ਹੇ ਕੀਤੇ ਸਵਾਲ, AI ਜਾਂ ਸੱਚੀ ਤਸਵੀਰ?</h2>
-                    <p class="spotlight-text"><strong>ਮਲੇਸ਼ੀਆ / ਗੁਰੂਹਰਸਹਾਏ (Punjab Live Now):</strong> ਮਿਥੁਨ ਨਾਲ ਜੁੜੀ ਇੱਕ ਤਸਵੀਰ ਸੋਸ਼ਲ ਮੀਡੀਆ ’ਤੇ ਸਾਹਮਣੇ ਆਉਣ ਤੋਂ ਬਾਅਦ ਕਈ ਗੰਭੀਰ ਸਵਾਲ ਖੜ੍ਹੇ ਹੋ ਰਹੇ ਹਨ। ਤਸਵੀਰ ਨੂੰ ਧਿਆਨ ਨਾਲ ਦੇਖਣ ’ਤੇ ਪਹਿਲਾਂ ਸਾਹਮਣੇ ਆਈ ਤਸਵੀਰ ਅਤੇ ਨਵੀਂ ਤਸਵੀਰ ਵਿੱਚ ਪੈਰਾਂ ਦੀਆਂ ਚੱਪਲਾਂ ਅਤੇ ਬੈਠਣ-ਖੜ੍ਹੇ ਹੋਣ ਦੀ ਸਥਿਤੀ ਵਿੱਚ ਫਰਕ ਸਾਫ਼ ਨਜ਼ਰ ਆਉਂਦਾ ਹੈ।</p>
-                    <p class="spotlight-text">ਇਨ੍ਹਾਂ ਤਬਦੀਲੀਆਂ ਕਾਰਨ ਇਹ ਸ਼ੱਕ ਜਤਾਇਆ ਜਾ ਰਿਹਾ ਹੈ ਕਿ ਤਸਵੀਰ AI (Artificial Intelligence) ਨਾਲ ਤਿਆਰ ਜਾਂ ਐਡਿਟ ਕੀਤੀ ਹੋ ਸਕਦੀ ਹੈ। ਹਾਲਾਂਕਿ, ਸਿਰਫ਼ ਤਸਵੀਰ ਵਿੱਚ ਫਰਕ ਹੋਣ ਦੇ ਆਧਾਰ ’ਤੇ ਇਸ ਨੂੰ AI ਤਸਵੀਰ ਜਾਂ ਮੌਤ ਦੀ ਪੁਸ਼ਟੀ ਨਹੀਂ ਮੰਨਿਆ ਜਾ ਸਕਦਾ।</p>
+                <div class="card-body">
+                    <h2 class="card-title">🚨 ਮਿਥੁਨ ਦੀ ਤਸਵੀਰ ਨੇ ਖੜ੍ਹੇ ਕੀਤੇ ਸਵਾਲ, AI ਜਾਂ ਸੱਚੀ ਤਸਵੀਰ?</h2>
+                    <p class="card-desc"><strong>ਮਲੇਸ਼ੀਆ / ਗੁਰੂਹਰਸਹਾਏ (Punjab Live Now):</strong> ਮਿਥੁਨ ਨਾਲ ਜੁੜੀ ਇੱਕ ਤਸਵੀਰ ਸੋਸ਼ਲ ਮੀਡੀਆ ’ਤੇ ਸਾਹਮਣੇ ਆਉਣ ਤੋਂ ਬਾਅਦ ਕਈ ਗੰਭੀਰ ਸਵਾਲ ਖੜ੍ਹੇ ਹੋ ਰਹੇ ਹਨ। ਤਸਵੀਰ ਨੂੰ ਧਿਆਨ ਨਾਲ ਦੇਖਣ ’ਤੇ ਪਹਿਲਾਂ ਸਾਹਮਣੇ ਆਈ ਤਸਵੀਰ ਅਤੇ ਨਵੀਂ ਤਸਵੀਰ ਵਿੱਚ ਪੈਰਾਂ ਦੀਆਂ ਚੱਪਲਾਂ ਅਤੇ ਬੈਠਣ-ਖੜ੍ਹੇ ਹੋਣ ਦੀ ਸਥਿਤੀ ਵਿੱਚ ਫਰਕ ਸਾਫ਼ ਨਜ਼ਰ ਆਉਂਦਾ ਹੈ।</p>
+                    <p class="card-desc">ਇਨ੍ਹਾਂ ਤਬਦੀਲੀਆਂ ਕਾਰਨ ਇਹ ਸ਼ੱਕ ਜਤਾਇਆ ਜਾ ਰਿਹਾ ਹੈ ਕਿ ਤਸਵੀਰ AI ਨਾਲ ਤਿਆਰ ਜਾਂ ਐਡਿਟ ਕੀਤੀ ਹੋ ਸਕਦੀ ਹੈ। ਹਾਲਾਂਕਿ, ਸਿਰਫ਼ ਤਸਵੀਰ ਵਿੱਚ ਫਰਕ ਹੋਣ ਦੇ ਆਧਾਰ ’ਤੇ ਇਸ ਨੂੰ AI ਤਸਵੀਰ ਜਾਂ ਮੌਤ ਦੀ ਪੁਸ਼ਟੀ ਨਹੀਂ ਮੰਨਿਆ ਜਾ ਸਕਦਾ।</p>
                     
-                    <div class="fact-notice">
+                    <div class="fact-box">
                         🔍 <strong>ਮੁੱਖ ਸਵਾਲ:</strong> ਮਿਥੁਨ ਨਾਲ ਅਸਲ ਵਿੱਚ ਕੀ ਹੋਇਆ? ਤਸਵੀਰ ਸੱਚੀ ਹੈ, AI ਹੈ ਜਾਂ ਕੋਈ ਹੋਰ ਮਾਮਲਾ? ਇਸ ਦੀ ਪੁਸ਼ਟੀ ਲਈ ਭਰੋਸੇਯੋਗ ਅਧਿਕਾਰਤ ਜਾਂਚ ਰਿਪੋਰਟ ਦੀ ਉਡੀਕ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ।
                     </div>
 
-                    <div class="spotlight-foot">
-                        <a href="malaysia-case.html" class="btn-pill btn-pill-dark">
-                            📖 ਪਹਿਲੀ ਪੂਰੀ ਗਰਾਊਂਡ ਰਿਪੋਰਟ ਪੜ੍ਹੋ
+                    <div class="card-footer">
+                        <a href="malaysia-case.html" class="btn-action btn-action-primary">
+                            📖 ਪਹਿਲੀ ਗਰਾਊਂਡ ਰਿਪੋਰਟ ਪੜ੍ਹੋ ➔
                         </a>
-                        <a href="https://api.whatsapp.com/send?text=ਮਿਥੁਨ ਦੀ ਤਸਵੀਰ ਨੇ ਖੜ੍ਹੇ ਕੀਤੇ ਸਵਾਲ, AI ਜਾਂ ਸੱਚੀ ਤਸਵੀਰ?: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="btn-pill">
+                        <a href="https://api.whatsapp.com/send?text=ਮਿਥੁਨ ਦੀ ਤਸਵੀਰ ਨੇ ਖੜ੍ਹੇ ਕੀਤੇ ਸਵਾਲ, AI ਜਾਂ ਸੱਚੀ ਤਸਵੀਰ?: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="btn-action btn-action-wa">
                             📲 WhatsApp 'ਤੇ ਸ਼ੇਅਰ ਕਰੋ
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Spotlight 2: ਜਮਸ਼ੇਦਪੁਰ CNG ਵੱਡਾ ਖ਼ਬਰ + ਵੀਡੀਓ ਕਾਰਡ -->
-            <div class="jamshedpur-box">
-                <div class="jamshedpur-box-inner">
-                    <div>
-                        <span style="background:#fee2e2; color:#b91c1c; padding:4px 10px; border-radius:4px; font-weight:700; font-size:0.8rem; font-family:'Oswald',sans-serif;">EXCLUSIVE VIDEO REPORT</span>
-                        <h3 style="font-family:'Mukta Mahee',sans-serif; font-size:1.35rem; font-weight:800; color:#0f172a; margin:8px 0 10px 0; line-height:1.35;">
-                            👉 ਜਮਸ਼ੇਦਪੁਰ ’ਚ ਅਚਾਨਕ ਫੱਟਿਆ CNG ਨੋਜ਼ਲ, ਦੇਖੋ ਮੌਕੇ ਦਾ ਹਾਲ!
-                        </h3>
-                        <p style="font-size:0.92rem; color:#475569; line-height:1.65; margin-bottom:14px;">
-                            <strong>ਜਮਸ਼ੇਦਪੁਰ:</strong> ਜਮਸ਼ੇਦਪੁਰ ਵਿੱਚ CNG ਪਾਈਪ ਦੇ ਨੋਜ਼ਲ ਦੇ ਅਚਾਨਕ ਫੱਟਣ ਦੀ ਵੱਡੀ ਘਟਨਾ ਸਾਹਮਣੇ ਆਈ ਹੈ। ਘਟਨਾ ਤੋਂ ਬਾਅਦ ਮੌਕੇ ’ਤੇ ਭਾਰੀ ਹਫੜਾ-ਦਫੜੀ ਮਚ ਗਈ। ਲਾਈਵ ਘਟਨਾਕ੍ਰਮ ਦੀ ਵੀਡੀਓ ਨਾਲ ਦੇਖੋ।
-                        </p>
-                        <div style="display:flex; gap:10px; flex-wrap:wrap;">
-                            <a href="videos.html" class="btn-pill btn-pill-dark" style="font-size:0.85rem;">🎬 ਵੀਡੀਓ ਹੱਬ ਖੋਲ੍ਹੋ</a>
-                            <a href="https://api.whatsapp.com/send?text=ਜਮਸ਼ੇਦਪੁਰ ’ਚ ਅਚਾਨਕ ਫੱਟਿਆ CNG ਨੋਜ਼ਲ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="btn-pill" style="font-size:0.85rem;">📲 ਸ਼ੇਅਰ ਕਰੋ</a>
-                        </div>
-                    </div>
-                    <div style="display:flex; justify-content:center;">
-                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DcudRnRSzTC/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:8px; margin:0 auto; width:100%; max-width:330px;"></blockquote>
+            <!-- Lead Story 2: ਜਮਸ਼ੇਦਪੁਰ CNG ਹਾਦਸਾ -->
+            <div class="news-card">
+                <div class="card-media">
+                    <span class="card-badge" style="background:#0f172a;">EXCLUSIVE NATIONAL NEWS</span>
+                    <img src="jmshedpurnewscng.jpg" alt="ਜਮਸ਼ੇਦਪੁਰ CNG ਨੋਜ਼ਲ ਹਾਦਸਾ" onerror="this.src='nepalnews1.jpg'">
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">👉 ਜਮਸ਼ੇਦਪੁਰ ’ਚ ਅਚਾਨਕ ਫੱਟਿਆ CNG ਨੋਜ਼ਲ, ਦੇਖੋ ਮੌਕੇ ਦਾ ਹਾਲ!</h2>
+                    <p class="card-desc"><strong>ਜਮਸ਼ੇਦਪੁਰ (Punjab Live Now):</strong> ਜਮਸ਼ੇਦਪੁਰ ਵਿੱਚ CNG ਪਾਈਪ ਦੇ ਨੋਜ਼ਲ ਦੇ ਅਚਾਨਕ ਫੱਟਣ ਦੀ ਵੱਡੀ ਘਟਨਾ ਸਾਹਮਣੇ ਆਈ ਹੈ। ਘਟਨਾ ਤੋਂ ਬਾਅਦ ਮੌਕੇ ’ਤੇ ਭਾਰੀ ਹਫੜਾ-ਦਫੜੀ ਮਚ ਗਈ। ਮਾਮਲੇ ਸਬੰਧੀ ਹੋਰ ਵੇਰਵਿਆਂ ਦੀ ਉਡੀਕ ਹੈ। ਲਾਈਵ ਵੀਡੀਓ ਰਿਪੋਰਟ ਦੇਖਣ ਲਈ ਵੀਡੀਓ ਹੱਬ ਖੋਲ੍ਹੋ।</p>
+
+                    <div class="card-footer">
+                        <a href="videos.html" class="btn-action btn-action-primary">
+                            🎬 ਵੀਡੀਓ ਦੇਖੋ (Video Hub) ➔
+                        </a>
+                        <a href="https://api.whatsapp.com/send?text=ਜਮਸ਼ੇਦਪੁਰ ’ਚ ਅਚਾਨਕ ਫੱਟਿਆ CNG ਨੋਜ਼ਲ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="btn-action btn-action-wa">
+                            📲 WhatsApp 'ਤੇ ਸ਼ੇਅਰ ਕਰੋ
+                        </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Secondary Grid -->
-            <div class="grid-header" style="margin-top:25px;">ਹੋਰ ਪ੍ਰਮੁੱਖ ਖ਼ਬਰਾਂ</div>
-            <div class="cards-grid">
-                <!-- ਮਲੇਸ਼ੀਆ ਪਹਿਲੀ ਖ਼ਬਰ (ਲਿੰਕ ਵਾਲੀ) -->
-                <div class="story-card">
-                    <div class="story-img-wrap">
-                        <img src="malaysianews1.jpg" alt="ਮਲੇਸ਼ੀਆ ਮਾਮਲਾ ਗਰਾਊਂਡ ਰਿਪੋਰਟ">
+            <!-- Secondary Grid Stories -->
+            <div class="section-header">ਹੋਰ ਪ੍ਰਮੁੱਖ ਖ਼ਬਰਾਂ</div>
+            <div class="news-grid-two">
+                <!-- ਮਲੇਸ਼ੀਆ ਪਹਿਲੀ ਖ਼ਬਰ -->
+                <div class="grid-card">
+                    <div class="grid-card-media">
+                        <img src="malaysianews1.jpg" alt="ਮਲੇਸ਼ੀਆ ਮਾਮਲਾ">
                     </div>
-                    <div class="story-body">
+                    <div class="grid-card-body">
                         <div>
-                            <h3 class="story-title">ਮਲੇਸ਼ੀਆ ’ਚ ਗੁਰੂਹਰਸਹਾਏ ਦੇ ਨੌਜਵਾਨ ਦੀ ਮੌਤ—ਕਤਲ ਜਾਂ ਖੁਦਕੁਸ਼ੀ?</h3>
-                            <p class="story-desc">ਪਰਿਵਾਰ ਵੱਲੋਂ ਕਤਲ ਦੇ ਗੰਭੀਰ ਦੋਸ਼ ਅਤੇ ਉੱਚ ਪੱਧਰੀ ਜਾਂਚ ਦੀ ਮੰਗ। ਪੜ੍ਹੋ ਪੂਰੀ ਰਿਪੋਰਟ।</p>
+                            <h3 class="grid-card-title">ਮਲੇਸ਼ੀਆ ’ਚ ਗੁਰੂਹਰਸਹਾਏ ਦੇ ਨੌਜਵਾਨ ਦੀ ਮੌਤ—ਕਤਲ ਜਾਂ ਖੁਦਕੁਸ਼ੀ?</h3>
+                            <p class="grid-card-text">ਪਰਿਵਾਰ ਵੱਲੋਂ ਕਤਲ ਦੇ ਗੰਭੀਰ ਦੋਸ਼ ਅਤੇ ਉੱਚ ਪੱਧਰੀ ਜਾਂਚ ਦੀ ਮੰਗ।</p>
                         </div>
                         <div style="display:flex; justify-content:space-between; align-items:center; margin-top:10px;">
-                            <a href="malaysia-case.html" class="btn-pill btn-pill-dark" style="font-size:0.82rem; padding:6px 12px;">ਪੂਰੀ ਖ਼ਬਰ ਪੜ੍ਹੋ ➔</a>
-                            <a href="https://api.whatsapp.com/send?text=ਮਲੇਸ਼ੀਆ ਮਾਮਲਾ ਗਰਾਊਂਡ ਰਿਪੋਰਟ: https://ghsvlogger-website.github.io/punjab-live-now/malaysia-case.html" target="_blank" class="btn-pill" style="font-size:0.82rem; padding:6px 12px;">📲</a>
+                            <a href="malaysia-case.html" class="btn-action btn-action-primary" style="font-size:0.82rem; padding:5px 12px;">ਪੜ੍ਹੋ ➔</a>
+                            <a href="https://api.whatsapp.com/send?text=ਮਲੇਸ਼ੀਆ ਮਾਮਲਾ: https://ghsvlogger-website.github.io/punjab-live-now/malaysia-case.html" target="_blank" class="btn-action btn-action-wa" style="font-size:0.82rem; padding:5px 12px;">📲</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- ਚੰਨੀ ਤੇ ਤਰਸੇਮ ਲਾਲ ਵਿਵਾਦ -->
-                <div class="story-card">
-                    <div class="story-img-wrap">
+                <!-- ਚੰਨੀ ਤੇ ਰਾਹੁਲ ਗਾਂਧੀ ਵਿਵਾਦ -->
+                <div class="grid-card">
+                    <div class="grid-card-media">
                         <img src="rahulchanni.jpg" alt="ਚਰਨਜੀਤ ਚੰਨੀ" onerror="this.src='news1_cropperd.jpg'">
                     </div>
-                    <div class="story-body">
+                    <div class="grid-card-body">
                         <div>
-                            <h3 class="story-title">🔥 ਚੰਨੀ ਵੱਲੋਂ ਤਰਸੇਮ ਲਾਲ ਦੀ ਪੋਸਟ ਸ਼ੇਅਰ ਕਰਨ ’ਤੇ ਸਿਆਸੀ ਚਰਚਾ</h3>
-                            <p class="story-desc">ਸਾਬਕਾ ਮੁੱਖ ਮੰਤਰੀ ਵੱਲੋਂ ਪੋਸਟ ਸ਼ੇਅਰ ਕਰਨ ਤੋਂ ਬਾਅਦ ਕਾਂਗਰਸ ਅਤੇ ਪੰਜਾਬ ਸਿਆਸਤ ਵਿੱਚ ਚਰਚਾਵਾਂ ਤੇਜ਼।</p>
+                            <h3 class="grid-card-title">🔥 ਚੰਨੀ ਵੱਲੋਂ ਤਰਸੇਮ ਲਾਲ ਦੀ ਪੋਸਟ ਸ਼ੇਅਰ ਕਰਨ ’ਤੇ ਸਿਆਸੀ ਚਰਚਾ</h3>
+                            <p class="grid-card-text">ਸਾਬਕਾ ਮੁੱਖ ਮੰਤਰੀ ਵੱਲੋਂ ਪੋਸਟ ਸ਼ੇਅਰ ਕਰਨ ਤੋਂ ਬਾਅਦ ਕਾਂਗਰਸ ਅਤੇ ਪੰਜਾਬ ਸਿਆਸਤ ਵਿੱਚ ਚਰਚਾਵਾਂ ਤੇਜ਼।</p>
                         </div>
                         <div style="display:flex; justify-content:flex-end; margin-top:10px;">
-                            <a href="https://api.whatsapp.com/send?text=ਚੰਨੀ ਤਰਸੇਮ ਲਾਲ ਪੋਸਟ ਵਿਵਾਦ: https://ghsvlogger-website.github.io/punjab-live-now/punjab.html" target="_blank" class="btn-pill" style="font-size:0.82rem; padding:6px 12px;">📲 ਸ਼ੇਅਰ ਕਰੋ</a>
+                            <a href="https://api.whatsapp.com/send?text=ਚੰਨੀ ਤਰਸੇਮ ਲਾਲ ਪੋਸਟ ਵਿਵਾਦ: https://ghsvlogger-website.github.io/punjab-live-now/punjab.html" target="_blank" class="btn-action btn-action-wa" style="font-size:0.82rem; padding:5px 12px;">📲 ਸ਼ੇਅਰ ਕਰੋ</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- ਸੁਖਬੀਰ ਬਾਦਲ ਮੁਲਾਕਾਤ -->
-                <div class="story-card">
-                    <div class="story-img-wrap">
+                <div class="grid-card">
+                    <div class="grid-card-media">
                         <img src="news1_cropperd.jpg" alt="ਸੁਖਬੀਰ ਬਾਦਲ">
                     </div>
-                    <div class="story-body">
+                    <div class="grid-card-body">
                         <div>
-                            <h3 class="story-title">ਸੁਖਬੀਰ ਸਿੰਘ ਬਾਦਲ ਨੇ PM ਮੋਦੀ ਨਾਲ ਕੀਤੀ ਅਹਿਮ ਮੁਲਾਕਾਤ</h3>
-                            <p class="story-desc">ਭਾਜਪਾ-ਅਕਾਲੀ ਦਲ ਦੇ ਸੰਭਾਵੀ ਗਠਜੋੜ ਦੀਆਂ ਅਟਕਲਾਂ ਦਰਮਿਆਨ ਪੰਜਾਬ ਸਿਆਸਤ 'ਚ ਨਵੀਂ ਹਲਚਲ।</p>
+                            <h3 class="grid-card-title">ਸੁਖਬੀਰ ਸਿੰਘ ਬਾਦਲ ਨੇ PM ਮੋਦੀ ਨਾਲ ਕੀਤੀ ਅਹਿਮ ਮੁਲਾਕਾਤ</h3>
+                            <p class="grid-card-text">ਭਾਜਪਾ-ਅਕਾਲੀ ਦਲ ਦੇ ਸੰਭਾਵੀ ਗਠਜੋੜ ਦੀਆਂ ਅਟਕਲਾਂ ਦਰਮਿਆਨ ਪੰਜਾਬ ਸਿਆਸਤ 'ਚ ਨਵੀਂ ਹਲਚਲ।</p>
                         </div>
                         <div style="display:flex; justify-content:flex-end; margin-top:10px;">
-                            <a href="https://api.whatsapp.com/send?text=ਸੁਖਬੀਰ ਮੋਦੀ ਮੁਲਾਕਾਤ: https://ghsvlogger-website.github.io/punjab-live-now/punjab.html" target="_blank" class="btn-pill" style="font-size:0.82rem; padding:6px 12px;">📲 ਸ਼ੇਅਰ ਕਰੋ</a>
+                            <a href="https://api.whatsapp.com/send?text=ਸੁਖਬੀਰ ਮੋਦੀ ਮੁਲਾਕਾਤ: https://ghsvlogger-website.github.io/punjab-live-now/punjab.html" target="_blank" class="btn-action btn-action-wa" style="font-size:0.82rem; padding:5px 12px;">📲 ਸ਼ੇਅਰ ਕਰੋ</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- ਨੇਪਾਲ ਹੜ੍ਹ -->
-                <div class="story-card">
-                    <div class="story-img-wrap">
+                <div class="grid-card">
+                    <div class="grid-card-media">
                         <img src="nepalnews1.jpg" alt="ਨੇਪਾਲ ਹੜ੍ਹ">
                     </div>
-                    <div class="story-body">
+                    <div class="grid-card-body">
                         <div>
-                            <h3 class="story-title">ਨੇਪਾਲ ਹੜ੍ਹ: ਮਰਨ ਵਾਲਿਆਂ ਦੀ ਗਿਣਤੀ 584 ਹੋਈ</h3>
-                            <p class="story-desc">ਨੇਪਾਲ ਵਿੱਚ ਭਾਰੀ ਬਾਰਿਸ਼ ਅਤੇ ਹੜ੍ਹਾਂ ਕਾਰਨ ਭਾਰੀ ਤਬਾਹੀ। ਬਚਾਅ ਕਾਰਜਾਂ ਲਈ ਫ਼ੌਜ ਤਾਇਨਾਤ।</p>
+                            <h3 class="grid-card-title">ਨੇਪਾਲ ਹੜ੍ਹ: ਮਰਨ ਵਾਲਿਆਂ ਦੀ ਗਿਣਤੀ 584 ਹੋਈ</h3>
+                            <p class="grid-card-text">ਨੇਪਾਲ ਵਿੱਚ ਭਾਰੀ ਬਾਰਿਸ਼ ਅਤੇ ਹੜ੍ਹਾਂ ਕਾਰਨ ਭਾਰੀ ਤਬਾਹੀ। ਰਾਹਤ ਕਾਰਜ ਜਾਰੀ।</p>
                         </div>
                         <div style="display:flex; justify-content:flex-end; margin-top:10px;">
-                            <a href="https://api.whatsapp.com/send?text=ਨੇਪਾਲ ਹੜ੍ਹ ਅੱਪਡੇਟ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="btn-pill" style="font-size:0.82rem; padding:6px 12px;">📲 ਸ਼ੇਅਰ ਕਰੋ</a>
+                            <a href="https://api.whatsapp.com/send?text=ਨੇਪਾਲ ਹੜ੍ਹ ਅੱਪਡੇਟ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="btn-action btn-action-wa" style="font-size:0.82rem; padding:5px 12px;">📲 ਸ਼ੇਅਰ ਕਰੋ</a>
                         </div>
                     </div>
                 </div>
@@ -722,14 +701,12 @@
 
         <!-- Right Sidebar -->
         <div class="sidebar">
-            <div class="sidebar-card">
-                <div class="sidebar-title">
-                    <span>🎬 ਤਾਜ਼ਾ ਵੀਡੀਓ ਰਿਪੋਰਟ</span>
+            <div class="sidebar-box">
+                <div class="sidebar-title">🎬 ਤਾਜ਼ਾ ਵੀਡੀਓ ਰਿਪੋਰਟ</div>
+                <div style="display: flex; justify-content: center; overflow: hidden; border-radius: 6px;">
+                    <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DcqoUntyBJY/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:6px; margin: 0; width:100%; min-width:280px;"></blockquote>
                 </div>
-                <div style="display: flex; justify-content: center; overflow: hidden; border-radius: 8px;">
-                    <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DcqoUntyBJY/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:8px; margin: 0; width:100%; min-width:280px;"></blockquote>
-                </div>
-                <a href="videos.html" class="sidebar-btn">
+                <a href="videos.html" class="sidebar-action-btn">
                     🎥 ਸਾਰੀਆਂ ਵੀਡੀਓ ਰਿਪੋਰਟਾਂ ਦੇਖੋ
                 </a>
             </div>
@@ -739,12 +716,12 @@
 
 <!-- Footer -->
 <footer>
-    <div class="footer-social-links">
+    <div class="footer-links">
         <a href="https://www.youtube.com/@punjablivenow" target="_blank">YouTube</a>
         <a href="https://www.facebook.com/profile.php?id=61562360634592" target="_blank">Facebook</a>
         <a href="https://www.instagram.com/punjablivenow" target="_blank">Instagram</a>
     </div>
-    <p style="font-size: 0.9rem; color: #64748b;">&copy; 2026 Punjab Live Now (PLN) Media Network. ਸਾਰੇ ਹੱਕ ਰਾਖਵੇਂ ਹਨ।</p>
+    <p style="font-size: 0.9rem; color: #9ca3af;">&copy; 2026 Punjab Live Now (PLN) Media Network. ਸਾਰੇ ਹੱਕ ਰਾਖਵੇਂ ਹਨ।</p>
 </footer>
 
 <script async src="//www.instagram.com/embed.js"></script>
