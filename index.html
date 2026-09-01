@@ -9,21 +9,24 @@
         body { background-color: #f4f6f9; color: #333; }
         header { background: #b30000; color: #fff; padding: 20px; text-align: center; }
         header h1 { font-size: 2.2rem; }
-        nav { background: #222; padding: 10px; text-align: center; }
+        header p { font-size: 1rem; margin-top: 5px; opacity: 0.9; }
+        nav { background: #222; padding: 12px; text-align: center; }
         nav a { color: #fff; text-decoration: none; margin: 0 15px; font-weight: bold; }
         nav a:hover { color: #ffcc00; }
         .container { max-width: 1100px; margin: 20px auto; padding: 0 15px; }
-        .breaking-bar { background: #ffcc00; padding: 10px; font-weight: bold; border-radius: 4px; margin-bottom: 20px; color: #000; }
-        .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .card { background: #fff; border-radius: 6px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
-        .card img { width: 100%; height: 210px; object-fit: cover; }
-        .card-body { padding: 15px; }
-        .card-body h3 { font-size: 1.15rem; margin-bottom: 10px; color: #b30000; line-height: 1.4; }
-        .card-body p { font-size: 0.92rem; line-height: 1.5; color: #444; margin-bottom: 15px; }
-        .disclaimer { font-size: 0.8rem; color: #777; background: #eee; padding: 6px; border-radius: 4px; margin-bottom: 10px; }
-        .share-btn { display: inline-block; background-color: #25D366; color: white; padding: 8px 12px; border-radius: 4px; text-decoration: none; font-size: 0.85rem; font-weight: bold; width: fit-content; }
+        .breaking-bar { background: #ffcc00; padding: 12px; font-weight: bold; border-radius: 4px; margin-bottom: 25px; color: #000; box-shadow: 0 2px 4px rgba(0,0,0,0.08); }
+        .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
+        .card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 3px 10px rgba(0,0,0,0.08); display: flex; flex-direction: column; justify-content: space-between; }
+        .card.featured { grid-column: 1 / -1; }
+        .card img { width: 100%; height: 220px; object-fit: cover; }
+        .card.featured img { height: 380px; object-fit: contain; background-color: #111; }
+        .card-body { padding: 20px; }
+        .card-body h3 { font-size: 1.3rem; margin-bottom: 12px; color: #b30000; line-height: 1.4; }
+        .card-body p { font-size: 0.96rem; line-height: 1.6; color: #333; margin-bottom: 12px; }
+        .disclaimer { font-size: 0.85rem; color: #666; background: #f0f0f0; padding: 10px; border-radius: 4px; margin: 15px 0; border-left: 4px solid #b30000; }
+        .share-btn { display: inline-block; background-color: #25D366; color: white; padding: 8px 14px; border-radius: 4px; text-decoration: none; font-size: 0.9rem; font-weight: bold; width: fit-content; margin-top: 5px; }
         .share-btn:hover { background-color: #1ebc57; }
-        footer { background: #111; color: #aaa; text-align: center; padding: 20px; margin-top: 40px; }
+        footer { background: #111; color: #aaa; text-align: center; padding: 25px 15px; margin-top: 50px; }
         .social-links a { color: #ffcc00; text-decoration: none; margin: 0 10px; font-weight: bold; }
     </style>
 </head>
@@ -37,26 +40,30 @@
 <nav>
     <a href="#">ਮੁੱਖ ਪੰਨਾ</a>
     <a href="#">ਪੰਜਾਬ</a>
+    <a href="#">ਗੁਰੂਹਰਸਹਾਏ</a>
     <a href="#">ਸਿਆਸਤ</a>
     <a href="#">ਵਿਦੇਸ਼</a>
     <a href="#">ਕ੍ਰਾਈਮ</a>
-    <a href="#">ਵੀਡੀਓਜ਼</a>
 </nav>
 
 <div class="container">
     <div class="breaking-bar">
-        🔴 Breaking News: ਮਲੇਸ਼ੀਆ 'ਚ ਗੁਰੂਹਰਸਹਾਏ ਦੇ ਨੌਜਵਾਨ ਦੀ ਸ਼ੱਕੀ ਹਾਲਾਤ 'ਚ ਮੌਤ, ਪਰਿਵਾਰ ਨੇ ਲਗਾਏ ਗੰਭੀਰ ਦੋਸ਼!
+        🔴 Breaking News: ਮਲੇਸ਼ੀਆ 'ਚ ਗੁਰੂਹਰਸਹਾਏ ਦੇ ਨੌਜਵਾਨ ਦੀ ਸ਼ੱਕੀ ਮੌਤ—ਪਰਿਵਾਰ ਨੇ ਲਗਾਏ ਗੰਭੀਰ ਦੋਸ਼!
     </div>
 
     <div class="news-grid">
-        <!-- ਖ਼ਬਰ 1: ਮਲੇਸ਼ੀਆ ਮਾਮਲਾ -->
-        <div class="card">
-            <img src="malaysianews1.jpg" alt="ਮਲੇਸ਼ੀਆ ਘਟਨਾ">
+        <!-- ਮੁੱਖ ਖ਼ਬਰ: ਮਲੇਸ਼ੀਆ ਪੂਰਾ ਵੇਰਵਾ -->
+        <div class="card featured">
+            <img src="malaysianews1.jpg" alt="ਮਲੇਸ਼ੀਆ ਮਾਮਲਾ">
             <div class="card-body">
-                <h3>ਮਲੇਸ਼ੀਆ ’ਚ ਗੁਰੂਹਰਸਹਾਏ ਦੇ ਨੌਜਵਾਨ ਦੀ ਸ਼ੱਕੀ ਮੌਤ—ਕਤਲ ਜਾਂ ਖੁਦਕੁਸ਼ੀ? ਪਰਿਵਾਰ ਨੇ ਖੜ੍ਹੇ ਕੀਤੇ ਗੰਭੀਰ ਸਵਾਲ</h3>
-                <p>ਗੁਰੂਹਰਸਹਾਏ ਦੀ ਬਸਤੀ ਗੁਰੂ ਕਰਮ ਸਿੰਘ ਵਾਲੀ ਦੇ ਰਹਿਣ ਵਾਲੇ ਮਿਥੁਨ ਦੀ ਮਲੇਸ਼ੀਆ ਵਿੱਚ ਸ਼ੱਕੀ ਹਾਲਾਤਾਂ ਦੌਰਾਨ ਮੌਤ ਹੋ ਗਈ। ਪਰਿਵਾਰ ਨੇ ਲੜਕੀ ਅਤੇ ਉਸਦੇ ਸਾਥੀ 'ਤੇ ਕਤਲ ਦੇ ਦੋਸ਼ ਲਗਾਉਂਦਿਆਂ ਮਾਮਲੇ ਦੀ ਜਾਂਚ ਅਤੇ ਇਨਸਾਫ਼ ਦੀ ਮੰਗ ਕੀਤੀ ਹੈ।</p>
-                <div class="disclaimer">⚠️ ਨੋਟ: ਇਹ ਖ਼ਬਰ ਪਰਿਵਾਰ ਵੱਲੋਂ ਲਗਾਏ ਗਏ ਦੋਸ਼ਾਂ 'ਤੇ ਆਧਾਰਿਤ ਹੈ। ਅਧਿਕਾਰਤ ਜਾਂਚ ਅਜੇ ਜਾਰੀ ਹੈ।</div>
-                <a href="https://api.whatsapp.com/send?text=ਮਲੇਸ਼ੀਆ 'ਚ ਗੁਰੂਹਰਸਹਾਏ ਦੇ ਨੌਜਵਾਨ ਦੀ ਮੌਤ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="share-btn">📲 WhatsApp 'ਤੇ ਸ਼ੇਅਰ ਕਰੋ</a>
+                <h3>🚨 ਮਲੇਸ਼ੀਆ ’ਚ ਗੁਰੂਹਰਸਹਾਏ ਦੇ ਨੌਜਵਾਨ ਦੀ ਮੌਤ—ਕਤਲ ਜਾਂ ਖੁਦਕੁਸ਼ੀ? ਪਰਿਵਾਰ ਨੇ ਖੜ੍ਹੇ ਕੀਤੇ ਗੰਭੀਰ ਸਵਾਲ</h3>
+                <p><strong>ਗੁਰੂਹਰਸਹਾਏ (Punjab Live Now):</strong> ਮਲੇਸ਼ੀਆ ਤੋਂ ਇੱਕ ਬੇਹੱਦ ਗੰਭੀਰ ਮਾਮਲਾ ਸਾਹਮਣੇ ਆਇਆ ਹੈ। ਗੁਰੂਹਰਸਹਾਏ ਦੀ ਬਸਤੀ ਗੁਰੂ ਕਰਮ ਸਿੰਘ ਵਾਲੀ ਦੇ ਰਹਿਣ ਵਾਲੇ ਮਿਥੁਨ ਦੀ ਮੌਤ ਹੋ ਗਈ ਹੈ। ਪਰਿਵਾਰ ਵੱਲੋਂ ਇਸ ਮੌਤ ਨੂੰ ਲੈ ਕੇ ਕਈ ਗੰਭੀਰ ਸਵਾਲ ਖੜ੍ਹੇ ਕੀਤੇ ਜਾ ਰਹੇ ਹਨ।</p>
+                <p>ਪਰਿਵਾਰ ਮੁਤਾਬਕ, ਇੱਕ ਲੜਕੀ ਕਰੀਬ 8 ਮਹੀਨੇ ਪਹਿਲਾਂ ਮਿਥੁਨ ਨੂੰ ਮਲੇਸ਼ੀਆ ਲੈ ਕੇ ਗਈ ਸੀ। ਦੋਸ਼ ਹੈ ਕਿ ਬਾਅਦ ਵਿੱਚ ਲੜਕੀ ਦੀ ਆਪਣੇ ਨਵੇਂ ਸਾਥੀ ਨਾਲ ਮਿਥੁਨ ਨੂੰ ਲੈ ਕੇ ਲੜਾਈ ਹੋਈ। ਪਰਿਵਾਰ ਦਾ ਦਾਅਵਾ ਹੈ ਕਿ ਲੜਾਈ ਦੌਰਾਨ ਮਿਥੁਨ ਨੂੰ ਗੰਭੀਰ ਸੱਟਾਂ ਲੱਗੀਆਂ ਅਤੇ ਉਸ ਦੀ ਮੌਤ ਹੋ ਗਈ। ਪਰਿਵਾਰ ਨੇ ਇਹ ਵੀ ਦੱਸਿਆ ਕਿ ਘਟਨਾ ਤੋਂ ਬਾਅਦ ਉਨ੍ਹਾਂ ਨੂੰ ਫੋਨ ਕਰਕੇ ਕਿਹਾ ਗਿਆ ਕਿ ਉਸ ਨੇ ਖੁਦਕੁਸ਼ੀ ਕਰ ਲਈ ਹੈ ਅਤੇ ਫਿਰ ਫਾਹੇ ਨਾਲ ਲਟਕਦੀ ਤਸਵੀਰ ਭੇਜੀ ਗਈ।</p>
+                <p>ਪਰਿਵਾਰ ਅਤੇ ਕੁਝ ਲੋਕਾਂ ਵੱਲੋਂ ਤਸਵੀਰ ਅਤੇ ਮੌਕੇ ਦੀ ਸਥਿਤੀ ’ਤੇ ਵੀ ਸਵਾਲ ਚੁੱਕੇ ਜਾ ਰਹੇ ਹਨ ਕਿ ਮਿਥੁਨ ਦੇ ਪੈਰ ਜ਼ਮੀਨ ਨੂੰ ਲੱਗੇ ਹੋਏ ਸਨ, ਸਰੀਰ 'ਤੇ ਨੀਲ ਦੇ ਨਿਸ਼ਾਨ ਦੱਸੇ ਜਾ ਰਹੇ ਹਨ ਅਤੇ ਗਲੇ ਵਿੱਚ ਪਾਈ ਰੱਸੀ ਵੀ ਪਤਲੀ ਸੀ। ਪਰਿਵਾਰ ਦਾ ਦਾਅਵਾ ਹੈ ਕਿ ਮਾਮਲਾ ਮੀਡੀਆ ਵਿੱਚ ਆਉਣ ਤੋਂ ਬਾਅਦ ਉਨ੍ਹਾਂ ਨੂੰ ਵੀਡੀਓ ਡਿਲੀਟ ਕਰਵਾਉਣ ਲਈ ਧਮਕੀਆਂ ਦਿੱਤੀਆਂ ਜਾ ਰਹੀਆਂ ਹਨ।</p>
+                <div class="disclaimer">
+                    ⚠️ <strong>ਨੋਟ:</strong> ਇਹ ਖ਼ਬਰ ਪਰਿਵਾਰ ਵੱਲੋਂ ਲਗਾਏ ਗਏ ਦੋਸ਼ਾਂ ਅਤੇ ਦਿੱਤੀਆਂ ਜਾਣਕਾਰੀਆਂ ’ਤੇ ਆਧਾਰਿਤ ਹੈ। ਕਿਸੇ ਵੀ ਵਿਅਕਤੀ ਨੂੰ ਦੋਸ਼ੀ ਕਰਾਰ ਦੇਣਾ ਜਾਂ ਕਤਲ ਦੀ ਪੁਸ਼ਟੀ ਕਰਨਾ ਜਾਂਚ ਪੂਰੀ ਹੋਣ ਤੋਂ ਪਹਿਲਾਂ ਉਚਿਤ ਨਹੀਂ ਹੈ। ਅਸਲ ਸੱਚ ਪੁਲਿਸ ਜਾਂਚ ਅਤੇ ਪੋਸਟਮਾਰਟਮ ਰਿਪੋਰਟ ਤੋਂ ਹੀ ਸਾਹਮਣੇ ਆਵੇਗਾ।
+                </div>
+                <a href="https://api.whatsapp.com/send?text=ਮਲੇਸ਼ੀਆ 'ਚ ਗੁਰੂਹਰਸਹਾਏ ਦੇ ਨੌਜਵਾਨ ਦੀ ਮੌਤ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="share-btn">📲 WhatsApp 'ਤੇ ਪੂਰੀ ਖ਼ਬਰ ਸ਼ੇਅਰ ਕਰੋ</a>
             </div>
         </div>
 
@@ -64,8 +71,8 @@
         <div class="card">
             <img src="news1_cropperd.jpg" alt="ਸੁਖਬੀਰ ਬਾਦਲ ਮੁਲਾਕਾਤ">
             <div class="card-body">
-                <h3>ਪੰਜਾਬ ਵਿਧਾਨ ਸਭਾ ਚੋਣਾਂ 2027 ਤੋਂ ਪਹਿਲਾਂ ਸੁਖਬੀਰ ਸਿੰਘ ਬਾਦਲ ਨੇ ਪ੍ਰਧਾਨ ਮੰਤਰੀ ਮੋਦੀ ਨਾਲ ਕੀਤੀ ਮੁਲਾਕਾਤ</h3>
-                <p>ਭਾਜਪਾ ਅਤੇ ਸ਼੍ਰੋਮਣੀ ਅਕਾਲੀ ਦਲ (SAD) ਵਿਚਕਾਰ ਸੰਭਾਵੀ ਗਠਜੋੜ ਦੀਆਂ ਚਰਚਾਵਾਂ ਤੇਜ਼। ਸੂਬੇ ਦੇ ਤਾਜ਼ਾ ਸਿਆਸੀ ਸਮੀਕਰਨਾਂ ਬਾਰੇ ਵਿਸ਼ੇਸ਼ ਰਿਪੋਰਟ।</p>
+                <h3>ਪੰਜਾਬ ਵਿਧਾਨ ਸਭਾ ਚੋਣਾਂ 2027 ਤੋਂ ਪਹਿਲਾਂ ਭਾਜਪਾ-ਅਕਾਲੀ ਦਲ ਗਠਜੋੜ ਦੀ ਚਰਚਾ ਦਰਮਿਆਨ ਸੁਖਬੀਰ ਸਿੰਘ ਬਾਦਲ ਵੱਲੋਂ PM ਮੋਦੀ ਨਾਲ ਮੁਲਾਕਾਤ</h3>
+                <p>ਪੰਜਾਬ ਦੀਆਂ ਤਾਜ਼ਾ ਸਿਆਸੀ ਸਰਗਰਮੀਆਂ ਅਤੇ ਆਉਣ ਵਾਲੀਆਂ ਚੋਣਾਂ ਦੇ ਸੰਭਾਵੀ ਸਮੀਕਰਨਾਂ ਬਾਰੇ ਵਿਸ਼ੇਸ਼ ਰਿਪੋਰਟ।</p>
                 <a href="https://api.whatsapp.com/send?text=ਪੜ੍ਹੋ ਤਾਜ਼ਾ ਖ਼ਬਰ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="share-btn">📲 WhatsApp 'ਤੇ ਸ਼ੇਅਰ ਕਰੋ</a>
             </div>
         </div>
@@ -75,7 +82,7 @@
             <img src="nepalnews1.jpg" alt="ਨੇਪਾਲ ਹੜ੍ਹ">
             <div class="card-body">
                 <h3>ਨੇਪਾਲ ਹੜ੍ਹਾਂ ਕਾਰਨ ਮਰਨ ਵਾਲਿਆਂ ਦੀ ਗਿਣਤੀ 584 ਹੋਈ, 2,482 ਲੋਕ ਲਾਪਤਾ</h3>
-                <p>ਨੇਪਾਲ ਵਿੱਚ ਕੁਦਰਤੀ ਆਫ਼ਤ ਕਾਰਨ ਭਾਰੀ ਤਬਾਹੀ। ਬਚਾਅ ਕਾਰਜ ਜਾਰੀ ਹਨ ਅਤੇ ਲਾਪਤਾ ਭਾਰਤੀਆਂ ਦੀ ਭਾਲ ਲਈ ਸਰਚ ਅਭਿਆਨ ਚਲਾਇਆ ਜਾ ਰਿਹਾ ਹੈ।</p>
+                <p>ਨੇਪਾਲ ਵਿੱਚ ਕੁਦਰਤੀ ਆਫ਼ਤ ਕਾਰਨ ਭਾਰੀ ਤਬਾਹੀ। ਬਚਾਅ ਕਾਰਜ ਜਾਰੀ ਹਨ ਅਤੇ ਲਾਪਤਾ 320 ਭਾਰਤੀਆਂ ਦੀ ਭਾਲ ਲਈ ਸਰਚ ਅਭਿਆਨ ਤੇਜ਼ ਕੀਤਾ ਗਿਆ ਹੈ।</p>
                 <a href="https://api.whatsapp.com/send?text=ਪੜ੍ਹੋ ਤਾਜ਼ਾ ਖ਼ਬਰ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="share-btn">📲 WhatsApp 'ਤੇ ਸ਼ੇਅਰ ਕਰੋ</a>
             </div>
         </div>
@@ -83,7 +90,7 @@
 </div>
 
 <footer>
-    <div class="social-links" style="margin-bottom: 10px;">
+    <div class="social-links" style="margin-bottom: 12px;">
         <a href="https://youtube.com" target="_blank">YouTube</a> |
         <a href="https://facebook.com" target="_blank">Facebook</a> |
         <a href="https://instagram.com" target="_blank">Instagram</a>
