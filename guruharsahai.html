@@ -1,1 +1,201 @@
+<!DOCTYPE html>
+<html lang="pa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ਗੁਰੂਹਰਸਹਾਏ ਖ਼ਬਰਾਂ - Punjab Live Now (PLN)</title>
+    
+    <!-- Top-Tier News Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Mukta+Mahee:wght@500;600;700;800&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
 
+    <style>
+        :root {
+            --primary: #c40000;
+            --primary-dark: #8f0000;
+            --accent: #ffcc00;
+            --dark-bg: #0d1117;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #f8fafc; color: var(--text-main); font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; }
+
+        /* Top Bar */
+        .top-utility { background: var(--dark-bg); color: #94a3b8; font-size: 0.8rem; padding: 7px 0; border-bottom: 1px solid #1e293b; }
+        .top-utility-inner { max-width: 1240px; margin: 0 auto; padding: 0 16px; display: flex; justify-content: space-between; align-items: center; }
+        .live-dot { display: inline-flex; align-items: center; gap: 6px; color: #f87171; font-weight: 700; }
+        .dot { width: 8px; height: 8px; background: #ef4444; border-radius: 50%; box-shadow: 0 0 8px #ef4444; }
+        .top-social a { color: #cbd5e1; text-decoration: none; margin-left: 14px; font-weight: 600; }
+
+        /* Header */
+        header { background: linear-gradient(135deg, #b91c1c 0%, #7f1d1d 100%); color: #fff; padding: 18px 0; box-shadow: 0 4px 20px rgba(185, 28, 28, 0.25); border-bottom: 3px solid var(--accent); }
+        .header-inner { max-width: 1240px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px; }
+        .brand-cluster { display: flex; align-items: center; gap: 16px; text-decoration: none; color: #fff; }
+        .brand-logo { width: 68px; height: 68px; border-radius: 50%; border: 3px solid var(--accent); object-fit: cover; background: #fff; }
+        .brand-name h1 { font-family: 'Oswald', sans-serif; font-size: 2.5rem; font-weight: 700; letter-spacing: 1px; line-height: 1; text-transform: uppercase; }
+        .brand-name h1 span { color: var(--accent); }
+        .brand-name p { font-family: 'Mukta Mahee', sans-serif; font-size: 0.95rem; color: #fef08a; font-weight: 600; margin-top: 4px; }
+
+        .header-actions { display: flex; align-items: center; gap: 10px; }
+        .ad-contact-btn { background: #fff; color: var(--primary); font-family: 'Mukta Mahee', sans-serif; font-weight: 700; font-size: 0.92rem; padding: 8px 16px; border-radius: 50px; text-decoration: none; border: 2px solid var(--accent); }
+        .live-tv-btn { background: var(--accent); color: #000; font-family: 'Oswald', sans-serif; font-size: 0.95rem; font-weight: 700; padding: 8px 18px; border-radius: 50px; text-decoration: none; }
+
+        /* Navigation */
+        nav { background: #0f172a; position: sticky; top: 0; z-index: 999; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+        .nav-inner { max-width: 1240px; margin: 0 auto; display: flex; overflow-x: auto; white-space: nowrap; scrollbar-width: none; }
+        .nav-inner::-webkit-scrollbar { display: none; }
+        .nav-inner a { font-family: 'Mukta Mahee', sans-serif; color: #e2e8f0; text-decoration: none; padding: 14px 22px; font-size: 1.05rem; font-weight: 700; transition: all 0.2s; border-right: 1px solid #1e293b; }
+        .nav-inner a:hover, .nav-inner a.active { background: var(--primary); color: #fff; }
+
+        /* Container & Header */
+        .container { max-width: 1240px; margin: 24px auto; padding: 0 16px; }
+        .category-header { background: #fff; border-radius: 12px; border: 1px solid var(--border-color); border-left: 6px solid var(--primary); padding: 16px 20px; margin-bottom: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
+        .category-header h2 { font-family: 'Mukta Mahee', sans-serif; font-size: 1.5rem; font-weight: 800; color: #0f172a; }
+
+        /* News Layout */
+        .main-grid { display: grid; grid-template-columns: 2.1fr 1fr; gap: 28px; }
+
+        /* Lead News Card */
+        .spotlight-card { background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: 0 6px 20px rgba(0,0,0,0.05); margin-bottom: 28px; }
+        .spotlight-media { position: relative; height: 380px; background: #000; overflow: hidden; }
+        .spotlight-media img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+        .media-badge { position: absolute; top: 16px; left: 16px; background: rgba(185, 28, 28, 0.95); color: #fff; font-family: 'Oswald', sans-serif; font-size: 0.85rem; padding: 5px 12px; border-radius: 6px; font-weight: 700; }
+        
+        .spotlight-body { padding: 26px; }
+        .spotlight-title { font-family: 'Mukta Mahee', sans-serif; font-size: 1.55rem; font-weight: 800; color: #0f172a; line-height: 1.35; margin-bottom: 14px; }
+        .spotlight-text { font-size: 0.98rem; line-height: 1.7; color: #475569; margin-bottom: 16px; }
+        
+        .share-pill { background: #22c55e; color: #fff; font-family: 'Mukta Mahee', sans-serif; font-size: 0.88rem; font-weight: 700; padding: 8px 16px; border-radius: 50px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+
+        /* Right Sidebar */
+        .sidebar-card { background: #fff; border-radius: 14px; border: 1px solid var(--border-color); padding: 20px; box-shadow: 0 4px 14px rgba(0,0,0,0.04); }
+        .sidebar-header { font-family: 'Oswald', sans-serif; font-size: 1.25rem; font-weight: 700; color: var(--primary); text-transform: uppercase; border-bottom: 2px solid #fee2e2; padding-bottom: 8px; margin-bottom: 18px; }
+        .insta-btn-pro { display: block; background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); color: #fff; text-align: center; padding: 12px; border-radius: 8px; font-weight: 700; font-size: 0.95rem; text-decoration: none; margin-top: 14px; }
+
+        /* Footer */
+        footer { background: #090d16; color: #94a3b8; text-align: center; padding: 40px 16px; margin-top: 60px; border-top: 4px solid var(--primary); }
+        .footer-social-links a { color: var(--accent); text-decoration: none; margin: 0 14px; font-weight: 700; font-size: 0.95rem; }
+
+        @media (max-width: 900px) {
+            .main-grid { grid-template-columns: 1fr; }
+            .spotlight-media { height: 260px; }
+            .brand-name h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-utility">
+    <div class="top-utility-inner">
+        <div class="live-dot">
+            <span class="dot"></span> ਗੁਰੂਹਰਸਹਾਏ ਨਿਊਜ਼ ਸੈਕਸ਼ਨ
+        </div>
+        <div class="top-social">
+            Follow Us: 
+            <a href="https://www.youtube.com/@punjablivenow" target="_blank">YouTube</a>
+            <a href="https://www.instagram.com/punjablivenow" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/profile.php?id=61562360634592" target="_blank">Facebook</a>
+        </div>
+    </div>
+</div>
+
+<header>
+    <div class="header-inner">
+        <a href="index.html" class="brand-cluster">
+            <img src="channel_logo1.png" alt="PLN Logo" class="brand-logo" onerror="this.style.display='none'">
+            <div class="brand-name">
+                <h1>PUNJAB <span>LIVE NOW</span></h1>
+                <p>ਸਭ ਤੋਂ ਪਹਿਲਾਂ, ਸਭ ਤੋਂ ਸਟੀਕ | Voice of Punjab</p>
+            </div>
+        </a>
+        <div class="header-actions">
+            <a href="https://api.whatsapp.com/send?text=ਮੈਂ ਪੰਜਾਬ ਲਾਈਵ ਨਾਓ 'ਤੇ ਇਸ਼ਤਿਹਾਰ / ਖ਼ਬਰ ਲਗਵਾਉਣ ਸੰਬੰਧੀ ਗੱਲਬਾਤ ਕਰਨੀ ਚਾਹੁੰਦਾ/ਚਾਹੁੰਦੀ ਹਾਂ।" target="_blank" class="ad-contact-btn">
+                📢 ਇਸ਼ਤਿਹਾਰ / ਖ਼ਬਰ ਦਿਓ
+            </a>
+            <a href="https://www.youtube.com/@punjablivenow" target="_blank" class="live-tv-btn">
+                ▶ LIVE TV
+            </a>
+        </div>
+    </div>
+</header>
+
+<nav>
+    <div class="nav-inner">
+        <a href="index.html">ਮੁੱਖ ਪੰਨਾ</a>
+        <a href="punjab.html">ਪੰਜਾਬ</a>
+        <a href="guruharsahai.html" class="active">ਗੁਰੂਹਰਸਹਾਏ</a>
+        <a href="index.html">ਸਿਆਸਤ</a>
+        <a href="index.html">ਵਿਦੇਸ਼</a>
+        <a href="index.html">ਕ੍ਰਾਈਮ</a>
+        <a href="https://www.instagram.com/punjablivenow/reels/" target="_blank">ਵੀਡੀਓਜ਼</a>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="category-header">
+        <h2>📍 ਗੁਰੂਹਰਸਹਾਏ ਦੀਆਂ ਤਾਜ਼ਾ ਖ਼ਬਰਾਂ (Guru Har Sahai News)</h2>
+    </div>
+
+    <div class="main-grid">
+        <div>
+            <!-- ਸੀਵਰੇਜ ਵਾਲੀ ਖ਼ਬਰ -->
+            <div class="spotlight-card">
+                <div class="spotlight-media">
+                    <span class="media-badge">ਸ਼ਹਿਰੀ ਸਮੱਸਿਆ / ਵਿਕਾਸ</span>
+                    <img src="ghs1_news.jpg" alt="ਸੀਵਰੇਜ ਸਫ਼ਾਈ ਗੁਰੂਹਰਸਹਾਏ" onerror="this.src='malaysianews1.jpg'">
+                </div>
+                <div class="spotlight-body">
+                    <h2 class="spotlight-title">📰 ਗੁਰੂਹਰਸਹਾਏ ਦੇ ਵਾਰਡ ਨੰਬਰ 14 ’ਚ ਸੀਵਰੇਜ ਦੀ ਸਫ਼ਾਈ ਦਾ ਕੰਮ ਸ਼ੁਰੂ</h2>
+                    <p class="spotlight-text"><strong>ਗੁਰੂਹਰਸਹਾਏ (Punjab Live Now):</strong> ਵਾਰਡ ਨੰਬਰ 14 ਵਿੱਚ ਸੀਵਰੇਜ ਦੀ ਸਫ਼ਾਈ ਦਾ ਕੰਮ ਸ਼ੁਰੂ ਕਰ ਦਿੱਤਾ ਗਿਆ ਹੈ। ਇਲਾਕੇ ਵਿੱਚ ਸੀਵਰੇਜ ਦੀ ਸਮੱਸਿਆ ਨੂੰ ਲੈ ਕੇ ਲੋਕਾਂ ਵੱਲੋਂ ਲੰਬੇ ਸਮੇਂ ਤੋਂ ਸਫ਼ਾਈ ਦੀ ਮੰਗ ਕੀਤੀ ਜਾ ਰਹੀ ਸੀ।</p>
+                    <p class="spotlight-text">ਹੁਣ ਸੀਵਰੇਜ ਲਾਈਨਾਂ ਦੀ ਸਫ਼ਾਈ ਸ਼ੁਰੂ ਹੋਣ ਨਾਲ ਇਲਾਕਾ ਵਾਸੀਆਂ ਨੂੰ ਰਾਹਤ ਮਿਲਣ ਦੀ ਉਮੀਦ ਹੈ। ਸਥਾਨਕ ਪੱਧਰ ’ਤੇ ਸੀਵਰੇਜ ਸਫ਼ਾਈ ਨਾਲ ਜੁੜਿਆ ਕੰਮ ਚੱਲ ਰਿਹਾ ਹੈ। ਪੰਜਾਬ ਵਾਟਰ ਸਪਲਾਈ ਐਂਡ ਸੀਵਰੇਜ ਬੋਰਡ ਵੱਲੋਂ ਸ਼ਹਿਰੀ ਖੇਤਰਾਂ ਵਿੱਚ ਸੀਵਰੇਜ ਪ੍ਰਣਾਲੀ ਦੀ ਦੇਖਭਾਲ ਅਤੇ ਸੰਚਾਲਨ ਨਾਲ ਸਬੰਧਤ ਕੰਮ ਕੀਤੇ ਜਾਂਦੇ ਹਨ। ਸਥਾਨਕ ਲੋਕਾਂ ਨੇ ਕੰਮ ਸ਼ੁਰੂ ਹੋਣ ’ਤੇ ਰਾਹਤ ਦੀ ਉਮੀਦ ਜਤਾਈ ਹੈ।</p>
+                    
+                    <div style="margin-top: 20px; display: flex; justify-content: space-between; align-items: center;">
+                        <span style="font-size: 0.85rem; color: #64748b; font-weight: 600;">#GuruHarsahai #Ward14 #Sewerage</span>
+                        <a href="https://api.whatsapp.com/send?text=ਗੁਰੂਹਰਸਹਾਏ ਦੇ ਵਾਰਡ ਨੰਬਰ 14 ’ਚ ਸੀਵਰੇਜ ਦੀ ਸਫ਼ਾਈ ਦਾ ਕੰਮ ਸ਼ੁਰੂ: https://ghsvlogger-website.github.io/punjab-live-now/guruharsahai.html" target="_blank" class="share-pill">
+                            📲 WhatsApp 'ਤੇ ਸ਼ੇਅਰ ਕਰੋ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div>
+            <div class="sidebar-card">
+                <div class="sidebar-header">
+                    <span>🎬 PLN ਵੀਡੀਓ ਬੁਲੇਟਿਨ</span>
+                </div>
+                <div style="display: flex; justify-content: center;">
+                    <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DcqoUntyBJY/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:8px; margin: 0; width:100%; min-width:280px;">
+                        <div style="padding:16px;">
+                            <a href="https://www.instagram.com/reel/DcqoUntyBJY/?utm_source=ig_embed&amp;utm_campaign=loading" style="background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
+                                <p style="color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; text-align:center;">View on Instagram</p>
+                            </a>
+                        </div>
+                    </blockquote>
+                </div>
+                <a href="https://www.instagram.com/punjablivenow/reels/" target="_blank" class="insta-btn-pro">
+                    🎥 Instagram 'ਤੇ ਸਾਰੀਆਂ ਰੀਲਾਂ ਦੇਖੋ
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-social-links">
+        <a href="https://www.youtube.com/@punjablivenow" target="_blank">YouTube</a>
+        <a href="https://www.facebook.com/profile.php?id=61562360634592" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/punjablivenow" target="_blank">Instagram</a>
+    </div>
+    <p style="font-size: 0.9rem; color: #64748b;">&copy; 2026 Punjab Live Now (PLN). ਸਾਰੇ ਹੱਕ ਰਾਖਵੇਂ ਹਨ।</p>
+</footer>
+
+<script async src="//www.instagram.com/embed.js"></script>
+</body>
+</html>
