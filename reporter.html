@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="pa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ਰਿਪੋਰਟਰ ਬਣੋ - Punjab Live Now (PLN)</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@600;700;800&family=Noto+Sans+Gurmukhi:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --brand-red: #c1121f;
+            --brand-red-dark: #780000;
+            --navy-dark: #003049;
+            --navy-deep: #031926;
+            --gold-accent: #fdf0d5;
+            --bg-canvas: #f8fafc;
+            --card-surface: #ffffff;
+            --text-heading: #031926;
+            --text-body: #1e293b;
+            --text-meta: #64748b;
+            --border-light: #e2e8f0;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+            --shadow-md: 0 4px 16px rgba(15,23,42,0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            background-color: var(--bg-canvas); 
+            color: var(--text-heading); 
+            font-family: 'Noto Sans Gurmukhi', 'Plus Jakarta Sans', -apple-system, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.65;
+        }
+
+        a, button {
+            cursor: pointer !important;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        /* 1. Header Top Strip */
+        .top-bar {
+            background: var(--navy-deep);
+            color: #cbd5e1;
+            font-size: 0.82rem;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .top-bar-inner {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .meta-cluster {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .live-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--brand-red);
+            color: #ffffff;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-weight: 800;
+            font-size: 0.75rem;
+        }
+        .live-dot {
+            width: 6px;
+            height: 6px;
+            background: #ffffff;
+            border-radius: 50%;
+        }
+
+        .loc-tag { color: #fdf0d5; font-weight: 700; }
+        .time-tag { color: #cbd5e1; font-weight: 500; }
+
+        .top-social-bar a {
+            color: #cbd5e1;
+            margin-left: 14px;
+            font-weight: 600;
+        }
+        .top-social-bar a:hover { color: #ffffff; }
+
+        /* 2. Main Broadcast Header */
+        header {
+            background: #ffffff;
+            border-bottom: 2px solid var(--border-light);
+            padding: 16px 0;
+        }
+        .header-inner {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .brand-link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: inherit;
+        }
+        
+        .brand-logo-wrapper {
+            width: 68px;
+            height: 68px;
+            min-width: 68px;
+            min-height: 68px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2.5px solid var(--brand-red);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .brand-logo {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .brand-text h1 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 2.3rem;
+            font-weight: 800;
+            line-height: 1;
+            color: var(--brand-red);
+            letter-spacing: -0.5px;
+            text-transform: uppercase;
+        }
+        .brand-text h1 span { color: var(--navy-dark); }
+        .brand-text p {
+            font-size: 0.9rem;
+            color: var(--text-meta);
+            font-weight: 600;
+            margin-top: 3px;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .hd-btn {
+            font-weight: 700;
+            font-size: 0.88rem;
+            padding: 8px 16px;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .btn-rep { background: var(--brand-red); color: #fff; }
+        .btn-ad-give { background: #fff1f2; color: var(--brand-red); border: 1px solid #fecdd3; }
+        .btn-live-stream { background: var(--navy-dark); color: #fff; }
+        .btn-wa-contact { background: #16a34a; color: #fff; }
+
+        /* 3. Navigation Bar */
+        nav {
+            background: var(--navy-dark);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid var(--brand-red);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        }
+        .nav-inner {
+            max-width: 1240px;
+            margin: 0 auto;
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+            scrollbar-width: none;
+        }
+        .nav-inner::-webkit-scrollbar { display: none; }
+        .nav-inner a {
+            color: #f8fafc;
+            padding: 13px 22px;
+            font-size: 1.02rem;
+            font-weight: 700;
+            border-right: 1px solid rgba(255,255,255,0.06);
+            display: inline-block;
+        }
+        .nav-inner a:hover, .nav-inner a.active {
+            background: var(--brand-red);
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 35px auto;
+            padding: 0 16px;
+        }
+
+        .form-card {
+            background: #fff;
+            border-radius: 10px;
+            border: 1px solid var(--border-light);
+            padding: 32px;
+            box-shadow: var(--shadow-sm);
+        }
+        .form-card h2 {
+            font-family: 'Baloo Paaji 2', sans-serif;
+            font-size: 1.85rem;
+            font-weight: 800;
+            color: var(--navy-deep);
+            margin-bottom: 8px;
+        }
+        .form-card p {
+            font-size: 0.95rem;
+            color: var(--text-meta);
+            margin-bottom: 24px;
+        }
+
+        .input-group { margin-bottom: 18px; }
+        .input-group label {
+            display: block;
+            font-weight: 700;
+            font-size: 0.92rem;
+            color: var(--navy-deep);
+            margin-bottom: 6px;
+        }
+        .input-group input, .input-group textarea, .input-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-light);
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            background: #f8fafc;
+        }
+        .submit-btn {
+            background: #16a34a;
+            color: #fff;
+            border: 0;
+            padding: 14px 24px;
+            border-radius: 6px;
+            font-family: inherit;
+            font-weight: 800;
+            font-size: 1.05rem;
+            cursor: pointer;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+        .submit-btn:hover { background: #15803d; }
+
+        footer {
+            background: #031926;
+            color: #94a3b8;
+            text-align: center;
+            padding: 40px 16px;
+            margin-top: 60px;
+            border-top: 4px solid var(--brand-red);
+        }
+        .footer-nav { margin-bottom: 16px; }
+        .footer-nav a {
+            color: #f1f5f9;
+            margin: 0 14px;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 900px) {
+            .brand-text h1 { font-size: 2rem; }
+            .header-actions { width: 100%; justify-content: center; }
+            .top-bar-inner { justify-content: center; text-align: center; }
+            .form-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <div class="meta-cluster">
+            <span class="live-tag"><span class="live-dot"></span> LIVE 24x7</span>
+            <span class="loc-tag">📍 ਪੰਜਾਬ ਨੈੱਟਵਰਕ (PLN)</span>
+            <span class="time-tag">ਬੁੱਧਵਾਰ, 2 ਸਤੰਬਰ 2026</span>
+        </div>
+        <div class="top-social-bar">
+            Follow: 
+            <a href="https://www.youtube.com/@punjablivenow" target="_blank">YouTube</a>
+            <a href="https://www.instagram.com/punjablivenow" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/profile.php?id=61562360634592" target="_blank">Facebook</a>
+        </div>
+    </div>
+</div>
+
+<header>
+    <div class="header-inner">
+        <a href="index.html" class="brand-link">
+            <div class="brand-logo-wrapper">
+                <img src="channel_logo1.png" alt="PLN Logo" class="brand-logo">
+            </div>
+            <div class="brand-text">
+                <h1>PUNJAB <span>LIVE NOW</span></h1>
+                <p>ਸਭ ਤੋਂ ਪਹਿਲਾਂ, ਸਭ ਤੋਂ ਸਟੀਕ | Voice of Punjab</p>
+            </div>
+        </a>
+        
+        <div class="header-actions">
+            <a href="reporter.html" class="hd-btn btn-rep">
+                🎤 ਰਿਪੋਰਟਰ ਬਣੋ
+            </a>
+            <a href="advertise.html" class="hd-btn btn-ad-give">
+                📢 ਇਸ਼ਤਿਹਾਰ ਦਿਓ
+            </a>
+            <a href="https://www.youtube.com/@punjablivenow" target="_blank" class="hd-btn btn-live-stream">
+                ▶ LIVE TV
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=919876543210" target="_blank" class="hd-btn btn-wa-contact">
+                💬 ਹੈਲਪਲਾਈਨ
+            </a>
+        </div>
+    </div>
+</header>
+
+<nav>
+    <div class="nav-inner">
+        <a href="index.html">ਮੁੱਖ ਪੰਨਾ</a>
+        <a href="punjab.html">ਪੰਜਾਬ</a>
+        <a href="guruharsahai.html">ਗੁਰੂਹਰਸਹਾਏ</a>
+        <a href="videos.html">ਵੀਡੀਓਜ਼</a>
+        <a href="advertise.html">ਇਸ਼ਤਿਹਾਰ ਦਿਓ</a>
+        <a href="reporter.html" class="active">ਰਿਪੋਰਟਰ ਬਣੋ</a>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="form-card">
+        <h2>🎤 Punjab Live Now (PLN) ਦਾ ਰਿਪੋਰਟਰ ਬਣੋ</h2>
+        <p>ਕੀ ਤੁਸੀਂ ਆਪਣੇ ਸ਼ਹਿਰ, ਪਿੰਡ ਜਾਂ ਕਸਬੇ ਦੀ ਆਵਾਜ਼ ਬਣਨਾ ਚਾਹੁੰਦੇ ਹੋ? ਹੇਠਾਂ ਦਿੱਤੇ ਫਾਰਮ ਵਿੱਚ ਆਪਣਾ ਵੇਰਵਾ ਭਰੋ, ਸਾਡੀ ਸੰਪਾਦਕੀ ਟੀਮ ਤੁਹਾਡੇ ਨਾਲ ਰਾਬਤਾ ਕਰੇਗੀ।</p>
+        
+        <form onsubmit="sendReporterApplication(event)">
+            <div class="input-group">
+                <label>ਪੂਰਾ ਨਾਮ (Full Name)</label>
+                <input type="text" id="repName" required placeholder="ਉਦਾਹਰਨ: ਗੁਰਪ੍ਰੀਤ ਸਿੰਘ">
+            </div>
+
+            <div class="input-group">
+                <label>ਮੋਬਾਈਲ ਨੰਬਰ (WhatsApp Number)</label>
+                <input type="tel" id="repPhone" required placeholder="ਉਦਾਹਰਨ: 9876543210">
+            </div>
+
+            <div class="input-group">
+                <label>ਜ਼ਿਲ੍ਹਾ (District)</label>
+                <input type="text" id="repDistrict" required placeholder="ਉਦਾਹਰਨ: ਫ਼ਿਰੋਜ਼ਪੁਰ, ਲੁਧਿਆਣਾ, ਅੰਮ੍ਰਿਤਸਰ...">
+            </div>
+
+            <div class="input-group">
+                <label>ਤਹਿਸੀਲ / ਸ਼ਹਿਰ / ਪਿੰਡ (City / Town / Area)</label>
+                <input type="text" id="repCity" required placeholder="ਉਦਾਹਰਨ: ਗੁਰੂਹਰਸਹਾਏ, ਜਲਾਲਾਬਾਦ, ਮਮਦੋਟ...">
+            </div>
+
+            <div class="input-group">
+                <label>ਪੱਤਰਕਾਰੀ / ਮੀਡੀਆ ਤਜਰਬਾ (Media Experience)</label>
+                <select id="repExp">
+                    <option value="ਨਵਾਂ ਸਿੱਖਿਆਰਥੀ (Fresher / Passionate)">ਨਵਾਂ ਸਿੱਖਿਆਰਥੀ (Fresher / Passionate)</option>
+                    <option value="1 ਤੋਂ 2 ਸਾਲ ਦਾ ਤਜਰਬਾ">1 ਤੋਂ 2 ਸਾਲ ਦਾ ਤਜਰਬਾ</option>
+                    <option value="3 ਸਾਲ ਤੋਂ ਵੱਧ ਦਾ ਤਜਰਬਾ">3 ਸਾਲ ਤੋਂ ਵੱਧ ਦਾ ਤਜਰਬਾ</option>
+                    <option value="ਸੋਸ਼ਲ ਮੀਡੀਆ ਕ੍ਰਿਏਟਰ / ਬਲਾਗਰ">ਸੋਸ਼ਲ ਮੀਡੀਆ ਕ੍ਰਿਏਟਰ / ਬਲਾਗਰ</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>ਆਪਣੇ ਬਾਰੇ ਸੰਖੇਪ ਜਾਣਕਾਰੀ (ਤੁਸੀਂ PLN ਨਾਲ ਕਿਉਂ ਜੁੜਨਾ ਚਾਹੁੰਦੇ ਹੋ?)</label>
+                <textarea id="repAbout" rows="3" placeholder="ਆਪਣੀ ਵਿੱਦਿਅਕ ਯੋਗਤਾ ਜਾਂ ਰਿਪੋਰਟਿੰਗ ਦੇ ਸ਼ੌਕ ਬਾਰੇ ਕੁਝ ਲਾਈਨਾਂ ਲਿਖੋ..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                💬 WhatsApp ਰਾਹੀਂ ਅਰਜ਼ੀ ਜਮ੍ਹਾਂ ਕਰੋ
+            </button>
+        </form>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-nav">
+        <a href="index.html">ਮੁੱਖ ਪੰਨਾ</a>
+        <a href="punjab.html">ਪੰਜਾਬ</a>
+        <a href="guruharsahai.html">ਗੁਰੂਹਰਸਹਾਏ</a>
+        <a href="videos.html">ਵੀਡੀਓਜ਼</a>
+        <a href="advertise.html">ਇਸ਼ਤਿਹਾਰ</a>
+    </div>
+    <p style="font-size: 0.88rem; color: #94a3b8; margin-top: 10px;">&copy; 2026 Punjab Live Now (PLN) Media Network. All Rights Reserved.</p>
+</footer>
+
+<script>
+function sendReporterApplication(e) {
+    e.preventDefault();
+    const name = document.getElementById('repName').value;
+    const phone = document.getElementById('repPhone').value;
+    const dist = document.getElementById('repDistrict').value;
+    const city = document.getElementById('repCity').value;
+    const exp = document.getElementById('repExp').value;
+    const about = document.getElementById('repAbout').value;
+
+    const text = `*🎤 ਨਵੀਂ ਰਿਪੋਰਟਰ ਅਰਜ਼ੀ (PLN JOINING)*%0A%0A*ਨਾਮ:* ${name}%0A*ਫ਼ੋਨ (WhatsApp):* ${phone}%0A*ਜ਼ਿਲ੍ਹਾ:* ${dist}%0A*ਕਸਬਾ/ਸ਼ਹਿਰ:* ${city}%0A*ਤਜਰਬਾ:* ${exp}%0A*ਵੇਰਵਾ:* ${about}`;
+    
+    window.open(`https://api.whatsapp.com/send?phone=919876543210&text=${text}`, '_blank');
+}
+</script>
+
+</body>
+</html>
