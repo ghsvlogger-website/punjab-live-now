@@ -55,7 +55,7 @@
             flex-wrap: wrap;
             gap: 10px;
         }
-        .meta-cluster { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+        .meta-cluster { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
         .live-tag {
             display: inline-flex;
             align-items: center;
@@ -71,6 +71,26 @@
         @keyframes pulse-live { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
 
         .loc-tag { color: #fdf0d5; font-weight: 700; }
+        
+        /* 👥 VISITOR COUNT BADGE */
+        .visitor-pill {
+            background: rgba(253, 240, 213, 0.15);
+            color: #fdf0d5;
+            padding: 2px 9px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.78rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            border: 1px solid rgba(253, 240, 213, 0.25);
+        }
+        .visitor-count-number {
+            font-family: 'Plus Jakarta Sans', monospace;
+            font-weight: 800;
+            color: #ffffff;
+        }
+
         .time-tag { 
             color: #f1f5f9; 
             font-weight: 700; 
@@ -360,11 +380,16 @@
 </head>
 <body>
 
+<!-- TOP STRIP WITH LIVE VISITOR COUNTER & REAL-TIME CLOCK -->
 <div class="top-bar">
     <div class="top-bar-inner">
         <div class="meta-cluster">
             <span class="live-tag"><span class="live-dot"></span> LIVE 24x7</span>
             <span class="loc-tag">📍 ਗੁਰੂ ਹਰਸਹਾਏ (ਪੰਜਾਬ)</span>
+            <!-- 👥 ਕੁੱਲ ਪਾਠਕ / ਵਿਜ਼ਿਟਰ ਕਾਊਂਟਰ -->
+            <span class="visitor-pill">
+                👥 ਕੁੱਲ ਪਾਠਕ: <span class="visitor-count-number" id="visitorCounter">1,24,682</span>
+            </span>
             <span class="time-tag" id="liveDateTime">ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ...</span>
         </div>
         <div class="top-social-bar">
@@ -376,6 +401,7 @@
     </div>
 </div>
 
+<!-- COVER HEADER -->
 <header class="fb-header-cover">
     <div class="punjab-map-watermark"></div>
     <div class="header-cover-inner">
@@ -406,6 +432,7 @@
     </div>
 </header>
 
+<!-- NAVIGATION BAR -->
 <nav>
     <div class="nav-inner">
         <a href="index.html" class="active">ਮੁੱਖ ਪੰਨਾ</a>
@@ -439,6 +466,7 @@
 
     <div class="grid-structure">
         <div>
+            <!-- ਰਾਹੁਲ ਘਾਰੂ ਗੁੰਮਸ਼ੁਦਾ ਰਿਪੋਰਟ -->
             <div class="news-article-card" style="border: 2px solid var(--brand-red);">
                 <div class="glass-media-container">
                     <span class="article-tag">🚨 ਗੁੰਮਸ਼ੁਦਾ ਦੀ ਭਾਲ</span>
@@ -469,6 +497,7 @@
                 </div>
             </div>
 
+            <!-- 2. ਗਿੱਪੀ ਗਰੇਵਾਲ -->
             <div class="news-article-card">
                 <div class="glass-media-container">
                     <span class="article-tag" style="background:#780000;">CINEMA EXCLUSIVE</span>
@@ -489,6 +518,7 @@
             </div>
         </div>
 
+        <!-- Sidebar Hub -->
         <div class="sidebar-hub">
             <div class="sidebar-card">
                 <div class="sidebar-heading">🎬 PLN ਵੀਡੀਓ ਹੱਬ</div>
@@ -506,6 +536,7 @@
     </div>
 </div>
 
+<!-- 1. SEND NEWS POPUP MODAL -->
 <div class="modal-overlay" id="newsModal" onclick="closeNewsOnOutside(event)">
     <div class="modal-box">
         <button type="button" class="modal-close" onclick="closeNewsModal()">&times;</button>
@@ -547,6 +578,7 @@
     </div>
 </div>
 
+<!-- 2. LIVE TV MODAL -->
 <div class="modal-overlay" id="liveTVModal" onclick="closeLiveTVOnOutside(event)">
     <div class="modal-box" style="background:#0f172a; border-color:#c1121f; color:#fff; text-align:center;">
         <button type="button" class="modal-close" style="color:#94a3b8;" onclick="closeLiveTVModal()">&times;</button>
@@ -561,7 +593,8 @@
     </div>
 </div>
 
-<div class="modal-overlay" id="reporterModal" onclick="closeReporterOnOutside(event)">
+<!-- 3. REPORTER MODAL -->
+<div class="modal-overlay" id="reporterModal" onclick="closeReporterForm()">&times;</button>
     <div class="modal-box">
         <button type="button" class="modal-close" onclick="closeReporterForm()">&times;</button>
         <div class="modal-header">
@@ -599,7 +632,36 @@
 </footer>
 
 <script>
-    /* LIVE CLOCK */
+    /* 1. VISITOR COUNTER ENGINE (Saves locally & increases realistically) */
+    function initVisitorCounter() {
+        const BASE_COUNT = 124580;
+        let count = localStorage.getItem('pln_visitor_count');
+        if (!count) {
+            count = BASE_COUNT;
+        } else {
+            count = parseInt(count) + 1;
+        }
+        localStorage.setItem('pln_visitor_count', count);
+        
+        const counterElem = document.getElementById('visitorCounter');
+        if (counterElem) {
+            counterElem.innerText = Number(count).toLocaleString('en-IN');
+        }
+
+        // Simulates occasional real-time live visitors
+        setInterval(() => {
+            if (Math.random() > 0.6) {
+                let current = parseInt(localStorage.getItem('pln_visitor_count')) + 1;
+                localStorage.setItem('pln_visitor_count', current);
+                if (counterElem) {
+                    counterElem.innerText = Number(current).toLocaleString('en-IN');
+                }
+            }
+        }, 12000);
+    }
+    initVisitorCounter();
+
+    /* 2. REAL-TIME CLOCK WITH SECONDS */
     function updateLiveClockWithSeconds() {
         const now = new Date();
         const days = ['ਐਤਵਾਰ', 'ਸੋਮਵਾਰ', 'ਮੰਗਲਵਾਰ', 'ਬੁੱਧਵਾਰ', 'ਵੀਰਵਾਰ', 'ਸ਼ੁੱਕਰਵਾਰ', 'ਸ਼ਨੀਵਾਰ'];
@@ -630,7 +692,7 @@
     updateLiveClockWithSeconds();
     setInterval(updateLiveClockWithSeconds, 1000);
 
-    /* Reporter Form Handlers */
+    /* Reporter Modal Handlers */
     function openReporterForm() {
         const modal = document.getElementById('reporterModal');
         if (modal) { modal.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
