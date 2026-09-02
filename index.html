@@ -38,7 +38,7 @@
 
         a, button { cursor: pointer !important; text-decoration: none; transition: all 0.2s ease; }
 
-        /* 1. Top Strip */
+        /* Top Strip */
         .top-bar {
             background: var(--navy-deep);
             color: #cbd5e1;
@@ -73,7 +73,6 @@
 
         .loc-tag { color: #fdf0d5; font-weight: 700; }
         
-        /* NEW: Live Weather Pill */
         .weather-pill {
             background: rgba(255,255,255,0.08);
             color: #f1f5f9;
@@ -86,7 +85,6 @@
             gap: 4px;
         }
 
-        /* Visitor Count Badge */
         .visitor-pill {
             background: rgba(253, 240, 213, 0.15);
             color: #fdf0d5;
@@ -114,7 +112,6 @@
             border-radius: 4px;
         }
         
-        /* Utility Controls (Font resize) */
         .top-tools { display: flex; align-items: center; gap: 8px; }
         .font-tool-btn {
             background: rgba(255,255,255,0.12);
@@ -127,7 +124,7 @@
         }
         .font-tool-btn:hover { background: var(--brand-red); }
 
-        /* 2. Facebook Cover Header */
+        /* Cover Header */
         .fb-header-cover {
             position: relative;
             width: 100%;
@@ -210,7 +207,7 @@
         .btn-wa-contact { background: #16a34a; color: #fff; font-weight: 800; }
         .btn-wa-contact:hover { background: #15803d; transform: translateY(-1px); }
 
-        /* 3. Navigation with Search Engine */
+        /* Navigation */
         nav {
             background: var(--navy-dark); position: sticky; top: 0; z-index: 1000;
             border-bottom: 3px solid var(--brand-red); box-shadow: 0 4px 12px rgba(0,0,0,0.12);
@@ -226,7 +223,6 @@
         }
         .nav-inner a:hover, .nav-inner a.active { background: var(--brand-red); color: #ffffff; }
 
-        /* NEW: Live Instant Search Input */
         .search-container { padding: 0 14px; }
         .news-search-box {
             background: rgba(255,255,255,0.12);
@@ -335,6 +331,11 @@
             margin-bottom: 16px; 
         }
 
+        .alert-info-box {
+            background: #fff1f2; border: 1.5px dashed var(--brand-red); border-radius: 6px;
+            padding: 12px 16px; margin-bottom: 16px; color: var(--brand-red-dark); font-weight: 700; font-size: 0.95rem;
+        }
+
         .reward-alert-box {
             background: #fefce8; border: 1.5px dashed #ca8a04; border-radius: 6px;
             padding: 12px 16px; margin-bottom: 16px; color: #854d0e; font-weight: 700; font-size: 0.95rem;
@@ -365,7 +366,6 @@
             padding: 11px; border-radius: 4px; font-weight: 700; font-size: 0.92rem; margin-top: 14px;
         }
 
-        /* NEW: Floating Quick WhatsApp Contact Action */
         .floating-quick-btn {
             position: fixed;
             bottom: 24px;
@@ -451,6 +451,7 @@
 </head>
 <body>
 
+<!-- TOP STRIP -->
 <div class="top-bar">
     <div class="top-bar-inner">
         <div class="meta-cluster">
@@ -472,6 +473,7 @@
     </div>
 </div>
 
+<!-- COVER HEADER -->
 <header class="fb-header-cover">
     <div class="punjab-map-watermark"></div>
     <div class="header-cover-inner">
@@ -502,6 +504,7 @@
     </div>
 </header>
 
+<!-- NAVIGATION BAR WITH INSTANT SEARCH -->
 <nav>
     <div class="nav-wrapper">
         <div class="nav-inner">
@@ -519,9 +522,10 @@
 </nav>
 
 <div class="container">
+    <!-- ਲਾਈਵ ਬ੍ਰੇਕਿੰਗ ਟਿੱਕਰ: ਸਕੂਲ ਬੱਸਾਂ ਹੜਤਾਲ -->
     <div class="ticker-bar">
-        <span class="ticker-badge">EMERGENCY NOTICE</span>
-        <span class="ticker-title">🚨 ਗੁੰਮਸ਼ੁਦਾ ਦੀ ਭਾਲ: ਰਾਹੁਲ ਘਾਰੂ ਦੀ ਤਲਾਸ਼ ਜਾਰੀ | ਸਹੀ ਜਾਣਕਾਰੀ ਦੇਣ ਵਾਲੇ ਨੂੰ ₹20,000 ਇਨਾਮ</span>
+        <span class="ticker-badge">BREAKING NEWS</span>
+        <span class="ticker-title">🚌 3 ਸਤੰਬਰ ਨੂੰ ਪੰਜਾਬ ’ਚ ਸਕੂਲ-ਕਾਲਜ ਬੱਸਾਂ ਤੇ ਵੈਨਾਂ ਦਾ ਚੱਕਾ ਜਾਮ | ਵਿਦਿਆਰਥੀਆਂ ਦੀ ਆਵਾਜਾਈ ਰਹੇਗੀ ਪ੍ਰਭਾਵਿਤ</span>
     </div>
 
     <div class="regional-bar">
@@ -532,15 +536,53 @@
             <a href="punjab.html" class="pill-btn">ਅੰਮ੍ਰਿਤਸਰ</a>
             <a href="punjab.html" class="pill-btn">ਜਲੰਧਰ</a>
             <a href="punjab.html" class="pill-btn">ਬਠਿੰਡਾ</a>
-            <a href="punjab.html" class="pill-btn">ਪਟਿਆਲਾ</a>
-            <a href="punjab.html" class="pill-btn">ਫ਼ਿਰੋਜ਼ਪੁਰ</a>
+            <a href="punjab.html" class="pill-btn">ਮਾਨਸਾ</a>
+            <a href="punjab.html" class="pill-btn">ਬਰਨਾਲਾ</a>
             <a href="guruharsahai.html" class="pill-btn">ਗੁਰੂਹਰਸਹਾਏ</a>
         </div>
     </div>
 
     <div class="grid-structure">
         <div id="articlesList">
+            
+            <!-- 1. 🚌 ਨਵੀਂ ਮੁੱਖ ਖ਼ਬਰ: 3 ਸਤੰਬਰ ਸਕੂਲ ਬੱਸਾਂ ਦਾ ਚੱਕਾ ਜਾਮ -->
             <div class="news-article-card filter-card" style="border: 2px solid var(--brand-red);">
+                <div class="glass-media-container">
+                    <span class="article-tag" style="background:var(--brand-red);">ਬ੍ਰੇਕਿੰਗ ਨਿਊਜ਼</span>
+                    <div class="glass-media-backdrop" style="background-image: url('3septemberband.jpeg');"></div>
+                    <div class="glass-overlay-filter"></div>
+                    <img src="3septemberband.jpeg" alt="3 ਸਤੰਬਰ ਪੰਜਾਬ ਸਕੂਲ ਬੱਸਾਂ ਚੱਕਾ ਜਾਮ" class="glass-foreground-img">
+                </div>
+                <div class="article-body">
+                    <h2 class="article-title" style="color:var(--navy-deep);">🚌 3 ਸਤੰਬਰ ਨੂੰ ਪੰਜਾਬ ’ਚ ਸਕੂਲ-ਕਾਲਜ ਬੱਸਾਂ ਤੇ ਵੈਨਾਂ ਦਾ ਚੱਕਾ ਜਾਮ, ਵਿਦਿਆਰਥੀਆਂ ਦੀ ਆਵਾਜਾਈ ਹੋਵੇਗੀ ਪ੍ਰਭਾਵਿਤ</h2>
+                    
+                    <p class="article-text">
+                        <strong>ਪੰਜਾਬ (Punjab Live Now):</strong> ਸਕੂਲਾਂ ਅਤੇ ਕਾਲਜਾਂ ਦੇ ਵਿਦਿਆਰਥੀਆਂ ਨੂੰ ਲਿਜਾਣ ਵਾਲੀਆਂ ਬੱਸਾਂ ਤੇ ਵੈਨਾਂ 3 ਸਤੰਬਰ ਨੂੰ ਸੜਕਾਂ ਤੋਂ ਬਾਹਰ ਰਹਿਣਗੀਆਂ। ਸਕੂਲ-ਕਾਲਜ ਬੱਸ ਆਪਰੇਟਰਾਂ ਅਤੇ ਚਾਲਕਾਂ ਵੱਲੋਂ ਹੜਤਾਲ ਕਰਨ ਦਾ ਐਲਾਨ ਕੀਤਾ ਗਿਆ ਹੈ।
+                    </p>
+
+                    <div class="alert-info-box">
+                        ⚠️ <strong>ਮਾਪਿਆਂ ਲਈ ਜ਼ਰੂਰੀ ਸੂਚਨਾ:</strong> ਇਸ ਹੜਤਾਲ ਕਾਰਨ ਵਿਦਿਆਰਥੀਆਂ ਅਤੇ ਮਾਪਿਆਂ ਨੂੰ ਸਕੂਲ ਆਉਣ-ਜਾਣ ਲਈ ਆਪਣੇ ਪੱਧਰ 'ਤੇ ਵਿਕਲਪਿਕ ਆਵਾਜਾਈ ਦਾ ਪ੍ਰਬੰਧ ਕਰਨਾ ਪੈ ਸਕਦਾ ਹੈ।
+                    </div>
+                    
+                    <p class="article-text">
+                        ਆਪਰੇਟਰਾਂ ਦਾ ਕਹਿਣਾ ਹੈ ਕਿ ਵਾਹਨਾਂ ਦੀ ਪਾਸਿੰਗ ਅਤੇ ਟੈਕਸਾਂ ਨਾਲ ਜੁੜੇ ਮਸਲਿਆਂ ਸਮੇਤ ਉਨ੍ਹਾਂ ਦੀਆਂ ਕਈ ਮੰਗਾਂ ਲੰਬੇ ਸਮੇਂ ਤੋਂ ਲਟਕ ਰਹੀਆਂ ਹਨ। ਸਰਕਾਰ ਵੱਲੋਂ ਕੋਈ ਠੋਸ ਹੱਲ ਨਾ ਕੱਢੇ ਜਾਣ ਦੇ ਵਿਰੋਧ ਵਿੱਚ 3 ਸਤੰਬਰ ਨੂੰ ਬੱਸਾਂ-ਵੈਨਾਂ ਬੰਦ ਰੱਖਣ ਦਾ ਫੈਸਲਾ ਲਿਆ ਗਿਆ ਹੈ।
+                    </p>
+
+                    <p class="article-text" style="font-size:0.88rem; color:#475569; background:#f8fafc; padding:10px; border-radius:4px; border-left:3px solid #94a3b8;">
+                        📌 <strong>ਨੋਟ:</strong> ਉਪਲਬਧ ਰਿਪੋਰਟਾਂ ਮੁਤਾਬਕ ਹੜਤਾਲ ਦਾ ਐਲਾਨ ਪੰਜਾਬ ਪੱਧਰ ’ਤੇ ਕੀਤਾ ਗਿਆ ਹੈ, ਜਦਕਿ ਬਠਿੰਡਾ, ਮਾਨਸਾ ਅਤੇ ਬਰਨਾਲਾ ਜ਼ਿਲ੍ਹਿਆਂ ਵਿੱਚ ਬੱਸਾਂ ਮੁਕੰਮਲ ਬੰਦ ਰਹਿਣ ਦੀ ਵਿਸ਼ੇਸ਼ ਜਾਣਕਾਰੀ ਮਿਲੀ ਹੈ।
+                    </p>
+                    
+                    <div class="article-action-row">
+                        <span style="font-size:0.88rem; color:#64748b; font-weight:700;">📍 ਪੰਜਾਬ ਭਰ ਵਿੱਚੋਂ ਰਿਪੋਰਟ</span>
+                        <a href="https://api.whatsapp.com/send?text=🚌 *3 ਸਤੰਬਰ ਨੂੰ ਪੰਜਾਬ 'ਚ ਸਕੂਲ-ਕਾਲਜ ਬੱਸਾਂ ਦਾ ਚੱਕਾ ਜਾਮ!* ਮਾਪਿਆਂ ਤੇ ਵਿਦਿਆਰਥੀਆਂ ਲਈ ਜ਼ਰੂਰੀ ਸੂਚਨਾ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="action-link action-link-wa">
+                            📲 ਮਾਪਿਆਂ ਨਾਲ ਸ਼ੇਅਰ ਕਰੋ
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. ਰਾਹੁਲ ਘਾਰੂ ਗੁੰਮਸ਼ੁਦਾ ਰਿਪੋਰਟ -->
+            <div class="news-article-card filter-card" style="border: 1px solid var(--border-light);">
                 <div class="glass-media-container">
                     <span class="article-tag">🚨 ਗੁੰਮਸ਼ੁਦਾ ਦੀ ਭਾਲ</span>
                     <span class="reward-tag">💰 ₹20,000 ਨਕਦ ਇਨਾਮ</span>
@@ -551,25 +593,22 @@
                 <div class="article-body">
                     <h2 class="article-title" style="color:var(--brand-red);">🚨 ਗੁੰਮਸ਼ੁਦਾ ਦੀ ਭਾਲ: ਰਾਹੁਲ ਘਾਰੂ ਦੀ ਤਲਾਸ਼ ਜਾਰੀ, ਪਰਿਵਾਰ ਨੇ ਲਗਾਈ ਮਦਦ ਦੀ ਗੁਹਾਰ</h2>
                     
-                    <p class="article-text"><strong>ਪੰਜਾਬ (Punjab Live Now):</strong> ਰਾਹੁਲ ਘਾਰੂ ਆਪਣੇ ਘਰ ਤੋਂ ਅਚਾਨਕ ਲਾਪਤਾ ਹੋ ਗਿਆ ਹੈ। ਪਰਿਵਾਰ ਵੱਲੋਂ ਉਸਦੀ ਲਗਾਤਾਰ ਭਾਲ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ। ਪ੍ਰਾਪਤ ਜਾਣਕਾਰੀ ਮੁਤਾਬਕ, ਰਾਹੁਲ ਘਰੋਂ <strong>5 ਲੱਖ ਰੁਪਏ</strong> ਲੈ ਕੇ ਚਲਾ ਗਿਆ ਹੈ। ਪਰਿਵਾਰਕ ਮੈਂਬਰਾਂ ਵੱਲੋਂ ਆਮ ਲੋਕਾਂ ਅਤੇ ਪ੍ਰਸ਼ਾਸਨ ਨੂੰ ਉਸਨੂੰ ਲੱਭਣ ਵਿੱਚ ਮਦਦ ਕਰਨ ਦੀ ਪੁਰਜ਼ੋਰ ਅਪੀਲ ਕੀਤੀ ਗਈ ਹੈ।</p>
+                    <p class="article-text"><strong>ਪੰਜਾਬ (Punjab Live Now):</strong> ਰਾਹੁਲ ਘਾਰੂ ਆਪਣੇ ਘਰ ਤੋਂ ਅਚਾਨਕ ਲਾਪਤਾ ਹੋ ਗਿਆ ਹੈ। ਪਰਿਵਾਰ ਵੱਲੋਂ ਉਸਦੀ ਲਗਾਤਾਰ ਭਾਲ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ। ਪ੍ਰਾਪਤ ਜਾਣਕਾਰੀ ਮੁਤਾਬਕ, ਰਾਹੁਲ ਘਰੋਂ 5 ਲੱਖ ਰੁਪਏ ਲੈ ਕੇ ਚਲਾ ਗਿਆ ਹੈ। ਪਰਿਵਾਰ ਵੱਲੋਂ ਮਦਦ ਦੀ ਅਪੀਲ ਕੀਤੀ ਗਈ ਹੈ।</p>
                     
                     <div class="reward-alert-box">
-                        💰 <strong>ਵਿਸ਼ੇਸ਼ ਇਨਾਮ:</strong> ਰਾਹੁਲ ਨੂੰ ਲੱਭ ਕੇ ਜਾਂ ਉਸਦੇ ਬਾਰੇ ਸਹੀ ਜਾਣਕਾਰੀ ਦੇਣ ਵਾਲੇ ਵਿਅਕਤੀ ਨੂੰ <strong>₹20,000 ਰੁਪਏ ਦਾ ਨਕਦ ਇਨਾਮ</strong> ਦਿੱਤਾ ਜਾਵੇਗਾ।
+                        💰 <strong>ਵਿਸ਼ੇਸ਼ ਇਨਾਮ:</strong> ਰਾਹੁਲ ਨੂੰ ਲੱਭ ਕੇ ਸਹੀ ਜਾਣਕਾਰੀ ਦੇਣ ਵਾਲੇ ਨੂੰ ₹20,000 ਰੁਪਏ ਨਕਦ ਇਨਾਮ ਦਿੱਤਾ ਜਾਵੇਗਾ।
                     </div>
-
-                    <p class="article-text" style="font-weight:700; color:var(--navy-deep);">
-                        👉 ਜੇਕਰ ਕਿਸੇ ਵੀ ਵਿਅਕਤੀ ਨੂੰ ਰਾਹੁਲ ਬਾਰੇ ਕੋਈ ਵੀ ਜਾਣਕਾਰੀ ਮਿਲੇ, ਤਾਂ ਤੁਰੰਤ ਪਰਿਵਾਰ ਜਾਂ ਸਬੰਧਤ ਨੰਬਰਾਂ 'ਤੇ ਸੰਪਰਕ ਕਰੋ।
-                    </p>
                     
                     <div class="article-action-row">
-                        <span style="font-size:0.88rem; color:#64748b; font-weight:700;">📍 ਲੋਕ ਹਿੱਤ ਵਿੱਚ ਜਾਰੀ ਸੂਚਨਾ</span>
-                        <a href="https://api.whatsapp.com/send?text=🚨 *ਗੁੰਮਸ਼ੁਦਾ ਦੀ ਭਾਲ (ਰਾਹੁਲ ਘਾਰੂ)*%0Aਘਰੋਂ 5 ਲੱਖ ਰੁਪਏ ਲੈ ਕੇ ਲਾਪਤਾ। ਸਹੀ ਜਾਣਕਾਰੀ ਦੇਣ ਵਾਲੇ ਨੂੰ ₹20,000 ਇਨਾਮ। ਪੂਰੀ ਰਿਪੋਰਟ ਦੇਖੋ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="action-link action-link-wa">
+                        <span style="font-size:0.88rem; color:#64748b; font-weight:700;">📍 ਲੋਕ ਹਿੱਤ ਵਿੱਚ ਜਾਰੀ</span>
+                        <a href="https://api.whatsapp.com/send?text=🚨 *ਗੁੰਮਸ਼ੁਦਾ ਦੀ ਭਾਲ (ਰਾਹੁਲ ਘਾਰੂ)* ਪੂਰੀ ਰਿਪੋਰਟ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="action-link action-link-wa">
                             📲 ਵੱਧ ਤੋਂ ਵੱਧ ਸ਼ੇਅਰ ਕਰੋ
                         </a>
                     </div>
                 </div>
             </div>
 
+            <!-- 3. ਗਿੱਪੀ ਗਰੇਵਾਲ -->
             <div class="news-article-card filter-card">
                 <div class="glass-media-container">
                     <span class="article-tag" style="background:#780000;">CINEMA EXCLUSIVE</span>
@@ -590,6 +629,7 @@
             </div>
         </div>
 
+        <!-- Sidebar Hub -->
         <div class="sidebar-hub">
             <div class="sidebar-card">
                 <div class="sidebar-heading">🎬 PLN ਵੀਡੀਓ ਹੱਬ</div>
@@ -607,10 +647,12 @@
     </div>
 </div>
 
+<!-- FLOATING QUICK WHATSAPP BUTTON -->
 <a href="https://api.whatsapp.com/send?phone=919876543210&text=ਸਤਿ%20ਸ਼੍ਰੀ%20ਅਕਾਲ%20PLN,%20ਮੈਂ%20ਜਾਣਕਾਰੀ%20ਲੈਣਾ%20ਚਾਹੁੰਦਾ/ਚਾਹੁੰਦੀ%20ਹਾਂ।" target="_blank" class="floating-quick-btn" title="ਸਿੱਧਾ WhatsApp ਕਰੋ">
     💬
 </a>
 
+<!-- POPUPS: NEWS, LIVE TV, REPORTER -->
 <div class="modal-overlay" id="newsModal" onclick="closeNewsOnOutside(event)">
     <div class="modal-box">
         <button type="button" class="modal-close" onclick="closeNewsModal()">&times;</button>
@@ -619,20 +661,10 @@
             <p style="font-size:0.9rem; color:var(--text-meta); margin-bottom:18px;">ਆਪਣੇ ਇਲਾਕੇ ਦੀ ਕੋਈ ਵੀ ਵੱਡੀ ਘਟਨਾ, ਸਮੱਸਿਆ ਜਾਂ ਵੀਡੀਓ ਸਿੱਧੀ ਸਾਡੇ ਨਿਊਜ਼ ਰੂਮ ਤੱਕ ਪਹੁੰਚਾਓ:</p>
         </div>
         <form onsubmit="handleNewsSubmit(event)">
-            <div class="form-group">
-                <label>ਤੁਹਾਡਾ ਨਾਮ (Your Name)</label>
-                <input type="text" id="newsSenderName" required placeholder="ਆਪਣਾ ਪੂਰਾ ਨਾਮ ਲਿਖੋ">
-            </div>
-            <div class="form-group">
-                <label>ਮੋਬਾਈਲ ਨੰਬਰ (WhatsApp Number)</label>
-                <input type="tel" id="newsSenderPhone" required placeholder="ਆਪਣਾ 10 ਅੰਕਾਂ ਦਾ ਮੋਬਾਈਲ ਨੰਬਰ">
-            </div>
-            <div class="form-group">
-                <label>ਜ਼ਿਲ੍ਹਾ ਤੇ ਸ਼ਹਿਰ/ਪਿੰਡ (Location)</label>
-                <input type="text" id="newsLocation" required placeholder="ਜਿਵੇਂ: ਗੁਰੂ ਹਰਸਹਾਏ, ਫ਼ਿਰੋਜ਼ਪੁਰ">
-            </div>
-            <div class="form-group">
-                <label>ਖ਼ਬਰ ਦੀ ਕਿਸਮ (Category)</label>
+            <div class="form-group"><label>ਤੁਹਾਡਾ ਨਾਮ</label><input type="text" id="newsSenderName" required placeholder="ਆਪਣਾ ਪੂਰਾ ਨਾਮ ਲਿਖੋ"></div>
+            <div class="form-group"><label>ਮੋਬਾਈਲ ਨੰਬਰ (WhatsApp)</label><input type="tel" id="newsSenderPhone" required placeholder="ਆਪਣਾ 10 ਅੰਕਾਂ ਦਾ ਮੋਬਾਈਲ ਨੰਬਰ"></div>
+            <div class="form-group"><label>ਜ਼ਿਲ੍ਹਾ ਤੇ ਸ਼ਹਿਰ/ਪਿੰਡ</label><input type="text" id="newsLocation" required placeholder="ਜਿਵੇਂ: ਗੁਰੂ ਹਰਸਹਾਏ, ਫ਼ਿਰੋਜ਼ਪੁਰ"></div>
+            <div class="form-group"><label>ਖ਼ਬਰ ਦੀ ਕਿਸਮ</label>
                 <select id="newsCategory">
                     <option value="ਤਾਜ਼ਾ ਬ੍ਰੇਕਿੰਗ ਨਿਊਜ਼">🚨 ਤਾਜ਼ਾ ਬ੍ਰੇਕਿੰਗ ਨਿਊਜ਼</option>
                     <option value="ਸੜਕ / ਪਿੰਡ ਦੀ ਸਮੱਸਿਆ">⚠️ ਸੜਕ / ਪਿੰਡ / ਇਲਾਕੇ ਦੀ ਸਮੱਸਿਆ</option>
@@ -641,13 +673,8 @@
                     <option value="ਹੋਰ ਵਿਸ਼ੇਸ਼ ਵੀਡੀਓ">📹 ਹੋਰ ਵਿਸ਼ੇਸ਼ ਵੀਡੀਓ</option>
                 </select>
             </div>
-            <div class="form-group">
-                <label>ਖ਼ਬਰ ਦਾ ਪੂਰਾ ਵੇਰਵਾ (News Details)</label>
-                <textarea id="newsDetails" rows="4" required placeholder="ਘਟਨਾ ਬਾਰੇ ਪੂਰੀ ਜਾਣਕਾਰੀ ਲਿਖੋ..."></textarea>
-            </div>
-            <button type="submit" class="btn-submit-app">
-                📲 WhatsApp 'ਤੇ ਖ਼ਬਰ ਭੇਜੋ
-            </button>
+            <div class="form-group"><label>ਖ਼ਬਰ ਦਾ ਪੂਰਾ ਵੇਰਵਾ</label><textarea id="newsDetails" rows="4" required placeholder="ਘਟਨਾ ਬਾਰੇ ਪੂਰੀ ਜਾਣਕਾਰੀ ਲਿਖੋ..."></textarea></div>
+            <button type="submit" class="btn-submit-app">📲 WhatsApp 'ਤੇ ਖ਼ਬਰ ਭੇਜੋ</button>
         </form>
     </div>
 </div>
@@ -704,7 +731,6 @@
 </footer>
 
 <script>
-    /* 1. VISITOR COUNTER */
     function initVisitorCounter() {
         const BASE_COUNT = 124580;
         let count = localStorage.getItem('pln_visitor_count');
@@ -715,7 +741,6 @@
     }
     initVisitorCounter();
 
-    /* 2. REAL-TIME RUNNING CLOCK */
     function updateLiveClockWithSeconds() {
         const now = new Date();
         const days = ['ਐਤਵਾਰ', 'ਸੋਮਵਾਰ', 'ਮੰਗਲਵਾਰ', 'ਬੁੱਧਵਾਰ', 'ਵੀਰਵਾਰ', 'ਸ਼ੁੱਕਰਵਾਰ', 'ਸ਼ਨੀਵਾਰ'];
@@ -737,7 +762,6 @@
     updateLiveClockWithSeconds();
     setInterval(updateLiveClockWithSeconds, 1000);
 
-    /* 3. FONT RESIZER FUNCTION */
     let currentFontSize = 0.98;
     function adjustFontSize(dir) {
         currentFontSize += (dir * 0.08);
@@ -746,31 +770,18 @@
         document.documentElement.style.setProperty('--font-scale', currentFontSize + 'rem');
     }
 
-    /* 4. INSTANT SEARCH FILTER */
     function filterLiveNews() {
         const input = document.getElementById('newsSearchInput').value.toLowerCase();
         const cards = document.querySelectorAll('.filter-card');
         cards.forEach(card => {
             const text = card.innerText.toLowerCase();
-            if (text.includes(input)) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
-            }
+            if (text.includes(input)) { card.style.display = 'block'; } else { card.style.display = 'none'; }
         });
     }
 
-    /* Reporter Modal Handlers */
-    function openReporterForm() {
-        const modal = document.getElementById('reporterModal');
-        if (modal) { modal.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
-    }
-    function closeReporterForm() {
-        const modal = document.getElementById('reporterModal');
-        if (modal) { modal.style.display = 'none'; document.body.style.overflow = 'auto'; }
-    }
+    function openReporterForm() { document.getElementById('reporterModal').style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+    function closeReporterForm() { document.getElementById('reporterModal').style.display = 'none'; document.body.style.overflow = 'auto'; }
     function closeReporterOnOutside(e) { if (e.target.id === 'reporterModal') closeReporterForm(); }
-
     function handleReporterSubmit(e) {
         e.preventDefault();
         const name = document.getElementById('mRepName').value;
@@ -784,28 +795,13 @@
         closeReporterForm();
     }
 
-    /* Live TV Handlers */
-    function openLiveTVModal() {
-        const modal = document.getElementById('liveTVModal');
-        if (modal) { modal.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
-    }
-    function closeLiveTVModal() {
-        const modal = document.getElementById('liveTVModal');
-        if (modal) { modal.style.display = 'none'; document.body.style.overflow = 'auto'; }
-    }
+    function openLiveTVModal() { document.getElementById('liveTVModal').style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+    function closeLiveTVModal() { document.getElementById('liveTVModal').style.display = 'none'; document.body.style.overflow = 'auto'; }
     function closeLiveTVOnOutside(e) { if (e.target.id === 'liveTVModal') closeLiveTVModal(); }
 
-    /* News Modal Handlers */
-    function openNewsModal() {
-        const modal = document.getElementById('newsModal');
-        if (modal) { modal.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
-    }
-    function closeNewsModal() {
-        const modal = document.getElementById('newsModal');
-        if (modal) { modal.style.display = 'none'; document.body.style.overflow = 'auto'; }
-    }
+    function openNewsModal() { document.getElementById('newsModal').style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+    function closeNewsModal() { document.getElementById('newsModal').style.display = 'none'; document.body.style.overflow = 'auto'; }
     function closeNewsOnOutside(e) { if (e.target.id === 'newsModal') closeNewsModal(); }
-
     function handleNewsSubmit(e) {
         e.preventDefault();
         const name = document.getElementById('newsSenderName').value;
@@ -813,7 +809,7 @@
         const loc = document.getElementById('newsLocation').value;
         const cat = document.getElementById('newsCategory').value;
         const details = document.getElementById('newsDetails').value;
-        const msg = `*🚨 ਨਵੀਂ ਖ਼ਬਰ ਅਲਰਟ (PLN ਨਿਊਜ਼ਰੂਮ)*%0A%0A*ਭੇਜਣ ਵਾਲਾ:* ${name}%0A*ਮੋਬਾਈਲ:* ${phone}%0A*ਜਗ੍ਹਾ:* ${loc}%0A*ਕਿਸਮ:* ${cat}%0A*ਵੇਰਵਾ:* ${details}%0A%0A_(ਫੋਟੋ/ਵੀਡੀਓ ਨਾਲ ਅਟੈਚ ਕਰ ਰਹੇ ਹਾਂ)_`;
+        const msg = `*🚨 ਨਵੀਂ ਖ਼ਬਰ ਅਲਰਟ (PLN ਨਿਊਜ਼ਰੂਮ)*%0A%0A*ਭੇਜਣ ਵਾਲਾ:* ${name}%0A*ਮੋਬਾਈਲ:* ${phone}%0A*ਜਗ੍ਹਾ:* ${loc}%0A*ਕਿਸਮ:* ${cat}%0A*ਵੇਰਵਾ:* ${details}`;
         window.open(`https://api.whatsapp.com/send?phone=919876543210&text=${msg}`, '_blank');
         closeNewsModal();
     }
