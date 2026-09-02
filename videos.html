@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ਵੀਡੀਓ ਬੁਲੇਟਿਨ - Punjab Live Now (PLN)</title>
+    <title>ਵੀਡੀਓ ਬੁਲੇਟਿਨ ਤੇ ਰੀਲਜ਼ - Punjab Live Now (PLN)</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,6 +37,7 @@
 
         a, button { cursor: pointer !important; text-decoration: none; transition: all 0.2s ease; }
 
+        /* 1. Header Top Strip */
         .top-bar {
             background: var(--navy-deep);
             color: #cbd5e1;
@@ -72,6 +73,7 @@
         .top-social-bar a { color: #cbd5e1; margin-left: 14px; font-weight: 600; }
         .top-social-bar a:hover { color: #ffffff; }
 
+        /* 2. Official Header */
         header { background: #ffffff; border-bottom: 2px solid var(--border-light); padding: 16px 0; }
         .header-inner {
             max-width: 1240px;
@@ -112,6 +114,7 @@
         .btn-live-stream { background: var(--navy-dark); color: #fff; }
         .btn-wa-contact { background: #16a34a; color: #fff; }
 
+        /* 3. Navigation Bar */
         nav {
             background: var(--navy-dark); position: sticky; top: 0; z-index: 1000;
             border-bottom: 3px solid var(--brand-red); box-shadow: 0 4px 12px rgba(0,0,0,0.12);
@@ -126,17 +129,63 @@
 
         .container { max-width: 1240px; margin: 24px auto; padding: 0 16px; }
 
-        .video-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
-        .video-card { background: #fff; border: 1px solid var(--border-light); border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-sm); }
-        .video-media { height: 210px; background: #000; overflow: hidden; position: relative; }
-        .video-media img { width: 100%; height: 100%; object-fit: cover; }
-        .play-btn {
-            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-            background: rgba(193, 18, 31, 0.9); color: #fff; padding: 10px 20px;
-            border-radius: 50px; font-weight: 800; font-size: 0.88rem;
+        .section-header-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+            gap: 12px;
+            border-bottom: 2px solid var(--border-light);
+            padding-bottom: 14px;
         }
-        .video-body { padding: 18px; }
-        .video-title { font-family: 'Baloo Paaji 2', sans-serif; font-size: 1.25rem; font-weight: 700; color: var(--navy-deep); line-height: 1.4; }
+        .section-header-box h2 {
+            font-family: 'Baloo Paaji 2', sans-serif;
+            font-size: 1.85rem;
+            font-weight: 800;
+            color: var(--navy-deep);
+        }
+        .insta-follow-btn {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: #fff;
+            padding: 8px 18px;
+            border-radius: 4px;
+            font-weight: 800;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Video Showcase Layout */
+        .reels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+            gap: 26px;
+            justify-content: center;
+            align-items: start;
+        }
+        .reel-card {
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            padding: 14px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .reel-badge {
+            align-self: flex-start;
+            background: var(--brand-red);
+            color: #fff;
+            font-size: 0.76rem;
+            font-weight: 800;
+            padding: 3px 9px;
+            border-radius: 3px;
+            margin-bottom: 12px;
+        }
 
         /* Modal */
         .modal-overlay {
@@ -168,6 +217,7 @@
             .brand-text h1 { font-size: 2rem; }
             .header-actions { width: 100%; justify-content: center; }
             .top-bar-inner { justify-content: center; text-align: center; }
+            .section-header-box { text-align: center; justify-content: center; }
         }
     </style>
 </head>
@@ -230,42 +280,48 @@
 </nav>
 
 <div class="container">
-    <h2 style="font-family: 'Baloo Paaji 2', sans-serif; font-size: 1.8rem; margin-bottom: 22px; color: var(--navy-deep);">🎬 ਵਿਸ਼ੇਸ਼ ਵੀਡੀਓ ਬੁਲੇਟਿਨ ਤੇ ਗਰਾਊਂਡ ਰਿਪੋਰਟਾਂ</h2>
+    <div class="section-header-box">
+        <div>
+            <h2>🎬 Instagram ਤਾਜ਼ਾ ਰੀਲਜ਼ ਤੇ ਗਰਾਊਂਡ ਵੀਡੀਓਜ਼</h2>
+            <p style="color: var(--text-meta); font-size: 0.95rem;">ਸਾਡੇ Instagram ਪੇਜ ਤੋਂ ਸਿੱਧੀਆਂ ਵਾਇਰਲ ਰਿਪੋਰਟਾਂ ਅਤੇ ਸ਼ਾਰਟ ਬੁਲੇਟਿਨ ਦੇਖੋ</p>
+        </div>
+        <a href="https://www.instagram.com/punjablivenow" target="_blank" class="insta-follow-btn">
+            📸 Follow @punjablivenow
+        </a>
+    </div>
     
-    <div class="video-grid">
-        <div class="video-card">
-            <div class="video-media">
-                <img src="jmshedpurnewscng.jpg" alt="ਜਮਸ਼ੇਦਪੁਰ CNG">
-                <a href="https://www.youtube.com/@punjablivenow" target="_blank" class="play-btn">▶ ਦੇਖੋ ਵੀਡੀਓ</a>
-            </div>
-            <div class="video-body">
-                <h3 class="video-title">ਜਮਸ਼ੇਦਪੁਰ ’ਚ ਅਚਾਨਕ ਫੱਟਿਆ CNG ਨੋਜ਼ਲ, ਦੇਖੋ ਮੌਕੇ ਦਾ ਹਾਲ!</h3>
-            </div>
+    <div class="reels-grid">
+        <!-- 1. ਤੁਹਾਡੀ ਦਿੱਤੀ ਗਈ INSTAGRAM REEL -->
+        <div class="reel-card">
+            <span class="reel-badge">FEATURED REEL</span>
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DcxTwLox0JX/" data-instgrm-version="14" style="width:100%; margin:0 auto; min-height:480px;">
+                <div style="padding:16px; text-align:center;">
+                    <a href="https://www.instagram.com/reel/DcxTwLox0JX/" target="_blank" style="color:var(--brand-red); font-family:sans-serif; font-size:14px; font-weight:bold; text-decoration:none;">
+                        ▶ Punjab Live Now (PLN) ਵੀਡੀਓ ਲੋਡ ਹੋ ਰਹੀ ਹੈ... ਦੇਖਣ ਲਈ ਕਲਿੱਕ ਕਰੋ
+                    </a>
+                </div>
+            </blockquote>
         </div>
 
-        <div class="video-card">
-            <div class="video-media">
-                <img src="gurdaspurnews1.jpg" alt="ਗੁਰਦਾਸਪੁਰ ਪੁਲਿਸ">
-                <a href="https://www.youtube.com/@punjablivenow" target="_blank" class="play-btn">▶ ਦੇਖੋ ਵੀਡੀਓ</a>
+        <!-- 2. PLN ਆਫੀਸ਼ੀਅਲ ਇੰਸਟਾਗ੍ਰਾਮ ਪ੍ਰੋਫਾਈਲ ਕਾਰਡ -->
+        <div class="reel-card" style="justify-content:center; text-align:center; padding:32px 20px;">
+            <span class="reel-badge" style="background:var(--navy-dark); align-self:center;">OFFICIAL INSTAGRAM</span>
+            <div style="width:84px; height:84px; border-radius:50%; overflow:hidden; margin:16px auto 14px; border:2.5px solid var(--brand-red);">
+                <img src="channel_logo1.png" alt="PLN" style="width:100%; height:100%; object-fit:cover;">
             </div>
-            <div class="video-body">
-                <h3 class="video-title">ਬੱਬੇਹਾਲੀ ਅੱਡੇ ’ਤੇ ਪੁਲਿਸ ਕਾਂਸਟੇਬਲ ਨਾਲ ਕਥਿਤ ਮਾਰਕੁੱਟ ਦੀ ਵੀਡੀਓ ਰਿਪੋਰਟ</h3>
-            </div>
-        </div>
-
-        <div class="video-card">
-            <div class="video-media">
-                <img src="gippynews1.jpg" alt="ਗਿੱਪੀ ਗਰੇਵਾਲ">
-                <a href="https://www.youtube.com/@punjablivenow" target="_blank" class="play-btn">▶ ਦੇਖੋ ਵੀਡੀਓ</a>
-            </div>
-            <div class="video-body">
-                <h3 class="video-title">ਗਿੱਪੀ ਗਰੇਵਾਲ ਦਾ ਵੱਡਾ ਇੰਟਰਵਿਊ: ਪ੍ਰਿੰਸ ਕੰਵਲਜੀਤ ਅਤੇ ਇੰਡਸਟਰੀ ਬਾਰੇ ਵੱਡੇ ਖੁਲਾਸੇ</h3>
-            </div>
+            <h3 style="font-family:'Baloo Paaji 2',sans-serif; font-size:1.4rem; color:var(--navy-deep);">Punjab Live Now</h3>
+            <p style="font-size:0.9rem; color:var(--text-meta); margin:8px 0 20px;">ਪੰਜਾਬ ਦੀ ਹਰ ਛੋਟੀ-ਵੱਡੀ ਖ਼ਬਰ ਅਤੇ ਲਾਈਵ ਰਿਪੋਰਟਾਂ ਆਪਣੇ ਮੋਬਾਈਲ 'ਤੇ ਦੇਖਣ ਲਈ Instagram ਉੱਤੇ ਫਾਲੋ ਕਰੋ।</p>
+            <a href="https://www.instagram.com/punjablivenow" target="_blank" class="insta-follow-btn" style="justify-content:center; width:100%; padding:12px;">
+                📸 Follow @punjablivenow
+            </a>
         </div>
     </div>
 </div>
 
-<!-- POPUP MODAL -->
+<!-- Instagram Official Embed Script -->
+<script async src="//www.instagram.com/embed.js"></script>
+
+<!-- POPUP MODAL: REPORTER FORM -->
 <div class="modal-overlay" id="reporterModal" onclick="closeReporterOnOutside(event)">
     <div class="modal-box">
         <button type="button" class="modal-close" onclick="closeReporterForm()">&times;</button>
