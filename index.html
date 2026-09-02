@@ -41,7 +41,7 @@
             transition: all 0.2s ease;
         }
 
-        /* 1. Top Live Bar */
+        /* 1. Header Top Strip */
         .top-bar {
             background: var(--navy-deep);
             color: #cbd5e1;
@@ -93,7 +93,7 @@
         }
         .top-social-bar a:hover { color: #ffffff; }
 
-        /* 2. Official Header */
+        /* 2. Official Broadcast Header */
         header {
             background: #ffffff;
             border-bottom: 2px solid var(--border-light);
@@ -116,6 +116,7 @@
             color: inherit;
         }
         
+        /* 100% Circular Logo */
         .brand-logo-wrapper {
             width: 68px;
             height: 68px;
@@ -169,12 +170,14 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
+            border: none;
         }
-        .btn-rep { background: #f8fafc; color: var(--navy-dark); border: 1px solid var(--border-light); }
-        .btn-rep:hover { background: #e2e8f0; }
+        .btn-rep { background: var(--brand-red); color: #fff; }
+        .btn-rep:hover { background: var(--brand-red-dark); }
         .btn-ad-give { background: #fff1f2; color: var(--brand-red); border: 1px solid #fecdd3; }
         .btn-ad-give:hover { background: var(--brand-red); color: #fff; }
-        .btn-live-stream { background: var(--brand-red); color: #fff; }
+        .btn-live-stream { background: var(--navy-dark); color: #fff; }
+        .btn-live-stream:hover { background: #001f33; }
         .btn-wa-contact { background: #16a34a; color: #fff; }
 
         /* 3. Navigation Bar */
@@ -243,7 +246,7 @@
             text-overflow: ellipsis;
         }
 
-        /* Advertisements */
+        /* Commercial Ads */
         .ad-label {
             font-size: 0.72rem;
             color: #94a3b8;
@@ -358,7 +361,7 @@
             margin-bottom: 26px;
         }
 
-        /* FROSTED GLASS MIRROR BLUR MEDIA CONTAINER */
+        /* Frosted Glass-Mirror Blur Backdrop Container */
         .glass-media-container {
             position: relative;
             width: 100%;
@@ -577,6 +580,96 @@
             margin-top: 14px;
         }
 
+        /* POPUP MODAL FOR REPORTER APPLICATION */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(3, 25, 38, 0.75);
+            backdrop-filter: blur(8px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            padding: 16px;
+        }
+        .modal-box {
+            background: #ffffff;
+            width: 100%;
+            max-width: 580px;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            border: 2px solid var(--brand-red);
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            padding: 26px;
+            animation: modalFade 0.25s ease-out;
+        }
+        @keyframes modalFade {
+            from { opacity: 0; transform: translateY(-20px) scale(0.96); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .modal-close {
+            position: absolute;
+            top: 16px;
+            right: 18px;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--navy-dark);
+            background: none;
+            border: none;
+            line-height: 1;
+        }
+        .modal-close:hover { color: var(--brand-red); }
+        .modal-header h3 {
+            font-family: 'Baloo Paaji 2', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--navy-deep);
+            margin-bottom: 6px;
+        }
+        .modal-header p {
+            font-size: 0.9rem;
+            color: var(--text-meta);
+            margin-bottom: 20px;
+        }
+        .form-group { margin-bottom: 14px; }
+        .form-group label {
+            display: block;
+            font-weight: 700;
+            font-size: 0.88rem;
+            color: var(--navy-deep);
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--border-light);
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 0.92rem;
+            background: #f8fafc;
+        }
+        .btn-submit-app {
+            width: 100%;
+            background: #16a34a;
+            color: #fff;
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: 800;
+            font-size: 1rem;
+            border: none;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-submit-app:hover { background: #15803d; }
+
         footer {
             background: #031926;
             color: #94a3b8;
@@ -637,9 +730,10 @@
         </a>
         
         <div class="header-actions">
-            <a href="https://api.whatsapp.com/send?text=ਸਤਿ ਸ਼੍ਰੀ ਅਕਾਲ ਜੀ, ਮੈਂ ਰਿਪੋਰਟਰ ਬਣਨ ਲਈ ਸੰਪਰਕ ਕਰ ਰਿਹਾ ਹਾਂ।" target="_blank" class="hd-btn btn-rep">
+            <!-- OPENS IN-PAGE APPLICATION FORM DIRECTLY -->
+            <button type="button" onclick="openReporterForm()" class="hd-btn btn-rep">
                 🎤 ਰਿਪੋਰਟਰ ਬਣੋ
-            </a>
+            </button>
             <a href="advertise.html" class="hd-btn btn-ad-give">
                 📢 ਇਸ਼ਤਿਹਾਰ ਦਿਓ
             </a>
@@ -660,6 +754,7 @@
         <a href="guruharsahai.html">ਗੁਰੂਹਰਸਹਾਏ</a>
         <a href="videos.html">ਵੀਡੀਓਜ਼</a>
         <a href="advertise.html">ਇਸ਼ਤਿਹਾਰ ਦਿਓ</a>
+        <a href="javascript:void(0)" onclick="openReporterForm()">ਰਿਪੋਰਟਰ ਬਣੋ</a>
     </div>
 </nav>
 
@@ -895,6 +990,58 @@
     </div>
 </div>
 
+<!-- POPUP MODAL: REPORTER APPLICATION FORM -->
+<div class="modal-overlay" id="reporterModal" onclick="closeReporterOnOutside(event)">
+    <div class="modal-box">
+        <button type="button" class="modal-close" onclick="closeReporterForm()">&times;</button>
+        <div class="modal-header">
+            <h3>🎤 Punjab Live Now ਰਿਪੋਰਟਰ ਬਣੋ</h3>
+            <p>ਆਪਣੇ ਸ਼ਹਿਰ ਜਾਂ ਪਿੰਡ ਦੀ ਆਵਾਜ਼ ਬਣਨ ਲਈ ਇਹ ਫਾਰਮ ਭਰੋ:</p>
+        </div>
+        
+        <form onsubmit="handleReporterSubmit(event)">
+            <div class="form-group">
+                <label>ਪੂਰਾ ਨਾਮ (Full Name)</label>
+                <input type="text" id="mRepName" required placeholder="ਆਪਣਾ ਪੂਰਾ ਨਾਮ ਲਿਖੋ">
+            </div>
+
+            <div class="form-group">
+                <label>ਮੋਬਾਈਲ ਨੰਬਰ (WhatsApp Number)</label>
+                <input type="tel" id="mRepPhone" required placeholder="10 ਅੰਕਾਂ ਦਾ ਮੋਬਾਈਲ ਨੰਬਰ">
+            </div>
+
+            <div class="form-group">
+                <label>ਜ਼ਿਲ੍ਹਾ (District)</label>
+                <input type="text" id="mRepDistrict" required placeholder="ਜਿਵੇਂ: ਫ਼ਿਰੋਜ਼ਪੁਰ, ਲੁਧਿਆਣਾ, ਅੰਮ੍ਰਿਤਸਰ...">
+            </div>
+
+            <div class="form-group">
+                <label>ਤਹਿਸੀਲ / ਕਸਬਾ / ਪਿੰਡ (City / Town)</label>
+                <input type="text" id="mRepCity" required placeholder="ਜਿਵੇਂ: ਗੁਰੂਹਰਸਹਾਏ, ਮਮਦੋਟ, ਜ਼ੀਰਾ...">
+            </div>
+
+            <div class="form-group">
+                <label>ਤਜਰਬਾ (Media / Reporting Experience)</label>
+                <select id="mRepExp">
+                    <option value="ਨਵਾਂ ਸਿੱਖਿਆਰਥੀ (Fresher / Passionate)">ਨਵਾਂ ਸਿੱਖਿਆਰਥੀ (Fresher / Passionate)</option>
+                    <option value="1 ਤੋਂ 2 ਸਾਲ ਦਾ ਤਜਰਬਾ">1 ਤੋਂ 2 ਸਾਲ ਦਾ ਤਜਰਬਾ</option>
+                    <option value="3 ਸਾਲ ਤੋਂ ਵੱਧ ਦਾ ਤਜਰਬਾ">3 ਸਾਲ ਤੋਂ ਵੱਧ ਦਾ ਤਜਰਬਾ</option>
+                    <option value="ਸੋਸ਼ਲ ਮੀਡੀਆ ਬਲਾਗਰ / ਕੰਟੈਂਟ ਕ੍ਰਿਏਟਰ">ਸੋਸ਼ਲ ਮੀਡੀਆ ਬਲਾਗਰ / ਕੰਟੈਂਟ ਕ੍ਰਿਏਟਰ</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>ਸੰਖੇਪ ਜਾਣਕਾਰੀ (ਤੁਸੀਂ PLN ਨਾਲ ਕਿਉਂ ਜੁੜਨਾ ਚਾਹੁੰਦੇ ਹੋ?)</label>
+                <textarea id="mRepAbout" rows="3" placeholder="ਆਪਣੀ ਪੜ੍ਹਾਈ ਜਾਂ ਸ਼ੌਕ ਬਾਰੇ ਸੰਖੇਪ ਜਾਣਕਾਰੀ ਦਿਓ..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit-app">
+                ✅ ਅਰਜ਼ੀ ਜਮ੍ਹਾਂ ਕਰੋ
+            </button>
+        </form>
+    </div>
+</div>
+
 <footer>
     <div class="footer-nav">
         <a href="index.html">ਮੁੱਖ ਪੰਨਾ</a>
@@ -902,9 +1049,49 @@
         <a href="guruharsahai.html">ਗੁਰੂਹਰਸਹਾਏ</a>
         <a href="videos.html">ਵੀਡੀਓਜ਼</a>
         <a href="advertise.html">ਇਸ਼ਤਿਹਾਰ</a>
+        <a href="javascript:void(0)" onclick="openReporterForm()">ਰਿਪੋਰਟਰ ਬਣੋ</a>
     </div>
     <p style="font-size: 0.88rem; color: #94a3b8; margin-top: 10px;">&copy; 2026 Punjab Live Now (PLN) Media Network. All Rights Reserved.</p>
 </footer>
+
+<script>
+    function openReporterForm() {
+        const modal = document.getElementById('reporterModal');
+        if (modal) {
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    function closeReporterForm() {
+        const modal = document.getElementById('reporterModal');
+        if (modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    }
+
+    function closeReporterOnOutside(e) {
+        if (e.target.id === 'reporterModal') {
+            closeReporterForm();
+        }
+    }
+
+    function handleReporterSubmit(e) {
+        e.preventDefault();
+        const name = document.getElementById('mRepName').value;
+        const phone = document.getElementById('mRepPhone').value;
+        const dist = document.getElementById('mRepDistrict').value;
+        const city = document.getElementById('mRepCity').value;
+        const exp = document.getElementById('mRepExp').value;
+        const about = document.getElementById('mRepAbout').value;
+
+        const text = `*🎤 ਨਵੀਂ ਰਿਪੋਰਟਰ ਅਰਜ਼ੀ (PLN Portal)*%0A%0A*ਨਾਮ:* ${name}%0A*ਫ਼ੋਨ:* ${phone}%0A*ਜ਼ਿਲ੍ਹਾ:* ${dist}%0A*ਕਸਬਾ/ਸ਼ਹਿਰ:* ${city}%0A*ਤਜਰਬਾ:* ${exp}%0A*ਵੇਰਵਾ:* ${about}`;
+        
+        window.open(`https://api.whatsapp.com/send?phone=919876543210&text=${text}`, '_blank');
+        closeReporterForm();
+    }
+</script>
 
 </body>
 </html>
