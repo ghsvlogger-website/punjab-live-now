@@ -39,161 +39,73 @@
 
         /* 1. Top Strip */
         .top-bar {
-            background: var(--navy-deep);
-            color: #cbd5e1;
-            font-size: 0.82rem;
-            padding: 8px 0;
+            background: var(--navy-deep); color: #cbd5e1; font-size: 0.82rem; padding: 8px 0;
             border-bottom: 1px solid rgba(255,255,255,0.08);
         }
         .top-bar-inner {
-            max-width: 1240px;
-            margin: 0 auto;
-            padding: 0 16px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
+            max-width: 1240px; margin: 0 auto; padding: 0 16px; display: flex;
+            justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
         }
         .meta-cluster { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
         .live-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: var(--brand-red);
-            color: #ffffff;
-            padding: 2px 8px;
-            border-radius: 3px;
-            font-weight: 800;
-            font-size: 0.75rem;
+            display: inline-flex; align-items: center; gap: 6px; background: var(--brand-red);
+            color: #ffffff; padding: 2px 8px; border-radius: 3px; font-weight: 800; font-size: 0.75rem;
         }
         .live-dot { width: 6px; height: 6px; background: #ffffff; border-radius: 50%; animation: pulse-live 1.1s infinite; }
         @keyframes pulse-live { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
-
         .loc-tag { color: #fdf0d5; font-weight: 700; }
         .time-tag { 
-            color: #f1f5f9; 
-            font-weight: 700; 
+            color: #f1f5f9; font-weight: 700; 
             font-family: 'Plus Jakarta Sans', 'Noto Sans Gurmukhi', monospace;
-            background: rgba(255,255,255,0.08);
-            padding: 2px 8px;
-            border-radius: 4px;
+            background: rgba(255,255,255,0.08); padding: 2px 8px; border-radius: 4px;
         }
         .top-social-bar a { color: #cbd5e1; margin-left: 14px; font-weight: 600; }
         .top-social-bar a:hover { color: #ffffff; }
 
-        /* 2. FACEBOOK COVER STYLE HEADER WITH PUNJAB MAP DESIGN */
+        /* 2. Facebook Cover Header */
         .fb-header-cover {
-            position: relative;
-            width: 100%;
-            min-height: 190px;
+            position: relative; width: 100%; min-height: 190px;
             background: linear-gradient(135deg, #031926 0%, #003049 45%, #780000 100%), url('header_cover.jpg');
-            background-size: cover;
-            background-position: center;
-            border-bottom: 3px solid var(--brand-red);
-            overflow: hidden;
-            display: flex;
-            align-items: center;
+            background-size: cover; background-position: center;
+            border-bottom: 3px solid var(--brand-red); overflow: hidden; display: flex; align-items: center;
         }
         .fb-header-cover::before {
-            content: "";
-            position: absolute;
-            top: 0; right: 0; bottom: 0; left: 0;
-            background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-                              radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
-            background-size: 24px 24px;
-            background-position: 0 0, 12px 12px;
-            opacity: 0.35;
-            pointer-events: none;
+            content: ""; position: absolute; inset: 0;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+            background-size: 24px 24px; opacity: 0.35; pointer-events: none;
         }
         .punjab-map-watermark {
-            position: absolute;
-            right: 2%;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 280px;
-            height: 280px;
-            opacity: 0.12;
-            pointer-events: none;
+            position: absolute; right: 2%; top: 50%; transform: translateY(-50%);
+            width: 280px; height: 280px; opacity: 0.12; pointer-events: none;
             background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Punjab_locator_map.svg/1024px-Punjab_locator_map.svg.png') no-repeat center;
-            background-size: contain;
-            filter: invert(1);
+            background-size: contain; filter: invert(1);
         }
         .header-cover-inner {
-            position: relative;
-            z-index: 2;
-            max-width: 1240px;
-            width: 100%;
-            margin: 0 auto;
-            padding: 24px 16px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 20px;
+            position: relative; z-index: 2; max-width: 1240px; width: 100%;
+            margin: 0 auto; padding: 24px 16px; display: flex; align-items: center;
+            justify-content: space-between; flex-wrap: wrap; gap: 20px;
         }
-        .brand-profile-cluster {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
+        .brand-profile-cluster { display: flex; align-items: center; gap: 20px; }
         .brand-logo-wrapper {
-            width: 86px;
-            height: 86px;
-            min-width: 86px;
-            min-height: 86px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 3.5px solid #ffffff;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.35);
-            background: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            width: 86px; height: 86px; min-width: 86px; min-height: 86px;
+            border-radius: 50%; overflow: hidden; border: 3.5px solid #ffffff;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.35); background: #ffffff;
+            display: flex; align-items: center; justify-content: center;
         }
-        .brand-logo {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-            display: block;
-        }
+        .brand-logo { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block; }
         .brand-text h1 {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 800;
-            line-height: 1;
-            color: #ffffff;
-            letter-spacing: -0.5px;
-            text-transform: uppercase;
+            font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.5rem; font-weight: 800;
+            line-height: 1; color: #ffffff; letter-spacing: -0.5px; text-transform: uppercase;
             text-shadow: 0 2px 10px rgba(0,0,0,0.5);
         }
         .brand-text h1 span { color: #fdf0d5; }
-        .brand-text p {
-            font-size: 0.95rem;
-            color: #e2e8f0;
-            font-weight: 600;
-            margin-top: 6px;
-            text-shadow: 0 1px 4px rgba(0,0,0,0.6);
-        }
+        .brand-text p { font-size: 0.95rem; color: #e2e8f0; font-weight: 600; margin-top: 6px; }
 
-        .header-actions {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
+        .header-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
         .hd-btn {
-            font-weight: 700;
-            font-size: 0.88rem;
-            padding: 10px 18px;
-            border-radius: 6px;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            border: none;
-            backdrop-filter: blur(8px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            font-weight: 700; font-size: 0.88rem; padding: 10px 18px; border-radius: 6px;
+            display: inline-flex; align-items: center; gap: 6px; border: none;
+            backdrop-filter: blur(8px); box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
         .btn-rep { background: #ffffff; color: var(--navy-deep); }
         .btn-rep:hover { background: #f1f5f9; transform: translateY(-1px); }
@@ -201,120 +113,53 @@
         .btn-ad-give:hover { background: #fdf0d5; color: var(--navy-deep); }
         .btn-live-stream { 
             background: linear-gradient(135deg, #c1121f 0%, #780000 100%); 
-            color: #fff; 
-            border: 1px solid #fca5a5;
+            color: #fff; border: 1px solid #fca5a5;
         }
         .btn-live-stream:hover { background: #780000; transform: translateY(-1px); }
-        .btn-wa-contact { background: #16a34a; color: #fff; }
+        .btn-wa-contact { background: #16a34a; color: #fff; font-weight: 800; }
+        .btn-wa-contact:hover { background: #15803d; transform: translateY(-1px); }
 
-        /* 3. Navigation Bar */
+        /* 3. Navigation */
         nav {
-            background: var(--navy-dark);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 3px solid var(--brand-red);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            background: var(--navy-dark); position: sticky; top: 0; z-index: 1000;
+            border-bottom: 3px solid var(--brand-red); box-shadow: 0 4px 12px rgba(0,0,0,0.12);
         }
-        .nav-inner {
-            max-width: 1240px;
-            margin: 0 auto;
-            display: flex;
-            overflow-x: auto;
-            white-space: nowrap;
-            scrollbar-width: none;
-        }
+        .nav-inner { max-width: 1240px; margin: 0 auto; display: flex; overflow-x: auto; white-space: nowrap; scrollbar-width: none; }
         .nav-inner::-webkit-scrollbar { display: none; }
         .nav-inner a {
-            color: #f8fafc;
-            padding: 13px 22px;
-            font-size: 1.02rem;
-            font-weight: 700;
-            border-right: 1px solid rgba(255,255,255,0.06);
-            display: inline-block;
+            color: #f8fafc; padding: 13px 22px; font-size: 1.02rem; font-weight: 700;
+            border-right: 1px solid rgba(255,255,255,0.06); display: inline-block;
         }
-        .nav-inner a:hover, .nav-inner a.active {
-            background: var(--brand-red);
-            color: #ffffff;
-        }
+        .nav-inner a:hover, .nav-inner a.active { background: var(--brand-red); color: #ffffff; }
 
-        .container {
-            max-width: 1240px;
-            margin: 24px auto;
-            padding: 0 16px;
-        }
+        .container { max-width: 1240px; margin: 24px auto; padding: 0 16px; }
 
         .section-header-box {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 24px;
-            flex-wrap: wrap;
-            gap: 12px;
-            border-bottom: 2px solid var(--border-light);
-            padding-bottom: 14px;
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 24px; flex-wrap: wrap; gap: 12px;
+            border-bottom: 2px solid var(--border-light); padding-bottom: 14px;
         }
         .section-header-box h2 {
-            font-family: 'Baloo Paaji 2', sans-serif;
-            font-size: 1.85rem;
-            font-weight: 800;
-            color: var(--navy-deep);
+            font-family: 'Baloo Paaji 2', sans-serif; font-size: 1.85rem; font-weight: 800; color: var(--navy-deep);
         }
         .insta-follow-btn {
             background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-            color: #fff;
-            padding: 9px 20px;
-            border-radius: 6px;
-            font-weight: 800;
-            font-size: 0.92rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            box-shadow: 0 2px 8px rgba(220,39,67,0.3);
+            color: #fff; padding: 9px 20px; border-radius: 6px; font-weight: 800; font-size: 0.92rem;
+            display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 2px 8px rgba(220,39,67,0.3);
         }
 
-        /* 4-Reel Responsive Showcase Grid */
         .reels-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
-            justify-content: center;
-            align-items: start;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px; justify-content: center; align-items: start;
         }
         .reel-card {
-            background: #ffffff;
-            border: 1px solid var(--border-light);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: var(--shadow-sm);
-            padding: 14px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            background: #ffffff; border: 1px solid var(--border-light); border-radius: 12px;
+            overflow: hidden; box-shadow: var(--shadow-sm); padding: 14px;
+            display: flex; flex-direction: column; align-items: center;
         }
         .reel-badge {
-            align-self: flex-start;
-            background: var(--brand-red);
-            color: #fff;
-            font-size: 0.76rem;
-            font-weight: 800;
-            padding: 3px 9px;
-            border-radius: 3px;
-            margin-bottom: 12px;
-        }
-
-        .insta-stream-banner {
-            background: linear-gradient(135deg, #031926 0%, #003049 100%);
-            color: #fff;
-            border-radius: 10px;
-            padding: 24px;
-            margin-top: 35px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 16px;
-            border: 1.5px solid rgba(255,255,255,0.1);
+            align-self: flex-start; background: var(--brand-red); color: #fff;
+            font-size: 0.76rem; font-weight: 800; padding: 3px 9px; border-radius: 3px; margin-bottom: 12px;
         }
 
         /* Modals */
@@ -379,7 +224,6 @@
 </head>
 <body>
 
-<!-- TOP STRIP WITH LIVE RUNNING TIME -->
 <div class="top-bar">
     <div class="top-bar-inner">
         <div class="meta-cluster">
@@ -396,7 +240,6 @@
     </div>
 </div>
 
-<!-- FACEBOOK COVER STYLE HEADER -->
 <header class="fb-header-cover">
     <div class="punjab-map-watermark"></div>
     <div class="header-cover-inner">
@@ -420,14 +263,13 @@
             <button type="button" onclick="openLiveTVModal()" class="hd-btn btn-live-stream">
                 ▶ LIVE TV
             </button>
-            <a href="https://api.whatsapp.com/send?phone=919876543210" target="_blank" class="hd-btn btn-wa-contact">
-                💬 ਹੈਲਪਲਾਈਨ
-            </a>
+            <button type="button" onclick="openNewsModal()" class="hd-btn btn-wa-contact">
+                🚨 ਖ਼ਬਰ ਭੇਜੋ
+            </button>
         </div>
     </div>
 </header>
 
-<!-- NAVIGATION BAR -->
 <nav>
     <div class="nav-inner">
         <a href="index.html">ਮੁੱਖ ਪੰਨਾ</a>
@@ -451,71 +293,95 @@
     </div>
     
     <div class="reels-grid">
-        <!-- 1. ਤੁਹਾਡੀ ਹੁਣੇ ਦਿੱਤੀ ਗਈ ਨਵੀਂ REEL (DcxHwscSGEA) -->
         <div class="reel-card">
             <span class="reel-badge">NEWLY ADDED REEL</span>
             <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DcxHwscSGEA/" data-instgrm-version="14" style="width:100%; margin:0 auto; min-height:480px;">
                 <div style="padding:16px; text-align:center;">
                     <a href="https://www.instagram.com/reel/DcxHwscSGEA/" target="_blank" style="color:var(--brand-red); font-family:sans-serif; font-size:14px; font-weight:bold; text-decoration:none;">
-                        ▶ Punjab Live Now (PLN) ਨਵੀਂ ਰੀਲ ਲੋਡ ਹੋ ਰਹੀ ਹੈ... ਦੇਖਣ ਲਈ ਕਲਿੱਕ ਕਰੋ
+                        ▶ Punjab Live Now (PLN) ਨਵੀਂ ਰੀਲ ਲੋਡ ਹੋ ਰਹੀ ਹੈ...
                     </a>
                 </div>
             </blockquote>
         </div>
 
-        <!-- 2. REEL (DcxSPaBxDQb) -->
         <div class="reel-card">
             <span class="reel-badge">LATEST REEL</span>
             <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DcxSPaBxDQb/" data-instgrm-version="14" style="width:100%; margin:0 auto; min-height:480px;">
                 <div style="padding:16px; text-align:center;">
                     <a href="https://www.instagram.com/reel/DcxSPaBxDQb/" target="_blank" style="color:var(--brand-red); font-family:sans-serif; font-size:14px; font-weight:bold; text-decoration:none;">
-                        ▶ Punjab Live Now (PLN) ਰੀਲ ਲੋਡ ਹੋ ਰਹੀ ਹੈ... ਦੇਖਣ ਲਈ ਕਲਿੱਕ ਕਰੋ
+                        ▶ Punjab Live Now (PLN) ਰੀਲ ਲੋਡ ਹੋ ਰਹੀ ਹੈ...
                     </a>
                 </div>
             </blockquote>
         </div>
 
-        <!-- 3. REEL (DcxTXJDxYVX) -->
         <div class="reel-card">
             <span class="reel-badge">TRENDING REEL</span>
             <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DcxTXJDxYVX/" data-instgrm-version="14" style="width:100%; margin:0 auto; min-height:480px;">
                 <div style="padding:16px; text-align:center;">
                     <a href="https://www.instagram.com/reel/DcxTXJDxYVX/" target="_blank" style="color:var(--brand-red); font-family:sans-serif; font-size:14px; font-weight:bold; text-decoration:none;">
-                        ▶ Punjab Live Now (PLN) ਰੀਲ ਲੋਡ ਹੋ ਰਹੀ ਹੈ... ਦੇਖਣ ਲਈ ਕਲਿੱਕ ਕਰੋ
+                        ▶ Punjab Live Now (PLN) ਰੀਲ ਲੋਡ ਹੋ ਰਹੀ ਹੈ...
                     </a>
                 </div>
             </blockquote>
         </div>
 
-        <!-- 4. REEL (DcxTwLox0JX) -->
         <div class="reel-card">
             <span class="reel-badge">POPULAR REEL</span>
             <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DcxTwLox0JX/" data-instgrm-version="14" style="width:100%; margin:0 auto; min-height:480px;">
                 <div style="padding:16px; text-align:center;">
                     <a href="https://www.instagram.com/reel/DcxTwLox0JX/" target="_blank" style="color:var(--brand-red); font-family:sans-serif; font-size:14px; font-weight:bold; text-decoration:none;">
-                        ▶ Punjab Live Now (PLN) ਵੀਡੀਓ ਲੋਡ ਹੋ ਰਹੀ ਹੈ... ਦੇਖਣ ਲਈ ਕਲਿੱਕ ਕਰੋ
+                        ▶ Punjab Live Now (PLN) ਵੀਡੀਓ ਲੋਡ ਹੋ ਰਹੀ ਹੈ...
                     </a>
                 </div>
             </blockquote>
         </div>
     </div>
+</div>
 
-    <!-- DIRECT INSTAGRAM FEED BANNER -->
-    <div class="insta-stream-banner">
-        <div>
-            <h3 style="font-family:'Baloo Paaji 2',sans-serif; font-size:1.45rem; color:#fdf0d5;">🔥 ਰੋਜ਼ਾਨਾ ਨਵੀਆਂ ਵੀਡੀਓਜ਼ ਤੇ ਲਾਈਵ ਕਵਰੇਜ</h3>
-            <p style="font-size:0.92rem; color:#cbd5e1; margin-top:4px;">ਸਾਡੇ Instagram ਪੇਜ ਉੱਤੇ ਹਰ ਰੋਜ਼ ਪੰਜਾਬ ਦੀਆਂ ਤਾਜ਼ਾ ਗਰਾਊਂਡ ਰਿਪੋਰਟਾਂ ਅੱਪਲੋਡ ਹੁੰਦੀਆਂ ਹਨ।</p>
+<script async src="//www.instagram.com/embed.js"></script>
+
+<div class="modal-overlay" id="newsModal" onclick="closeNewsOnOutside(event)">
+    <div class="modal-box">
+        <button type="button" class="modal-close" onclick="closeNewsModal()">&times;</button>
+        <div class="modal-header">
+            <h3 style="font-family:'Baloo Paaji 2',sans-serif; font-size:1.6rem; color:var(--brand-red);">🚨 PLN ਨੂੰ ਖ਼ਬਰ / ਵੀਡੀਓ ਭੇਜੋ</h3>
+            <p style="font-size:0.9rem; color:var(--text-meta); margin-bottom:18px;">ਆਪਣੇ ਇਲਾਕੇ ਦੀ ਕੋਈ ਵੀ ਵੱਡੀ ਘਟਨਾ, ਸਮੱਸਿਆ ਜਾਂ ਵੀਡੀਓ ਸਿੱਧੀ ਸਾਡੇ ਨਿਊਜ਼ ਰੂਮ ਤੱਕ ਪਹੁੰਚਾਓ:</p>
         </div>
-        <a href="https://www.instagram.com/punjablivenow" target="_blank" class="insta-follow-btn">
-            ▶ ਸਾਰੀਆਂ ਰੀਲਜ਼ ਦੇਖੋ (Instagram Feed)
-        </a>
+        <form onsubmit="handleNewsSubmit(event)">
+            <div class="form-group">
+                <label>ਤੁਹਾਡਾ ਨਾਮ (Your Name)</label>
+                <input type="text" id="newsSenderName" required placeholder="ਆਪਣਾ ਪੂਰਾ ਨਾਮ ਲਿਖੋ">
+            </div>
+            <div class="form-group">
+                <label>ਮੋਬਾਈਲ ਨੰਬਰ (WhatsApp Number)</label>
+                <input type="tel" id="newsSenderPhone" required placeholder="ਆਪਣਾ 10 ਅੰਕਾਂ ਦਾ ਮੋਬਾਈਲ ਨੰਬਰ">
+            </div>
+            <div class="form-group">
+                <label>ਜ਼ਿਲ੍ਹਾ ਤੇ ਸ਼ਹਿਰ/ਪਿੰਡ (Location)</label>
+                <input type="text" id="newsLocation" required placeholder="ਜਿਵੇਂ: ਗੁਰੂ ਹਰਸਹਾਏ, ਫ਼ਿਰੋਜ਼ਪੁਰ">
+            </div>
+            <div class="form-group">
+                <label>ਖ਼ਬਰ ਦੀ ਕਿਸਮ (Category)</label>
+                <select id="newsCategory">
+                    <option value="ਤਾਜ਼ਾ ਬ੍ਰੇਕਿੰਗ ਨਿਊਜ਼">🚨 ਤਾਜ਼ਾ ਬ੍ਰੇਕਿੰਗ ਨਿਊਜ਼</option>
+                    <option value="ਸੜਕ / ਪਿੰਡ ਦੀ ਸਮੱਸਿਆ">⚠️ ਸੜਕ / ਪਿੰਡ / ਇਲਾਕੇ ਦੀ ਸਮੱਸਿਆ</option>
+                    <option value="ਹਾਦਸਾ ਜਾਂ ਕ੍ਰਾਈਮ ਰਿਪੋਰਟ">🚔 ਹਾਦਸਾ ਜਾਂ ਕ੍ਰਾਈਮ ਰਿਪੋਰਟ</option>
+                    <option value="ਸਮਾਜਿਕ / ਧਾਰਮਿਕ ਪ੍ਰੋਗਰਾਮ">🌸 ਸਮਾਜਿਕ / ਧਾਰਮਿਕ ਪ੍ਰੋਗਰਾਮ</option>
+                    <option value="ਹੋਰ ਵਿਸ਼ੇਸ਼ ਵੀਡੀਓ">📹 ਹੋਰ ਵਿਸ਼ੇਸ਼ ਵੀਡੀਓ</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>ਖ਼ਬਰ ਦਾ ਪੂਰਾ ਵੇਰਵਾ (News Details)</label>
+                <textarea id="newsDetails" rows="4" required placeholder="ਘਟਨਾ ਬਾਰੇ ਪੂਰੀ ਜਾਣਕਾਰੀ ਲਿਖੋ..."></textarea>
+            </div>
+            <button type="submit" class="btn-submit-app">
+                📲 WhatsApp 'ਤੇ ਖ਼ਬਰ ਭੇਜੋ
+            </button>
+        </form>
     </div>
 </div>
 
-<!-- Instagram Official Engine -->
-<script async src="//www.instagram.com/embed.js"></script>
-
-<!-- LIVE TV MODAL -->
 <div class="modal-overlay" id="liveTVModal" onclick="closeLiveTVOnOutside(event)">
     <div class="modal-box" style="background:#0f172a; border-color:#c1121f; color:#fff; text-align:center;">
         <button type="button" class="modal-close" style="color:#94a3b8;" onclick="closeLiveTVModal()">&times;</button>
@@ -530,7 +396,6 @@
     </div>
 </div>
 
-<!-- REPORTER MODAL -->
 <div class="modal-overlay" id="reporterModal" onclick="closeReporterOnOutside(event)">
     <div class="modal-box">
         <button type="button" class="modal-close" onclick="closeReporterForm()">&times;</button>
@@ -569,7 +434,7 @@
 </footer>
 
 <script>
-    /* LIVE RUNNING CLOCK WITH SECONDS */
+    /* LIVE CLOCK */
     function updateLiveClockWithSeconds() {
         const now = new Date();
         const days = ['ਐਤਵਾਰ', 'ਸੋਮਵਾਰ', 'ਮੰਗਲਵਾਰ', 'ਬੁੱਧਵਾਰ', 'ਵੀਰਵਾਰ', 'ਸ਼ੁੱਕਰਵਾਰ', 'ਸ਼ਨੀਵਾਰ'];
@@ -600,7 +465,7 @@
     updateLiveClockWithSeconds();
     setInterval(updateLiveClockWithSeconds, 1000);
 
-    /* Modal Handlers */
+    /* Reporter Modal */
     function openReporterForm() {
         const modal = document.getElementById('reporterModal');
         if (modal) { modal.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
@@ -624,6 +489,7 @@
         closeReporterForm();
     }
 
+    /* Live TV Modal */
     function openLiveTVModal() {
         const modal = document.getElementById('liveTVModal');
         if (modal) { modal.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
@@ -633,6 +499,31 @@
         if (modal) { modal.style.display = 'none'; document.body.style.overflow = 'auto'; }
     }
     function closeLiveTVOnOutside(e) { if (e.target.id === 'liveTVModal') closeLiveTVModal(); }
+
+    /* News Modal */
+    function openNewsModal() {
+        const modal = document.getElementById('newsModal');
+        if (modal) { modal.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+    }
+    function closeNewsModal() {
+        const modal = document.getElementById('newsModal');
+        if (modal) { modal.style.display = 'none'; document.body.style.overflow = 'auto'; }
+    }
+    function closeNewsOnOutside(e) { if (e.target.id === 'newsModal') closeNewsModal(); }
+
+    function handleNewsSubmit(e) {
+        e.preventDefault();
+        const name = document.getElementById('newsSenderName').value;
+        const phone = document.getElementById('newsSenderPhone').value;
+        const loc = document.getElementById('newsLocation').value;
+        const cat = document.getElementById('newsCategory').value;
+        const details = document.getElementById('newsDetails').value;
+
+        const msg = `*🚨 ਨਵੀਂ ਖ਼ਬਰ ਅਲਰਟ (PLN ਨਿਊਜ਼ਰੂਮ)*%0A%0A*ਭੇਜਣ ਵਾਲਾ:* ${name}%0A*ਮੋਬਾਈਲ:* ${phone}%0A*ਜਗ੍ਹਾ:* ${loc}%0A*ਕਿਸਮ:* ${cat}%0A*ਵੇਰਵਾ:* ${details}%0A%0A_(ਫੋਟੋ/ਵੀਡੀਓ ਨਾਲ ਅਟੈਚ ਕਰ ਰਹੇ ਹਾਂ)_`;
+        
+        window.open(`https://api.whatsapp.com/send?phone=919876543210&text=${msg}`, '_blank');
+        closeNewsModal();
+    }
 </script>
 
 </body>
