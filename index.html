@@ -116,7 +116,7 @@
             color: inherit;
         }
         
-        /* 100% Guaranteed Perfect Circle Logo */
+        /* Perfect Circle Logo */
         .brand-logo-wrapper {
             width: 68px;
             height: 68px;
@@ -242,7 +242,19 @@
             text-overflow: ellipsis;
         }
 
-        /* Top Advertisement */
+        /* Commercial Advertisements Across Punjab */
+        .ad-label {
+            font-size: 0.72rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            display: block;
+            margin-bottom: 4px;
+            text-align: right;
+            font-weight: 800;
+        }
+
+        /* Top Leaderboard Ad: Punjab-Wide Immigration (Jalandhar/Chandigarh/Amritsar) */
         .ad-banner-top {
             background: linear-gradient(135deg, #031926 0%, #003049 100%);
             color: #fff;
@@ -276,6 +288,30 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
+        }
+
+        /* In-Article Banner Ad: Ludhiana/Mohali Healthcare */
+        .ad-mid-banner {
+            background: linear-gradient(135deg, #780000 0%, #c1121f 100%);
+            color: #fff;
+            border-radius: 8px;
+            padding: 18px 24px;
+            margin: 26px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            border: 1.5px dashed #fdf0d5;
+        }
+
+        .ad-sidebar-card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 18px;
+            border: 1.5px dashed var(--border-light);
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-sm);
         }
 
         .regional-bar {
@@ -482,12 +518,6 @@
             color: var(--navy-deep);
             margin-bottom: 8px;
         }
-        .mini-card-desc {
-            font-size: 0.88rem;
-            color: var(--text-meta);
-            line-height: 1.6;
-            margin-bottom: 12px;
-        }
 
         /* Sidebar Hub */
         .sidebar-hub { display: flex; flex-direction: column; gap: 15px; }
@@ -553,7 +583,7 @@
     <div class="top-bar-inner">
         <div class="meta-cluster">
             <span class="live-tag"><span class="live-dot"></span> LIVE 24x7</span>
-            <span class="loc-tag">📍 ਗੁਰੂ ਹਰਸਹਾਏ (ਪੰਜਾਬ)</span>
+            <span class="loc-tag">📍 ਪੰਜਾਬ ਨੈੱਟਵਰਕ (PLN)</span>
             <span class="time-tag">ਬੁੱਧਵਾਰ, 2 ਸਤੰਬਰ 2026</span>
         </div>
         <div class="top-social-bar">
@@ -610,29 +640,38 @@
         <span class="ticker-title">🚨 ਦਿੱਲੀ-NCR: 16 ਸਾਲਾ ਨਾਬਾਲਿਗ ਨਾਲ ਸਲੀਪਰ ਬੱਸ ’ਚ ਕਥਿਤ ਦਰਿੰਦਗੀ | ਡਰਾਈਵਰ ਤੇ ਕੰਡਕਟਰ ਗ੍ਰਿਫ਼ਤਾਰ</span>
     </div>
 
-    <div class="ad-banner-top">
-        <div>
-            <h4>✈️ ਰੌਇਲ ਐਜੂਕੇਸ਼ਨ ਐਂਡ ਇਮੀਗ੍ਰੇਸ਼ਨ — ਕੈਨੇਡਾ, ਯੂ.ਕੇ. ਤੇ ਆਸਟ੍ਰੇਲੀਆ</h4>
-            <p>ਬਿਨਾਂ ਕਿਸੇ ਧੋਖਾਧੜੀ ਦੇ ਸਿੱਧਾ ਦਾਖਲਾ | ਸਪਾਊਸ ਵੀਜ਼ਾ ਤੇ ਸਟੱਡੀ ਵੀਜ਼ਾ ਵਿਸ਼ੇਸ਼ ਸੇਵਾਵਾਂ</p>
+    <!-- DUMMY AD 1: ਪੰਜਾਬ ਭਰ ਲਈ ਇਮੀਗ੍ਰੇਸ਼ਨ ਤੇ ਵੀਜ਼ਾ ਬੈਨਰ (ਜਲੰਧਰ / ਚੰਡੀਗੜ੍ਹ / ਬਠਿੰਡਾ / ਅੰਮ੍ਰਿਤਸਰ) -->
+    <div>
+        <span class="ad-label">PUNJAB WIDE SPONSORED ADVERTISEMENT</span>
+        <div class="ad-banner-top">
+            <div>
+                <h4>✈️ ਗਲੋਬਲ ਪੰਜਾਬ ਇਮੀਗ੍ਰੇਸ਼ਨ ਗਰੁੱਪ (ਚੰਡੀਗੜ੍ਹ • ਜਲੰਧਰ • ਬਠਿੰਡਾ • ਅੰਮ੍ਰਿਤਸਰ)</h4>
+                <p>ਕੈਨੇਡਾ, ਯੂ.ਕੇ. ਤੇ ਆਸਟ੍ਰੇਲੀਆ ਸਟੱਡੀ ਤੇ ਸਪਾਊਸ ਵੀਜ਼ਾ | ਰਿਫਿਊਜ਼ਲ ਕੇਸਾਂ ਦੇ ਵਿਸ਼ੇਸ਼ ਮਾਹਿਰ | ਫੀਸ ਵੀਜ਼ਾ ਲੱਗਣ ਤੋਂ ਬਾਅਦ</p>
+            </div>
+            <a href="https://api.whatsapp.com/send?text=ਸਤਿ ਸ਼੍ਰੀ ਅਕਾਲ ਜੀ, ਮੈਂ ਸਟੱਡੀ/ਵਰਕ ਵੀਜ਼ਾ ਜਾਣਕਾਰੀ ਲਈ ਸੰਪਰਕ ਕਰ ਰਿਹਾ/ਰਹੀ ਹਾਂ।" target="_blank" class="ad-btn">
+                📞 ਫ੍ਰੀ ਕਾਊਂਸਲਿੰਗ ਬੁੱਕ ਕਰੋ
+            </a>
         </div>
-        <a href="advertise.html" class="ad-btn">📞 ਫ੍ਰੀ ਕਾਊਂਸਲਿੰਗ ਲਵੋ</a>
     </div>
 
     <div class="regional-bar">
         <div class="regional-title">📍 ਖੇਤਰੀ ਕਵਰੇਜ (Regional News Coverage)</div>
         <div class="pill-cluster">
+            <a href="punjab.html" class="pill-btn">ਸਮੁੱਚਾ ਪੰਜਾਬ</a>
+            <a href="punjab.html" class="pill-btn">ਲੁਧਿਆਣਾ</a>
+            <a href="punjab.html" class="pill-btn">ਅੰਮ੍ਰਿਤਸਰ</a>
+            <a href="punjab.html" class="pill-btn">ਜਲੰਧਰ</a>
+            <a href="punjab.html" class="pill-btn">ਬਠਿੰਡਾ</a>
+            <a href="punjab.html" class="pill-btn">ਪਟਿਆਲਾ</a>
+            <a href="punjab.html" class="pill-btn">ਫ਼ਿਰੋਜ਼ਪੁਰ</a>
             <a href="guruharsahai.html" class="pill-btn">ਗੁਰੂਹਰਸਹਾਏ</a>
             <a href="punjab.html" class="pill-btn">ਗੁਰਦਾਸਪੁਰ</a>
-            <a href="punjab.html" class="pill-btn">ਫ਼ਿਰੋਜ਼ਪੁਰ</a>
-            <a href="punjab.html" class="pill-btn">ਮਮਦੋਟ</a>
-            <a href="punjab.html" class="pill-btn">ਜ਼ੀਰਾ</a>
-            <a href="punjab.html" class="pill-btn">ਮੱਖੂ</a>
-            <a href="punjab.html" class="pill-btn">ਸਮੁੱਚਾ ਪੰਜਾਬ</a>
         </div>
     </div>
 
     <div class="grid-structure">
         <div>
+            <!-- News 1: Delhi Case -->
             <div class="news-article-card">
                 <div class="article-media-box">
                     <span class="article-tag">NATIONAL CRIME REPORT</span>
@@ -651,6 +690,21 @@
                 </div>
             </div>
 
+            <!-- DUMMY AD 2: ਮਲਟੀਸਪੈਸ਼ਲਿਟੀ ਹਸਪਤਾਲ (ਲੁਧਿਆਣਾ / ਮੋਹਾਲੀ / ਪੰਜਾਬ) -->
+            <div>
+                <span class="ad-label">HEALTHCARE PROMOTION</span>
+                <div class="ad-mid-banner">
+                    <div>
+                        <h4 style="font-family:'Baloo Paaji 2',sans-serif; font-size:1.3rem; color:#fdf0d5;">🏥 ਮੈਕਸ-ਕੇਅਰ ਸੁਪਰ ਸਪੈਸ਼ਲਿਟੀ ਹਸਪਤਾਲ (ਲੁਧਿਆਣਾ ਤੇ ਮੋਹਾਲੀ)</h4>
+                        <p style="font-size:0.9rem; color:#f1f5f9; margin-top:3px;">ਦਿਲ, ਕੈਂਸਰ ਅਤੇ ਗੋਡੇ ਬਦਲਣ ਦੇ ਮਾਹਿਰ ਡਾਕਟਰ | ਆਯੂਸ਼ਮਾਨ ਭਾਰਤ ਤੇ ਸਾਰੇ ਇੰਸ਼ੋਰੈਂਸ ਕਾਰਡ ਕੈਸ਼ਲੈੱਸ ਮੰਨਣਯੋਗ</p>
+                    </div>
+                    <a href="https://api.whatsapp.com/send?text=ਸਤਿ ਸ਼੍ਰੀ ਅਕਾਲ ਜੀ, ਮੈਂ ਹਸਪਤਾਲ ਅਪੁਆਇੰਟਮੈਂਟ ਬਾਰੇ ਪੁੱਛਣਾ ਚਾਹੁੰਦਾ/ਚਾਹੁੰਦੀ ਹਾਂ।" target="_blank" class="ad-btn" style="background:#fdf0d5; color:#780000;">
+                        📍 24x7 ਹੈਲਪਲਾਈਨ
+                    </a>
+                </div>
+            </div>
+
+            <!-- News 2: Nepal Flood 3 Photos -->
             <div class="news-article-card">
                 <div style="position: relative;">
                     <span class="article-tag" style="background:#0284c7;">GLOBAL / FLASH FLOOD</span>
@@ -675,4 +729,113 @@
                     <p class="article-text"><strong>ਕਾਠਮੰਡੂ / ਪੰਜਾਬ (Punjab Live Now):</strong> ਨੇਪਾਲ ’ਚ ਆਈ ਭਿਆਨਕ ਫਲੈਸ਼ ਫਲੱਡ ਨੇ ਕਈ ਇਲਾਕਿਆਂ ’ਚ ਭਾਰੀ ਤਬਾਹੀ ਮਚਾਈ ਹੈ। ਘਰਾਂ, ਸੜਕਾਂ ਅਤੇ ਆਲੇ-ਦੁਆਲੇ ਦੇ ਇਲਾਕਿਆਂ ’ਚ ਪਾਣੀ ਤੇ ਮਲਬੇ ਦਾ ਮੰਜ਼ਰ ਹੈ। ਰਾਹਤ ਕਾਰਜ ਜਾਰੀ ਹਨ।</p>
                     
                     <div class="article-action-row">
-                        <span style="font-size:0.88rem; color:#647
+                        <span style="font-size:0.88rem; color:#64748b; font-weight:700;">📸 3 ਐਕਸਕਲੂਸਿਵ ਫੋਟੋ ਰਿਪੋਰਟ</span>
+                        <a href="https://api.whatsapp.com/send?text=ਨੇਪਾਲ ’ਚ ਕੁਦਰਤ ਦਾ ਕਹਿਰ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="action-link action-link-wa">
+                            📲 WhatsApp 'ਤੇ ਸ਼ੇਅਰ ਕਰੋ
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News 3: Gurdaspur Case -->
+            <div class="news-article-card">
+                <div class="article-media-box">
+                    <span class="article-tag">PUNJAB CRIME REPORT</span>
+                    <img src="gurdaspurnews1.jpg" alt="ਗੁਰਦਾਸਪੁਰ ਪੁਲਿਸ ਮਾਮਲਾ">
+                </div>
+                <div class="article-body">
+                    <h2 class="article-title">🚨 ਬੱਬੇਹਾਲੀ ਅੱਡੇ ’ਤੇ ਪੁਲਿਸ ਕਾਂਸਟੇਬਲ ਨਾਲ ਕਥਿਤ ਮਾਰਕੁੱਟ, ਮਾਮਲਾ ਜਾਂਚ ਅਧੀਨ</h2>
+                    <p class="article-text"><strong>ਗੁਰਦਾਸਪੁਰ (Punjab Live Now):</strong> ਗੁਰਦਾਸਪੁਰ ਦੇ ਬੱਬੇਹਾਲੀ ਅੱਡੇ ’ਤੇ ਪੰਜਾਬ ਪੁਲਿਸ ਦੇ ਕਾਂਸਟੇਬਲ ਨਾਲ ਕਥਿਤ ਤੌਰ ’ਤੇ ਮਾਰਕੁੱਟ ਹੋਣ ਦਾ ਮਾਮਲਾ ਸਾਹਮਣੇ ਆਇਆ ਹੈ। ਪੁਲਿਸ ਵੱਲੋਂ ਮਾਮਲੇ ਦੀ ਗੰਭੀਰਤਾ ਨਾਲ ਜਾਂਚ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ।</p>
+                    
+                    <div class="article-action-row">
+                        <span style="font-size:0.88rem; color:#64748b; font-weight:700;">📍 ਬੱਬੇਹਾਲੀ ਅੱਡਾ, ਗੁਰਦਾਸਪੁਰ</span>
+                        <a href="https://api.whatsapp.com/send?text=ਗੁਰਦਾਸਪੁਰ ਕਾਂਸਟੇਬਲ ਮਾਮਲਾ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="action-link action-link-wa">
+                            📲 WhatsApp 'ਤੇ ਸ਼ੇਅਰ ਕਰੋ
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Secondary Grid -->
+            <div class="section-separator">ਹੋਰ ਪ੍ਰਮੁੱਖ ਖ਼ਬਰਾਂ</div>
+            <div class="dual-grid">
+                <div class="mini-card">
+                    <div class="mini-card-media"><img src="jmshedpurnewscng.jpg" alt="ਜਮਸ਼ੇਦਪੁਰ CNG"></div>
+                    <div class="mini-card-body">
+                        <div>
+                            <span style="color:var(--brand-red); font-size:0.8rem; font-weight:800;">📍 ਜਮਸ਼ੇਦਪੁਰ</span>
+                            <h3 class="mini-card-title">ਜਮਸ਼ੇਦਪੁਰ ’ਚ ਅਚਾਨਕ ਫੱਟਿਆ CNG ਨੋਜ਼ਲ, ਦੇਖੋ ਮੌਕੇ ਦਾ ਹਾਲ!</h3>
+                        </div>
+                        <a href="videos.html" class="action-link action-link-dark" style="margin-top:10px; font-size:0.82rem; padding:6px 12px;">ਵੀਡੀਓ ➔</a>
+                    </div>
+                </div>
+
+                <div class="mini-card">
+                    <div class="mini-card-media"><img src="rahulchanni.jpg" alt="ਚਰਨਜੀਤ ਚੰਨੀ"></div>
+                    <div class="mini-card-body">
+                        <div>
+                            <span style="color:var(--brand-red); font-size:0.8rem; font-weight:800;">📍 ਸਿਆਸਤ</span>
+                            <h3 class="mini-card-title">🔥 ਚੰਨੀ ਵੱਲੋਂ ਤਰਸੇਮ ਲਾਲ ਦੀ ਪੋਸਟ ਸ਼ੇਅਰ ਕਰਨ ’ਤੇ ਸਿਆਸੀ ਚਰਚਾ</h3>
+                        </div>
+                        <a href="punjab.html" class="action-link action-link-dark" style="margin-top:10px; font-size:0.82rem; padding:6px 12px;">ਪੜ੍ਹੋ ➔</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar-hub">
+            <div class="sidebar-card">
+                <div class="sidebar-heading">🎬 PLN ਵੀਡੀਓ ਹੱਬ</div>
+                <p style="font-size: 0.92rem; color: #475569; margin-bottom: 14px;">ਸਾਰੀਆਂ ਲਾਈਵ ਗਰਾਊਂਡ ਰਿਪੋਰਟਾਂ ਅਤੇ ਵੀਡੀਓ ਬੁਲੇਟਿਨ ਦੇਖੋ।</p>
+                <a href="videos.html" class="sidebar-btn">🎥 ਵੀਡੀਓਜ਼ ਸੈਕਸ਼ਨ ਖੋਲ੍ਹੋ ➔</a>
+            </div>
+
+            <!-- DUMMY AD 3: ਪੰਜਾਬ ਭਰ ਲਈ ਖੇਤੀਬਾੜੀ ਤੇ ਟਰੈਕਟਰ (ਮੋਗਾ / ਬਠਿੰਡਾ / ਮਾਲਵਾ ਜ਼ੋਨ) -->
+            <div class="ad-sidebar-card" style="background:#f0fdf4; border-color:#86efac;">
+                <span class="ad-label" style="text-align:left; color:#15803d;">PUNJAB AGRO PROMOTION</span>
+                <h4 style="font-family:'Baloo Paaji 2',sans-serif; font-size:1.15rem; color:#14532d; margin-top:4px;">🚜 ਮਾਲਵਾ ਐਗਰੋ ਐਂਡ ਟਰੈਕਟਰਜ਼ (ਸਮੁੱਚਾ ਮਾਲਵਾ ਜ਼ੋਨ)</h4>
+                <p style="font-size:0.86rem; color:#166534; margin:6px 0 10px 0;">ਨਵੇਂ ਮਾਡਲ ਟਰੈਕਟਰਾਂ ਅਤੇ ਸੁਪਰ ਸੀਡਰਾਂ 'ਤੇ ਪੰਜਾਬ ਸਰਕਾਰ ਵੱਲੋਂ <strong>50% ਸਬਸਿਡੀ</strong>। ਆਸਾਨ ਕਿਸ਼ਤਾਂ ਦੀ ਸਹੂਲਤ।</p>
+                <span style="font-size:0.82rem; color:#15803d; font-weight:700;">📞 98765-XXXXX | ਪੰਜਾਬ ਭਰ 'ਚ ਡਿਲੀਵਰੀ</span>
+            </div>
+
+            <!-- DUMMY AD 4: ਵਿਆਹਾਂ ਦੇ ਗਹਿਣੇ ਤੇ ਲਹਿੰਗੇ (ਅੰਮ੍ਰਿਤਸਰ / ਪਟਿਆਲਾ / ਲੁਧਿਆਣਾ) -->
+            <div class="ad-sidebar-card" style="background:#fffcf0; border-color:#fcd34d;">
+                <span class="ad-label" style="text-align:left; color:#b45309;">ROYAL WEDDING COLLECTION</span>
+                <h4 style="font-family:'Baloo Paaji 2',sans-serif; font-size:1.15rem; color:#78350f; margin-top:4px;">💎 ਸ਼ਾਹੀ ਜਿਊਲਰਜ਼ ਤੇ ਬ੍ਰਾਈਡਲ ਹੱਬ (ਅੰਮ੍ਰਿਤਸਰ • ਪਟਿਆਲਾ)</h4>
+                <p style="font-size:0.86rem; color:#92400e; margin:6px 0 10px 0;">100% ਹਾਲਮਾਰਕ ਗੋਲਡ, ਡਾਇਮੰਡ ਜਿਊਲਰੀ ਅਤੇ ਲਗਜ਼ਰੀ ਬ੍ਰਾਈਡਲ ਲਹਿੰਗਿਆਂ ਦੀ ਸ਼ਾਨਦਾਰ ਕੁਲੈਕਸ਼ਨ।</p>
+                <span style="font-size:0.82rem; color:#b45309; font-weight:700;">📍 ਮਾਲ ਰੋਡ • ਆਨਲਾਈਨ ਬੁਕਿੰਗ ਉਪਲਬਧ</span>
+            </div>
+
+            <!-- DUMMY AD 5: ਰੀਅਲ ਅਸਟੇਟ ਤੇ ਕਮਰਸ਼ੀਅਲ ਪ੍ਰਾਪਰਟੀ (ਮੋਹਾਲੀ / ਨਿਊ ਚੰਡੀਗੜ੍ਹ / ਜ਼ੀਰਕਪੁਰ) -->
+            <div class="ad-sidebar-card" style="background:#f5f3ff; border-color:#c4b5fd;">
+                <span class="ad-label" style="text-align:left; color:#6d28d9;">REAL ESTATE INVESTMENT</span>
+                <h4 style="font-family:'Baloo Paaji 2',sans-serif; font-size:1.15rem; color:#4c1d95; margin-top:4px;">🏢 ਪੰਜਾਬ ਪ੍ਰਾਪਰਟੀਜ਼ (ਮੋਹਾਲੀ ਤੇ ਏਅਰਪੋਰਟ ਰੋਡ)</h4>
+                <p style="font-size:0.86rem; color:#5b21b6; margin:6px 0 10px 0;">ਪ੍ਰਾਈਮ ਲੋਕੇਸ਼ਨ 'ਤੇ ਰਿਹਾਇਸ਼ੀ ਪਲਾਟ ਅਤੇ ਦੁਕਾਨਾਂ ਖਰੀਦੋ। ਰਜਿਸਟਰੀ ਤੁਰੰਤ, ਬੈਂਕ ਲੋਨ ਉਪਲਬਧ।</p>
+                <span style="font-size:0.82rem; color:#6d28d9; font-weight:700;">📞 98140-XXXXX | ਮੋਹਾਲੀ</span>
+            </div>
+
+            <!-- DIRECT BOOKING AD: ਪੰਜਾਬ ਦੇ ਕਿਸੇ ਵੀ ਕੋਨੇ ਤੋਂ ਇਸ਼ਤਿਹਾਰ ਬੁੱਕ ਕਰੋ -->
+            <div class="ad-sidebar-card" style="background:#ffffff; text-align:center; border: 2px dashed var(--brand-red);">
+                <span class="ad-label" style="text-align:center; color:var(--brand-red);">ADVERTISE WITH PLN</span>
+                <h4 style="font-family:'Baloo Paaji 2',sans-serif; font-size:1.25rem; color:var(--navy-dark); margin-top:4px;">📢 ਪੰਜਾਬ ਭਰ ਵਿੱਚੋਂ ਆਪਣਾ ਇਸ਼ਤਿਹਾਰ ਦਿਓ</h4>
+                <p style="font-size:0.86rem; color:var(--text-meta); margin:6px 0 14px 0;">ਲੁਧਿਆਣਾ, ਜਲੰਧਰ, ਅੰਮ੍ਰਿਤਸਰ, ਬਠਿੰਡਾ ਸਮੇਤ ਸਮੁੱਚੇ ਪੰਜਾਬ ਵਿੱਚ ਆਪਣੇ ਕਾਰੋਬਾਰ ਦਾ ਪ੍ਰਚਾਰ ਕਰੋ।</p>
+                <a href="advertise.html" class="sidebar-btn" style="background:var(--navy-dark); margin-top:0;">ਇਸ਼ਤਿਹਾਰ ਬੁੱਕ ਕਰੋ ➔</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-nav">
+        <a href="index.html">ਮੁੱਖ ਪੰਨਾ</a>
+        <a href="punjab.html">ਪੰਜਾਬ</a>
+        <a href="guruharsahai.html">ਗੁਰੂਹਰਸਹਾਏ</a>
+        <a href="videos.html">ਵੀਡੀਓਜ਼</a>
+        <a href="advertise.html">ਇਸ਼ਤਿਹਾਰ</a>
+    </div>
+    <p style="font-size: 0.88rem; color: #94a3b8; margin-top: 10px;">&copy; 2026 Punjab Live Now (PLN) Media Network. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
