@@ -35,13 +35,8 @@
             line-height: 1.65;
         }
 
-        a, button {
-            cursor: pointer !important;
-            text-decoration: none;
-            transition: all 0.2s ease;
-        }
+        a, button { cursor: pointer !important; text-decoration: none; transition: all 0.2s ease; }
 
-        /* 1. Header Top Strip */
         .top-bar {
             background: var(--navy-deep);
             color: #cbd5e1;
@@ -59,12 +54,7 @@
             flex-wrap: wrap;
             gap: 10px;
         }
-        .meta-cluster {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
+        .meta-cluster { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
         .live-tag {
             display: inline-flex;
             align-items: center;
@@ -76,29 +66,13 @@
             font-weight: 800;
             font-size: 0.75rem;
         }
-        .live-dot {
-            width: 6px;
-            height: 6px;
-            background: #ffffff;
-            border-radius: 50%;
-        }
-
+        .live-dot { width: 6px; height: 6px; background: #ffffff; border-radius: 50%; }
         .loc-tag { color: #fdf0d5; font-weight: 700; }
         .time-tag { color: #cbd5e1; font-weight: 500; }
-
-        .top-social-bar a {
-            color: #cbd5e1;
-            margin-left: 14px;
-            font-weight: 600;
-        }
+        .top-social-bar a { color: #cbd5e1; margin-left: 14px; font-weight: 600; }
         .top-social-bar a:hover { color: #ffffff; }
 
-        /* 2. Main Broadcast Header */
-        header {
-            background: #ffffff;
-            border-bottom: 2px solid var(--border-light);
-            padding: 16px 0;
-        }
+        header { background: #ffffff; border-bottom: 2px solid var(--border-light); padding: 16px 0; }
         .header-inner {
             max-width: 1240px;
             margin: 0 auto;
@@ -109,185 +83,101 @@
             flex-wrap: wrap;
             gap: 16px;
         }
-        .brand-link {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            color: inherit;
-        }
+        .brand-link { display: flex; align-items: center; gap: 15px; color: inherit; }
         
-        /* 100% Guaranteed Perfect Circle Logo */
         .brand-logo-wrapper {
-            width: 68px;
-            height: 68px;
-            min-width: 68px;
-            min-height: 68px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 2.5px solid var(--brand-red);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            background: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            width: 68px; height: 68px; min-width: 68px; min-height: 68px;
+            border-radius: 50%; overflow: hidden; border: 2.5px solid var(--brand-red);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1); background: #ffffff;
+            display: flex; align-items: center; justify-content: center;
         }
-        .brand-logo {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-            display: block;
-        }
-
+        .brand-logo { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block; }
         .brand-text h1 {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 2.3rem;
-            font-weight: 800;
-            line-height: 1;
-            color: var(--brand-red);
-            letter-spacing: -0.5px;
-            text-transform: uppercase;
+            font-size: 2.3rem; font-weight: 800; line-height: 1;
+            color: var(--brand-red); letter-spacing: -0.5px; text-transform: uppercase;
         }
         .brand-text h1 span { color: var(--navy-dark); }
-        .brand-text p {
-            font-size: 0.9rem;
-            color: var(--text-meta);
-            font-weight: 600;
-            margin-top: 3px;
-        }
+        .brand-text p { font-size: 0.9rem; color: var(--text-meta); font-weight: 600; margin-top: 3px; }
 
-        .header-actions {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
+        .header-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
         .hd-btn {
-            font-weight: 700;
-            font-size: 0.88rem;
-            padding: 8px 16px;
-            border-radius: 4px;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
+            font-weight: 700; font-size: 0.88rem; padding: 8px 16px;
+            border-radius: 4px; display: inline-flex; align-items: center; gap: 6px; border: none;
         }
-        .btn-rep { background: #f8fafc; color: var(--navy-dark); border: 1px solid var(--border-light); }
+        .btn-rep { background: var(--brand-red); color: #fff; }
+        .btn-rep:hover { background: var(--brand-red-dark); }
         .btn-ad-give { background: #fff1f2; color: var(--brand-red); border: 1px solid #fecdd3; }
-        .btn-live-stream { background: var(--brand-red); color: #fff; }
+        .btn-ad-give:hover { background: var(--brand-red); color: #fff; }
+        .btn-live-stream { background: var(--navy-dark); color: #fff; }
         .btn-wa-contact { background: #16a34a; color: #fff; }
 
-        /* 3. Navigation Bar */
         nav {
-            background: var(--navy-dark);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 3px solid var(--brand-red);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            background: var(--navy-dark); position: sticky; top: 0; z-index: 1000;
+            border-bottom: 3px solid var(--brand-red); box-shadow: 0 4px 12px rgba(0,0,0,0.12);
         }
-        .nav-inner {
-            max-width: 1240px;
-            margin: 0 auto;
-            display: flex;
-            overflow-x: auto;
-            white-space: nowrap;
-            scrollbar-width: none;
-        }
+        .nav-inner { max-width: 1240px; margin: 0 auto; display: flex; overflow-x: auto; white-space: nowrap; scrollbar-width: none; }
         .nav-inner::-webkit-scrollbar { display: none; }
         .nav-inner a {
-            color: #f8fafc;
-            padding: 13px 22px;
-            font-size: 1.02rem;
-            font-weight: 700;
-            border-right: 1px solid rgba(255,255,255,0.06);
-            display: inline-block;
+            color: #f8fafc; padding: 13px 22px; font-size: 1.02rem; font-weight: 700;
+            border-right: 1px solid rgba(255,255,255,0.06); display: inline-block;
         }
-        .nav-inner a:hover, .nav-inner a.active {
-            background: var(--brand-red);
-            color: #ffffff;
-        }
+        .nav-inner a:hover, .nav-inner a.active { background: var(--brand-red); color: #ffffff; }
 
-        .container {
-            max-width: 860px;
-            margin: 35px auto;
-            padding: 0 16px;
-        }
+        .container { max-width: 860px; margin: 35px auto; padding: 0 16px; }
 
         .form-card {
-            background: #fff;
-            border-radius: 10px;
-            border: 1px solid var(--border-light);
-            padding: 32px;
-            box-shadow: var(--shadow-sm);
+            background: #fff; border-radius: 10px; border: 1px solid var(--border-light);
+            padding: 32px; box-shadow: var(--shadow-sm);
         }
         .form-card h2 {
-            font-family: 'Baloo Paaji 2', sans-serif;
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--navy-deep);
-            margin-bottom: 8px;
+            font-family: 'Baloo Paaji 2', sans-serif; font-size: 1.85rem; font-weight: 800;
+            color: var(--navy-deep); margin-bottom: 8px;
         }
-        .form-card p {
-            font-size: 0.95rem;
-            color: var(--text-meta);
-            margin-bottom: 24px;
-        }
-
+        .form-card p { font-size: 0.95rem; color: var(--text-meta); margin-bottom: 24px; }
         .input-group { margin-bottom: 18px; }
-        .input-group label {
-            display: block;
-            font-weight: 700;
-            font-size: 0.92rem;
-            color: var(--navy-deep);
-            margin-bottom: 6px;
-        }
+        .input-group label { display: block; font-weight: 700; font-size: 0.92rem; color: var(--navy-deep); margin-bottom: 6px; }
         .input-group input, .input-group textarea, .input-group select {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid var(--border-light);
-            border-radius: 6px;
-            font-family: inherit;
-            font-size: 0.95rem;
-            background: #f8fafc;
+            width: 100%; padding: 12px; border: 1px solid var(--border-light); border-radius: 6px; font-family: inherit; font-size: 0.95rem; background: #f8fafc;
         }
         .submit-btn {
-            background: #16a34a;
-            color: #fff;
-            border: 0;
-            padding: 14px 24px;
-            border-radius: 6px;
-            font-family: inherit;
-            font-weight: 800;
-            font-size: 1.05rem;
-            cursor: pointer;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 8px;
+            background: #16a34a; color: #fff; border: 0; padding: 14px 24px; border-radius: 6px;
+            font-family: inherit; font-weight: 800; font-size: 1.05rem; cursor: pointer; width: 100%;
+            display: flex; justify-content: center; align-items: center; gap: 8px;
         }
         .submit-btn:hover { background: #15803d; }
 
-        footer {
-            background: #031926;
-            color: #94a3b8;
-            text-align: center;
-            padding: 40px 16px;
-            margin-top: 60px;
-            border-top: 4px solid var(--brand-red);
+        /* Modal */
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(3, 25, 38, 0.75); backdrop-filter: blur(8px);
+            display: none; justify-content: center; align-items: center; z-index: 9999; padding: 16px;
         }
-        .footer-nav { margin-bottom: 16px; }
-        .footer-nav a {
-            color: #f1f5f9;
-            margin: 0 14px;
-            font-weight: 700;
-            font-size: 0.95rem;
+        .modal-box {
+            background: #ffffff; width: 100%; max-width: 580px; border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3); border: 2px solid var(--brand-red);
+            max-height: 90vh; overflow-y: auto; position: relative; padding: 26px;
         }
+        .modal-close { position: absolute; top: 16px; right: 18px; font-size: 1.6rem; font-weight: 800; color: var(--navy-dark); background: none; border: none; }
+        .modal-header h3 { font-family: 'Baloo Paaji 2', sans-serif; font-size: 1.6rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 6px; }
+        .modal-header p { font-size: 0.9rem; color: var(--text-meta); margin-bottom: 20px; }
+        .form-group { margin-bottom: 14px; }
+        .form-group label { display: block; font-weight: 700; font-size: 0.88rem; color: var(--navy-deep); margin-bottom: 5px; }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%; padding: 10px 12px; border: 1px solid var(--border-light); border-radius: 6px; font-family: inherit; font-size: 0.92rem; background: #f8fafc;
+        }
+        .btn-submit-app {
+            width: 100%; background: #16a34a; color: #fff; padding: 12px; border-radius: 6px; font-weight: 800; font-size: 1rem; border: none; margin-top: 10px; cursor: pointer;
+        }
+
+        footer { background: #031926; color: #94a3b8; text-align: center; padding: 40px 16px; margin-top: 60px; border-top: 4px solid var(--brand-red); }
+        .footer-nav a { color: #f1f5f9; margin: 0 14px; font-weight: 700; font-size: 0.95rem; }
 
         @media (max-width: 900px) {
             .brand-text h1 { font-size: 2rem; }
             .header-actions { width: 100%; justify-content: center; }
             .top-bar-inner { justify-content: center; text-align: center; }
+            .form-card { padding: 20px; }
         }
     </style>
 </head>
@@ -297,7 +187,7 @@
     <div class="top-bar-inner">
         <div class="meta-cluster">
             <span class="live-tag"><span class="live-dot"></span> LIVE 24x7</span>
-            <span class="loc-tag">📍 ਗੁਰੂ ਹਰਸਹਾਏ (ਪੰਜਾਬ)</span>
+            <span class="loc-tag">📍 ਪੰਜਾਬ ਨੈੱਟਵਰਕ (PLN)</span>
             <span class="time-tag">ਬੁੱਧਵਾਰ, 2 ਸਤੰਬਰ 2026</span>
         </div>
         <div class="top-social-bar">
@@ -322,9 +212,9 @@
         </a>
         
         <div class="header-actions">
-            <a href="https://api.whatsapp.com/send?text=ਸਤਿ ਸ਼੍ਰੀ ਅਕਾਲ ਜੀ, ਮੈਂ ਰਿਪੋਰਟਰ ਬਣਨ ਲਈ ਸੰਪਰਕ ਕਰ ਰਿਹਾ ਹਾਂ।" target="_blank" class="hd-btn btn-rep">
+            <button type="button" onclick="openReporterForm()" class="hd-btn btn-rep">
                 🎤 ਰਿਪੋਰਟਰ ਬਣੋ
-            </a>
+            </button>
             <a href="advertise.html" class="hd-btn btn-ad-give">
                 📢 ਇਸ਼ਤਿਹਾਰ ਦਿਓ
             </a>
@@ -345,25 +235,24 @@
         <a href="guruharsahai.html">ਗੁਰੂਹਰਸਹਾਏ</a>
         <a href="videos.html">ਵੀਡੀਓਜ਼</a>
         <a href="advertise.html" class="active">ਇਸ਼ਤਿਹਾਰ ਦਿਓ</a>
+        <a href="javascript:void(0)" onclick="openReporterForm()">ਰਿਪੋਰਟਰ ਬਣੋ</a>
     </div>
 </nav>
 
 <div class="container">
     <div class="form-card">
-        <h2>📢 ਆਪਣਾ ਇਸ਼ਤਿਹਾਰ / ਖ਼ਬਰ ਬੁੱਕ ਕਰੋ</h2>
-        <p>ਆਪਣੇ ਕਾਰੋਬਾਰ ਨੂੰ ਪੰਜਾਬ ਦੇ ਲੱਖਾਂ ਸਰੋਤਿਆਂ ਤੱਕ ਪਹੁੰਚਾਉਣ ਲਈ ਵੇਰਵੇ ਦਰਜ ਕਰੋ, ਸਾਡੀ ਟੀਮ ਤੁਹਾਡੇ ਨਾਲ ਤੁਰੰਤ ਰਾਬਤਾ ਕਰੇਗੀ।</p>
+        <h2>📢 ਆਪਣਾ ਇਸ਼ਤਿਹਾਰ / ਪ੍ਰਮੋਸ਼ਨ ਬੁੱਕ ਕਰੋ</h2>
+        <p>ਆਪਣੇ ਕਾਰੋਬਾਰ ਨੂੰ ਪੰਜਾਬ ਦੇ ਲੱਖਾਂ ਸਰੋਤਿਆਂ ਤੱਕ ਪਹੁੰਚਾਉਣ ਲਈ ਵੇਰਵੇ ਦਰਜ ਕਰੋ:</p>
         
         <form onsubmit="sendToWhatsApp(event)">
             <div class="input-group">
-                <label>ਤੁਹਾਡਾ ਨਾਮ / ਸੰਸਥਾ ਦਾ ਨਾਮ</label>
+                <label>ਤੁਹਾਡਾ ਨਾਮ / ਕਾਰੋਬਾਰ ਦਾ ਨਾਮ</label>
                 <input type="text" id="advName" required placeholder="ਉਦਾਹਰਨ: ਰੌਇਲ ਕਲੌਥ ਹਾਊਸ">
             </div>
-
             <div class="input-group">
                 <label>ਮੋਬਾਈਲ ਨੰਬਰ (WhatsApp)</label>
                 <input type="tel" id="advPhone" required placeholder="ਉਦਾਹਰਨ: 9876543210">
             </div>
-
             <div class="input-group">
                 <label>ਇਸ਼ਤਿਹਾਰ ਦੀ ਕਿਸਮ (Placement)</label>
                 <select id="advType">
@@ -373,15 +262,55 @@
                     <option value="ਸੋਸ਼ਲ ਮੀਡੀਆ / ਵੀਡੀਓ ਪ੍ਰਮੋਸ਼ਨ">ਸੋਸ਼ਲ ਮੀਡੀਆ / ਵੀਡੀਓ ਪ੍ਰਮੋਸ਼ਨ</option>
                 </select>
             </div>
-
             <div class="input-group">
                 <label>ਇਸ਼ਤਿਹਾਰ ਦਾ ਸੰਖੇਪ ਵੇਰਵਾ</label>
                 <textarea id="advMessage" rows="4" placeholder="ਇਸ਼ਤਿਹਾਰ ਸੰਬੰਧੀ ਜ਼ਰੂਰੀ ਜਾਣਕਾਰੀ ਲਿਖੋ..."></textarea>
             </div>
+            <button type="submit" class="submit-btn">💬 WhatsApp ਰਾਹੀਂ ਬੁਕਿੰਗ ਭੇਜੋ</button>
+        </form>
+    </div>
+</div>
 
-            <button type="submit" class="submit-btn">
-                💬 WhatsApp ਰਾਹੀਂ ਬੁਕਿੰਗ ਭੇਜੋ
-            </button>
+<!-- POPUP MODAL -->
+<div class="modal-overlay" id="reporterModal" onclick="closeReporterOnOutside(event)">
+    <div class="modal-box">
+        <button type="button" class="modal-close" onclick="closeReporterForm()">&times;</button>
+        <div class="modal-header">
+            <h3>🎤 Punjab Live Now ਰਿਪੋਰਟਰ ਬਣੋ</h3>
+            <p>ਆਪਣੇ ਸ਼ਹਿਰ ਜਾਂ ਪਿੰਡ ਦੀ ਆਵਾਜ਼ ਬਣਨ ਲਈ ਇਹ ਫਾਰਮ ਭਰੋ:</p>
+        </div>
+        
+        <form onsubmit="handleReporterSubmit(event)">
+            <div class="form-group">
+                <label>ਪੂਰਾ ਨਾਮ (Full Name)</label>
+                <input type="text" id="mRepName" required placeholder="ਆਪਣਾ ਪੂਰਾ ਨਾਮ ਲਿਖੋ">
+            </div>
+            <div class="form-group">
+                <label>ਮੋਬਾਈਲ ਨੰਬਰ (WhatsApp Number)</label>
+                <input type="tel" id="mRepPhone" required placeholder="10 ਅੰਕਾਂ ਦਾ ਮੋਬਾਈਲ ਨੰਬਰ">
+            </div>
+            <div class="form-group">
+                <label>ਜ਼ਿਲ੍ਹਾ (District)</label>
+                <input type="text" id="mRepDistrict" required placeholder="ਜਿਵੇਂ: ਫ਼ਿਰੋਜ਼ਪੁਰ, ਲੁਧਿਆਣਾ, ਅੰਮ੍ਰਿਤਸਰ...">
+            </div>
+            <div class="form-group">
+                <label>ਤਹਿਸੀਲ / ਕਸਬਾ / ਪਿੰਡ (City / Town)</label>
+                <input type="text" id="mRepCity" required placeholder="ਜਿਵੇਂ: ਗੁਰੂਹਰਸਹਾਏ, ਮਮਦੋਟ, ਜ਼ੀਰਾ...">
+            </div>
+            <div class="form-group">
+                <label>ਤਜਰਬਾ (Media / Reporting Experience)</label>
+                <select id="mRepExp">
+                    <option value="ਨਵਾਂ ਸਿੱਖਿਆਰਥੀ (Fresher / Passionate)">ਨਵਾਂ ਸਿੱਖਿਆਰਥੀ (Fresher / Passionate)</option>
+                    <option value="1 ਤੋਂ 2 ਸਾਲ ਦਾ ਤਜਰਬਾ">1 ਤੋਂ 2 ਸਾਲ ਦਾ ਤਜਰਬਾ</option>
+                    <option value="3 ਸਾਲ ਤੋਂ ਵੱਧ ਦਾ ਤਜਰਬਾ">3 ਸਾਲ ਤੋਂ ਵੱਧ ਦਾ ਤਜਰਬਾ</option>
+                    <option value="ਸੋਸ਼ਲ ਮੀਡੀਆ ਬਲਾਗਰ / ਕੰਟੈਂਟ ਕ੍ਰਿਏਟਰ">ਸੋਸ਼ਲ ਮੀਡੀਆ ਬਲਾਗਰ / ਕੰਟੈਂਟ ਕ੍ਰਿਏਟਰ</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>ਸੰਖੇਪ ਜਾਣਕਾਰੀ</label>
+                <textarea id="mRepAbout" rows="3" placeholder="ਆਪਣੀ ਪੜ੍ਹਾਈ ਜਾਂ ਸ਼ੌਕ ਬਾਰੇ ਸੰਖੇਪ ਜਾਣਕਾਰੀ ਦਿਓ..."></textarea>
+            </div>
+            <button type="submit" class="btn-submit-app">✅ ਅਰਜ਼ੀ ਜਮ੍ਹਾਂ ਕਰੋ</button>
         </form>
     </div>
 </div>
@@ -393,21 +322,43 @@
         <a href="guruharsahai.html">ਗੁਰੂਹਰਸਹਾਏ</a>
         <a href="videos.html">ਵੀਡੀਓਜ਼</a>
         <a href="advertise.html">ਇਸ਼ਤਿਹਾਰ</a>
+        <a href="javascript:void(0)" onclick="openReporterForm()">ਰਿਪੋਰਟਰ ਬਣੋ</a>
     </div>
     <p style="font-size: 0.88rem; color: #94a3b8; margin-top: 10px;">&copy; 2026 Punjab Live Now (PLN) Media Network. All Rights Reserved.</p>
 </footer>
 
 <script>
-function sendToWhatsApp(e) {
-    e.preventDefault();
-    const name = document.getElementById('advName').value;
-    const phone = document.getElementById('advPhone').value;
-    const type = document.getElementById('advType').value;
-    const msg = document.getElementById('advMessage').value;
+    function sendToWhatsApp(e) {
+        e.preventDefault();
+        const name = document.getElementById('advName').value;
+        const phone = document.getElementById('advPhone').value;
+        const type = document.getElementById('advType').value;
+        const msg = document.getElementById('advMessage').value;
+        const text = `*ਨਵਾਂ ਇਸ਼ਤਿਹਾਰ ਬੁਕਿੰਗ (PLN)*%0A%0A*ਨਾਮ:* ${name}%0A*ਫ਼ੋਨ:* ${phone}%0A*ਕਿਸਮ:* ${type}%0A*ਵੇਰਵਾ:* ${msg}`;
+        window.open(`https://api.whatsapp.com/send?phone=919876543210&text=${text}`, '_blank');
+    }
 
-    const text = `*ਨਵਾਂ ਇਸ਼ਤਿਹਾਰ ਬੁਕਿੰਗ (PLN)*%0A%0A*ਨਾਮ:* ${name}%0A*ਫ਼ੋਨ:* ${phone}%0A*ਕਿਸਮ:* ${type}%0A*ਵੇਰਵਾ:* ${msg}`;
-    window.open(`https://api.whatsapp.com/send?phone=919876543210&text=${text}`, '_blank');
-}
+    function openReporterForm() {
+        const modal = document.getElementById('reporterModal');
+        if (modal) { modal.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+    }
+    function closeReporterForm() {
+        const modal = document.getElementById('reporterModal');
+        if (modal) { modal.style.display = 'none'; document.body.style.overflow = 'auto'; }
+    }
+    function closeReporterOnOutside(e) { if (e.target.id === 'reporterModal') closeReporterForm(); }
+    function handleReporterSubmit(e) {
+        e.preventDefault();
+        const name = document.getElementById('mRepName').value;
+        const phone = document.getElementById('mRepPhone').value;
+        const dist = document.getElementById('mRepDistrict').value;
+        const city = document.getElementById('mRepCity').value;
+        const exp = document.getElementById('mRepExp').value;
+        const about = document.getElementById('mRepAbout').value;
+        const text = `*🎤 ਨਵੀਂ ਰਿਪੋਰਟਰ ਅਰਜ਼ੀ (PLN Portal)*%0A%0A*ਨਾਮ:* ${name}%0A*ਫ਼ੋਨ:* ${phone}%0A*ਜ਼ਿਲ੍ਹਾ:* ${dist}%0A*ਕਸਬਾ/ਸ਼ਹਿਰ:* ${city}%0A*ਤਜਰਬਾ:* ${exp}%0A*ਵੇਰਵਾ:* ${about}`;
+        window.open(`https://api.whatsapp.com/send?phone=919876543210&text=${text}`, '_blank');
+        closeReporterForm();
+    }
 </script>
 
 </body>
