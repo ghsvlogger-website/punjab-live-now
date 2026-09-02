@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ਪੰਜਾਬ ਸਟੇਟ ਖ਼ਬਰਾਂ - Punjab Live Now (PLN)</title>
+    <title>ਪੰਜਾਬ ਦੀਆਂ ਮੁੱਖ ਖ਼ਬਰਾਂ - Punjab Live Now (PLN)</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@600;700;800&family=Noto+Sans+Gurmukhi:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 
     <style>
@@ -37,257 +37,206 @@
 
         a, button { cursor: pointer !important; text-decoration: none; transition: all 0.2s ease; }
 
-        /* Top Live Bar */
         .top-bar {
-            background: var(--navy-deep);
-            color: #cbd5e1;
-            font-size: 0.82rem;
-            padding: 8px 0;
+            background: var(--navy-deep); color: #cbd5e1; font-size: 0.82rem; padding: 8px 0;
             border-bottom: 1px solid rgba(255,255,255,0.08);
         }
         .top-bar-inner {
-            max-width: 1240px;
-            margin: 0 auto;
-            padding: 0 16px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
+            max-width: 1240px; margin: 0 auto; padding: 0 16px; display: flex;
+            justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
         }
         .meta-cluster { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
         .live-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: var(--brand-red);
-            color: #ffffff;
-            padding: 2px 8px;
-            border-radius: 3px;
-            font-weight: 800;
-            font-size: 0.75rem;
+            display: inline-flex; align-items: center; gap: 6px; background: var(--brand-red);
+            color: #ffffff; padding: 2px 8px; border-radius: 3px; font-weight: 800; font-size: 0.75rem;
         }
-        .live-dot { width: 6px; height: 6px; background: #ffffff; border-radius: 50%; }
+        .live-dot { width: 6px; height: 6px; background: #ffffff; border-radius: 50%; animation: pulse-live 1.1s infinite; }
+        @keyframes pulse-live { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
         .loc-tag { color: #fdf0d5; font-weight: 700; }
-        .time-tag { color: #cbd5e1; font-weight: 500; }
+        .time-tag { 
+            color: #f1f5f9; font-weight: 700; 
+            font-family: 'Plus Jakarta Sans', 'Noto Sans Gurmukhi', monospace;
+            background: rgba(255,255,255,0.08); padding: 2px 8px; border-radius: 4px;
+        }
         .top-social-bar a { color: #cbd5e1; margin-left: 14px; font-weight: 600; }
         .top-social-bar a:hover { color: #ffffff; }
 
-        /* Header */
-        header { background: #ffffff; border-bottom: 2px solid var(--border-light); padding: 16px 0; }
-        .header-inner {
-            max-width: 1240px;
-            margin: 0 auto;
-            padding: 0 16px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 16px;
+        .fb-header-cover {
+            position: relative; width: 100%; min-height: 190px;
+            background: linear-gradient(135deg, #031926 0%, #003049 45%, #780000 100%), url('header_cover.jpg');
+            background-size: cover; background-position: center;
+            border-bottom: 3px solid var(--brand-red); overflow: hidden; display: flex; align-items: center;
         }
-        .brand-link { display: flex; align-items: center; gap: 15px; color: inherit; }
-        
+        .fb-header-cover::before {
+            content: ""; position: absolute; inset: 0;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+            background-size: 24px 24px; opacity: 0.35; pointer-events: none;
+        }
+        .punjab-map-watermark {
+            position: absolute; right: 2%; top: 50%; transform: translateY(-50%);
+            width: 280px; height: 280px; opacity: 0.12; pointer-events: none;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Punjab_locator_map.svg/1024px-Punjab_locator_map.svg.png') no-repeat center;
+            background-size: contain; filter: invert(1);
+        }
+        .header-cover-inner {
+            position: relative; z-index: 2; max-width: 1240px; width: 100%;
+            margin: 0 auto; padding: 24px 16px; display: flex; align-items: center;
+            justify-content: space-between; flex-wrap: wrap; gap: 20px;
+        }
+        .brand-profile-cluster { display: flex; align-items: center; gap: 20px; }
         .brand-logo-wrapper {
-            width: 68px;
-            height: 68px;
-            min-width: 68px;
-            min-height: 68px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 2.5px solid var(--brand-red);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            background: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            width: 86px; height: 86px; min-width: 86px; min-height: 86px;
+            border-radius: 50%; overflow: hidden; border: 3.5px solid #ffffff;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.35); background: #ffffff;
+            display: flex; align-items: center; justify-content: center;
         }
         .brand-logo { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block; }
         .brand-text h1 {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 2.3rem;
-            font-weight: 800;
-            line-height: 1;
-            color: var(--brand-red);
-            letter-spacing: -0.5px;
-            text-transform: uppercase;
+            font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.5rem; font-weight: 800;
+            line-height: 1; color: #ffffff; letter-spacing: -0.5px; text-transform: uppercase;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
         }
-        .brand-text h1 span { color: var(--navy-dark); }
-        .brand-text p { font-size: 0.9rem; color: var(--text-meta); font-weight: 600; margin-top: 3px; }
+        .brand-text h1 span { color: #fdf0d5; }
+        .brand-text p { font-size: 0.95rem; color: #e2e8f0; font-weight: 600; margin-top: 6px; }
 
-        .header-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .header-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
         .hd-btn {
-            font-weight: 700;
-            font-size: 0.88rem;
-            padding: 8px 16px;
-            border-radius: 4px;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            border: none;
+            font-weight: 700; font-size: 0.88rem; padding: 10px 18px; border-radius: 6px;
+            display: inline-flex; align-items: center; gap: 6px; border: none;
+            backdrop-filter: blur(8px); box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
-        .btn-rep { background: var(--brand-red); color: #fff; }
-        .btn-rep:hover { background: var(--brand-red-dark); }
-        .btn-ad-give { background: #fff1f2; color: var(--brand-red); border: 1px solid #fecdd3; }
-        .btn-ad-give:hover { background: var(--brand-red); color: #fff; }
-        .btn-live-stream { background: var(--navy-dark); color: #fff; }
-        .btn-live-stream:hover { background: #001f33; }
-        .btn-wa-contact { background: #16a34a; color: #fff; }
+        .btn-rep { background: #ffffff; color: var(--navy-deep); }
+        .btn-rep:hover { background: #f1f5f9; transform: translateY(-1px); }
+        .btn-ad-give { background: rgba(253, 240, 213, 0.18); color: #fdf0d5; border: 1px solid rgba(253, 240, 213, 0.4); }
+        .btn-ad-give:hover { background: #fdf0d5; color: var(--navy-deep); }
+        .btn-live-stream { 
+            background: linear-gradient(135deg, #c1121f 0%, #780000 100%); 
+            color: #fff; border: 1px solid #fca5a5;
+        }
+        .btn-live-stream:hover { background: #780000; transform: translateY(-1px); }
+        .btn-wa-contact { background: #16a34a; color: #fff; font-weight: 800; }
+        .btn-wa-contact:hover { background: #15803d; transform: translateY(-1px); }
 
-        /* Navigation */
         nav {
-            background: var(--navy-dark);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 3px solid var(--brand-red);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            background: var(--navy-dark); position: sticky; top: 0; z-index: 1000;
+            border-bottom: 3px solid var(--brand-red); box-shadow: 0 4px 12px rgba(0,0,0,0.12);
         }
-        .nav-inner {
-            max-width: 1240px;
-            margin: 0 auto;
-            display: flex;
-            overflow-x: auto;
-            white-space: nowrap;
-            scrollbar-width: none;
-        }
+        .nav-inner { max-width: 1240px; margin: 0 auto; display: flex; overflow-x: auto; white-space: nowrap; scrollbar-width: none; }
         .nav-inner::-webkit-scrollbar { display: none; }
         .nav-inner a {
-            color: #f8fafc;
-            padding: 13px 22px;
-            font-size: 1.02rem;
-            font-weight: 700;
-            border-right: 1px solid rgba(255,255,255,0.06);
-            display: inline-block;
+            color: #f8fafc; padding: 13px 22px; font-size: 1.02rem; font-weight: 700;
+            border-right: 1px solid rgba(255,255,255,0.06); display: inline-block;
         }
         .nav-inner a:hover, .nav-inner a.active { background: var(--brand-red); color: #ffffff; }
 
         .container { max-width: 1240px; margin: 24px auto; padding: 0 16px; }
 
-        .ticker-bar {
-            background: #ffffff;
-            border: 1px solid var(--border-light);
-            border-left: 5px solid var(--brand-red);
-            border-radius: 4px;
-            padding: 10px 16px;
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            margin-bottom: 20px;
-            box-shadow: var(--shadow-sm);
-        }
-        .ticker-badge { background: var(--brand-red); color: #fff; font-size: 0.8rem; padding: 3px 9px; border-radius: 3px; font-weight: 800; }
-        .ticker-title { font-weight: 700; font-size: 1rem; color: var(--navy-deep); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-
         .grid-structure { display: grid; grid-template-columns: 2.2fr 1fr; gap: 28px; }
-
         .news-article-card {
-            background: var(--card-surface);
-            border: 1px solid var(--border-light);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: var(--shadow-sm);
-            margin-bottom: 26px;
+            background: var(--card-surface); border: 1px solid var(--border-light);
+            border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-sm); margin-bottom: 26px;
         }
-
         .glass-media-container {
-            position: relative;
-            width: 100%;
-            height: 440px;
-            overflow: hidden;
-            background: #000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-bottom: 1px solid var(--border-light);
+            position: relative; width: 100%; min-height: 380px; max-height: 560px; height: auto;
+            overflow: hidden; background: #020617; display: flex; justify-content: center;
+            align-items: center; border-bottom: 1px solid var(--border-light); padding: 8px 0;
         }
         .glass-media-backdrop {
-            position: absolute;
-            top: -20px; left: -20px; right: -20px; bottom: -20px;
-            background-size: cover;
-            background-position: center;
-            filter: blur(24px) brightness(0.65);
-            transform: scale(1.15);
-            z-index: 1;
+            position: absolute; top: -20px; left: -20px; right: -20px; bottom: -20px;
+            background-size: cover; background-position: center; filter: blur(28px) brightness(0.55);
+            transform: scale(1.15); z-index: 1;
         }
         .glass-overlay-filter {
-            position: absolute; inset: 0;
-            background: rgba(3, 25, 38, 0.35);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            z-index: 2;
+            position: absolute; inset: 0; background: rgba(3, 25, 38, 0.4);
+            backdrop-filter: blur(8px); z-index: 2;
         }
         .glass-foreground-img {
-            position: relative;
-            max-width: 95%; max-height: 420px;
-            width: auto; height: auto;
-            object-fit: contain;
-            z-index: 3;
-            border-radius: 4px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            position: relative; max-width: 100%; width: 100%; max-height: 520px; height: auto;
+            object-fit: contain; z-index: 3; display: block;
         }
         .article-tag {
-            position: absolute; top: 14px; left: 14px;
-            background: var(--brand-red); color: #fff;
-            font-size: 0.78rem; padding: 4px 10px;
-            border-radius: 3px; font-weight: 800; z-index: 10;
+            position: absolute; top: 14px; left: 14px; background: var(--brand-red);
+            color: #fff; font-size: 0.78rem; padding: 4px 10px; border-radius: 3px; font-weight: 800; z-index: 10;
         }
-
         .article-body { padding: 24px; }
         .article-title {
-            font-family: 'Baloo Paaji 2', sans-serif;
-            font-size: 1.7rem; font-weight: 800;
+            font-family: 'Baloo Paaji 2', sans-serif; font-size: 1.7rem; font-weight: 800;
             color: var(--navy-deep); line-height: 1.35; margin-bottom: 12px;
         }
         .article-text { font-size: 0.98rem; line-height: 1.75; color: var(--text-body); margin-bottom: 16px; }
-        .article-action-row {
-            display: flex; justify-content: space-between; align-items: center;
-            border-top: 1px solid var(--border-light); padding-top: 16px; flex-wrap: wrap; gap: 10px;
-        }
-        .action-link {
-            font-size: 0.9rem; font-weight: 700; padding: 7px 16px;
-            border-radius: 4px; display: inline-flex; align-items: center; gap: 6px;
-        }
-        .action-link-wa { background: #16a34a; color: #fff; }
 
-        /* Sidebar */
         .sidebar-hub { display: flex; flex-direction: column; gap: 15px; }
-        .sidebar-card { background: #fff; border: 1px solid var(--border-light); border-radius: 8px; padding: 20px; box-shadow: var(--shadow-sm); margin-bottom: 10px; }
-        .sidebar-heading { font-family: 'Baloo Paaji 2', sans-serif; font-size: 1.3rem; font-weight: 800; color: var(--brand-red); border-bottom: 2px solid #fee2e2; padding-bottom: 8px; margin-bottom: 14px; }
-        .sidebar-btn { display: block; background: var(--brand-red); color: #fff; text-align: center; padding: 11px; border-radius: 4px; font-weight: 700; font-size: 0.92rem; margin-top: 14px; }
+        .sidebar-card {
+            background: #fff; border: 1px solid var(--border-light); border-radius: 8px;
+            padding: 20px; box-shadow: var(--shadow-sm); margin-bottom: 10px;
+        }
+        .sidebar-heading {
+            font-family: 'Baloo Paaji 2', sans-serif; font-size: 1.3rem; font-weight: 800;
+            color: var(--brand-red); border-bottom: 2px solid #fee2e2; padding-bottom: 8px; margin-bottom: 14px;
+        }
+        .sidebar-btn {
+            display: block; background: var(--brand-red); color: #fff; text-align: center;
+            padding: 11px; border-radius: 4px; font-weight: 700; font-size: 0.92rem; margin-top: 14px;
+        }
 
-        /* Modal */
         .modal-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(3, 25, 38, 0.75); backdrop-filter: blur(8px);
+            background: rgba(3, 25, 38, 0.85); backdrop-filter: blur(10px);
             display: none; justify-content: center; align-items: center; z-index: 9999; padding: 16px;
         }
         .modal-box {
             background: #ffffff; width: 100%; max-width: 580px; border-radius: 12px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3); border: 2px solid var(--brand-red);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4); border: 2px solid var(--brand-red);
             max-height: 90vh; overflow-y: auto; position: relative; padding: 26px;
+            animation: modalFade 0.25s ease-out;
+        }
+        @keyframes modalFade {
+            from { opacity: 0; transform: translateY(-20px) scale(0.96); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
         }
         .modal-close { position: absolute; top: 16px; right: 18px; font-size: 1.6rem; font-weight: 800; color: var(--navy-dark); background: none; border: none; }
-        .modal-header h3 { font-family: 'Baloo Paaji 2', sans-serif; font-size: 1.6rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 6px; }
-        .modal-header p { font-size: 0.9rem; color: var(--text-meta); margin-bottom: 20px; }
+        .modal-close:hover { color: var(--brand-red); }
+
+        .live-screen-container {
+            background: #020617; border-radius: 8px; padding: 35px 20px; text-align: center;
+            border: 1px solid #1e293b; position: relative; overflow: hidden; margin: 16px 0 22px;
+        }
+        .live-status-pill {
+            display: inline-flex; align-items: center; gap: 6px; background: rgba(193,18,31,0.2);
+            color: #ff4d4d; border: 1px solid #c1121f; padding: 4px 12px; border-radius: 50px;
+            font-weight: 800; font-size: 0.8rem; margin-bottom: 15px;
+        }
+        .live-blink-circle { width: 8px; height: 8px; background: #ff4d4d; border-radius: 50%; animation: pulse-live 1s infinite; }
+        .live-screen-title { font-family: 'Baloo Paaji 2', sans-serif; font-size: 1.6rem; color: #ffffff; margin-bottom: 8px; }
+        .live-screen-desc { font-size: 0.95rem; color: #94a3b8; max-width: 420px; margin: 0 auto; }
+
         .form-group { margin-bottom: 14px; }
         .form-group label { display: block; font-weight: 700; font-size: 0.88rem; color: var(--navy-deep); margin-bottom: 5px; }
         .form-group input, .form-group select, .form-group textarea {
-            width: 100%; padding: 10px 12px; border: 1px solid var(--border-light); border-radius: 6px; font-family: inherit; font-size: 0.92rem; background: #f8fafc;
+            width: 100%; padding: 10px 12px; border: 1px solid var(--border-light);
+            border-radius: 6px; font-family: inherit; font-size: 0.92rem; background: #f8fafc;
         }
         .btn-submit-app {
-            width: 100%; background: #16a34a; color: #fff; padding: 12px; border-radius: 6px; font-weight: 800; font-size: 1rem; border: none; margin-top: 10px; cursor: pointer;
+            width: 100%; background: #16a34a; color: #fff; padding: 12px; border-radius: 6px;
+            font-weight: 800; font-size: 1rem; border: none; margin-top: 10px; cursor: pointer;
         }
 
-        footer { background: #031926; color: #94a3b8; text-align: center; padding: 40px 16px; margin-top: 60px; border-top: 4px solid var(--brand-red); }
+        footer {
+            background: #031926; color: #94a3b8; text-align: center; padding: 40px 16px;
+            margin-top: 60px; border-top: 4px solid var(--brand-red);
+        }
         .footer-nav a { color: #f1f5f9; margin: 0 14px; font-weight: 700; font-size: 0.95rem; }
 
         @media (max-width: 900px) {
             .grid-structure { grid-template-columns: 1fr; }
-            .glass-media-container { height: 320px; }
-            .glass-foreground-img { max-height: 300px; }
+            .glass-media-container { min-height: 280px; max-height: 420px; }
+            .glass-foreground-img { max-height: 400px; }
             .brand-text h1 { font-size: 2rem; }
+            .header-cover-inner { justify-content: center; text-align: center; }
+            .brand-profile-cluster { flex-direction: column; text-align: center; }
             .header-actions { width: 100%; justify-content: center; }
             .top-bar-inner { justify-content: center; text-align: center; }
+            .punjab-map-watermark { display: none; }
         }
     </style>
 </head>
@@ -297,8 +246,8 @@
     <div class="top-bar-inner">
         <div class="meta-cluster">
             <span class="live-tag"><span class="live-dot"></span> LIVE 24x7</span>
-            <span class="loc-tag">📍 ਪੰਜਾਬ ਨੈੱਟਵਰਕ (PLN)</span>
-            <span class="time-tag">ਬੁੱਧਵਾਰ, 2 ਸਤੰਬਰ 2026</span>
+            <span class="loc-tag">📍 ਗੁਰੂ ਹਰਸਹਾਏ (ਪੰਜਾਬ)</span>
+            <span class="time-tag" id="liveDateTime">ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ...</span>
         </div>
         <div class="top-social-bar">
             Follow: 
@@ -309,31 +258,24 @@
     </div>
 </div>
 
-<header>
-    <div class="header-inner">
-        <a href="index.html" class="brand-link">
+<header class="fb-header-cover">
+    <div class="punjab-map-watermark"></div>
+    <div class="header-cover-inner">
+        <a href="index.html" class="brand-profile-cluster">
             <div class="brand-logo-wrapper">
                 <img src="channel_logo1.png" alt="PLN Logo" class="brand-logo">
             </div>
             <div class="brand-text">
                 <h1>PUNJAB <span>LIVE NOW</span></h1>
-                <p>ਸਭ ਤੋਂ ਪਹਿਲਾਂ, ਸਭ ਤੋਂ ਸਟੀਕ | Voice of Punjab</p>
+                <p>📍 ਪੰਜਾਬ ਦਾ ਅਧਿਕਾਰਤ ਨਿਊਜ਼ ਨੈੱਟਵਰਕ | Voice of Punjab</p>
             </div>
         </a>
         
         <div class="header-actions">
-            <button type="button" onclick="openReporterForm()" class="hd-btn btn-rep">
-                🎤 ਰਿਪੋਰਟਰ ਬਣੋ
-            </button>
-            <a href="advertise.html" class="hd-btn btn-ad-give">
-                📢 ਇਸ਼ਤਿਹਾਰ ਦਿਓ
-            </a>
-            <a href="https://www.youtube.com/@punjablivenow" target="_blank" class="hd-btn btn-live-stream">
-                ▶ LIVE TV
-            </a>
-            <a href="https://api.whatsapp.com/send?phone=919876543210" target="_blank" class="hd-btn btn-wa-contact">
-                💬 ਹੈਲਪਲਾਈਨ
-            </a>
+            <button type="button" onclick="openReporterForm()" class="hd-btn btn-rep">🎤 ਰਿਪੋਰਟਰ ਬਣੋ</button>
+            <a href="advertise.html" class="hd-btn btn-ad-give">📢 ਇਸ਼ਤਿਹਾਰ ਦਿਓ</a>
+            <button type="button" onclick="openLiveTVModal()" class="hd-btn btn-live-stream">▶ LIVE TV</button>
+            <button type="button" onclick="openNewsModal()" class="hd-btn btn-wa-contact">🚨 ਖ਼ਬਰ ਭੇਜੋ</button>
         </div>
     </div>
 </header>
@@ -350,55 +292,35 @@
 </nav>
 
 <div class="container">
-    <div class="ticker-bar">
-        <span class="ticker-badge">PUNJAB DESK</span>
-        <span class="ticker-title">🚨 ਪੰਜਾਬ ਭਰ ਦੀਆਂ ਸਿਆਸੀ, ਸਮਾਜਿਕ ਅਤੇ ਜ਼ਮੀਨੀ ਖ਼ਬਰਾਂ ਦਾ ਸਭ ਤੋਂ ਵੱਡਾ ਬੁਲੇਟਿਨ</span>
-    </div>
-
     <div class="grid-structure">
         <div>
-            <!-- News 1 -->
             <div class="news-article-card">
                 <div class="glass-media-container">
-                    <span class="article-tag">PUNJAB POLICE UPDATE</span>
-                    <div class="glass-media-backdrop" style="background-image: url('gurdaspurnews1.jpg');"></div>
+                    <span class="article-tag">PUNJAB EXCLUSIVE</span>
+                    <div class="glass-media-backdrop" style="background-image: url('lakhanews1.jpg');"></div>
                     <div class="glass-overlay-filter"></div>
-                    <img src="gurdaspurnews1.jpg" alt="ਗੁਰਦਾਸਪੁਰ ਪੁਲਿਸ" class="glass-foreground-img">
+                    <img src="lakhanews1.jpg" alt="ਲੱਖਾ ਸਿਧਾਣਾ ਬਿਆਨ" class="glass-foreground-img">
                 </div>
                 <div class="article-body">
-                    <h2 class="article-title">🚨 ਬੱਬੇਹਾਲੀ ਅੱਡੇ ’ਤੇ ਪੁਲਿਸ ਕਾਂਸਟੇਬਲ ਨਾਲ ਕਥਿਤ ਮਾਰਕੁੱਟ, ਮਾਮਲਾ ਜਾਂਚ ਅਧੀਨ</h2>
-                    <p class="article-text"><strong>ਗੁਰਦਾਸਪੁਰ (Punjab Live Now):</strong> ਗੁਰਦਾਸਪੁਰ ਦੇ ਬੱਬੇਹਾਲੀ ਅੱਡੇ ’ਤੇ ਪੰਜਾਬ ਪੁਲਿਸ ਦੇ ਕਾਂਸਟੇਬਲ ਨਾਲ ਕਥਿਤ ਤੌਰ ’ਤੇ ਮਾਰਕੁੱਟ ਹੋਣ ਦਾ ਮਾਮਲਾ ਸਾਹਮਣੇ ਆਇਆ ਹੈ। ਪੁਲਿਸ ਵੱਲੋਂ ਮਾਮਲੇ ਦੀ ਗੰਭੀਰਤਾ ਨਾਲ ਜਾਂਚ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ।</p>
-                    <div class="article-action-row">
-                        <span style="font-size:0.88rem; color:#64748b; font-weight:700;">📍 ਗੁਰਦਾਸਪੁਰ</span>
-                        <a href="https://api.whatsapp.com/send?text=ਗੁਰਦਾਸਪੁਰ ਕਾਂਸਟੇਬਲ ਮਾਮਲਾ: https://ghsvlogger-website.github.io/punjab-live-now/punjab.html" target="_blank" class="action-link action-link-wa">
-                            📲 WhatsApp 'ਤੇ ਸ਼ੇਅਰ ਕਰੋ
-                        </a>
-                    </div>
+                    <h2 class="article-title">🔥 “ਇਹ ਜ਼ਮੀਨਾਂ ਸਾਨੂੰ ਖ਼ੈਰਾਤ ’ਚ ਨਹੀਂ ਮਿਲੀਆਂ…” — ਲੱਖਾ ਸਿਧਾਣਾ</h2>
+                    <p class="article-text"><strong>ਪੰਜਾਬ (Punjab Live Now):</strong> ਪੰਜਾਬ ਦੀਆਂ ਜ਼ਮੀਨਾਂ ਨੂੰ ਲੈ ਕੇ ਲੱਖਾ ਸਿਧਾਣਾ ਦਾ ਇੱਕ ਤਾਜ਼ਾ ਬਿਆਨ ਸੋਸ਼ਲ ਮੀਡੀਆ ਅਤੇ ਸਿਆਸੀ ਹਲਕਿਆਂ ਵਿੱਚ ਜ਼ਬਰਦਸਤ ਚਰਚਾ ਦਾ ਵਿਸ਼ਾ ਬਣਿਆ ਹੋਇਆ ਹੈ। ਉਨ੍ਹਾਂ ਸਾਫ਼ ਸ਼ਬਦਾਂ ਵਿੱਚ ਕਿਹਾ, <em>“ਇਹ ਜ਼ਮੀਨਾਂ ਸਾਨੂੰ ਖ਼ੈਰਾਤ ’ਚ ਨਹੀਂ ਮਿਲੀਆਂ, ਸਾਡੇ ਪੁਰਖਿਆਂ ਨੇ ਖ਼ੂਨ ਡੋਲ੍ਹਿਆ ਹੈ।”</em></p>
                 </div>
             </div>
 
-            <!-- News 2 -->
             <div class="news-article-card">
                 <div class="glass-media-container">
-                    <span class="article-tag" style="background:#031926;">POLITICAL DESK</span>
+                    <span class="article-tag">POLITICS</span>
                     <div class="glass-media-backdrop" style="background-image: url('rahulchanni.jpg');"></div>
                     <div class="glass-overlay-filter"></div>
                     <img src="rahulchanni.jpg" alt="ਚਰਨਜੀਤ ਚੰਨੀ" class="glass-foreground-img">
                 </div>
                 <div class="article-body">
-                    <h2 class="article-title">🔥 ਚੰਨੀ ਵੱਲੋਂ ਤਰਸੇਮ ਲਾਲ ਦੀ ਪੋਸਟ ਸ਼ੇਅਰ ਕਰਨ ’ਤੇ ਸਿਆਸੀ ਚਰਚਾ ਤੇਜ਼</h2>
-                    <p class="article-text"><strong>ਚੰਡੀਗੜ੍ਹ (Punjab Live Now):</strong> ਸਾਬਕਾ ਮੁੱਖ ਮੰਤਰੀ ਚਰਨਜੀਤ ਸਿੰਘ ਚੰਨੀ ਵੱਲੋਂ ਸ਼ੋਸ਼ਲ ਮੀਡੀਆ 'ਤੇ ਤਰਸੇਮ ਲਾਲ ਦੀ ਪੋਸਟ ਸ਼ੇਅਰ ਕੀਤੇ ਜਾਣ ਤੋਂ ਬਾਅਦ ਪੰਜਾਬ ਦੀ ਸਿਆਸਤ ਵਿੱਚ ਨਵੀਂ ਚਰਚਾ ਛਿੜ ਗਈ ਹੈ।</p>
-                    <div class="article-action-row">
-                        <span style="font-size:0.88rem; color:#64748b; font-weight:700;">📍 ਚੰਡੀਗੜ੍ਹ / ਪੰਜਾਬ</span>
-                        <a href="https://api.whatsapp.com/send?text=ਚੰਨੀ ਤਰਸੇਮ ਲਾਲ ਪੋਸਟ ਵਿਵਾਦ: https://ghsvlogger-website.github.io/punjab-live-now/punjab.html" target="_blank" class="action-link action-link-wa">
-                            📲 WhatsApp 'ਤੇ ਸ਼ੇਅਰ ਕਰੋ
-                        </a>
-                    </div>
+                    <h2 class="article-title">🔥 ਚਰਨਜੀਤ ਸਿੰਘ ਚੰਨੀ ਵੱਲੋਂ ਤਰਸੇਮ ਲਾਲ ਦੀ ਪੋਸਟ ਸ਼ੇਅਰ ਕਰਨ ’ਤੇ ਸਿਆਸੀ ਚਰਚਾ</h2>
+                    <p class="article-text"><strong>ਚੰਡੀਗੜ੍ਹ (Punjab Live Now):</strong> ਪੰਜਾਬ ਕਾਂਗਰਸ ਦੇ ਸੀਨੀਅਰ ਆਗੂ ਅਤੇ ਸਾਬਕਾ ਮੁੱਖ ਮੰਤਰੀ ਚਰਨਜੀਤ ਸਿੰਘ ਚੰਨੀ ਵੱਲੋਂ ਸੋਸ਼ਲ ਮੀਡੀਆ 'ਤੇ ਸਾਂਝੀ ਕੀਤੀ ਗਈ ਇੱਕ ਤਾਜ਼ਾ ਪੋਸਟ ਤੋਂ ਬਾਅਦ ਸਿਆਸੀ ਹਲਕਿਆਂ ਵਿੱਚ ਨਵੀਂ ਬਹਿਸ ਛਿੜ ਗਈ ਹੈ।</p>
                 </div>
             </div>
         </div>
 
-        <!-- Sidebar -->
         <div class="sidebar-hub">
             <div class="sidebar-card">
                 <div class="sidebar-heading">🎬 PLN ਵੀਡੀਓ ਹੱਬ</div>
@@ -407,53 +329,65 @@
             </div>
 
             <div class="sidebar-card" style="background:#ffffff; text-align:center; border: 2px dashed var(--brand-red);">
-                <h4 style="font-family:'Baloo Paaji 2',sans-serif; font-size:1.25rem; color:var(--navy-dark); margin-top:4px;">📢 ਪੰਜਾਬ ਭਰ ਵਿੱਚੋਂ ਇਸ਼ਤਿਹਾਰ ਦਿਓ</h4>
-                <p style="font-size:0.86rem; color:var(--text-meta); margin:6px 0 14px 0;">ਆਪਣੇ ਕਾਰੋਬਾਰ ਨੂੰ ਪੰਜਾਬ ਦੇ ਲੱਖਾਂ ਸਰੋਤਿਆਂ ਤੱਕ ਪਹੁੰਚਾਓ।</p>
+                <div class="sidebar-heading" style="border:none; margin-bottom:6px;">📢 ਆਪਣਾ ਇਸ਼ਤਿਹਾਰ ਦਿਓ</div>
+                <p style="font-size:0.86rem; color:var(--text-meta); margin-bottom:14px;">ਪੰਜਾਬ ਭਰ ਵਿੱਚ ਆਪਣੇ ਕਾਰੋਬਾਰ ਦਾ ਪ੍ਰਚਾਰ ਕਰੋ।</p>
                 <a href="advertise.html" class="sidebar-btn" style="background:var(--navy-dark); margin-top:0;">ਇਸ਼ਤਿਹਾਰ ਬੁੱਕ ਕਰੋ ➔</a>
             </div>
         </div>
     </div>
 </div>
 
-<!-- POPUP MODAL -->
+<div class="modal-overlay" id="newsModal" onclick="closeNewsOnOutside(event)">
+    <div class="modal-box">
+        <button type="button" class="modal-close" onclick="closeNewsModal()">&times;</button>
+        <div class="modal-header">
+            <h3 style="font-family:'Baloo Paaji 2',sans-serif; font-size:1.6rem; color:var(--brand-red);">🚨 PLN ਨੂੰ ਖ਼ਬਰ / ਵੀਡੀਓ ਭੇਜੋ</h3>
+            <p style="font-size:0.9rem; color:var(--text-meta); margin-bottom:18px;">ਆਪਣੇ ਇਲਾਕੇ ਦੀ ਘਟਨਾ ਸਾਡੇ ਨਿਊਜ਼ ਰੂਮ ਤੱਕ ਪਹੁੰਚਾਓ:</p>
+        </div>
+        <form onsubmit="handleNewsSubmit(event)">
+            <div class="form-group"><label>ਤੁਹਾਡਾ ਨਾਮ</label><input type="text" id="newsSenderName" required placeholder="ਆਪਣਾ ਪੂਰਾ ਨਾਮ"></div>
+            <div class="form-group"><label>ਮੋਬਾਈਲ ਨੰਬਰ (WhatsApp)</label><input type="tel" id="newsSenderPhone" required placeholder="10 ਅੰਕਾਂ ਦਾ ਨੰਬਰ"></div>
+            <div class="form-group"><label>ਜ਼ਿਲ੍ਹਾ ਤੇ ਸ਼ਹਿਰ/ਪਿੰਡ</label><input type="text" id="newsLocation" required placeholder="ਜਿਵੇਂ: ਗੁਰੂ ਹਰਸਹਾਏ"></div>
+            <div class="form-group"><label>ਖ਼ਬਰ ਦੀ ਕਿਸਮ</label>
+                <select id="newsCategory">
+                    <option value="ਤਾਜ਼ਾ ਬ੍ਰੇਕਿੰਗ ਨਿਊਜ਼">🚨 ਤਾਜ਼ਾ ਬ੍ਰੇਕਿੰਗ ਨਿਊਜ਼</option>
+                    <option value="ਸੜਕ / ਪਿੰਡ ਦੀ ਸਮੱਸਿਆ">⚠️ ਸੜਕ / ਪਿੰਡ ਦੀ ਸਮੱਸਿਆ</option>
+                    <option value="ਹਾਦਸਾ ਜਾਂ ਕ੍ਰਾਈਮ ਰਿਪੋਰਟ">🚔 ਹਾਦਸਾ ਜਾਂ ਕ੍ਰਾਈਮ ਰਿਪੋਰਟ</option>
+                    <option value="ਸਮਾਜਿਕ / ਧਾਰਮਿਕ ਪ੍ਰੋਗਰਾਮ">🌸 ਸਮਾਜਿਕ / ਧਾਰਮਿਕ ਪ੍ਰੋਗਰਾਮ</option>
+                </select>
+            </div>
+            <div class="form-group"><label>ਖ਼ਬਰ ਦਾ ਵੇਰਵਾ</label><textarea id="newsDetails" rows="4" required placeholder="ਘਟਨਾ ਬਾਰੇ ਪੂਰੀ ਜਾਣਕਾਰੀ ਲਿਖੋ..."></textarea></div>
+            <button type="submit" class="btn-submit-app">📲 WhatsApp 'ਤੇ ਖ਼ਬਰ ਭੇਜੋ</button>
+        </form>
+    </div>
+</div>
+
+<div class="modal-overlay" id="liveTVModal" onclick="closeLiveTVOnOutside(event)">
+    <div class="modal-box" style="background:#0f172a; border-color:#c1121f; color:#fff; text-align:center;">
+        <button type="button" class="modal-close" style="color:#94a3b8;" onclick="closeLiveTVModal()">&times;</button>
+        <div class="live-screen-container">
+            <span class="live-status-pill"><span class="live-blink-circle"></span> PLN 24x7 LIVE BROADCAST</span>
+            <h3 class="live-screen-title">📡 ਲਾਈਵ ਸਟ੍ਰੀਮਿੰਗ ਜਲਦ ਸ਼ੁਰੂ ਹੋ ਰਹੀ ਹੈ</h3>
+            <p class="live-screen-desc">PLN ਦੇ ਨਵੇਂ ਡਿਜੀਟਲ ਬ੍ਰੌਡਕਾਸਟ ਸਟੂਡੀਓ ਦਾ ਕੰਮ ਜਾਰੀ ਹੈ। ਤਾਜ਼ਾ ਵੀਡੀਓਜ਼ ਦੇਖਣ ਲਈ Instagram ਨਾਲ ਜੁੜੋ।</p>
+        </div>
+        <a href="https://www.instagram.com/punjablivenow" target="_blank" style="background:linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color:#fff; padding:12px; border-radius:6px; font-weight:800; display:block;">
+            📸 Instagram 'ਤੇ ਲਾਈਵ ਵੀਡੀਓਜ਼ ਦੇਖੋ
+        </a>
+    </div>
+</div>
+
 <div class="modal-overlay" id="reporterModal" onclick="closeReporterOnOutside(event)">
     <div class="modal-box">
         <button type="button" class="modal-close" onclick="closeReporterForm()">&times;</button>
         <div class="modal-header">
-            <h3>🎤 Punjab Live Now ਰਿਪੋਰਟਰ ਬਣੋ</h3>
-            <p>ਆਪਣੇ ਸ਼ਹਿਰ ਜਾਂ ਪਿੰਡ ਦੀ ਆਵਾਜ਼ ਬਣਨ ਲਈ ਇਹ ਫਾਰਮ ਭਰੋ:</p>
+            <h3 style="font-family:'Baloo Paaji 2',sans-serif; font-size:1.6rem; color:var(--navy-deep);">🎤 Punjab Live Now ਰਿਪੋਰਟਰ ਬਣੋ</h3>
+            <p style="font-size:0.9rem; color:var(--text-meta); margin-bottom:20px;">ਆਪਣੇ ਸ਼ਹਿਰ ਜਾਂ ਪਿੰਡ ਦੀ ਆਵਾਜ਼ ਬਣਨ ਲਈ ਇਹ ਫਾਰਮ ਭਰੋ:</p>
         </div>
-        
         <form onsubmit="handleReporterSubmit(event)">
-            <div class="form-group">
-                <label>ਪੂਰਾ ਨਾਮ (Full Name)</label>
-                <input type="text" id="mRepName" required placeholder="ਆਪਣਾ ਪੂਰਾ ਨਾਮ ਲਿਖੋ">
-            </div>
-            <div class="form-group">
-                <label>ਮੋਬਾਈਲ ਨੰਬਰ (WhatsApp Number)</label>
-                <input type="tel" id="mRepPhone" required placeholder="10 ਅੰਕਾਂ ਦਾ ਮੋਬਾਈਲ ਨੰਬਰ">
-            </div>
-            <div class="form-group">
-                <label>ਜ਼ਿਲ੍ਹਾ (District)</label>
-                <input type="text" id="mRepDistrict" required placeholder="ਜਿਵੇਂ: ਫ਼ਿਰੋਜ਼ਪੁਰ, ਲੁਧਿਆਣਾ, ਅੰਮ੍ਰਿਤਸਰ...">
-            </div>
-            <div class="form-group">
-                <label>ਤਹਿਸੀਲ / ਕਸਬਾ / ਪਿੰਡ (City / Town)</label>
-                <input type="text" id="mRepCity" required placeholder="ਜਿਵੇਂ: ਗੁਰੂਹਰਸਹਾਏ, ਮਮਦੋਟ, ਜ਼ੀਰਾ...">
-            </div>
-            <div class="form-group">
-                <label>ਤਜਰਬਾ (Media / Reporting Experience)</label>
-                <select id="mRepExp">
-                    <option value="ਨਵਾਂ ਸਿੱਖਿਆਰਥੀ (Fresher / Passionate)">ਨਵਾਂ ਸਿੱਖਿਆਰਥੀ (Fresher / Passionate)</option>
-                    <option value="1 ਤੋਂ 2 ਸਾਲ ਦਾ ਤਜਰਬਾ">1 ਤੋਂ 2 ਸਾਲ ਦਾ ਤਜਰਬਾ</option>
-                    <option value="3 ਸਾਲ ਤੋਂ ਵੱਧ ਦਾ ਤਜਰਬਾ">3 ਸਾਲ ਤੋਂ ਵੱਧ ਦਾ ਤਜਰਬਾ</option>
-                    <option value="ਸੋਸ਼ਲ ਮੀਡੀਆ ਬਲਾਗਰ / ਕੰਟੈਂਟ ਕ੍ਰਿਏਟਰ">ਸੋਸ਼ਲ ਮੀਡੀਆ ਬਲਾਗਰ / ਕੰਟੈਂਟ ਕ੍ਰਿਏਟਰ</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>ਸੰਖੇਪ ਜਾਣਕਾਰੀ</label>
-                <textarea id="mRepAbout" rows="3" placeholder="ਆਪਣੀ ਪੜ੍ਹਾਈ ਜਾਂ ਸ਼ੌਕ ਬਾਰੇ ਸੰਖੇਪ ਜਾਣਕਾਰੀ ਦਿਓ..."></textarea>
-            </div>
+            <div class="form-group"><label>ਪੂਰਾ ਨਾਮ</label><input type="text" id="mRepName" required placeholder="ਆਪਣਾ ਪੂਰਾ ਨਾਮ"></div>
+            <div class="form-group"><label>ਮੋਬਾਈਲ ਨੰਬਰ</label><input type="tel" id="mRepPhone" required placeholder="10 ਅੰਕਾਂ ਦਾ ਮੋਬਾਈਲ ਨੰਬਰ"></div>
+            <div class="form-group"><label>ਜ਼ਿਲ੍ਹਾ</label><input type="text" id="mRepDistrict" required placeholder="ਫ਼ਿਰੋਜ਼ਪੁਰ, ਲੁਧਿਆਣਾ..."></div>
+            <div class="form-group"><label>ਤਹਿਸੀਲ / ਕਸਬਾ</label><input type="text" id="mRepCity" required placeholder="ਗੁਰੂਹਰਸਹਾਏ, ਮਮਦੋਟ..."></div>
             <button type="submit" class="btn-submit-app">✅ ਅਰਜ਼ੀ ਜਮ੍ਹਾਂ ਕਰੋ</button>
         </form>
     </div>
@@ -472,14 +406,30 @@
 </footer>
 
 <script>
-    function openReporterForm() {
-        const modal = document.getElementById('reporterModal');
-        if (modal) { modal.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+    function updateLiveClockWithSeconds() {
+        const now = new Date();
+        const days = ['ਐਤਵਾਰ', 'ਸੋਮਵਾਰ', 'ਮੰਗਲਵਾਰ', 'ਬੁੱਧਵਾਰ', 'ਵੀਰਵਾਰ', 'ਸ਼ੁੱਕਰਵਾਰ', 'ਸ਼ਨੀਵਾਰ'];
+        const months = ['ਜਨਵਰੀ', 'ਫ਼ਰਵਰੀ', 'ਮਾਰਚ', 'ਅਪ੍ਰੈਲ', 'ਮਈ', 'ਜੂਨ', 'ਜੁਲਾਈ', 'ਅਗਸਤ', 'ਸਤੰਬਰ', 'ਅਕਤੂਬਰ', 'ਨਵੰਬਰ', 'ਦਸੰਬਰ'];
+        const dayName = days[now.getDay()];
+        const date = now.getDate();
+        const monthName = months[now.getMonth()];
+        const year = now.getFullYear();
+        let hrs = now.getHours();
+        const mins = now.getMinutes().toString().padStart(2, '0');
+        const secs = now.getSeconds().toString().padStart(2, '0');
+        const ampm = hrs >= 12 ? 'PM' : 'AM';
+        hrs = hrs % 12;
+        hrs = hrs ? hrs : 12;
+        const strHrs = hrs.toString().padStart(2, '0');
+        const fullString = `${dayName}, ${date} ${monthName} ${year} | ${strHrs}:${mins}:${secs} ${ampm}`;
+        const clockElem = document.getElementById('liveDateTime');
+        if (clockElem) { clockElem.innerText = fullString; }
     }
-    function closeReporterForm() {
-        const modal = document.getElementById('reporterModal');
-        if (modal) { modal.style.display = 'none'; document.body.style.overflow = 'auto'; }
-    }
+    updateLiveClockWithSeconds();
+    setInterval(updateLiveClockWithSeconds, 1000);
+
+    function openReporterForm() { document.getElementById('reporterModal').style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+    function closeReporterForm() { document.getElementById('reporterModal').style.display = 'none'; document.body.style.overflow = 'auto'; }
     function closeReporterOnOutside(e) { if (e.target.id === 'reporterModal') closeReporterForm(); }
     function handleReporterSubmit(e) {
         e.preventDefault();
@@ -487,11 +437,28 @@
         const phone = document.getElementById('mRepPhone').value;
         const dist = document.getElementById('mRepDistrict').value;
         const city = document.getElementById('mRepCity').value;
-        const exp = document.getElementById('mRepExp').value;
-        const about = document.getElementById('mRepAbout').value;
-        const text = `*🎤 ਨਵੀਂ ਰਿਪੋਰਟਰ ਅਰਜ਼ੀ (PLN Portal)*%0A%0A*ਨਾਮ:* ${name}%0A*ਫ਼ੋਨ:* ${phone}%0A*ਜ਼ਿਲ੍ਹਾ:* ${dist}%0A*ਕਸਬਾ/ਸ਼ਹਿਰ:* ${city}%0A*ਤਜਰਬਾ:* ${exp}%0A*ਵੇਰਵਾ:* ${about}`;
+        const text = `*🎤 ਰਿਪੋਰਟਰ ਅਰਜ਼ੀ (PLN)*%0A%0A*ਨਾਮ:* ${name}%0A*ਫ਼ੋਨ:* ${phone}%0A*ਜ਼ਿਲ੍ਹਾ:* ${dist}%0A*ਕਸਬਾ:* ${city}`;
         window.open(`https://api.whatsapp.com/send?phone=919876543210&text=${text}`, '_blank');
         closeReporterForm();
+    }
+
+    function openLiveTVModal() { document.getElementById('liveTVModal').style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+    function closeLiveTVModal() { document.getElementById('liveTVModal').style.display = 'none'; document.body.style.overflow = 'auto'; }
+    function closeLiveTVOnOutside(e) { if (e.target.id === 'liveTVModal') closeLiveTVModal(); }
+
+    function openNewsModal() { document.getElementById('newsModal').style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+    function closeNewsModal() { document.getElementById('newsModal').style.display = 'none'; document.body.style.overflow = 'auto'; }
+    function closeNewsOnOutside(e) { if (e.target.id === 'newsModal') closeNewsModal(); }
+    function handleNewsSubmit(e) {
+        e.preventDefault();
+        const name = document.getElementById('newsSenderName').value;
+        const phone = document.getElementById('newsSenderPhone').value;
+        const loc = document.getElementById('newsLocation').value;
+        const cat = document.getElementById('newsCategory').value;
+        const details = document.getElementById('newsDetails').value;
+        const msg = `*🚨 ਨਵੀਂ ਖ਼ਬਰ ਅਲਰਟ (PLN ਨਿਊਜ਼ਰੂਮ)*%0A%0A*ਭੇਜਣ ਵਾਲਾ:* ${name}%0A*ਮੋਬਾਈਲ:* ${phone}%0A*ਜਗ੍ਹਾ:* ${loc}%0A*ਕਿਸਮ:* ${cat}%0A*ਵੇਰਵਾ:* ${details}`;
+        window.open(`https://api.whatsapp.com/send?phone=919876543210&text=${msg}`, '_blank');
+        closeNewsModal();
     }
 </script>
 
