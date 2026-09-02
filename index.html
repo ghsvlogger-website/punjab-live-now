@@ -37,7 +37,7 @@
 
         a, button { cursor: pointer !important; text-decoration: none; transition: all 0.2s ease; }
 
-        /* 1. Header Top Strip */
+        /* 1. Top Strip */
         .top-bar {
             background: var(--navy-deep);
             color: #cbd5e1;
@@ -164,7 +164,7 @@
         .btn-live-stream:hover { background: #780000; transform: translateY(-1px); }
         .btn-wa-contact { background: #16a34a; color: #fff; }
 
-        /* 3. Navigation Bar */
+        /* 3. Navigation */
         nav {
             background: var(--navy-dark); position: sticky; top: 0; z-index: 1000;
             border-bottom: 3px solid var(--brand-red); box-shadow: 0 4px 12px rgba(0,0,0,0.12);
@@ -206,23 +206,46 @@
             border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-sm); margin-bottom: 26px;
         }
 
-        /* Glass Backdrop */
+        /* Responsive Perfect-Fit Media Container */
         .glass-media-container {
-            position: relative; width: 100%; height: 440px; overflow: hidden; background: #000;
-            display: flex; justify-content: center; align-items: center; border-bottom: 1px solid var(--border-light);
+            position: relative;
+            width: 100%;
+            min-height: 380px;
+            max-height: 560px;
+            height: auto;
+            overflow: hidden;
+            background: #020617;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid var(--border-light);
+            padding: 8px 0;
         }
         .glass-media-backdrop {
-            position: absolute; top: -20px; left: -20px; right: -20px; bottom: -20px;
-            background-size: cover; background-position: center; filter: blur(24px) brightness(0.65);
-            transform: scale(1.15); z-index: 1;
+            position: absolute;
+            top: -20px; left: -20px; right: -20px; bottom: -20px;
+            background-size: cover;
+            background-position: center;
+            filter: blur(28px) brightness(0.55);
+            transform: scale(1.15);
+            z-index: 1;
         }
         .glass-overlay-filter {
-            position: absolute; inset: 0; background: rgba(3, 25, 38, 0.35);
-            backdrop-filter: blur(12px); z-index: 2;
+            position: absolute;
+            inset: 0;
+            background: rgba(3, 25, 38, 0.4);
+            backdrop-filter: blur(8px);
+            z-index: 2;
         }
         .glass-foreground-img {
-            position: relative; max-width: 95%; max-height: 420px; width: auto; height: auto;
-            object-fit: contain; z-index: 3; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            position: relative;
+            max-width: 100%;
+            width: 100%;
+            max-height: 520px;
+            height: auto;
+            object-fit: contain; /* ਪੂਰੀ ਫੋਟੋ ਸਾਫ਼ ਦਿਖੇਗੀ ਬਿਨਾਂ ਕੱਟੇ */
+            z-index: 3;
+            display: block;
         }
 
         .article-tag {
@@ -323,8 +346,8 @@
 
         @media (max-width: 900px) {
             .grid-structure { grid-template-columns: 1fr; }
-            .glass-media-container { height: 320px; }
-            .glass-foreground-img { max-height: 300px; }
+            .glass-media-container { min-height: 280px; max-height: 420px; }
+            .glass-foreground-img { max-height: 400px; }
             .brand-text h1 { font-size: 2rem; }
             .header-cover-inner { justify-content: center; text-align: center; }
             .brand-profile-cluster { flex-direction: column; text-align: center; }
@@ -336,7 +359,6 @@
 </head>
 <body>
 
-<!-- TOP BAR -->
 <div class="top-bar">
     <div class="top-bar-inner">
         <div class="meta-cluster">
@@ -353,7 +375,6 @@
     </div>
 </div>
 
-<!-- COVER HEADER -->
 <header class="fb-header-cover">
     <div class="punjab-map-watermark"></div>
     <div class="header-cover-inner">
@@ -384,7 +405,6 @@
     </div>
 </header>
 
-<!-- NAV -->
 <nav>
     <div class="nav-inner">
         <a href="index.html" class="active">ਮੁੱਖ ਪੰਨਾ</a>
@@ -418,7 +438,7 @@
 
     <div class="grid-structure">
         <div>
-            <!-- 🚨 ਨਵੀਂ ਖ਼ਬਰ: ਰਾਹੁਲ ਘਾਰੂ ਗੁੰਮਸ਼ੁਦਾ ਰਿਪੋਰਟ -->
+            <!-- ਰਾਹੁਲ ਘਾਰੂ ਗੁੰਮਸ਼ੁਦਾ ਰਿਪੋਰਟ (Auto-Fit Box) -->
             <div class="news-article-card" style="border: 2px solid var(--brand-red);">
                 <div class="glass-media-container">
                     <span class="article-tag">🚨 ਗੁੰਮਸ਼ੁਦਾ ਦੀ ਭਾਲ</span>
@@ -459,30 +479,10 @@
                 </div>
                 <div class="article-body">
                     <h2 class="article-title">🎬 “ਆਪਣੇ ਹੀ ਸਭ ਤੋਂ ਵੱਧ ਜੜ੍ਹਾਂ ਵੱਢਦੇ ਹਨ!” — ਗਿੱਪੀ ਗਰੇਵਾਲ</h2>
-                    <p class="article-text"><strong>ਚੰਡੀਗੜ੍ਹ / ਪੰਜਾਬ (Punjab Live Now):</strong> ਪੰਜਾਬੀ ਫ਼ਿਲਮ ਇੰਡਸਟਰੀ ਨਾਲ ਜੁੜਿਆ ਗਿੱਪੀ ਗਰੇਵਾਲ ਦਾ ਇੱਕ ਵੱਡਾ ਬਿਆਨ ਚਰਚਾ ਦਾ ਵਿਸ਼ਾ ਬਣਿਆ ਹੋਇਆ ਹੈ। ਗਿੱਪੀ ਗਰੇਵਾਲ ਮੁਤਾਬਕ, ਪ੍ਰਿੰਸ ਕੰਵਲਜੀਤ ਸਿੰਘ ਉਰਫ਼ ਪੰਮੇ ਦੇ ਕੁਝ ਜਿਗਰੀ ਯਾਰਾਂ ਨੇ ਉਸਨੂੰ ਫ਼ੋਨ ਕਰਕੇ ਕਿਹਾ ਸੀ ਕਿ ਪ੍ਰਿੰਸ ਨੂੰ ਸਟਾਰ ਨਾ ਬਣਾਇਆ ਜਾਵੇ।</p>
+                    <p class="article-text"><strong>ਚੰਡੀਗੜ੍ਹ / ਪੰਜਾਬ (Punjab Live Now):</strong> ਪੰਜਾਬੀ ਫ਼ਿਲਮ ਇੰਡਸਟਰੀ ਨਾਲ ਜੁੜਿਆ ਗਿੱਪੀ ਗਰੇਵਾਲ ਦਾ ਇੱਕ ਵੱਡਾ ਬਿਆਨ ਚਰਚਾ ਦਾ ਵਿਸ਼ਾ ਬਣਿਆ ਹੋਇਆ ਹੈ।</p>
                     <div class="article-action-row">
                         <span style="font-size:0.88rem; color:#64748b; font-weight:700;">📍 ਪੰਜਾਬੀ ਸਿਨੇਮਾ</span>
                         <a href="https://api.whatsapp.com/send?text=ਗਿੱਪੀ ਗਰੇਵਾਲ ਦਾ ਵੱਡਾ ਖੁਲਾਸਾ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="action-link action-link-wa">
-                            📲 WhatsApp 'ਤੇ ਸ਼ੇਅਰ ਕਰੋ
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 3. ਲੱਖਾ ਸਿਧਾਣਾ -->
-            <div class="news-article-card">
-                <div class="glass-media-container">
-                    <span class="article-tag">PUNJAB EXCLUSIVE</span>
-                    <div class="glass-media-backdrop" style="background-image: url('lakhanews1.jpg');"></div>
-                    <div class="glass-overlay-filter"></div>
-                    <img src="lakhanews1.jpg" alt="ਲੱਖਾ ਸਿਧਾਣਾ ਬਿਆਨ" class="glass-foreground-img">
-                </div>
-                <div class="article-body">
-                    <h2 class="article-title">🔥 “ਇਹ ਜ਼ਮੀਨਾਂ ਸਾਨੂੰ ਖ਼ੈਰਾਤ ’ਚ ਨਹੀਂ ਮਿਲੀਆਂ…” — ਲੱਖਾ ਸਿਧਾਣਾ</h2>
-                    <p class="article-text"><strong>ਪੰਜਾਬ (Punjab Live Now):</strong> ਪੰਜਾਬ ਦੀਆਂ ਜ਼ਮੀਨਾਂ ਨੂੰ ਲੈ ਕੇ ਲੱਖਾ ਸਿਧਾਣਾ ਦਾ ਇੱਕ ਤਾਜ਼ਾ ਬਿਆਨ ਸੋਸ਼ਲ ਮੀਡੀਆ ਅਤੇ ਸਿਆਸੀ ਹਲਕਿਆਂ ਵਿੱਚ ਜ਼ਬਰਦਸਤ ਚਰਚਾ ਦਾ ਵਿਸ਼ਾ ਬਣਿਆ ਹੋਇਆ ਹੈ।</p>
-                    <div class="article-action-row">
-                        <span style="font-size:0.88rem; color:#64748b; font-weight:700;">📍 ਪੰਜਾਬ</span>
-                        <a href="https://api.whatsapp.com/send?text=ਲੱਖਾ ਸਿਧਾਣਾ ਦਾ ਵੱਡਾ ਬਿਆਨ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="action-link action-link-wa">
                             📲 WhatsApp 'ਤੇ ਸ਼ੇਅਰ ਕਰੋ
                         </a>
                     </div>
@@ -562,7 +562,6 @@
 </footer>
 
 <script>
-    /* LIVE RUNNING CLOCK WITH SECONDS */
     function updateLiveClockWithSeconds() {
         const now = new Date();
         const days = ['ਐਤਵਾਰ', 'ਸੋਮਵਾਰ', 'ਮੰਗਲਵਾਰ', 'ਬੁੱਧਵਾਰ', 'ਵੀਰਵਾਰ', 'ਸ਼ੁੱਕਰਵਾਰ', 'ਸ਼ਨੀਵਾਰ'];
@@ -593,7 +592,6 @@
     updateLiveClockWithSeconds();
     setInterval(updateLiveClockWithSeconds, 1000);
 
-    /* Modal Handlers */
     function openReporterForm() {
         const modal = document.getElementById('reporterModal');
         if (modal) { modal.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
