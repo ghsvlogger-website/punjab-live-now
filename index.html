@@ -82,7 +82,7 @@
         .top-social-bar a { color: #cbd5e1; margin-left: 14px; font-weight: 600; }
         .top-social-bar a:hover { color: #ffffff; }
 
-        /* 2. FACEBOOK COVER STYLE HEADER WITH PUNJAB MAP DESIGN */
+        /* 2. Cover Header */
         .fb-header-cover {
             position: relative;
             width: 100%;
@@ -95,21 +95,15 @@
             display: flex;
             align-items: center;
         }
-
-        /* Punjab Map & Broadcast Graphic overlay */
         .fb-header-cover::before {
             content: "";
             position: absolute;
-            top: 0; right: 0; bottom: 0; left: 0;
-            background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-                              radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+            inset: 0;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
             background-size: 24px 24px;
-            background-position: 0 0, 12px 12px;
             opacity: 0.35;
             pointer-events: none;
         }
-
-        /* Punjab Map Watermark Icon on the Right */
         .punjab-map-watermark {
             position: absolute;
             right: 2%;
@@ -123,7 +117,6 @@
             background-size: contain;
             filter: invert(1);
         }
-
         .header-cover-inner {
             position: relative;
             z-index: 2;
@@ -137,75 +130,28 @@
             flex-wrap: wrap;
             gap: 20px;
         }
-
-        .brand-profile-cluster {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        /* Circular Channel Profile Logo over Cover */
+        .brand-profile-cluster { display: flex; align-items: center; gap: 20px; }
         .brand-logo-wrapper {
-            width: 86px;
-            height: 86px;
-            min-width: 86px;
-            min-height: 86px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 3.5px solid #ffffff;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.35);
-            background: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            width: 86px; height: 86px; min-width: 86px; min-height: 86px;
+            border-radius: 50%; overflow: hidden; border: 3.5px solid #ffffff;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.35); background: #ffffff;
+            display: flex; align-items: center; justify-content: center;
         }
-        .brand-logo {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-            display: block;
-        }
-
+        .brand-logo { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block; }
         .brand-text h1 {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 800;
-            line-height: 1;
-            color: #ffffff;
-            letter-spacing: -0.5px;
-            text-transform: uppercase;
+            font-size: 2.5rem; font-weight: 800; line-height: 1;
+            color: #ffffff; letter-spacing: -0.5px; text-transform: uppercase;
             text-shadow: 0 2px 10px rgba(0,0,0,0.5);
         }
         .brand-text h1 span { color: #fdf0d5; }
-        .brand-text p {
-            font-size: 0.95rem;
-            color: #e2e8f0;
-            font-weight: 600;
-            margin-top: 6px;
-            text-shadow: 0 1px 4px rgba(0,0,0,0.6);
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
+        .brand-text p { font-size: 0.95rem; color: #e2e8f0; font-weight: 600; margin-top: 6px; }
 
-        .header-actions {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
+        .header-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
         .hd-btn {
-            font-weight: 700;
-            font-size: 0.88rem;
-            padding: 10px 18px;
-            border-radius: 6px;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            border: none;
-            backdrop-filter: blur(8px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            font-weight: 700; font-size: 0.88rem; padding: 10px 18px; border-radius: 6px;
+            display: inline-flex; align-items: center; gap: 6px; border: none;
+            backdrop-filter: blur(8px); box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
         .btn-rep { background: #ffffff; color: var(--navy-deep); }
         .btn-rep:hover { background: #f1f5f9; transform: translateY(-1px); }
@@ -213,272 +159,117 @@
         .btn-ad-give:hover { background: #fdf0d5; color: var(--navy-deep); }
         .btn-live-stream { 
             background: linear-gradient(135deg, #c1121f 0%, #780000 100%); 
-            color: #fff; 
-            border: 1px solid #fca5a5;
+            color: #fff; border: 1px solid #fca5a5;
         }
         .btn-live-stream:hover { background: #780000; transform: translateY(-1px); }
         .btn-wa-contact { background: #16a34a; color: #fff; }
-        .btn-wa-contact:hover { background: #15803d; }
 
         /* 3. Navigation Bar */
         nav {
-            background: var(--navy-dark);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 3px solid var(--brand-red);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            background: var(--navy-dark); position: sticky; top: 0; z-index: 1000;
+            border-bottom: 3px solid var(--brand-red); box-shadow: 0 4px 12px rgba(0,0,0,0.12);
         }
-        .nav-inner {
-            max-width: 1240px;
-            margin: 0 auto;
-            display: flex;
-            overflow-x: auto;
-            white-space: nowrap;
-            scrollbar-width: none;
-        }
+        .nav-inner { max-width: 1240px; margin: 0 auto; display: flex; overflow-x: auto; white-space: nowrap; scrollbar-width: none; }
         .nav-inner::-webkit-scrollbar { display: none; }
         .nav-inner a {
-            color: #f8fafc;
-            padding: 13px 22px;
-            font-size: 1.02rem;
-            font-weight: 700;
-            border-right: 1px solid rgba(255,255,255,0.06);
-            display: inline-block;
+            color: #f8fafc; padding: 13px 22px; font-size: 1.02rem; font-weight: 700;
+            border-right: 1px solid rgba(255,255,255,0.06); display: inline-block;
         }
-        .nav-inner a:hover, .nav-inner a.active {
-            background: var(--brand-red);
-            color: #ffffff;
-        }
+        .nav-inner a:hover, .nav-inner a.active { background: var(--brand-red); color: #ffffff; }
 
-        .container {
-            max-width: 1240px;
-            margin: 24px auto;
-            padding: 0 16px;
-        }
+        .container { max-width: 1240px; margin: 24px auto; padding: 0 16px; }
 
         .ticker-bar {
-            background: #ffffff;
-            border: 1px solid var(--border-light);
-            border-left: 5px solid var(--brand-red);
-            border-radius: 4px;
-            padding: 10px 16px;
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            margin-bottom: 20px;
-            box-shadow: var(--shadow-sm);
+            background: #ffffff; border: 1px solid var(--border-light); border-left: 5px solid var(--brand-red);
+            border-radius: 4px; padding: 10px 16px; display: flex; align-items: center; gap: 14px;
+            margin-bottom: 20px; box-shadow: var(--shadow-sm);
         }
-        .ticker-badge {
-            background: var(--brand-red);
-            color: #fff;
-            font-size: 0.8rem;
-            padding: 3px 9px;
-            border-radius: 3px;
-            font-weight: 800;
-        }
-        .ticker-title {
-            font-weight: 700;
-            font-size: 1rem;
-            color: var(--navy-deep);
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        /* Top Commercial Banner */
-        .ad-label {
-            font-size: 0.72rem;
-            color: #94a3b8;
-            text-transform: uppercase;
-            letter-spacing: 0.6px;
-            display: block;
-            margin-bottom: 4px;
-            text-align: right;
-            font-weight: 800;
-        }
-        .ad-banner-top {
-            background: linear-gradient(135deg, #031926 0%, #003049 100%);
-            color: #fff;
-            border-radius: 8px;
-            padding: 16px 22px;
-            margin-bottom: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 15px;
-            border: 1.5px dashed #669bbc;
-        }
-        .ad-banner-top h4 {
-            font-family: 'Baloo Paaji 2', sans-serif;
-            font-size: 1.35rem;
-            color: #fdf0d5;
-        }
-        .ad-banner-top p { font-size: 0.9rem; color: #e2e8f0; margin-top: 2px; }
-        .ad-btn {
-            background: #fdf0d5;
-            color: #003049;
-            font-weight: 800;
-            font-size: 0.9rem;
-            padding: 8px 18px;
-            border-radius: 4px;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
+        .ticker-badge { background: var(--brand-red); color: #fff; font-size: 0.8rem; padding: 3px 9px; border-radius: 3px; font-weight: 800; }
+        .ticker-title { font-weight: 700; font-size: 1rem; color: var(--navy-deep); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
         .regional-bar {
-            background: #ffffff;
-            border: 1px solid var(--border-light);
-            border-radius: 6px;
-            padding: 12px 18px;
-            margin-bottom: 26px;
-            box-shadow: var(--shadow-sm);
+            background: #ffffff; border: 1px solid var(--border-light); border-radius: 6px;
+            padding: 12px 18px; margin-bottom: 26px; box-shadow: var(--shadow-sm);
         }
-        .regional-title {
-            font-size: 0.8rem;
-            font-weight: 800;
-            color: var(--text-meta);
-            text-transform: uppercase;
-            margin-bottom: 8px;
-        }
+        .regional-title { font-size: 0.8rem; font-weight: 800; color: var(--text-meta); text-transform: uppercase; margin-bottom: 8px; }
         .pill-cluster { display: flex; flex-wrap: wrap; gap: 8px; }
         .pill-btn {
-            background: #f8fafc;
-            color: var(--navy-dark);
-            padding: 5px 14px;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            font-weight: 700;
-            border: 1px solid var(--border-light);
+            background: #f8fafc; color: var(--navy-dark); padding: 5px 14px; border-radius: 4px;
+            font-size: 0.9rem; font-weight: 700; border: 1px solid var(--border-light);
         }
         .pill-btn:hover { background: #fee2e2; color: var(--brand-red); }
 
-        .grid-structure {
-            display: grid;
-            grid-template-columns: 2.2fr 1fr;
-            gap: 28px;
-        }
+        .grid-structure { display: grid; grid-template-columns: 2.2fr 1fr; gap: 28px; }
 
         .news-article-card {
-            background: var(--card-surface);
-            border: 1px solid var(--border-light);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: var(--shadow-sm);
-            margin-bottom: 26px;
+            background: var(--card-surface); border: 1px solid var(--border-light);
+            border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-sm); margin-bottom: 26px;
         }
 
-        /* Glass-Mirror Blur Backdrop */
+        /* Glass Backdrop */
         .glass-media-container {
-            position: relative;
-            width: 100%;
-            height: 440px;
-            overflow: hidden;
-            background: #000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-bottom: 1px solid var(--border-light);
+            position: relative; width: 100%; height: 440px; overflow: hidden; background: #000;
+            display: flex; justify-content: center; align-items: center; border-bottom: 1px solid var(--border-light);
         }
         .glass-media-backdrop {
-            position: absolute;
-            top: -20px; left: -20px; right: -20px; bottom: -20px;
-            background-size: cover;
-            background-position: center;
-            filter: blur(24px) brightness(0.65);
-            transform: scale(1.15);
-            z-index: 1;
+            position: absolute; top: -20px; left: -20px; right: -20px; bottom: -20px;
+            background-size: cover; background-position: center; filter: blur(24px) brightness(0.65);
+            transform: scale(1.15); z-index: 1;
         }
         .glass-overlay-filter {
-            position: absolute; inset: 0;
-            background: rgba(3, 25, 38, 0.35);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            z-index: 2;
+            position: absolute; inset: 0; background: rgba(3, 25, 38, 0.35);
+            backdrop-filter: blur(12px); z-index: 2;
         }
         .glass-foreground-img {
-            position: relative;
-            max-width: 95%; max-height: 420px;
-            width: auto; height: auto;
-            object-fit: contain;
-            z-index: 3;
-            border-radius: 4px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            position: relative; max-width: 95%; max-height: 420px; width: auto; height: auto;
+            object-fit: contain; z-index: 3; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
         .article-tag {
-            position: absolute; top: 14px; left: 14px;
-            background: var(--brand-red); color: #fff;
-            font-size: 0.78rem; padding: 4px 10px;
-            border-radius: 3px; font-weight: 800; z-index: 10;
+            position: absolute; top: 14px; left: 14px; background: var(--brand-red);
+            color: #fff; font-size: 0.78rem; padding: 4px 10px; border-radius: 3px; font-weight: 800; z-index: 10;
+        }
+        .reward-tag {
+            position: absolute; top: 14px; right: 14px; background: #16a34a;
+            color: #fff; font-size: 0.82rem; padding: 4px 12px; border-radius: 3px; font-weight: 800; z-index: 10;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
         }
 
         .article-body { padding: 24px; }
         .article-title {
-            font-family: 'Baloo Paaji 2', sans-serif;
-            font-size: 1.7rem;
-            font-weight: 800;
-            color: var(--navy-deep);
-            line-height: 1.35;
-            margin-bottom: 12px;
+            font-family: 'Baloo Paaji 2', sans-serif; font-size: 1.7rem; font-weight: 800;
+            color: var(--navy-deep); line-height: 1.35; margin-bottom: 12px;
         }
-        .article-text {
-            font-size: 0.98rem;
-            line-height: 1.75;
-            color: var(--text-body);
-            margin-bottom: 16px;
+        .article-text { font-size: 0.98rem; line-height: 1.75; color: var(--text-body); margin-bottom: 16px; }
+
+        .reward-alert-box {
+            background: #fefce8; border: 1.5px dashed #ca8a04; border-radius: 6px;
+            padding: 12px 16px; margin-bottom: 16px; color: #854d0e; font-weight: 700; font-size: 0.95rem;
         }
+
         .article-action-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-top: 1px solid var(--border-light);
-            padding-top: 16px;
-            flex-wrap: wrap;
-            gap: 10px;
+            display: flex; justify-content: space-between; align-items: center;
+            border-top: 1px solid var(--border-light); padding-top: 16px; flex-wrap: wrap; gap: 10px;
         }
         .action-link {
-            font-size: 0.9rem;
-            font-weight: 700;
-            padding: 7px 16px;
-            border-radius: 4px;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
+            font-size: 0.9rem; font-weight: 700; padding: 7px 16px; border-radius: 4px;
+            display: inline-flex; align-items: center; gap: 6px;
         }
         .action-link-wa { background: #16a34a; color: #fff; }
 
-        /* Sidebar */
+        /* Sidebar Hub */
         .sidebar-hub { display: flex; flex-direction: column; gap: 15px; }
         .sidebar-card {
-            background: #fff;
-            border: 1px solid var(--border-light);
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: var(--shadow-sm);
-            margin-bottom: 10px;
+            background: #fff; border: 1px solid var(--border-light); border-radius: 8px;
+            padding: 20px; box-shadow: var(--shadow-sm); margin-bottom: 10px;
         }
         .sidebar-heading {
-            font-family: 'Baloo Paaji 2', sans-serif;
-            font-size: 1.3rem;
-            font-weight: 800;
-            color: var(--brand-red);
-            border-bottom: 2px solid #fee2e2;
-            padding-bottom: 8px;
-            margin-bottom: 14px;
+            font-family: 'Baloo Paaji 2', sans-serif; font-size: 1.3rem; font-weight: 800;
+            color: var(--brand-red); border-bottom: 2px solid #fee2e2; padding-bottom: 8px; margin-bottom: 14px;
         }
         .sidebar-btn {
-            display: block;
-            background: var(--brand-red);
-            color: #fff;
-            text-align: center;
-            padding: 11px;
-            border-radius: 4px;
-            font-weight: 700;
-            font-size: 0.92rem;
-            margin-top: 14px;
+            display: block; background: var(--brand-red); color: #fff; text-align: center;
+            padding: 11px; border-radius: 4px; font-weight: 700; font-size: 0.92rem; margin-top: 14px;
         }
 
         /* Modals */
@@ -497,11 +288,7 @@
             from { opacity: 0; transform: translateY(-20px) scale(0.96); }
             to { opacity: 1; transform: translateY(0) scale(1); }
         }
-        .modal-close {
-            position: absolute; top: 16px; right: 18px;
-            font-size: 1.6rem; font-weight: 800; color: var(--navy-dark);
-            background: none; border: none;
-        }
+        .modal-close { position: absolute; top: 16px; right: 18px; font-size: 1.6rem; font-weight: 800; color: var(--navy-dark); background: none; border: none; }
         .modal-close:hover { color: var(--brand-red); }
 
         .live-screen-container {
@@ -524,13 +311,13 @@
             border-radius: 6px; font-family: inherit; font-size: 0.92rem; background: #f8fafc;
         }
         .btn-submit-app {
-            width: 100%; background: #16a34a; color: #fff; padding: 12px;
-            border-radius: 6px; font-weight: 800; font-size: 1rem; border: none; margin-top: 10px; cursor: pointer;
+            width: 100%; background: #16a34a; color: #fff; padding: 12px; border-radius: 6px;
+            font-weight: 800; font-size: 1rem; border: none; margin-top: 10px; cursor: pointer;
         }
 
         footer {
-            background: #031926; color: #94a3b8; text-align: center;
-            padding: 40px 16px; margin-top: 60px; border-top: 4px solid var(--brand-red);
+            background: #031926; color: #94a3b8; text-align: center; padding: 40px 16px;
+            margin-top: 60px; border-top: 4px solid var(--brand-red);
         }
         .footer-nav a { color: #f1f5f9; margin: 0 14px; font-weight: 700; font-size: 0.95rem; }
 
@@ -549,7 +336,7 @@
 </head>
 <body>
 
-<!-- TOP STRIP -->
+<!-- TOP BAR -->
 <div class="top-bar">
     <div class="top-bar-inner">
         <div class="meta-cluster">
@@ -566,7 +353,7 @@
     </div>
 </div>
 
-<!-- FACEBOOK COVER STYLE HEADER WITH PUNJAB MAP DESIGN -->
+<!-- COVER HEADER -->
 <header class="fb-header-cover">
     <div class="punjab-map-watermark"></div>
     <div class="header-cover-inner">
@@ -597,7 +384,7 @@
     </div>
 </header>
 
-<!-- NAVIGATION -->
+<!-- NAV -->
 <nav>
     <div class="nav-inner">
         <a href="index.html" class="active">ਮੁੱਖ ਪੰਨਾ</a>
@@ -611,22 +398,8 @@
 
 <div class="container">
     <div class="ticker-bar">
-        <span class="ticker-badge">PUNJABI CINEMA</span>
-        <span class="ticker-title">🎬 ਗਿੱਪੀ ਗਰੇਵਾਲ ਦਾ ਵੱਡਾ ਖੁਲਾਸਾ: “ਆਪਣੇ ਹੀ ਸਭ ਤੋਂ ਵੱਧ ਜੜ੍ਹਾਂ ਵੱਢਦੇ ਹਨ…” | ਪ੍ਰਿੰਸ ਕੰਵਲਜੀਤ ਬਾਰੇ ਕਹੀ ਵੱਡੀ ਗੱਲ</span>
-    </div>
-
-    <!-- Top Sponsored Ad -->
-    <div>
-        <span class="ad-label">PUNJAB WIDE SPONSORED ADVERTISEMENT</span>
-        <div class="ad-banner-top">
-            <div>
-                <h4>✈️ ਗਲੋਬਲ ਪੰਜਾਬ ਇਮੀਗ੍ਰੇਸ਼ਨ ਗਰੁੱਪ (ਚੰਡੀਗੜ੍ਹ • ਜਲੰਧਰ • ਬਠਿੰਡਾ • ਅੰਮ੍ਰਿਤਸਰ)</h4>
-                <p>ਕੈਨੇਡਾ, ਯੂ.ਕੇ. ਤੇ ਆਸਟ੍ਰੇਲੀਆ ਸਟੱਡੀ ਤੇ ਸਪਾਊਸ ਵੀਜ਼ਾ | ਰਿਫਿਊਜ਼ਲ ਕੇਸਾਂ ਦੇ ਵਿਸ਼ੇਸ਼ ਮਾਹਿਰ | ਫੀਸ ਵੀਜ਼ਾ ਲੱਗਣ ਤੋਂ ਬਾਅਦ</p>
-            </div>
-            <a href="https://api.whatsapp.com/send?text=ਸਤਿ ਸ਼੍ਰੀ ਅਕਾਲ ਜੀ, ਮੈਂ ਸਟੱਡੀ/ਵਰਕ ਵੀਜ਼ਾ ਜਾਣਕਾਰੀ ਲਈ ਸੰਪਰਕ ਕਰ ਰਿਹਾ/ਰਹੀ ਹਾਂ।" target="_blank" class="ad-btn">
-                📞 ਫ੍ਰੀ ਕਾਊਂਸਲਿੰਗ ਬੁੱਕ ਕਰੋ
-            </a>
-        </div>
+        <span class="ticker-badge">EMERGENCY NOTICE</span>
+        <span class="ticker-title">🚨 ਗੁੰਮਸ਼ੁਦਾ ਦੀ ਭਾਲ: ਰਾਹੁਲ ਘਾਰੂ ਦੀ ਤਲਾਸ਼ ਜਾਰੀ | ਸਹੀ ਜਾਣਕਾਰੀ ਦੇਣ ਵਾਲੇ ਨੂੰ ₹20,000 ਇਨਾਮ</span>
     </div>
 
     <div class="regional-bar">
@@ -640,13 +413,43 @@
             <a href="punjab.html" class="pill-btn">ਪਟਿਆਲਾ</a>
             <a href="punjab.html" class="pill-btn">ਫ਼ਿਰੋਜ਼ਪੁਰ</a>
             <a href="guruharsahai.html" class="pill-btn">ਗੁਰੂਹਰਸਹਾਏ</a>
-            <a href="punjab.html" class="pill-btn">ਗੁਰਦਾਸਪੁਰ</a>
         </div>
     </div>
 
     <div class="grid-structure">
         <div>
-            <!-- 1. ਗਿੱਪੀ ਗਰੇਵਾਲ -->
+            <!-- 🚨 ਨਵੀਂ ਖ਼ਬਰ: ਰਾਹੁਲ ਘਾਰੂ ਗੁੰਮਸ਼ੁਦਾ ਰਿਪੋਰਟ -->
+            <div class="news-article-card" style="border: 2px solid var(--brand-red);">
+                <div class="glass-media-container">
+                    <span class="article-tag">🚨 ਗੁੰਮਸ਼ੁਦਾ ਦੀ ਭਾਲ</span>
+                    <span class="reward-tag">💰 ₹20,000 ਨਕਦ ਇਨਾਮ</span>
+                    <div class="glass-media-backdrop" style="background-image: url('rahulnews1.jpg');"></div>
+                    <div class="glass-overlay-filter"></div>
+                    <img src="rahulnews1.jpg" alt="ਰਾਹੁਲ ਘਾਰੂ ਗੁੰਮਸ਼ੁਦਾ" class="glass-foreground-img">
+                </div>
+                <div class="article-body">
+                    <h2 class="article-title" style="color:var(--brand-red);">🚨 ਗੁੰਮਸ਼ੁਦਾ ਦੀ ਭਾਲ: ਰਾਹੁਲ ਘਾਰੂ ਦੀ ਤਲਾਸ਼ ਜਾਰੀ, ਪਰਿਵਾਰ ਨੇ ਲਗਾਈ ਮਦਦ ਦੀ ਗੁਹਾਰ</h2>
+                    
+                    <p class="article-text"><strong>ਪੰਜਾਬ (Punjab Live Now):</strong> ਰਾਹੁਲ ਘਾਰੂ ਆਪਣੇ ਘਰ ਤੋਂ ਅਚਾਨਕ ਲਾਪਤਾ ਹੋ ਗਿਆ ਹੈ। ਪਰਿਵਾਰ ਵੱਲੋਂ ਉਸਦੀ ਲਗਾਤਾਰ ਭਾਲ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ। ਪ੍ਰਾਪਤ ਜਾਣਕਾਰੀ ਮੁਤਾਬਕ, ਰਾਹੁਲ ਘਰੋਂ <strong>5 ਲੱਖ ਰੁਪਏ</strong> ਲੈ ਕੇ ਚਲਾ ਗਿਆ ਹੈ। ਪਰਿਵਾਰਕ ਮੈਂਬਰਾਂ ਵੱਲੋਂ ਆਮ ਲੋਕਾਂ ਅਤੇ ਪ੍ਰਸ਼ਾਸਨ ਨੂੰ ਉਸਨੂੰ ਲੱਭਣ ਵਿੱਚ ਮਦਦ ਕਰਨ ਦੀ ਪੁਰਜ਼ੋਰ ਅਪੀਲ ਕੀਤੀ ਗਈ ਹੈ।</p>
+                    
+                    <div class="reward-alert-box">
+                        💰 <strong>ਵਿਸ਼ੇਸ਼ ਇਨਾਮ:</strong> ਰਾਹੁਲ ਨੂੰ ਲੱਭ ਕੇ ਜਾਂ ਉਸਦੇ ਬਾਰੇ ਸਹੀ ਜਾਣਕਾਰੀ ਦੇਣ ਵਾਲੇ ਵਿਅਕਤੀ ਨੂੰ <strong>₹20,000 ਰੁਪਏ ਦਾ ਨਕਦ ਇਨਾਮ</strong> ਦਿੱਤਾ ਜਾਵੇਗਾ।
+                    </div>
+
+                    <p class="article-text" style="font-weight:700; color:var(--navy-deep);">
+                        👉 ਜੇਕਰ ਕਿਸੇ ਵੀ ਵਿਅਕਤੀ ਨੂੰ ਰਾਹੁਲ ਬਾਰੇ ਕੋਈ ਵੀ ਜਾਣਕਾਰੀ ਮਿਲੇ, ਤਾਂ ਤੁਰੰਤ ਪਰਿਵਾਰ ਜਾਂ ਸਬੰਧਤ ਨੰਬਰਾਂ 'ਤੇ ਸੰਪਰਕ ਕਰੋ। ਕਿਰਪਾ ਕਰਕੇ ਇਸ ਪੋਸਟ ਨੂੰ ਵੱਧ ਤੋਂ ਵੱਧ ਸ਼ੇਅਰ ਕਰੋ ਤਾਂ ਜੋ ਪਰਿਵਾਰ ਨੂੰ ਉਨ੍ਹਾਂ ਦਾ ਬੱਚਾ ਜਲਦ ਮਿਲ ਸਕੇ।
+                    </p>
+                    
+                    <div class="article-action-row">
+                        <span style="font-size:0.88rem; color:#64748b; font-weight:700;">📍 ਲੋਕ ਹਿੱਤ ਵਿੱਚ ਜਾਰੀ ਸੂਚਨਾ</span>
+                        <a href="https://api.whatsapp.com/send?text=🚨 *ਗੁੰਮਸ਼ੁਦਾ ਦੀ ਭਾਲ (ਰਾਹੁਲ ਘਾਰੂ)*%0Aਘਰੋਂ 5 ਲੱਖ ਰੁਪਏ ਲੈ ਕੇ ਲਾਪਤਾ। ਸਹੀ ਜਾਣਕਾਰੀ ਦੇਣ ਵਾਲੇ ਨੂੰ ₹20,000 ਇਨਾਮ। ਪੂਰੀ ਰਿਪੋਰਟ ਦੇਖੋ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="action-link action-link-wa">
+                            📲 ਵੱਧ ਤੋਂ ਵੱਧ ਸ਼ੇਅਰ ਕਰੋ
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. ਗਿੱਪੀ ਗਰੇਵਾਲ -->
             <div class="news-article-card">
                 <div class="glass-media-container">
                     <span class="article-tag" style="background:#780000;">CINEMA EXCLUSIVE</span>
@@ -656,8 +459,7 @@
                 </div>
                 <div class="article-body">
                     <h2 class="article-title">🎬 “ਆਪਣੇ ਹੀ ਸਭ ਤੋਂ ਵੱਧ ਜੜ੍ਹਾਂ ਵੱਢਦੇ ਹਨ!” — ਗਿੱਪੀ ਗਰੇਵਾਲ</h2>
-                    <p class="article-text"><strong>ਚੰਡੀਗੜ੍ਹ / ਪੰਜਾਬ (Punjab Live Now):</strong> ਪੰਜਾਬੀ ਫ਼ਿਲਮ ਇੰਡਸਟਰੀ ਨਾਲ ਜੁੜਿਆ ਗਿੱਪੀ ਗਰੇਵਾਲ ਦਾ ਇੱਕ ਵੱਡਾ ਬਿਆਨ ਚਰਚਾ ਦਾ ਵਿਸ਼ਾ ਬਣਿਆ ਹੋਇਆ ਹੈ। ਗਿੱਪੀ ਗਰੇਵਾਲ ਮੁਤਾਬਕ, ਪ੍ਰਿੰਸ ਕੰਵਲਜੀਤ ਸਿੰਘ ਉਰਫ਼ ਪੰਮੇ ਦੇ ਕੁਝ ਜਿਗਰੀ ਯਾਰਾਂ ਨੇ ਉਸਨੂੰ ਫ਼ੋਨ ਕਰਕੇ ਕਿਹਾ ਸੀ ਕਿ ਪ੍ਰਿੰਸ ਨੂੰ ਸਟਾਰ ਨਾ ਬਣਾਇਆ ਜਾਵੇ ਅਤੇ ਉਸਨੂੰ ਸਿਰਫ਼ ਛੋਟੇ-ਮੋਟੇ ਰੋਲ ਹੀ ਦਿੱਤੇ ਜਾਣ।</p>
-                    <p class="article-text">ਗਿੱਪੀ ਗਰੇਵਾਲ ਨੇ ਕਿਹਾ ਕਿ ਉਸਨੂੰ ਪ੍ਰਿੰਸ ਕੰਵਲਜੀਤ ਦੇ ਹੁਨਰ ’ਤੇ ਪੂਰਾ ਭਰੋਸਾ ਸੀ। ਇਸੇ ਕਰਕੇ ਫ਼ਿਲਮ ‘ਵਾਰਨਿੰਗ’ ਵਿੱਚ ਉਸਨੇ ਪ੍ਰਿੰਸ ਨੂੰ ਆਪਣੇ ਤੋਂ ਵੀ ਵੱਡਾ ਰੋਲ ਦਿੱਤਾ, ਜਿਸਨੂੰ ਦਰਸ਼ਕਾਂ ਵੱਲੋਂ ਭਰਵਾਂ ਪਿਆਰ ਮਿਲਿਆ।</p>
+                    <p class="article-text"><strong>ਚੰਡੀਗੜ੍ਹ / ਪੰਜਾਬ (Punjab Live Now):</strong> ਪੰਜਾਬੀ ਫ਼ਿਲਮ ਇੰਡਸਟਰੀ ਨਾਲ ਜੁੜਿਆ ਗਿੱਪੀ ਗਰੇਵਾਲ ਦਾ ਇੱਕ ਵੱਡਾ ਬਿਆਨ ਚਰਚਾ ਦਾ ਵਿਸ਼ਾ ਬਣਿਆ ਹੋਇਆ ਹੈ। ਗਿੱਪੀ ਗਰੇਵਾਲ ਮੁਤਾਬਕ, ਪ੍ਰਿੰਸ ਕੰਵਲਜੀਤ ਸਿੰਘ ਉਰਫ਼ ਪੰਮੇ ਦੇ ਕੁਝ ਜਿਗਰੀ ਯਾਰਾਂ ਨੇ ਉਸਨੂੰ ਫ਼ੋਨ ਕਰਕੇ ਕਿਹਾ ਸੀ ਕਿ ਪ੍ਰਿੰਸ ਨੂੰ ਸਟਾਰ ਨਾ ਬਣਾਇਆ ਜਾਵੇ।</p>
                     <div class="article-action-row">
                         <span style="font-size:0.88rem; color:#64748b; font-weight:700;">📍 ਪੰਜਾਬੀ ਸਿਨੇਮਾ</span>
                         <a href="https://api.whatsapp.com/send?text=ਗਿੱਪੀ ਗਰੇਵਾਲ ਦਾ ਵੱਡਾ ਖੁਲਾਸਾ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="action-link action-link-wa">
@@ -667,7 +469,7 @@
                 </div>
             </div>
 
-            <!-- 2. ਲੱਖਾ ਸਿਧਾਣਾ -->
+            <!-- 3. ਲੱਖਾ ਸਿਧਾਣਾ -->
             <div class="news-article-card">
                 <div class="glass-media-container">
                     <span class="article-tag">PUNJAB EXCLUSIVE</span>
@@ -677,7 +479,7 @@
                 </div>
                 <div class="article-body">
                     <h2 class="article-title">🔥 “ਇਹ ਜ਼ਮੀਨਾਂ ਸਾਨੂੰ ਖ਼ੈਰਾਤ ’ਚ ਨਹੀਂ ਮਿਲੀਆਂ…” — ਲੱਖਾ ਸਿਧਾਣਾ</h2>
-                    <p class="article-text"><strong>ਪੰਜਾਬ (Punjab Live Now):</strong> ਪੰਜਾਬ ਦੀਆਂ ਜ਼ਮੀਨਾਂ ਨੂੰ ਲੈ ਕੇ ਲੱਖਾ ਸਿਧਾਣਾ ਦਾ ਇੱਕ ਤਾਜ਼ਾ ਬਿਆਨ ਸੋਸ਼ਲ ਮੀਡੀਆ ਅਤੇ ਸਿਆਸੀ ਹਲਕਿਆਂ ਵਿੱਚ ਜ਼ਬਰਦਸਤ ਚਰਚਾ ਦਾ ਵਿਸ਼ਾ ਬਣਿਆ ਹੋਇਆ ਹੈ। ਉਨ੍ਹਾਂ ਸਾਫ਼ ਸ਼ਬਦਾਂ ਵਿੱਚ ਕਿਹਾ, <em>“ਇਹ ਜ਼ਮੀਨਾਂ ਸਾਨੂੰ ਖ਼ੈਰਾਤ ’ਚ ਨਹੀਂ ਮਿਲੀਆਂ, ਸਾਡੇ ਪੁਰਖਿਆਂ ਨੇ ਖ਼ੂਨ ਡੋਲ੍ਹਿਆ ਹੈ।”</em></p>
+                    <p class="article-text"><strong>ਪੰਜਾਬ (Punjab Live Now):</strong> ਪੰਜਾਬ ਦੀਆਂ ਜ਼ਮੀਨਾਂ ਨੂੰ ਲੈ ਕੇ ਲੱਖਾ ਸਿਧਾਣਾ ਦਾ ਇੱਕ ਤਾਜ਼ਾ ਬਿਆਨ ਸੋਸ਼ਲ ਮੀਡੀਆ ਅਤੇ ਸਿਆਸੀ ਹਲਕਿਆਂ ਵਿੱਚ ਜ਼ਬਰਦਸਤ ਚਰਚਾ ਦਾ ਵਿਸ਼ਾ ਬਣਿਆ ਹੋਇਆ ਹੈ।</p>
                     <div class="article-action-row">
                         <span style="font-size:0.88rem; color:#64748b; font-weight:700;">📍 ਪੰਜਾਬ</span>
                         <a href="https://api.whatsapp.com/send?text=ਲੱਖਾ ਸਿਧਾਣਾ ਦਾ ਵੱਡਾ ਬਿਆਨ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="action-link action-link-wa">
@@ -688,7 +490,7 @@
             </div>
         </div>
 
-        <!-- Sidebar -->
+        <!-- Sidebar Hub -->
         <div class="sidebar-hub">
             <div class="sidebar-card">
                 <div class="sidebar-heading">🎬 PLN ਵੀਡੀਓ ਹੱਬ</div>
