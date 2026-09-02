@@ -37,6 +37,7 @@
 
         a, button { cursor: pointer !important; text-decoration: none; transition: all 0.2s ease; }
 
+        /* 1. Top Strip */
         .top-bar {
             background: var(--navy-deep); color: #cbd5e1; font-size: 0.82rem; padding: 8px 0;
             border-bottom: 1px solid rgba(255,255,255,0.08);
@@ -61,6 +62,7 @@
         .top-social-bar a { color: #cbd5e1; margin-left: 14px; font-weight: 600; }
         .top-social-bar a:hover { color: #ffffff; }
 
+        /* 2. Facebook Cover Header */
         .fb-header-cover {
             position: relative; width: 100%; min-height: 190px;
             background: linear-gradient(135deg, #031926 0%, #003049 45%, #780000 100%), url('header_cover.jpg');
@@ -117,6 +119,7 @@
         .btn-wa-contact { background: #16a34a; color: #fff; font-weight: 800; }
         .btn-wa-contact:hover { background: #15803d; transform: translateY(-1px); }
 
+        /* 3. Navigation */
         nav {
             background: var(--navy-dark); position: sticky; top: 0; z-index: 1000;
             border-bottom: 3px solid var(--brand-red); box-shadow: 0 4px 12px rgba(0,0,0,0.12);
@@ -138,10 +141,18 @@
         }
         .article-body { padding: 24px; }
         .article-title {
-            font-family: 'Baloo Paaji 2', sans-serif; font-size: 1.7rem; font-weight: 800;
+            font-family: 'Baloo Paaji 2', sans-serif; font-size: 1.65rem; font-weight: 800;
             color: var(--navy-deep); line-height: 1.35; margin-bottom: 12px;
         }
         .article-text { font-size: 0.98rem; line-height: 1.75; color: var(--text-body); margin-bottom: 16px; }
+        .article-action-row {
+            display: flex; justify-content: space-between; align-items: center;
+            border-top: 1px solid var(--border-light); padding-top: 16px; flex-wrap: wrap; gap: 10px;
+        }
+        .action-link-wa {
+            background: #16a34a; color: #fff; font-size: 0.88rem; font-weight: 700;
+            padding: 7px 16px; border-radius: 4px; display: inline-flex; align-items: center; gap: 6px;
+        }
 
         .sidebar-hub { display: flex; flex-direction: column; gap: 15px; }
         .sidebar-card {
@@ -157,6 +168,7 @@
             padding: 11px; border-radius: 4px; font-weight: 700; font-size: 0.92rem; margin-top: 14px;
         }
 
+        /* Modals */
         .modal-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(3, 25, 38, 0.85); backdrop-filter: blur(10px);
@@ -243,7 +255,7 @@
             </div>
             <div class="brand-text">
                 <h1>PUNJAB <span>LIVE NOW</span></h1>
-                <p>📍 ਪੰਜਾਬ ਦਾ ਅਧਿਕਾਰਤ ਨਿਊਜ਼ ਨੈੱਟਵਰਕ | Voice of Punjab</p>
+                <p>📍 ਗੁਰੂਹਰਸਹਾਏ ਬਿਊਰੋ | ਸਥਾਨਕ ਖ਼ਬਰਾਂ ਤੇ ਜ਼ਮੀਨੀ ਰਿਪੋਰਟਾਂ</p>
             </div>
         </a>
         
@@ -259,8 +271,8 @@
 <nav>
     <div class="nav-inner">
         <a href="index.html">ਮੁੱਖ ਪੰਨਾ</a>
-        <a href="punjab.html" class="active">ਪੰਜਾਬ</a>
-        <a href="guruharsahai.html">ਗੁਰੂਹਰਸਹਾਏ</a>
+        <a href="punjab.html">ਪੰਜਾਬ</a>
+        <a href="guruharsahai.html" class="active">ਗੁਰੂਹਰਸਹਾਏ</a>
         <a href="videos.html">ਵੀਡੀਓਜ਼</a>
         <a href="advertise.html">ਇਸ਼ਤਿਹਾਰ ਦਿਓ</a>
         <a href="javascript:void(0)" onclick="openReporterForm()">ਰਿਪੋਰਟਰ ਬਣੋ</a>
@@ -270,19 +282,56 @@
 <div class="container">
     <div class="grid-structure">
         <div>
+            <!-- ਖ਼ਬਰ 1: ਮੰਡੀ ਤੇ ਲੋਕਲ ਬਾਜ਼ਾਰ ਰਿਪੋਰਟ -->
             <div class="news-article-card">
                 <div class="article-body">
-                    <span style="color:var(--brand-red); font-weight:800; font-size:0.85rem;">📍 ਖੇਤਰੀ ਅਪਡੇਟ</span>
-                    <h2 class="article-title">📍 ਗੁਰੂਹਰਸਹਾਏ ਇਲਾਕੇ ਦੀਆਂ ਲੋਕਲ ਸਮੱਸਿਆਵਾਂ ਤੇ ਬ੍ਰੇਕਿੰਗ ਰਿਪੋਰਟਾਂ</h2>
-                    <p class="article-text">ਗੁਰੂਹਰਸਹਾਏ ਅਤੇ ਆਸ-ਪਾਸ ਦੇ ਪੇਂਡੂ ਖੇਤਰਾਂ ਦੀ ਹਰ ਤਾਜ਼ਾ ਘਟਨਾ, ਮੰਡੀ ਦੀਆਂ ਖ਼ਬਰਾਂ, ਪ੍ਰਸ਼ਾਸਨਿਕ ਨੋਟਿਸ ਅਤੇ ਲੋਕ ਹਿੱਤ ਦੇ ਮੁੱਦਿਆਂ ਦੀ ਵਿਸ਼ੇਸ਼ ਜ਼ਮੀਨੀ ਕਵਰੇਜ PLN 'ਤੇ ਸਭ ਤੋਂ ਪਹਿਲਾਂ ਦੇਖੋ।</p>
-                    <button type="button" onclick="openNewsModal()" class="sidebar-btn" style="width:fit-content; padding:8px 18px; margin-top:10px;">
-                        🚨 ਗੁਰੂਹਰਸਹਾਏ ਦੀ ਖ਼ਬਰ ਭੇਜੋ
-                    </button>
+                    <span style="color:var(--brand-red); font-weight:800; font-size:0.82rem;">📍 ਦਾਣਾ ਮੰਡੀ ਗੁਰੂਹਰਸਹਾਏ</span>
+                    <h2 class="article-title">🌾 ਗੁਰੂਹਰਸਹਾਏ ਦਾਣਾ ਮੰਡੀ 'ਚ ਸੀਜ਼ਨਲ ਤਿਆਰੀਆਂ ਤੇ ਕਿਸਾਨਾਂ ਲਈ ਪੁਖ਼ਤਾ ਪ੍ਰਬੰਧਾਂ ਦੇ ਨਿਰਦੇਸ਼</h2>
+                    <p class="article-text"><strong>ਗੁਰੂਹਰਸਹਾਏ (PLN ਬਿਊਰੋ):</strong> ਆਗਾਮੀ ਸੀਜ਼ਨ ਦੇ ਮੱਦੇਨਜ਼ਰ ਗੁਰੂਹਰਸਹਾਏ ਦੀ ਮੁੱਖ ਦਾਣਾ ਮੰਡੀ ਵਿਖੇ ਪ੍ਰਬੰਧਾਂ ਦਾ ਜਾਇਜ਼ਾ ਲਿਆ ਗਿਆ। ਕਿਸਾਨਾਂ ਅਤੇ ਆੜ੍ਹਤੀਆਂ ਦੀ ਸਹੂਲਤ ਲਈ ਪੀਣ ਵਾਲੇ ਸਾਫ਼ ਪਾਣੀ, ਬਿਜਲੀ ਅਤੇ ਬਾਰਦਾਨੇ ਦੇ ਪੁਖ਼ਤਾ ਇੰਤਜ਼ਾਮਾਂ ਸਬੰਧੀ ਅਧਿਕਾਰੀਆਂ ਨੂੰ ਹਦਾਇਤਾਂ ਜਾਰੀ ਕੀਤੀਆਂ ਗਈਆਂ ਹਨ ਤਾਂ ਜੋ ਮੰਡੀਕਰਨ ਦੌਰਾਨ ਕਿਸੇ ਕਿਸਮ ਦੀ ਪ੍ਰੇਸ਼ਾਨੀ ਨਾ ਆਵੇ।</p>
+                    <div class="article-action-row">
+                        <span style="font-size:0.85rem; color:#64748b;">ਪੋਸਟ ਕੀਤਾ: PLN ਲੋਕਲ ਡੈਸਕ</span>
+                        <a href="https://api.whatsapp.com/send?text=ਗੁਰੂਹਰਸਹਾਏ ਮੰਡੀ ਰਿਪੋਰਟ: https://ghsvlogger-website.github.io/punjab-live-now/guruharsahai.html" target="_blank" class="action-link-wa">📲 ਸ਼ੇਅਰ ਕਰੋ</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ਖ਼ਬਰ 2: ਟ੍ਰੈਫਿਕ ਤੇ ਰੋਡ ਸੇਫਟੀ ਚੈਕਿੰਗ -->
+            <div class="news-article-card">
+                <div class="article-body">
+                    <span style="color:var(--brand-red); font-weight:800; font-size:0.82rem;">📍 ਟ੍ਰੈਫਿਕ ਅਪਡੇਟ</span>
+                    <h2 class="article-title">🚔 ਫ਼ਿਰੋਜ਼ਪੁਰ-ਫਾਜ਼ਿਲਕਾ ਰੋਡ 'ਤੇ ਟ੍ਰੈਫਿਕ ਨਿਯਮਾਂ ਦੀ ਉਲੰਘਣਾ ਖ਼ਿਲਾਫ਼ ਵਿਸ਼ੇਸ਼ ਮੁਹਿੰਮ</h2>
+                    <p class="article-text"><strong>ਗੁਰੂਹਰਸਹਾਏ (PLN ਬਿਊਰੋ):</strong> ਗੁਰੂਹਰਸਹਾਏ ਮੁੱਖ ਹਾਈਵੇਅ ਅਤੇ ਬਾਜ਼ਾਰਾਂ ਵਿੱਚ ਜਾਮ ਦੀ ਸਥਿਤੀ ਨੂੰ ਠੱਲ੍ਹ ਪਾਉਣ ਲਈ ਟ੍ਰੈਫਿਕ ਪੁਲਿਸ ਵੱਲੋਂ ਵਿਸ਼ੇਸ਼ ਨਾਕੇ ਲਗਾ ਕੇ ਚੈਕਿੰਗ ਕੀਤੀ ਗਈ। ਅਧਿਕਾਰੀਆਂ ਨੇ ਵਾਹਨ ਚਾਲਕਾਂ ਨੂੰ ਹੈਲਮੇਟ ਪਹਿਨਣ, ਦਸਤਾਵੇਜ਼ ਪੂਰੇ ਰੱਖਣ ਅਤੇ ਨਿਰਧਾਰਿਤ ਪਾਰਕਿੰਗ ਵਿੱਚ ਹੀ ਗੱਡੀਆਂ ਖੜ੍ਹੀਆਂ ਕਰਨ ਦੀ ਅਪੀਲ ਕੀਤੀ।</p>
+                    <div class="article-action-row">
+                        <span style="font-size:0.85rem; color:#64748b;">ਪੋਸਟ ਕੀਤਾ: PLN ਲੋਕਲ ਡੈਸਕ</span>
+                        <a href="https://api.whatsapp.com/send?text=ਗੁਰੂਹਰਸਹਾਏ ਟ੍ਰੈਫਿਕ ਰਿਪੋਰਟ: https://ghsvlogger-website.github.io/punjab-live-now/guruharsahai.html" target="_blank" class="action-link-wa">📲 ਸ਼ੇਅਰ ਕਰੋ</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ਖ਼ਬਰ 3: ਪਾਵਰਕਾਮ ਜ਼ਰੂਰੀ ਸੂਚਨਾ -->
+            <div class="news-article-card">
+                <div class="article-body">
+                    <span style="color:var(--brand-red); font-weight:800; font-size:0.82rem;">⚡ ਬਿਜਲੀ ਸਪਲਾਈ ਅਪਡੇਟ</span>
+                    <h2 class="article-title">⚡ ਪਾਵਰਕਾਮ ਵੱਲੋਂ ਲਾਈਨਾਂ ਦੀ ਜ਼ਰੂਰੀ ਮੁਰੰਮਤ ਕਾਰਨ ਸਬੰਧਤ ਇਲਾਕਿਆਂ ਵਿੱਚ ਬਿਜਲੀ ਸਪਲਾਈ ਪ੍ਰਭਾਵਿਤ</h2>
+                    <p class="article-text"><strong>ਗੁਰੂਹਰਸਹਾਏ:</strong> ਸ਼ਹਿਰ ਦੇ 66 ਕੇ.ਵੀ. ਸਬ-ਸਟੇਸ਼ਨ ਤੋਂ ਚੱਲਣ ਵਾਲੇ ਕੁਝ ਮੁੱਖ ਫੀਡਰਾਂ ਦੀ ਤਕਨੀਕੀ ਮੁਰੰਮਤ ਅਤੇ ਤਾਰਾਂ ਦੀ ਦਰੁਸਤੀ ਕਾਰਨ ਨਿਰਧਾਰਿਤ ਸਮੇਂ ਲਈ ਬਿਜਲੀ ਸਪਲਾਈ ਬੰਦ ਰਹਿਣ ਦੀ ਸੂਚਨਾ ਮਿਲੀ ਹੈ। ਵਿਭਾਗ ਵੱਲੋਂ ਖਪਤਕਾਰਾਂ ਨੂੰ ਕੰਮ ਸਮੇਂ ਸਿਰ ਮੁਕੰਮਲ ਕਰਨ ਦਾ ਭਰੋਸਾ ਦਿੱਤਾ ਗਿਆ ਹੈ।</p>
+                    <div class="article-action-row">
+                        <span style="font-size:0.85rem; color:#64748b;">ਪੋਸਟ ਕੀਤਾ: PLN ਲੋਕਲ ਡੈਸਕ</span>
+                        <a href="https://api.whatsapp.com/send?text=ਗੁਰੂਹਰਸਹਾਏ ਬਿਜਲੀ ਅਪਡੇਟ: https://ghsvlogger-website.github.io/punjab-live-now/guruharsahai.html" target="_blank" class="action-link-wa">📲 ਸ਼ੇਅਰ ਕਰੋ</a>
+                    </div>
                 </div>
             </div>
         </div>
 
+        <!-- Sidebar -->
         <div class="sidebar-hub">
+            <div class="sidebar-card">
+                <div class="sidebar-heading">📍 ਗੁਰੂਹਰਸਹਾਏ ਨਿਊਜ਼ ਡੈਸਕ</div>
+                <p style="font-size: 0.92rem; color: #475569; margin-bottom: 14px;">ਕੀ ਤੁਹਾਡੇ ਪਿੰਡ ਜਾਂ ਵਾਰਡ ਵਿੱਚ ਕੋਈ ਵੱਡੀ ਸਮੱਸਿਆ ਹੈ? ਤੁਰੰਤ PLN ਨੂੰ ਸੂਚਿਤ ਕਰੋ।</p>
+                <button type="button" onclick="openNewsModal()" class="sidebar-btn" style="border:none; width:100%;">
+                    🚨 ਆਪਣੀ ਖ਼ਬਰ ਭੇਜੋ
+                </button>
+            </div>
+
             <div class="sidebar-card">
                 <div class="sidebar-heading">🎬 PLN ਵੀਡੀਓ ਹੱਬ</div>
                 <p style="font-size: 0.92rem; color: #475569; margin-bottom: 14px;">ਸਾਰੀਆਂ ਲਾਈਵ ਗਰਾਊਂਡ ਰਿਪੋਰਟਾਂ ਅਤੇ ਵੀਡੀਓ ਬੁਲੇਟਿਨ ਦੇਖੋ।</p>
@@ -292,22 +341,24 @@
     </div>
 </div>
 
+<!-- POPUPS: NEWS, LIVE TV, REPORTER -->
 <div class="modal-overlay" id="newsModal" onclick="closeNewsOnOutside(event)">
     <div class="modal-box">
         <button type="button" class="modal-close" onclick="closeNewsModal()">&times;</button>
         <div class="modal-header">
             <h3 style="font-family:'Baloo Paaji 2',sans-serif; font-size:1.6rem; color:var(--brand-red);">🚨 PLN ਨੂੰ ਖ਼ਬਰ / ਵੀਡੀਓ ਭੇਜੋ</h3>
-            <p style="font-size:0.9rem; color:var(--text-meta); margin-bottom:18px;">ਆਪਣੇ ਇਲਾਕੇ ਦੀ ਘਟਨਾ ਸਾਡੇ ਨਿਊਜ਼ ਰੂਮ ਤੱਕ ਪਹੁੰਚਾਓ:</p>
+            <p style="font-size:0.9rem; color:var(--text-meta); margin-bottom:18px;">ਗੁਰੂਹਰਸਹਾਏ ਦੀ ਕੋਈ ਵੀ ਘਟਨਾ ਸਾਡੇ ਨਿਊਜ਼ ਰੂਮ ਤੱਕ ਪਹੁੰਚਾਓ:</p>
         </div>
         <form onsubmit="handleNewsSubmit(event)">
             <div class="form-group"><label>ਤੁਹਾਡਾ ਨਾਮ</label><input type="text" id="newsSenderName" required placeholder="ਆਪਣਾ ਪੂਰਾ ਨਾਮ"></div>
             <div class="form-group"><label>ਮੋਬਾਈਲ ਨੰਬਰ (WhatsApp)</label><input type="tel" id="newsSenderPhone" required placeholder="10 ਅੰਕਾਂ ਦਾ ਨੰਬਰ"></div>
-            <div class="form-group"><label>ਜ਼ਿਲ੍ਹਾ ਤੇ ਸ਼ਹਿਰ/ਪਿੰਡ</label><input type="text" id="newsLocation" required placeholder="ਜਿਵੇਂ: ਗੁਰੂ ਹਰਸਹਾਏ"></div>
+            <div class="form-group"><label>ਸ਼ਹਿਰ / ਪਿੰਡ / ਵਾਰਡ</label><input type="text" id="newsLocation" required placeholder="ਜਿਵੇਂ: ਗੁਰੂਹਰਸਹਾਏ, ਪਿੰਡ..."></div>
             <div class="form-group"><label>ਖ਼ਬਰ ਦੀ ਕਿਸਮ</label>
                 <select id="newsCategory">
                     <option value="ਤਾਜ਼ਾ ਬ੍ਰੇਕਿੰਗ ਨਿਊਜ਼">🚨 ਤਾਜ਼ਾ ਬ੍ਰੇਕਿੰਗ ਨਿਊਜ਼</option>
                     <option value="ਸੜਕ / ਪਿੰਡ ਦੀ ਸਮੱਸਿਆ">⚠️ ਸੜਕ / ਪਿੰਡ ਦੀ ਸਮੱਸਿਆ</option>
                     <option value="ਹਾਦਸਾ ਜਾਂ ਕ੍ਰਾਈਮ ਰਿਪੋਰਟ">🚔 ਹਾਦਸਾ ਜਾਂ ਕ੍ਰਾਈਮ ਰਿਪੋਰਟ</option>
+                    <option value="ਸਮਾਜਿਕ / ਧਾਰਮਿਕ ਪ੍ਰੋਗਰਾਮ">🌸 ਸਮਾਜਿਕ / ਧਾਰਮਿਕ ਪ੍ਰੋਗਰਾਮ</option>
                 </select>
             </div>
             <div class="form-group"><label>ਖ਼ਬਰ ਦਾ ਵੇਰਵਾ</label><textarea id="newsDetails" rows="4" required placeholder="ਘਟਨਾ ਬਾਰੇ ਪੂਰੀ ਜਾਣਕਾਰੀ ਲਿਖੋ..."></textarea></div>
