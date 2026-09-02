@@ -41,7 +41,7 @@
             transition: all 0.2s ease;
         }
 
-        /* 1. Header Top Strip */
+        /* 1. Top Live Bar */
         .top-bar {
             background: var(--navy-deep);
             color: #cbd5e1;
@@ -93,7 +93,7 @@
         }
         .top-social-bar a:hover { color: #ffffff; }
 
-        /* 2. Main Broadcast Header */
+        /* 2. Official Header */
         header {
             background: #ffffff;
             border-bottom: 2px solid var(--border-light);
@@ -116,7 +116,6 @@
             color: inherit;
         }
         
-        /* 100% Guaranteed Perfect Circle Logo */
         .brand-logo-wrapper {
             width: 68px;
             height: 68px;
@@ -244,7 +243,7 @@
             text-overflow: ellipsis;
         }
 
-        /* Commercial Advertisements */
+        /* Advertisements */
         .ad-label {
             font-size: 0.72rem;
             color: #94a3b8;
@@ -358,23 +357,51 @@
             box-shadow: var(--shadow-sm);
             margin-bottom: 26px;
         }
-        .article-media-box {
+
+        /* FROSTED GLASS MIRROR BLUR MEDIA CONTAINER */
+        .glass-media-container {
             position: relative;
-            background: #020617;
             width: 100%;
-            max-height: 480px;
+            height: 440px;
+            overflow: hidden;
+            background: #000;
             display: flex;
             justify-content: center;
             align-items: center;
             border-bottom: 1px solid var(--border-light);
         }
-        .article-media-box img {
-            width: 100%;
-            height: auto;
-            max-height: 480px;
-            object-fit: contain;
-            display: block;
+        .glass-media-backdrop {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            background-size: cover;
+            background-position: center;
+            filter: blur(24px) brightness(0.65);
+            transform: scale(1.15);
+            z-index: 1;
         }
+        .glass-overlay-filter {
+            position: absolute;
+            inset: 0;
+            background: rgba(3, 25, 38, 0.35);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 2;
+        }
+        .glass-foreground-img {
+            position: relative;
+            max-width: 95%;
+            max-height: 420px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            z-index: 3;
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
         .article-tag {
             position: absolute;
             top: 14px;
@@ -571,6 +598,8 @@
             .dual-grid { grid-template-columns: 1fr; }
             .nepal-gallery-grid { grid-template-columns: 1fr; }
             .gallery-main-photo, .gallery-sub-photos { height: 260px; }
+            .glass-media-container { height: 320px; }
+            .glass-foreground-img { max-height: 300px; }
             .brand-text h1 { font-size: 2rem; }
             .header-actions { width: 100%; justify-content: center; }
             .top-bar-inner { justify-content: center; text-align: center; }
@@ -671,11 +700,13 @@
 
     <div class="grid-structure">
         <div>
-            <!-- MAIN LEAD STORY 1: ਗਿੱਪੀ ਗਰੇਵਾਲ ਵੱਡਾ ਬਿਆਨ -->
+            <!-- 1. ਗਿੱਪੀ ਗਰੇਵਾਲ (ਗਲਾਸ-ਮਿਰਰ ਬਲਰ ਬੈਕਗ੍ਰਾਊਂਡ ਨਾਲ) -->
             <div class="news-article-card">
-                <div class="article-media-box">
+                <div class="glass-media-container">
                     <span class="article-tag" style="background:#780000;">CINEMA EXCLUSIVE</span>
-                    <img src="gippynews1.jpg" alt="ਗਿੱਪੀ ਗਰੇਵਾਲ ਬਿਆਨ">
+                    <div class="glass-media-backdrop" style="background-image: url('gippynews1.jpg');"></div>
+                    <div class="glass-overlay-filter"></div>
+                    <img src="gippynews1.jpg" alt="ਗਿੱਪੀ ਗਰੇਵਾਲ ਬਿਆਨ" class="glass-foreground-img">
                 </div>
                 <div class="article-body">
                     <h2 class="article-title">🎬 “ਆਪਣੇ ਹੀ ਸਭ ਤੋਂ ਵੱਧ ਜੜ੍ਹਾਂ ਵੱਢਦੇ ਹਨ!” — ਗਿੱਪੀ ਗਰੇਵਾਲ</h2>
@@ -691,11 +722,13 @@
                 </div>
             </div>
 
-            <!-- MAIN LEAD STORY 2: ਲੱਖਾ ਸਿਧਾਣਾ -->
+            <!-- 2. ਲੱਖਾ ਸਿਧਾਣਾ (ਗਲਾਸ-ਮਿਰਰ ਬਲਰ ਬੈਕਗ੍ਰਾਊਂਡ ਨਾਲ) -->
             <div class="news-article-card">
-                <div class="article-media-box">
+                <div class="glass-media-container">
                     <span class="article-tag">PUNJAB EXCLUSIVE</span>
-                    <img src="lakhanews1.jpg" alt="ਲੱਖਾ ਸਿਧਾਣਾ ਬਿਆਨ">
+                    <div class="glass-media-backdrop" style="background-image: url('lakhanews1.jpg');"></div>
+                    <div class="glass-overlay-filter"></div>
+                    <img src="lakhanews1.jpg" alt="ਲੱਖਾ ਸਿਧਾਣਾ ਬਿਆਨ" class="glass-foreground-img">
                 </div>
                 <div class="article-body">
                     <h2 class="article-title">🔥 “ਇਹ ਜ਼ਮੀਨਾਂ ਸਾਨੂੰ ਖ਼ੈਰਾਤ ’ਚ ਨਹੀਂ ਮਿਲੀਆਂ…” — ਲੱਖਾ ਸਿਧਾਣਾ</h2>
@@ -711,11 +744,13 @@
                 </div>
             </div>
 
-            <!-- News 3: Delhi Case -->
+            <!-- 3. ਦਿੱਲੀ ਕੇਸ (ਗਲਾਸ-ਮਿਰਰ ਬਲਰ ਬੈਕਗ੍ਰਾਊਂਡ ਨਾਲ) -->
             <div class="news-article-card">
-                <div class="article-media-box">
+                <div class="glass-media-container">
                     <span class="article-tag">NATIONAL CRIME REPORT</span>
-                    <img src="delhigangrap1.jpg" alt="ਦਿੱਲੀ ਨਾਬਾਲਿਗ ਮਾਮਲਾ">
+                    <div class="glass-media-backdrop" style="background-image: url('delhigangrap1.jpg');"></div>
+                    <div class="glass-overlay-filter"></div>
+                    <img src="delhigangrap1.jpg" alt="ਦਿੱਲੀ ਨਾਬਾਲਿਗ ਮਾਮਲਾ" class="glass-foreground-img">
                 </div>
                 <div class="article-body">
                     <h2 class="article-title">🚨 16 ਸਾਲਾ ਮਾਸੂਮ ਨਾਲ ਕਥਿਤ ਦਰਿੰਦਗੀ, 47 ਕਿਲੋਮੀਟਰ ਤੱਕ ਕਿਸੇ ਨੇ ਨਾ ਸੁਣੀ ਪੁਕਾਰ</h2>
@@ -744,7 +779,7 @@
                 </div>
             </div>
 
-            <!-- News 4: Nepal Flood 3 Photos -->
+            <!-- 4. ਨੇਪਾਲ ਹੜ੍ਹ 3-Photos -->
             <div class="news-article-card">
                 <div style="position: relative;">
                     <span class="article-tag" style="background:#0284c7;">GLOBAL / FLASH FLOOD</span>
@@ -777,11 +812,13 @@
                 </div>
             </div>
 
-            <!-- News 5: Gurdaspur Case -->
+            <!-- 5. ਗੁਰਦਾਸਪੁਰ ਕੇਸ (ਗਲਾਸ-ਮਿਰਰ ਬਲਰ ਬੈਕਗ੍ਰਾਊਂਡ ਨਾਲ) -->
             <div class="news-article-card">
-                <div class="article-media-box">
+                <div class="glass-media-container">
                     <span class="article-tag">PUNJAB CRIME REPORT</span>
-                    <img src="gurdaspurnews1.jpg" alt="ਗੁਰਦਾਸਪੁਰ ਪੁਲਿਸ ਮਾਮਲਾ">
+                    <div class="glass-media-backdrop" style="background-image: url('gurdaspurnews1.jpg');"></div>
+                    <div class="glass-overlay-filter"></div>
+                    <img src="gurdaspurnews1.jpg" alt="ਗੁਰਦਾਸਪੁਰ ਪੁਲਿਸ ਮਾਮਲਾ" class="glass-foreground-img">
                 </div>
                 <div class="article-body">
                     <h2 class="article-title">🚨 ਬੱਬੇਹਾਲੀ ਅੱਡੇ ’ਤੇ ਪੁਲਿਸ ਕਾਂਸਟੇਬਲ ਨਾਲ ਕਥਿਤ ਮਾਰਕੁੱਟ, ਮਾਮਲਾ ਜਾਂਚ ਅਧੀਨ</h2>
