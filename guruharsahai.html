@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ਗੁਰੂਹਰਸਹਾਏ ਲੋਕਲ ਖ਼ਬਰਾਂ - Punjab Live Now (PLN)</title>
+    <title>ਗੁਰੂਹਰਸਹਾਏ ਖ਼ਬਰਾਂ - Punjab Live Now (PLN)</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -84,88 +84,52 @@
             gap: 16px;
         }
         .brand-link { display: flex; align-items: center; gap: 15px; color: inherit; }
+        
         .brand-logo-wrapper {
-            width: 68px;
-            height: 68px;
-            min-width: 68px;
-            min-height: 68px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 2.5px solid var(--brand-red);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            background: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            width: 68px; height: 68px; min-width: 68px; min-height: 68px;
+            border-radius: 50%; overflow: hidden; border: 2.5px solid var(--brand-red);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1); background: #ffffff;
+            display: flex; align-items: center; justify-content: center;
         }
         .brand-logo { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block; }
         .brand-text h1 {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 2.3rem;
-            font-weight: 800;
-            line-height: 1;
-            color: var(--brand-red);
-            letter-spacing: -0.5px;
-            text-transform: uppercase;
+            font-size: 2.3rem; font-weight: 800; line-height: 1;
+            color: var(--brand-red); letter-spacing: -0.5px; text-transform: uppercase;
         }
         .brand-text h1 span { color: var(--navy-dark); }
         .brand-text p { font-size: 0.9rem; color: var(--text-meta); font-weight: 600; margin-top: 3px; }
 
         .header-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
         .hd-btn {
-            font-weight: 700;
-            font-size: 0.88rem;
-            padding: 8px 16px;
-            border-radius: 4px;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
+            font-weight: 700; font-size: 0.88rem; padding: 8px 16px;
+            border-radius: 4px; display: inline-flex; align-items: center; gap: 6px; border: none;
         }
-        .btn-rep { background: #f8fafc; color: var(--navy-dark); border: 1px solid var(--border-light); }
+        .btn-rep { background: var(--brand-red); color: #fff; }
+        .btn-rep:hover { background: var(--brand-red-dark); }
         .btn-ad-give { background: #fff1f2; color: var(--brand-red); border: 1px solid #fecdd3; }
-        .btn-live-stream { background: var(--brand-red); color: #fff; }
+        .btn-ad-give:hover { background: var(--brand-red); color: #fff; }
+        .btn-live-stream { background: var(--navy-dark); color: #fff; }
         .btn-wa-contact { background: #16a34a; color: #fff; }
 
         nav {
-            background: var(--navy-dark);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 3px solid var(--brand-red);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            background: var(--navy-dark); position: sticky; top: 0; z-index: 1000;
+            border-bottom: 3px solid var(--brand-red); box-shadow: 0 4px 12px rgba(0,0,0,0.12);
         }
-        .nav-inner {
-            max-width: 1240px;
-            margin: 0 auto;
-            display: flex;
-            overflow-x: auto;
-            white-space: nowrap;
-            scrollbar-width: none;
-        }
+        .nav-inner { max-width: 1240px; margin: 0 auto; display: flex; overflow-x: auto; white-space: nowrap; scrollbar-width: none; }
         .nav-inner::-webkit-scrollbar { display: none; }
         .nav-inner a {
-            color: #f8fafc;
-            padding: 13px 22px;
-            font-size: 1.02rem;
-            font-weight: 700;
-            border-right: 1px solid rgba(255,255,255,0.06);
-            display: inline-block;
+            color: #f8fafc; padding: 13px 22px; font-size: 1.02rem; font-weight: 700;
+            border-right: 1px solid rgba(255,255,255,0.06); display: inline-block;
         }
         .nav-inner a:hover, .nav-inner a.active { background: var(--brand-red); color: #ffffff; }
 
         .container { max-width: 1240px; margin: 24px auto; padding: 0 16px; }
 
         .ticker-bar {
-            background: #ffffff;
-            border: 1px solid var(--border-light);
-            border-left: 5px solid var(--brand-red);
-            border-radius: 4px;
-            padding: 10px 16px;
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            margin-bottom: 20px;
-            box-shadow: var(--shadow-sm);
+            background: #ffffff; border: 1px solid var(--border-light); border-left: 5px solid var(--brand-red);
+            border-radius: 4px; padding: 10px 16px; display: flex; align-items: center; gap: 14px;
+            margin-bottom: 20px; box-shadow: var(--shadow-sm);
         }
         .ticker-badge { background: var(--brand-red); color: #fff; font-size: 0.8rem; padding: 3px 9px; border-radius: 3px; font-weight: 800; }
         .ticker-title { font-weight: 700; font-size: 1rem; color: var(--navy-deep); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -173,33 +137,44 @@
         .grid-structure { display: grid; grid-template-columns: 2.2fr 1fr; gap: 28px; }
 
         .news-article-card {
-            background: var(--card-surface);
-            border: 1px solid var(--border-light);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: var(--shadow-sm);
-            margin-bottom: 26px;
+            background: var(--card-surface); border: 1px solid var(--border-light);
+            border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-sm); margin-bottom: 26px;
         }
-        .article-media-box {
-            position: relative;
-            background: #020617;
-            width: 100%;
-            max-height: 480px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-bottom: 1px solid var(--border-light);
+        .glass-media-container {
+            position: relative; width: 100%; height: 440px; overflow: hidden; background: #000;
+            display: flex; justify-content: center; align-items: center; border-bottom: 1px solid var(--border-light);
         }
-        .article-media-box img { width: 100%; height: auto; max-height: 480px; object-fit: contain; display: block; }
-        .article-tag { position: absolute; top: 14px; left: 14px; background: var(--brand-red); color: #fff; font-size: 0.78rem; padding: 4px 10px; border-radius: 3px; font-weight: 800; z-index: 10; }
-
+        .glass-media-backdrop {
+            position: absolute; top: -20px; left: -20px; right: -20px; bottom: -20px;
+            background-size: cover; background-position: center; filter: blur(24px) brightness(0.65);
+            transform: scale(1.15); z-index: 1;
+        }
+        .glass-overlay-filter {
+            position: absolute; inset: 0; background: rgba(3, 25, 38, 0.35);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); z-index: 2;
+        }
+        .glass-foreground-img {
+            position: relative; max-width: 95%; max-height: 420px; width: auto; height: auto;
+            object-fit: contain; z-index: 3; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .article-tag {
+            position: absolute; top: 14px; left: 14px; background: var(--brand-red);
+            color: #fff; font-size: 0.78rem; padding: 4px 10px; border-radius: 3px; font-weight: 800; z-index: 10;
+        }
         .article-body { padding: 24px; }
-        .article-title { font-family: 'Baloo Paaji 2', sans-serif; font-size: 1.7rem; font-weight: 800; color: var(--navy-deep); line-height: 1.35; margin-bottom: 12px; }
+        .article-title {
+            font-family: 'Baloo Paaji 2', sans-serif; font-size: 1.7rem; font-weight: 800;
+            color: var(--navy-deep); line-height: 1.35; margin-bottom: 12px;
+        }
         .article-text { font-size: 0.98rem; line-height: 1.75; color: var(--text-body); margin-bottom: 16px; }
-
-        .article-action-row { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-light); padding-top: 16px; flex-wrap: wrap; gap: 10px; }
-        .action-link { font-size: 0.9rem; font-weight: 700; padding: 7px 16px; border-radius: 4px; display: inline-flex; align-items: center; gap: 6px; }
-        .action-link-dark { background: var(--navy-dark); color: #fff; }
+        .article-action-row {
+            display: flex; justify-content: space-between; align-items: center;
+            border-top: 1px solid var(--border-light); padding-top: 16px; flex-wrap: wrap; gap: 10px;
+        }
+        .action-link {
+            font-size: 0.9rem; font-weight: 700; padding: 7px 16px; border-radius: 4px;
+            display: inline-flex; align-items: center; gap: 6px;
+        }
         .action-link-wa { background: #16a34a; color: #fff; }
 
         .sidebar-hub { display: flex; flex-direction: column; gap: 15px; }
@@ -207,11 +182,36 @@
         .sidebar-heading { font-family: 'Baloo Paaji 2', sans-serif; font-size: 1.3rem; font-weight: 800; color: var(--brand-red); border-bottom: 2px solid #fee2e2; padding-bottom: 8px; margin-bottom: 14px; }
         .sidebar-btn { display: block; background: var(--brand-red); color: #fff; text-align: center; padding: 11px; border-radius: 4px; font-weight: 700; font-size: 0.92rem; margin-top: 14px; }
 
+        /* Modal */
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(3, 25, 38, 0.75); backdrop-filter: blur(8px);
+            display: none; justify-content: center; align-items: center; z-index: 9999; padding: 16px;
+        }
+        .modal-box {
+            background: #ffffff; width: 100%; max-width: 580px; border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3); border: 2px solid var(--brand-red);
+            max-height: 90vh; overflow-y: auto; position: relative; padding: 26px;
+        }
+        .modal-close { position: absolute; top: 16px; right: 18px; font-size: 1.6rem; font-weight: 800; color: var(--navy-dark); background: none; border: none; }
+        .modal-header h3 { font-family: 'Baloo Paaji 2', sans-serif; font-size: 1.6rem; font-weight: 800; color: var(--navy-deep); margin-bottom: 6px; }
+        .modal-header p { font-size: 0.9rem; color: var(--text-meta); margin-bottom: 20px; }
+        .form-group { margin-bottom: 14px; }
+        .form-group label { display: block; font-weight: 700; font-size: 0.88rem; color: var(--navy-deep); margin-bottom: 5px; }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%; padding: 10px 12px; border: 1px solid var(--border-light); border-radius: 6px; font-family: inherit; font-size: 0.92rem; background: #f8fafc;
+        }
+        .btn-submit-app {
+            width: 100%; background: #16a34a; color: #fff; padding: 12px; border-radius: 6px; font-weight: 800; font-size: 1rem; border: none; margin-top: 10px; cursor: pointer;
+        }
+
         footer { background: #031926; color: #94a3b8; text-align: center; padding: 40px 16px; margin-top: 60px; border-top: 4px solid var(--brand-red); }
         .footer-nav a { color: #f1f5f9; margin: 0 14px; font-weight: 700; font-size: 0.95rem; }
 
         @media (max-width: 900px) {
             .grid-structure { grid-template-columns: 1fr; }
+            .glass-media-container { height: 320px; }
+            .glass-foreground-img { max-height: 300px; }
             .brand-text h1 { font-size: 2rem; }
             .header-actions { width: 100%; justify-content: center; }
             .top-bar-inner { justify-content: center; text-align: center; }
@@ -249,9 +249,9 @@
         </a>
         
         <div class="header-actions">
-            <a href="https://api.whatsapp.com/send?text=ਸਤਿ ਸ਼੍ਰੀ ਅਕਾਲ ਜੀ, ਮੈਂ ਗੁਰੂਹਰਸਹਾਏ ਤੋਂ ਰਿਪੋਰਟਰ ਬਣਨ ਲਈ ਸੰਪਰਕ ਕਰ ਰਿਹਾ ਹਾਂ।" target="_blank" class="hd-btn btn-rep">
+            <button type="button" onclick="openReporterForm()" class="hd-btn btn-rep">
                 🎤 ਰਿਪੋਰਟਰ ਬਣੋ
-            </a>
+            </button>
             <a href="advertise.html" class="hd-btn btn-ad-give">
                 📢 ਇਸ਼ਤਿਹਾਰ ਦਿਓ
             </a>
@@ -272,28 +272,30 @@
         <a href="guruharsahai.html" class="active">ਗੁਰੂਹਰਸਹਾਏ</a>
         <a href="videos.html">ਵੀਡੀਓਜ਼</a>
         <a href="advertise.html">ਇਸ਼ਤਿਹਾਰ ਦਿਓ</a>
+        <a href="javascript:void(0)" onclick="openReporterForm()">ਰਿਪੋਰਟਰ ਬਣੋ</a>
     </div>
 </nav>
 
 <div class="container">
     <div class="ticker-bar">
-        <span class="ticker-badge">LOCAL DESK</span>
-        <span class="ticker-title">📍 ਗੁਰੂਹਰਸਹਾਏ ਤੇ ਆਸ-ਪਾਸ ਦੇ ਇਲਾਕੇ ਦੀਆਂ ਖ਼ਾਸ ਜ਼ਮੀਨੀ ਰਿਪੋਰਟਾਂ</span>
+        <span class="ticker-badge">GURU HAR SAHAI</span>
+        <span class="ticker-title">📍 ਗੁਰੂਹਰਸਹਾਏ ਹਲਕੇ ਦੀਆਂ ਸਾਰੀਆਂ ਵੱਡੀਆਂ ਜ਼ਮੀਨੀ ਖ਼ਬਰਾਂ ਤੇ ਪ੍ਰਸ਼ਾਸਨਿਕ ਅੱਪਡੇਟ</span>
     </div>
 
     <div class="grid-structure">
         <div>
             <div class="news-article-card">
-                <div class="article-media-box">
-                    <span class="article-tag">GURU HAR SAHAI NEWS</span>
-                    <img src="ghs1_news.jpg" alt="ਗੁਰੂਹਰਸਹਾਏ ਖ਼ਬਰ" onerror="this.src='jmshedpurnewscng.jpg'">
+                <div class="glass-media-container">
+                    <span class="article-tag">GURU HAR SAHAI UPDATE</span>
+                    <div class="glass-media-backdrop" style="background-image: url('ghs1_news.jpg');"></div>
+                    <div class="glass-overlay-filter"></div>
+                    <img src="ghs1_news.jpg" alt="ਗੁਰੂਹਰਸਹਾਏ ਖ਼ਬਰ" class="glass-foreground-img">
                 </div>
                 <div class="article-body">
                     <h2 class="article-title">📍 ਗੁਰੂਹਰਸਹਾਏ ਇਲਾਕੇ ਦੀਆਂ ਸਮੱਸਿਆਵਾਂ ਅਤੇ ਤਾਜ਼ਾ ਗਤੀਵਿਧੀਆਂ 'ਤੇ ਵਿਸ਼ੇਸ਼ ਨਜ਼ਰ</h2>
                     <p class="article-text"><strong>ਗੁਰੂਹਰਸਹਾਏ (Punjab Live Now):</strong> ਗੁਰੂਹਰਸਹਾਏ ਸ਼ਹਿਰ, ਮੰਡੀ ਅਤੇ ਆਸ-ਪਾਸ ਦੇ ਪਿੰਡਾਂ ਦੀ ਹਰ ਅਹਿਮ ਖ਼ਬਰ, ਲੋਕਾਂ ਦੇ ਮਸਲੇ ਅਤੇ ਪ੍ਰਸ਼ਾਸਨਿਕ ਕਾਰਵਾਈਆਂ ਸਭ ਤੋਂ ਪਹਿਲਾਂ ਦੇਖਣ ਲਈ PLN ਨਾਲ ਜੁੜੇ ਰਹੋ। ਜੇਕਰ ਤੁਹਾਡੇ ਇਲਾਕੇ ਵਿੱਚ ਕੋਈ ਜਨਤਕ ਸਮੱਸਿਆ ਹੈ ਤਾਂ ਸਾਡੀ ਟੀਮ ਨਾਲ ਸਾਂਝੀ ਕਰੋ।</p>
-                    
                     <div class="article-action-row">
-                        <span style="font-size:0.88rem; color:#64748b; font-weight:700;">📍 ਗੁਰੂਹਰਸਹਾਏ ਹਲਕਾ</span>
+                        <span style="font-size:0.88rem; color:#64748b; font-weight:700;">📍 ਗੁਰੂਹਰਸਹਾਏ</span>
                         <a href="https://api.whatsapp.com/send?text=ਗੁਰੂਹਰਸਹਾਏ ਖ਼ਬਰਾਂ: https://ghsvlogger-website.github.io/punjab-live-now/guruharsahai.html" target="_blank" class="action-link action-link-wa">
                             📲 WhatsApp 'ਤੇ ਸ਼ੇਅਰ ਕਰੋ
                         </a>
@@ -310,20 +312,56 @@
                 <a href="videos.html" class="sidebar-btn">🎥 ਵੀਡੀਓਜ਼ ਸੈਕਸ਼ਨ ਖੋਲ੍ਹੋ ➔</a>
             </div>
 
-            <div class="sidebar-card" style="background:#fffcf0; border: 1.5px dashed #fcd34d;">
-                <span class="ad-label" style="text-align:left; color:#b45309;">ROYAL WEDDING COLLECTION</span>
-                <h4 style="font-family:'Baloo Paaji 2',sans-serif; font-size:1.15rem; color:#78350f; margin-top:4px;">💎 ਸ਼ਾਹੀ ਜਿਊਲਰਜ਼ ਤੇ ਬ੍ਰਾਈਡਲ ਹੱਬ</h4>
-                <p style="font-size:0.86rem; color:#92400e; margin:6px 0 10px 0;">100% ਹਾਲਮਾਰਕ ਗੋਲਡ ਅਤੇ ਲਗਜ਼ਰੀ ਬ੍ਰਾਈਡਲ ਲਹਿੰਗਿਆਂ ਦੀ ਵਿਸ਼ਾਲ ਕੁਲੈਕਸ਼ਨ।</p>
-                <span style="font-size:0.82rem; color:#b45309; font-weight:700;">📍 ਪੰਜਾਬ ਭਰ 'ਚ ਸ਼ੋਅਰੂਮ</span>
-            </div>
-
             <div class="sidebar-card" style="background:#ffffff; text-align:center; border: 2px dashed var(--brand-red);">
-                <span class="ad-label" style="text-align:center; color:var(--brand-red);">ADVERTISE WITH PLN</span>
-                <h4 style="font-family:'Baloo Paaji 2',sans-serif; font-size:1.25rem; color:var(--navy-dark); margin-top:4px;">📢 ਇਸ਼ਤਿਹਾਰ ਬੁੱਕ ਕਰੋ</h4>
-                <p style="font-size:0.86rem; color:var(--text-meta); margin:6px 0 14px 0;">ਆਪਣੇ ਕਾਰੋਬਾਰ ਨੂੰ ਪੰਜਾਬ ਦੇ ਲੱਖਾਂ ਸਰੋਤਿਆਂ ਤੱਕ ਪਹੁੰਚਾਓ।</p>
+                <h4 style="font-family:'Baloo Paaji 2',sans-serif; font-size:1.25rem; color:var(--navy-dark); margin-top:4px;">📢 ਗੁਰੂਹਰਸਹਾਏ ਤੋਂ ਇਸ਼ਤਿਹਾਰ ਦਿਓ</h4>
+                <p style="font-size:0.86rem; color:var(--text-meta); margin:6px 0 14px 0;">ਆਪਣੀ ਦੁਕਾਨ ਜਾਂ ਕਾਰੋਬਾਰ ਦਾ ਪ੍ਰਚਾਰ ਪੂਰੇ ਹਲਕੇ ਵਿੱਚ ਕਰੋ।</p>
                 <a href="advertise.html" class="sidebar-btn" style="background:var(--navy-dark); margin-top:0;">ਇਸ਼ਤਿਹਾਰ ਬੁੱਕ ਕਰੋ ➔</a>
             </div>
         </div>
+    </div>
+</div>
+
+<!-- POPUP MODAL -->
+<div class="modal-overlay" id="reporterModal" onclick="closeReporterOnOutside(event)">
+    <div class="modal-box">
+        <button type="button" class="modal-close" onclick="closeReporterForm()">&times;</button>
+        <div class="modal-header">
+            <h3>🎤 Punjab Live Now ਰਿਪੋਰਟਰ ਬਣੋ</h3>
+            <p>ਆਪਣੇ ਸ਼ਹਿਰ ਜਾਂ ਪਿੰਡ ਦੀ ਆਵਾਜ਼ ਬਣਨ ਲਈ ਇਹ ਫਾਰਮ ਭਰੋ:</p>
+        </div>
+        
+        <form onsubmit="handleReporterSubmit(event)">
+            <div class="form-group">
+                <label>ਪੂਰਾ ਨਾਮ (Full Name)</label>
+                <input type="text" id="mRepName" required placeholder="ਆਪਣਾ ਪੂਰਾ ਨਾਮ ਲਿਖੋ">
+            </div>
+            <div class="form-group">
+                <label>ਮੋਬਾਈਲ ਨੰਬਰ (WhatsApp Number)</label>
+                <input type="tel" id="mRepPhone" required placeholder="10 ਅੰਕਾਂ ਦਾ ਮੋਬਾਈਲ ਨੰਬਰ">
+            </div>
+            <div class="form-group">
+                <label>ਜ਼ਿਲ੍ਹਾ (District)</label>
+                <input type="text" id="mRepDistrict" required placeholder="ਜਿਵੇਂ: ਫ਼ਿਰੋਜ਼ਪੁਰ, ਲੁਧਿਆਣਾ, ਅੰਮ੍ਰਿਤਸਰ...">
+            </div>
+            <div class="form-group">
+                <label>ਤਹਿਸੀਲ / ਕਸਬਾ / ਪਿੰਡ (City / Town)</label>
+                <input type="text" id="mRepCity" required placeholder="ਜਿਵੇਂ: ਗੁਰੂਹਰਸਹਾਏ, ਮਮਦੋਟ, ਜ਼ੀਰਾ...">
+            </div>
+            <div class="form-group">
+                <label>ਤਜਰਬਾ (Media / Reporting Experience)</label>
+                <select id="mRepExp">
+                    <option value="ਨਵਾਂ ਸਿੱਖਿਆਰਥੀ (Fresher / Passionate)">ਨਵਾਂ ਸਿੱਖਿਆਰਥੀ (Fresher / Passionate)</option>
+                    <option value="1 ਤੋਂ 2 ਸਾਲ ਦਾ ਤਜਰਬਾ">1 ਤੋਂ 2 ਸਾਲ ਦਾ ਤਜਰਬਾ</option>
+                    <option value="3 ਸਾਲ ਤੋਂ ਵੱਧ ਦਾ ਤਜਰਬਾ">3 ਸਾਲ ਤੋਂ ਵੱਧ ਦਾ ਤਜਰਬਾ</option>
+                    <option value="ਸੋਸ਼ਲ ਮੀਡੀਆ ਬਲਾਗਰ / ਕੰਟੈਂਟ ਕ੍ਰਿਏਟਰ">ਸੋਸ਼ਲ ਮੀਡੀਆ ਬਲਾਗਰ / ਕੰਟੈਂਟ ਕ੍ਰਿਏਟਰ</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>ਸੰਖੇਪ ਜਾਣਕਾਰੀ</label>
+                <textarea id="mRepAbout" rows="3" placeholder="ਆਪਣੀ ਪੜ੍ਹਾਈ ਜਾਂ ਸ਼ੌਕ ਬਾਰੇ ਸੰਖੇਪ ਜਾਣਕਾਰੀ ਦਿਓ..."></textarea>
+            </div>
+            <button type="submit" class="btn-submit-app">✅ ਅਰਜ਼ੀ ਜਮ੍ਹਾਂ ਕਰੋ</button>
+        </form>
     </div>
 </div>
 
@@ -334,9 +372,34 @@
         <a href="guruharsahai.html">ਗੁਰੂਹਰਸਹਾਏ</a>
         <a href="videos.html">ਵੀਡੀਓਜ਼</a>
         <a href="advertise.html">ਇਸ਼ਤਿਹਾਰ</a>
+        <a href="javascript:void(0)" onclick="openReporterForm()">ਰਿਪੋਰਟਰ ਬਣੋ</a>
     </div>
     <p style="font-size: 0.88rem; color: #94a3b8; margin-top: 10px;">&copy; 2026 Punjab Live Now (PLN) Media Network. All Rights Reserved.</p>
 </footer>
+
+<script>
+    function openReporterForm() {
+        const modal = document.getElementById('reporterModal');
+        if (modal) { modal.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+    }
+    function closeReporterForm() {
+        const modal = document.getElementById('reporterModal');
+        if (modal) { modal.style.display = 'none'; document.body.style.overflow = 'auto'; }
+    }
+    function closeReporterOnOutside(e) { if (e.target.id === 'reporterModal') closeReporterForm(); }
+    function handleReporterSubmit(e) {
+        e.preventDefault();
+        const name = document.getElementById('mRepName').value;
+        const phone = document.getElementById('mRepPhone').value;
+        const dist = document.getElementById('mRepDistrict').value;
+        const city = document.getElementById('mRepCity').value;
+        const exp = document.getElementById('mRepExp').value;
+        const about = document.getElementById('mRepAbout').value;
+        const text = `*🎤 ਨਵੀਂ ਰਿਪੋਰਟਰ ਅਰਜ਼ੀ (PLN Portal)*%0A%0A*ਨਾਮ:* ${name}%0A*ਫ਼ੋਨ:* ${phone}%0A*ਜ਼ਿਲ੍ਹਾ:* ${dist}%0A*ਕਸਬਾ/ਸ਼ਹਿਰ:* ${city}%0A*ਤਜਰਬਾ:* ${exp}%0A*ਵੇਰਵਾ:* ${about}`;
+        window.open(`https://api.whatsapp.com/send?phone=919876543210&text=${text}`, '_blank');
+        closeReporterForm();
+    }
+</script>
 
 </body>
 </html>
