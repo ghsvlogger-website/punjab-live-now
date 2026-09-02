@@ -15,53 +15,326 @@
             --brand-red-dark: #780000;
             --navy-dark: #003049;
             --navy-deep: #031926;
+            --gold-accent: #fdf0d5;
             --bg-canvas: #f8fafc;
+            --card-surface: #ffffff;
+            --text-heading: #031926;
+            --text-body: #1e293b;
+            --text-meta: #64748b;
             --border-light: #e2e8f0;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+            --shadow-md: 0 4px 16px rgba(15,23,42,0.08);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: var(--bg-canvas); color: var(--navy-deep); font-family: 'Noto Sans Gurmukhi', 'Plus Jakarta Sans', -apple-system, sans-serif; line-height: 1.65; }
+        body { 
+            background-color: var(--bg-canvas); 
+            color: var(--text-heading); 
+            font-family: 'Noto Sans Gurmukhi', 'Plus Jakarta Sans', -apple-system, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.65;
+        }
 
-        header { background: #ffffff; border-bottom: 2px solid var(--border-light); padding: 16px 0; }
-        .header-inner { max-width: 1240px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; justify-content: space-between; }
-        .brand-link { display: flex; align-items: center; gap: 15px; text-decoration: none; color: inherit; }
-        .brand-logo { width: 60px; height: 60px; border-radius: 50%; border: 2px solid var(--brand-red); }
-        .brand-text h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2rem; font-weight: 800; color: var(--brand-red); }
+        a, button {
+            cursor: pointer !important;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        /* 1. Header Top Strip */
+        .top-bar {
+            background: var(--navy-deep);
+            color: #cbd5e1;
+            font-size: 0.82rem;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .top-bar-inner {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .meta-cluster {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .live-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--brand-red);
+            color: #ffffff;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-weight: 800;
+            font-size: 0.75rem;
+        }
+        .live-dot {
+            width: 6px;
+            height: 6px;
+            background: #ffffff;
+            border-radius: 50%;
+        }
+
+        .loc-tag { color: #fdf0d5; font-weight: 700; }
+        .time-tag { color: #cbd5e1; font-weight: 500; }
+
+        .top-social-bar a {
+            color: #cbd5e1;
+            margin-left: 14px;
+            font-weight: 600;
+        }
+        .top-social-bar a:hover { color: #ffffff; }
+
+        /* 2. Main Broadcast Header */
+        header {
+            background: #ffffff;
+            border-bottom: 2px solid var(--border-light);
+            padding: 16px 0;
+        }
+        .header-inner {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .brand-link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: inherit;
+        }
+        
+        /* 100% Guaranteed Perfect Circle Logo */
+        .brand-logo-wrapper {
+            width: 68px;
+            height: 68px;
+            min-width: 68px;
+            min-height: 68px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2.5px solid var(--brand-red);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .brand-logo {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .brand-text h1 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 2.3rem;
+            font-weight: 800;
+            line-height: 1;
+            color: var(--brand-red);
+            letter-spacing: -0.5px;
+            text-transform: uppercase;
+        }
         .brand-text h1 span { color: var(--navy-dark); }
+        .brand-text p {
+            font-size: 0.9rem;
+            color: var(--text-meta);
+            font-weight: 600;
+            margin-top: 3px;
+        }
 
-        nav { background: var(--navy-dark); position: sticky; top: 0; z-index: 1000; border-bottom: 3px solid var(--brand-red); }
-        .nav-inner { max-width: 1240px; margin: 0 auto; display: flex; }
-        .nav-inner a { font-family: 'Noto Sans Gurmukhi', sans-serif; color: #f8fafc; text-decoration: none; padding: 13px 22px; font-size: 1.02rem; font-weight: 700; border-right: 1px solid rgba(255,255,255,0.06); }
-        .nav-inner a:hover, .nav-inner a.active { background: var(--brand-red); color: #fff; }
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .hd-btn {
+            font-weight: 700;
+            font-size: 0.88rem;
+            padding: 8px 16px;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .btn-rep { background: #f8fafc; color: var(--navy-dark); border: 1px solid var(--border-light); }
+        .btn-ad-give { background: #fff1f2; color: var(--brand-red); border: 1px solid #fecdd3; }
+        .btn-live-stream { background: var(--brand-red); color: #fff; }
+        .btn-wa-contact { background: #16a34a; color: #fff; }
 
-        .container { max-width: 800px; margin: 35px auto; padding: 0 16px; }
-        .form-card { background: #fff; border-radius: 10px; border: 1px solid var(--border-light); padding: 30px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
-        .form-card h2 { font-family: 'Baloo Paaji 2', sans-serif; font-size: 1.8rem; color: var(--navy-deep); margin-bottom: 10px; }
-        .form-card p { font-size: 0.95rem; color: #64748b; margin-bottom: 24px; }
+        /* 3. Navigation Bar */
+        nav {
+            background: var(--navy-dark);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid var(--brand-red);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        }
+        .nav-inner {
+            max-width: 1240px;
+            margin: 0 auto;
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+            scrollbar-width: none;
+        }
+        .nav-inner::-webkit-scrollbar { display: none; }
+        .nav-inner a {
+            color: #f8fafc;
+            padding: 13px 22px;
+            font-size: 1.02rem;
+            font-weight: 700;
+            border-right: 1px solid rgba(255,255,255,0.06);
+            display: inline-block;
+        }
+        .nav-inner a:hover, .nav-inner a.active {
+            background: var(--brand-red);
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 35px auto;
+            padding: 0 16px;
+        }
+
+        .form-card {
+            background: #fff;
+            border-radius: 10px;
+            border: 1px solid var(--border-light);
+            padding: 32px;
+            box-shadow: var(--shadow-sm);
+        }
+        .form-card h2 {
+            font-family: 'Baloo Paaji 2', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--navy-deep);
+            margin-bottom: 8px;
+        }
+        .form-card p {
+            font-size: 0.95rem;
+            color: var(--text-meta);
+            margin-bottom: 24px;
+        }
 
         .input-group { margin-bottom: 18px; }
-        .input-group label { display: block; font-weight: 700; font-size: 0.92rem; margin-bottom: 6px; }
+        .input-group label {
+            display: block;
+            font-weight: 700;
+            font-size: 0.92rem;
+            color: var(--navy-deep);
+            margin-bottom: 6px;
+        }
         .input-group input, .input-group textarea, .input-group select {
-            width: 100%; padding: 12px; border: 1px solid var(--border-light); border-radius: 6px; font-family: inherit; font-size: 0.95rem;
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-light);
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            background: #f8fafc;
         }
         .submit-btn {
-            background: #25D366; color: #fff; border: 0; padding: 14px 24px; border-radius: 6px; font-family: 'Noto Sans Gurmukhi', sans-serif; font-weight: 800; font-size: 1.05rem; cursor: pointer; width: 100%; display: flex; justify-content: center; align-items: center; gap: 8px;
+            background: #16a34a;
+            color: #fff;
+            border: 0;
+            padding: 14px 24px;
+            border-radius: 6px;
+            font-family: inherit;
+            font-weight: 800;
+            font-size: 1.05rem;
+            cursor: pointer;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
         }
-        .submit-btn:hover { background: #1ebc57; }
+        .submit-btn:hover { background: #15803d; }
 
-        footer { background: #031926; color: #94a3b8; text-align: center; padding: 35px 16px; margin-top: 60px; border-top: 4px solid var(--brand-red); }
+        footer {
+            background: #031926;
+            color: #94a3b8;
+            text-align: center;
+            padding: 40px 16px;
+            margin-top: 60px;
+            border-top: 4px solid var(--brand-red);
+        }
+        .footer-nav { margin-bottom: 16px; }
+        .footer-nav a {
+            color: #f1f5f9;
+            margin: 0 14px;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 900px) {
+            .brand-text h1 { font-size: 2rem; }
+            .header-actions { width: 100%; justify-content: center; }
+            .top-bar-inner { justify-content: center; text-align: center; }
+        }
     </style>
 </head>
 <body>
 
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <div class="meta-cluster">
+            <span class="live-tag"><span class="live-dot"></span> LIVE 24x7</span>
+            <span class="loc-tag">📍 ਗੁਰੂ ਹਰਸਹਾਏ (ਪੰਜਾਬ)</span>
+            <span class="time-tag">ਬੁੱਧਵਾਰ, 2 ਸਤੰਬਰ 2026</span>
+        </div>
+        <div class="top-social-bar">
+            Follow: 
+            <a href="https://www.youtube.com/@punjablivenow" target="_blank">YouTube</a>
+            <a href="https://www.instagram.com/punjablivenow" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/profile.php?id=61562360634592" target="_blank">Facebook</a>
+        </div>
+    </div>
+</div>
+
 <header>
     <div class="header-inner">
         <a href="index.html" class="brand-link">
-            <img src="channel_logo1.png" alt="PLN Logo" class="brand-logo" onerror="this.style.display='none'">
+            <div class="brand-logo-wrapper">
+                <img src="channel_logo1.png" alt="PLN Logo" class="brand-logo">
+            </div>
             <div class="brand-text">
                 <h1>PUNJAB <span>LIVE NOW</span></h1>
+                <p>ਸਭ ਤੋਂ ਪਹਿਲਾਂ, ਸਭ ਤੋਂ ਸਟੀਕ | Voice of Punjab</p>
             </div>
         </a>
+        
+        <div class="header-actions">
+            <a href="https://api.whatsapp.com/send?text=ਸਤਿ ਸ਼੍ਰੀ ਅਕਾਲ ਜੀ, ਮੈਂ ਰਿਪੋਰਟਰ ਬਣਨ ਲਈ ਸੰਪਰਕ ਕਰ ਰਿਹਾ ਹਾਂ।" target="_blank" class="hd-btn btn-rep">
+                🎤 ਰਿਪੋਰਟਰ ਬਣੋ
+            </a>
+            <a href="advertise.html" class="hd-btn btn-ad-give">
+                📢 ਇਸ਼ਤਿਹਾਰ ਦਿਓ
+            </a>
+            <a href="https://www.youtube.com/@punjablivenow" target="_blank" class="hd-btn btn-live-stream">
+                ▶ LIVE TV
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=919876543210" target="_blank" class="hd-btn btn-wa-contact">
+                💬 ਹੈਲਪਲਾਈਨ
+            </a>
+        </div>
     </div>
 </header>
 
@@ -77,12 +350,12 @@
 
 <div class="container">
     <div class="form-card">
-        <h2>📢 ਆਪਣਾ ਇਸ਼ਤਿਹਾਰ / ਖ਼ਬਰ ਦਰਜ ਕਰੋ</h2>
-        <p>ਆਪਣੇ ਕਾਰੋਬਾਰ ਨੂੰ ਪੰਜਾਬ ਦੇ ਲੱਖਾਂ ਲੋਕਾਂ ਤੱਕ ਪਹੁੰਚਾਉਣ ਲਈ ਵੇਰਵੇ ਭਰੋ, ਸਾਡੀ ਟੀਮ ਤੁਹਾਡੇ ਨਾਲ ਤੁਰੰਤ ਰਾਬਤਾ ਕਾਇਮ ਕਰੇਗੀ।</p>
+        <h2>📢 ਆਪਣਾ ਇਸ਼ਤਿਹਾਰ / ਖ਼ਬਰ ਬੁੱਕ ਕਰੋ</h2>
+        <p>ਆਪਣੇ ਕਾਰੋਬਾਰ ਨੂੰ ਪੰਜਾਬ ਦੇ ਲੱਖਾਂ ਸਰੋਤਿਆਂ ਤੱਕ ਪਹੁੰਚਾਉਣ ਲਈ ਵੇਰਵੇ ਦਰਜ ਕਰੋ, ਸਾਡੀ ਟੀਮ ਤੁਹਾਡੇ ਨਾਲ ਤੁਰੰਤ ਰਾਬਤਾ ਕਰੇਗੀ।</p>
         
         <form onsubmit="sendToWhatsApp(event)">
             <div class="input-group">
-                <label>ਤੁਹਾਡਾ ਨਾਮ / ਕਾਰੋਬਾਰ ਦਾ ਨਾਮ</label>
+                <label>ਤੁਹਾਡਾ ਨਾਮ / ਸੰਸਥਾ ਦਾ ਨਾਮ</label>
                 <input type="text" id="advName" required placeholder="ਉਦਾਹਰਨ: ਰੌਇਲ ਕਲੌਥ ਹਾਊਸ">
             </div>
 
@@ -92,29 +365,36 @@
             </div>
 
             <div class="input-group">
-                <label>ਇਸ਼ਤਿਹਾਰ ਦੀ ਕਿਸਮ (Type of Ad)</label>
+                <label>ਇਸ਼ਤਿਹਾਰ ਦੀ ਕਿਸਮ (Placement)</label>
                 <select id="advType">
                     <option value="ਮੁੱਖ ਪੰਨਾ ਟੌਪ ਬੈਨਰ (Top Banner)">ਮੁੱਖ ਪੰਨਾ ਟੌਪ ਬੈਨਰ (Top Banner)</option>
-                    <option value="ਸਾਈਡਬਾਰ ਬੈਨਰ (Sidebar Ad)">ਸਾਈਡਬਾਰ ਬੈਨਰ (Sidebar Ad)</option>
-                    <option value="ਖ਼ਬਰਾਂ ਦੇ ਵਿਚਕਾਰਲਾ ਬੈਨਰ (In-Article Ad)">ਖ਼ਬਰਾਂ ਦੇ ਵਿਚਕਾਰਲਾ ਬੈਨਰ (In-Article Ad)</option>
+                    <option value="ਸਾਈਡਬਾਰ ਸਪਾਂਸਰ ਬਾਕਸ (Sidebar Ad)">ਸਾਈਡਬਾਰ ਸਪਾਂਸਰ ਬਾਕਸ (Sidebar Ad)</option>
+                    <option value="ਖ਼ਬਰਾਂ ਦੇ ਵਿਚਕਾਰਲਾ ਬੈਨਰ (In-Article Banner)">ਖ਼ਬਰਾਂ ਦੇ ਵਿਚਕਾਰਲਾ ਬੈਨਰ (In-Article Banner)</option>
                     <option value="ਸੋਸ਼ਲ ਮੀਡੀਆ / ਵੀਡੀਓ ਪ੍ਰਮੋਸ਼ਨ">ਸੋਸ਼ਲ ਮੀਡੀਆ / ਵੀਡੀਓ ਪ੍ਰਮੋਸ਼ਨ</option>
                 </select>
             </div>
 
             <div class="input-group">
-                <label>ਸੰਦੇਸ਼ / ਇਸ਼ਤਿਹਾਰ ਦਾ ਵੇਰਵਾ</label>
+                <label>ਇਸ਼ਤਿਹਾਰ ਦਾ ਸੰਖੇਪ ਵੇਰਵਾ</label>
                 <textarea id="advMessage" rows="4" placeholder="ਇਸ਼ਤਿਹਾਰ ਸੰਬੰਧੀ ਜ਼ਰੂਰੀ ਜਾਣਕਾਰੀ ਲਿਖੋ..."></textarea>
             </div>
 
             <button type="submit" class="submit-btn">
-                💬 WhatsApp 'ਤੇ ਜਾਣਕਾਰੀ ਭੇਜੋ
+                💬 WhatsApp ਰਾਹੀਂ ਬੁਕਿੰਗ ਭੇਜੋ
             </button>
         </form>
     </div>
 </div>
 
 <footer>
-    <p>&copy; 2026 Punjab Live Now (PLN) Media Network. All Rights Reserved.</p>
+    <div class="footer-nav">
+        <a href="index.html">ਮੁੱਖ ਪੰਨਾ</a>
+        <a href="punjab.html">ਪੰਜਾਬ</a>
+        <a href="guruharsahai.html">ਗੁਰੂਹਰਸਹਾਏ</a>
+        <a href="videos.html">ਵੀਡੀਓਜ਼</a>
+        <a href="advertise.html">ਇਸ਼ਤਿਹਾਰ</a>
+    </div>
+    <p style="font-size: 0.88rem; color: #94a3b8; margin-top: 10px;">&copy; 2026 Punjab Live Now (PLN) Media Network. All Rights Reserved.</p>
 </footer>
 
 <script>
@@ -125,7 +405,7 @@ function sendToWhatsApp(e) {
     const type = document.getElementById('advType').value;
     const msg = document.getElementById('advMessage').value;
 
-    const text = `*ਨਵਾਂ ਇਸ਼ਤਿਹਾਰ ਪੁੱਛਗਿੱਛ (PLN)*%0A%0A*ਨਾਮ/ਫਰਮ:* ${name}%0A*ਫ਼ੋਨ:* ${phone}%0A*ਕਿਸਮ:* ${type}%0A*ਵੇਰਵਾ:* ${msg}`;
+    const text = `*ਨਵਾਂ ਇਸ਼ਤਿਹਾਰ ਬੁਕਿੰਗ (PLN)*%0A%0A*ਨਾਮ:* ${name}%0A*ਫ਼ੋਨ:* ${phone}%0A*ਕਿਸਮ:* ${type}%0A*ਵੇਰਵਾ:* ${msg}`;
     window.open(`https://api.whatsapp.com/send?phone=919876543210&text=${text}`, '_blank');
 }
 </script>
