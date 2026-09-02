@@ -24,6 +24,7 @@
             --border-light: #e2e8f0;
             --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
             --shadow-md: 0 4px 16px rgba(15,23,42,0.08);
+            --font-scale: 1rem;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -55,7 +56,7 @@
             flex-wrap: wrap;
             gap: 10px;
         }
-        .meta-cluster { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+        .meta-cluster { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
         .live-tag {
             display: inline-flex;
             align-items: center;
@@ -72,7 +73,20 @@
 
         .loc-tag { color: #fdf0d5; font-weight: 700; }
         
-        /* 👥 VISITOR COUNT BADGE */
+        /* NEW: Live Weather Pill */
+        .weather-pill {
+            background: rgba(255,255,255,0.08);
+            color: #f1f5f9;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.78rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Visitor Count Badge */
         .visitor-pill {
             background: rgba(253, 240, 213, 0.15);
             color: #fdf0d5;
@@ -94,13 +108,24 @@
         .time-tag { 
             color: #f1f5f9; 
             font-weight: 700; 
-            font-family: 'Plus Jakarta Sans', 'Noto Sans Gurmukhi', monospace;
+            font-family: 'Plus Jakarta Sans', monospace;
             background: rgba(255,255,255,0.08);
             padding: 2px 8px;
             border-radius: 4px;
         }
-        .top-social-bar a { color: #cbd5e1; margin-left: 14px; font-weight: 600; }
-        .top-social-bar a:hover { color: #ffffff; }
+        
+        /* Utility Controls (Font resize) */
+        .top-tools { display: flex; align-items: center; gap: 8px; }
+        .font-tool-btn {
+            background: rgba(255,255,255,0.12);
+            color: #fff;
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 2px 7px;
+            border-radius: 3px;
+            font-size: 0.75rem;
+            font-weight: 800;
+        }
+        .font-tool-btn:hover { background: var(--brand-red); }
 
         /* 2. Facebook Cover Header */
         .fb-header-cover {
@@ -185,18 +210,37 @@
         .btn-wa-contact { background: #16a34a; color: #fff; font-weight: 800; }
         .btn-wa-contact:hover { background: #15803d; transform: translateY(-1px); }
 
-        /* 3. Navigation */
+        /* 3. Navigation with Search Engine */
         nav {
             background: var(--navy-dark); position: sticky; top: 0; z-index: 1000;
             border-bottom: 3px solid var(--brand-red); box-shadow: 0 4px 12px rgba(0,0,0,0.12);
         }
-        .nav-inner { max-width: 1240px; margin: 0 auto; display: flex; overflow-x: auto; white-space: nowrap; scrollbar-width: none; }
+        .nav-wrapper {
+            max-width: 1240px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;
+        }
+        .nav-inner { display: flex; overflow-x: auto; white-space: nowrap; scrollbar-width: none; }
         .nav-inner::-webkit-scrollbar { display: none; }
         .nav-inner a {
-            color: #f8fafc; padding: 13px 22px; font-size: 1.02rem; font-weight: 700;
+            color: #f8fafc; padding: 13px 20px; font-size: 1.02rem; font-weight: 700;
             border-right: 1px solid rgba(255,255,255,0.06); display: inline-block;
         }
         .nav-inner a:hover, .nav-inner a.active { background: var(--brand-red); color: #ffffff; }
+
+        /* NEW: Live Instant Search Input */
+        .search-container { padding: 0 14px; }
+        .news-search-box {
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.25);
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            outline: none;
+            width: 170px;
+            transition: all 0.25s ease;
+        }
+        .news-search-box::placeholder { color: #cbd5e1; }
+        .news-search-box:focus { width: 230px; background: #ffffff; color: var(--navy-deep); }
 
         .container { max-width: 1240px; margin: 24px auto; padding: 0 16px; }
 
@@ -225,9 +269,9 @@
         .news-article-card {
             background: var(--card-surface); border: 1px solid var(--border-light);
             border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-sm); margin-bottom: 26px;
+            transition: transform 0.2s ease;
         }
 
-        /* 100% Fit Media Box */
         .glass-media-container {
             position: relative;
             width: 100%;
@@ -284,7 +328,12 @@
             font-family: 'Baloo Paaji 2', sans-serif; font-size: 1.7rem; font-weight: 800;
             color: var(--navy-deep); line-height: 1.35; margin-bottom: 12px;
         }
-        .article-text { font-size: 0.98rem; line-height: 1.75; color: var(--text-body); margin-bottom: 16px; }
+        .article-text { 
+            font-size: var(--font-scale); 
+            line-height: 1.75; 
+            color: var(--text-body); 
+            margin-bottom: 16px; 
+        }
 
         .reward-alert-box {
             background: #fefce8; border: 1.5px dashed #ca8a04; border-radius: 6px;
@@ -316,7 +365,27 @@
             padding: 11px; border-radius: 4px; font-weight: 700; font-size: 0.92rem; margin-top: 14px;
         }
 
-        /* Popups / Modals */
+        /* NEW: Floating Quick WhatsApp Contact Action */
+        .floating-quick-btn {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #16a34a;
+            color: #ffffff;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.7rem;
+            box-shadow: 0 6px 20px rgba(22, 163, 74, 0.45);
+            z-index: 999;
+            transition: transform 0.25s ease;
+        }
+        .floating-quick-btn:hover { transform: scale(1.1); }
+
+        /* Modals */
         .modal-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(3, 25, 38, 0.85); backdrop-filter: blur(10px);
@@ -375,33 +444,34 @@
             .header-actions { width: 100%; justify-content: center; }
             .top-bar-inner { justify-content: center; text-align: center; }
             .punjab-map-watermark { display: none; }
+            .search-container { width: 100%; padding: 8px 16px; }
+            .news-search-box { width: 100%; }
         }
     </style>
 </head>
 <body>
 
-<!-- TOP STRIP WITH LIVE VISITOR COUNTER & REAL-TIME CLOCK -->
 <div class="top-bar">
     <div class="top-bar-inner">
         <div class="meta-cluster">
             <span class="live-tag"><span class="live-dot"></span> LIVE 24x7</span>
-            <span class="loc-tag">📍 ਗੁਰੂ ਹਰਸਹਾਏ (ਪੰਜਾਬ)</span>
-            <!-- 👥 ਕੁੱਲ ਪਾਠਕ / ਵਿਜ਼ਿਟਰ ਕਾਊਂਟਰ -->
+            <span class="loc-tag">📍 ਗੁਰੂ ਹਰਸਹਾਏ</span>
+            <span class="weather-pill" id="weatherWidget">⛅ 31°C ਪੰਜਾਬ</span>
             <span class="visitor-pill">
                 👥 ਕੁੱਲ ਪਾਠਕ: <span class="visitor-count-number" id="visitorCounter">1,24,682</span>
             </span>
             <span class="time-tag" id="liveDateTime">ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ...</span>
         </div>
-        <div class="top-social-bar">
-            Follow: 
-            <a href="https://www.youtube.com/@punjablivenow" target="_blank">YouTube</a>
-            <a href="https://www.instagram.com/punjablivenow" target="_blank">Instagram</a>
-            <a href="https://www.facebook.com/profile.php?id=61562360634592" target="_blank">Facebook</a>
+        <div class="top-tools">
+            <span style="font-size:0.75rem; color:#94a3b8;">ਫ਼ੌਂਟ:</span>
+            <button type="button" onclick="adjustFontSize(-1)" class="font-tool-btn" title="ਛੋਟਾ ਅੱਖਰ">A-</button>
+            <button type="button" onclick="adjustFontSize(1)" class="font-tool-btn" title="ਵੱਡਾ ਅੱਖਰ">A+</button>
+            <a href="https://www.youtube.com/@punjablivenow" target="_blank" style="color:#cbd5e1; margin-left:8px; font-weight:600;">YouTube</a>
+            <a href="https://www.instagram.com/punjablivenow" target="_blank" style="color:#cbd5e1; margin-left:8px; font-weight:600;">Instagram</a>
         </div>
     </div>
 </div>
 
-<!-- COVER HEADER -->
 <header class="fb-header-cover">
     <div class="punjab-map-watermark"></div>
     <div class="header-cover-inner">
@@ -432,15 +502,19 @@
     </div>
 </header>
 
-<!-- NAVIGATION BAR -->
 <nav>
-    <div class="nav-inner">
-        <a href="index.html" class="active">ਮੁੱਖ ਪੰਨਾ</a>
-        <a href="punjab.html">ਪੰਜਾਬ</a>
-        <a href="guruharsahai.html">ਗੁਰੂਹਰਸਹਾਏ</a>
-        <a href="videos.html">ਵੀਡੀਓਜ਼</a>
-        <a href="advertise.html">ਇਸ਼ਤਿਹਾਰ ਦਿਓ</a>
-        <a href="javascript:void(0)" onclick="openReporterForm()">ਰਿਪੋਰਟਰ ਬਣੋ</a>
+    <div class="nav-wrapper">
+        <div class="nav-inner">
+            <a href="index.html" class="active">ਮੁੱਖ ਪੰਨਾ</a>
+            <a href="punjab.html">ਪੰਜਾਬ</a>
+            <a href="guruharsahai.html">ਗੁਰੂਹਰਸਹਾਏ</a>
+            <a href="videos.html">ਵੀਡੀਓਜ਼</a>
+            <a href="advertise.html">ਇਸ਼ਤਿਹਾਰ ਦਿਓ</a>
+            <a href="javascript:void(0)" onclick="openReporterForm()">ਰਿਪੋਰਟਰ ਬਣੋ</a>
+        </div>
+        <div class="search-container">
+            <input type="text" id="newsSearchInput" class="news-search-box" placeholder="🔍 ਖ਼ਬਰ ਲੱਭੋ..." onkeyup="filterLiveNews()">
+        </div>
     </div>
 </nav>
 
@@ -465,9 +539,8 @@
     </div>
 
     <div class="grid-structure">
-        <div>
-            <!-- ਰਾਹੁਲ ਘਾਰੂ ਗੁੰਮਸ਼ੁਦਾ ਰਿਪੋਰਟ -->
-            <div class="news-article-card" style="border: 2px solid var(--brand-red);">
+        <div id="articlesList">
+            <div class="news-article-card filter-card" style="border: 2px solid var(--brand-red);">
                 <div class="glass-media-container">
                     <span class="article-tag">🚨 ਗੁੰਮਸ਼ੁਦਾ ਦੀ ਭਾਲ</span>
                     <span class="reward-tag">💰 ₹20,000 ਨਕਦ ਇਨਾਮ</span>
@@ -485,7 +558,7 @@
                     </div>
 
                     <p class="article-text" style="font-weight:700; color:var(--navy-deep);">
-                        👉 ਜੇਕਰ ਕਿਸੇ ਵੀ ਵਿਅਕਤੀ ਨੂੰ ਰਾਹੁਲ ਬਾਰੇ ਕੋਈ ਵੀ ਜਾਣਕਾਰੀ ਮਿਲੇ, ਤਾਂ ਤੁਰੰਤ ਪਰਿਵਾਰ ਜਾਂ ਸਬੰਧਤ ਨੰਬਰਾਂ 'ਤੇ ਸੰਪਰਕ ਕਰੋ। ਕਿਰਪਾ ਕਰਕੇ ਇਸ ਪੋਸਟ ਨੂੰ ਵੱਧ ਤੋਂ ਵੱਧ ਸ਼ੇਅਰ ਕਰੋ ਤਾਂ ਜੋ ਪਰਿਵਾਰ ਨੂੰ ਉਨ੍ਹਾਂ ਦਾ ਬੱਚਾ ਜਲਦ ਮਿਲ ਸਕੇ।
+                        👉 ਜੇਕਰ ਕਿਸੇ ਵੀ ਵਿਅਕਤੀ ਨੂੰ ਰਾਹੁਲ ਬਾਰੇ ਕੋਈ ਵੀ ਜਾਣਕਾਰੀ ਮਿਲੇ, ਤਾਂ ਤੁਰੰਤ ਪਰਿਵਾਰ ਜਾਂ ਸਬੰਧਤ ਨੰਬਰਾਂ 'ਤੇ ਸੰਪਰਕ ਕਰੋ।
                     </p>
                     
                     <div class="article-action-row">
@@ -497,8 +570,7 @@
                 </div>
             </div>
 
-            <!-- 2. ਗਿੱਪੀ ਗਰੇਵਾਲ -->
-            <div class="news-article-card">
+            <div class="news-article-card filter-card">
                 <div class="glass-media-container">
                     <span class="article-tag" style="background:#780000;">CINEMA EXCLUSIVE</span>
                     <div class="glass-media-backdrop" style="background-image: url('gippynews1.jpg');"></div>
@@ -518,7 +590,6 @@
             </div>
         </div>
 
-        <!-- Sidebar Hub -->
         <div class="sidebar-hub">
             <div class="sidebar-card">
                 <div class="sidebar-heading">🎬 PLN ਵੀਡੀਓ ਹੱਬ</div>
@@ -527,7 +598,7 @@
             </div>
 
             <div class="sidebar-card" style="background:#ffffff; text-align:center; border: 2px dashed var(--brand-red);">
-                <span class="ad-label" style="text-align:center; color:var(--brand-red);">ADVERTISE WITH PLN</span>
+                <span class="ad-label" style="text-align:center; color:var(--brand-red); font-size:0.75rem; font-weight:800;">ADVERTISE WITH PLN</span>
                 <h4 style="font-family:'Baloo Paaji 2',sans-serif; font-size:1.25rem; color:var(--navy-dark); margin-top:4px;">📢 ਪੰਜਾਬ ਭਰ ਵਿੱਚੋਂ ਆਪਣਾ ਇਸ਼ਤਿਹਾਰ ਦਿਓ</h4>
                 <p style="font-size:0.86rem; color:var(--text-meta); margin:6px 0 14px 0;">ਆਪਣੇ ਕਾਰੋਬਾਰ ਨੂੰ ਪੰਜਾਬ ਦੇ ਲੱਖਾਂ ਸਰੋਤਿਆਂ ਤੱਕ ਪਹੁੰਚਾਓ।</p>
                 <a href="advertise.html" class="sidebar-btn" style="background:var(--navy-dark); margin-top:0;">ਇਸ਼ਤਿਹਾਰ ਬੁੱਕ ਕਰੋ ➔</a>
@@ -536,7 +607,10 @@
     </div>
 </div>
 
-<!-- 1. SEND NEWS POPUP MODAL -->
+<a href="https://api.whatsapp.com/send?phone=919876543210&text=ਸਤਿ%20ਸ਼੍ਰੀ%20ਅਕਾਲ%20PLN,%20ਮੈਂ%20ਜਾਣਕਾਰੀ%20ਲੈਣਾ%20ਚਾਹੁੰਦਾ/ਚਾਹੁੰਦੀ%20ਹਾਂ।" target="_blank" class="floating-quick-btn" title="ਸਿੱਧਾ WhatsApp ਕਰੋ">
+    💬
+</a>
+
 <div class="modal-overlay" id="newsModal" onclick="closeNewsOnOutside(event)">
     <div class="modal-box">
         <button type="button" class="modal-close" onclick="closeNewsModal()">&times;</button>
@@ -578,7 +652,6 @@
     </div>
 </div>
 
-<!-- 2. LIVE TV MODAL -->
 <div class="modal-overlay" id="liveTVModal" onclick="closeLiveTVOnOutside(event)">
     <div class="modal-box" style="background:#0f172a; border-color:#c1121f; color:#fff; text-align:center;">
         <button type="button" class="modal-close" style="color:#94a3b8;" onclick="closeLiveTVModal()">&times;</button>
@@ -593,8 +666,7 @@
     </div>
 </div>
 
-<!-- 3. REPORTER MODAL -->
-<div class="modal-overlay" id="reporterModal" onclick="closeReporterForm()">&times;</button>
+<div class="modal-overlay" id="reporterModal" onclick="closeReporterOnOutside(event)">
     <div class="modal-box">
         <button type="button" class="modal-close" onclick="closeReporterForm()">&times;</button>
         <div class="modal-header">
@@ -632,65 +704,61 @@
 </footer>
 
 <script>
-    /* 1. VISITOR COUNTER ENGINE (Saves locally & increases realistically) */
+    /* 1. VISITOR COUNTER */
     function initVisitorCounter() {
         const BASE_COUNT = 124580;
         let count = localStorage.getItem('pln_visitor_count');
-        if (!count) {
-            count = BASE_COUNT;
-        } else {
-            count = parseInt(count) + 1;
-        }
+        if (!count) { count = BASE_COUNT; } else { count = parseInt(count) + 1; }
         localStorage.setItem('pln_visitor_count', count);
-        
         const counterElem = document.getElementById('visitorCounter');
-        if (counterElem) {
-            counterElem.innerText = Number(count).toLocaleString('en-IN');
-        }
-
-        // Simulates occasional real-time live visitors
-        setInterval(() => {
-            if (Math.random() > 0.6) {
-                let current = parseInt(localStorage.getItem('pln_visitor_count')) + 1;
-                localStorage.setItem('pln_visitor_count', current);
-                if (counterElem) {
-                    counterElem.innerText = Number(current).toLocaleString('en-IN');
-                }
-            }
-        }, 12000);
+        if (counterElem) { counterElem.innerText = Number(count).toLocaleString('en-IN'); }
     }
     initVisitorCounter();
 
-    /* 2. REAL-TIME CLOCK WITH SECONDS */
+    /* 2. REAL-TIME RUNNING CLOCK */
     function updateLiveClockWithSeconds() {
         const now = new Date();
         const days = ['ਐਤਵਾਰ', 'ਸੋਮਵਾਰ', 'ਮੰਗਲਵਾਰ', 'ਬੁੱਧਵਾਰ', 'ਵੀਰਵਾਰ', 'ਸ਼ੁੱਕਰਵਾਰ', 'ਸ਼ਨੀਵਾਰ'];
         const months = ['ਜਨਵਰੀ', 'ਫ਼ਰਵਰੀ', 'ਮਾਰਚ', 'ਅਪ੍ਰੈਲ', 'ਮਈ', 'ਜੂਨ', 'ਜੁਲਾਈ', 'ਅਗਸਤ', 'ਸਤੰਬਰ', 'ਅਕਤੂਬਰ', 'ਨਵੰਬਰ', 'ਦਸੰਬਰ'];
-        
         const dayName = days[now.getDay()];
         const date = now.getDate();
         const monthName = months[now.getMonth()];
         const year = now.getFullYear();
-
         let hrs = now.getHours();
         const mins = now.getMinutes().toString().padStart(2, '0');
         const secs = now.getSeconds().toString().padStart(2, '0');
         const ampm = hrs >= 12 ? 'PM' : 'AM';
-        
-        hrs = hrs % 12;
-        hrs = hrs ? hrs : 12;
+        hrs = hrs % 12; hrs = hrs ? hrs : 12;
         const strHrs = hrs.toString().padStart(2, '0');
-
         const fullString = `${dayName}, ${date} ${monthName} ${year} | ${strHrs}:${mins}:${secs} ${ampm}`;
-        
         const clockElem = document.getElementById('liveDateTime');
-        if (clockElem) {
-            clockElem.innerText = fullString;
-        }
+        if (clockElem) { clockElem.innerText = fullString; }
     }
-
     updateLiveClockWithSeconds();
     setInterval(updateLiveClockWithSeconds, 1000);
+
+    /* 3. FONT RESIZER FUNCTION */
+    let currentFontSize = 0.98;
+    function adjustFontSize(dir) {
+        currentFontSize += (dir * 0.08);
+        if (currentFontSize < 0.85) currentFontSize = 0.85;
+        if (currentFontSize > 1.35) currentFontSize = 1.35;
+        document.documentElement.style.setProperty('--font-scale', currentFontSize + 'rem');
+    }
+
+    /* 4. INSTANT SEARCH FILTER */
+    function filterLiveNews() {
+        const input = document.getElementById('newsSearchInput').value.toLowerCase();
+        const cards = document.querySelectorAll('.filter-card');
+        cards.forEach(card => {
+            const text = card.innerText.toLowerCase();
+            if (text.includes(input)) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
 
     /* Reporter Modal Handlers */
     function openReporterForm() {
@@ -745,9 +813,7 @@
         const loc = document.getElementById('newsLocation').value;
         const cat = document.getElementById('newsCategory').value;
         const details = document.getElementById('newsDetails').value;
-
         const msg = `*🚨 ਨਵੀਂ ਖ਼ਬਰ ਅਲਰਟ (PLN ਨਿਊਜ਼ਰੂਮ)*%0A%0A*ਭੇਜਣ ਵਾਲਾ:* ${name}%0A*ਮੋਬਾਈਲ:* ${phone}%0A*ਜਗ੍ਹਾ:* ${loc}%0A*ਕਿਸਮ:* ${cat}%0A*ਵੇਰਵਾ:* ${details}%0A%0A_(ਫੋਟੋ/ਵੀਡੀਓ ਨਾਲ ਅਟੈਚ ਕਰ ਰਹੇ ਹਾਂ)_`;
-        
         window.open(`https://api.whatsapp.com/send?phone=919876543210&text=${msg}`, '_blank');
         closeNewsModal();
     }
