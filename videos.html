@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@600;700;800&family=Noto+Sans+Gurmukhi:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 
+    <!-- Trustindex Automatic Instagram Reels Feed Script -->
+    <script defer async src="https://cdn.trustindex.io/loader-feed.js?78f3041803d563370c56cd8fec1"></script>
+
     <style>
         :root {
             --brand-red: #c1121f;
@@ -37,7 +40,7 @@
 
         a, button { cursor: pointer !important; text-decoration: none; transition: all 0.2s ease; }
 
-        /* 1. Top Strip */
+        /* Top Strip */
         .top-bar {
             background: var(--navy-deep); color: #cbd5e1; font-size: 0.82rem; padding: 8px 0;
             border-bottom: 1px solid rgba(255,255,255,0.08);
@@ -56,13 +59,13 @@
         .loc-tag { color: #fdf0d5; font-weight: 700; }
         .time-tag { 
             color: #f1f5f9; font-weight: 700; 
-            font-family: 'Plus Jakarta Sans', 'Noto Sans Gurmukhi', monospace;
+            font-family: 'Plus Jakarta Sans', monospace;
             background: rgba(255,255,255,0.08); padding: 2px 8px; border-radius: 4px;
         }
         .top-social-bar a { color: #cbd5e1; margin-left: 14px; font-weight: 600; }
         .top-social-bar a:hover { color: #ffffff; }
 
-        /* 2. Facebook Cover Header */
+        /* Cover Header */
         .fb-header-cover {
             position: relative; width: 100%; min-height: 190px;
             background: linear-gradient(135deg, #031926 0%, #003049 45%, #780000 100%), url('header_cover.jpg');
@@ -119,7 +122,7 @@
         .btn-wa-contact { background: #16a34a; color: #fff; font-weight: 800; }
         .btn-wa-contact:hover { background: #15803d; transform: translateY(-1px); }
 
-        /* 3. Navigation */
+        /* Navigation */
         nav {
             background: var(--navy-dark); position: sticky; top: 0; z-index: 1000;
             border-bottom: 3px solid var(--brand-red); box-shadow: 0 4px 12px rgba(0,0,0,0.12);
@@ -148,18 +151,15 @@
             display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 2px 8px rgba(220,39,67,0.3);
         }
 
-        .reels-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px; justify-content: center; align-items: start;
-        }
-        .reel-card {
-            background: #ffffff; border: 1px solid var(--border-light); border-radius: 12px;
-            overflow: hidden; box-shadow: var(--shadow-sm); padding: 14px;
-            display: flex; flex-direction: column; align-items: center;
-        }
-        .reel-badge {
-            align-self: flex-start; background: var(--brand-red); color: #fff;
-            font-size: 0.76rem; font-weight: 800; padding: 3px 9px; border-radius: 3px; margin-bottom: 12px;
+        /* Auto Feed Wrapper */
+        .trustindex-wrapper {
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 30px;
+            min-height: 250px;
         }
 
         /* Modals */
@@ -224,6 +224,7 @@
 </head>
 <body>
 
+<!-- TOP STRIP -->
 <div class="top-bar">
     <div class="top-bar-inner">
         <div class="meta-cluster">
@@ -240,6 +241,7 @@
     </div>
 </div>
 
+<!-- FACEBOOK COVER HEADER -->
 <header class="fb-header-cover">
     <div class="punjab-map-watermark"></div>
     <div class="header-cover-inner">
@@ -270,6 +272,7 @@
     </div>
 </header>
 
+<!-- NAVIGATION BAR -->
 <nav>
     <div class="nav-inner">
         <a href="index.html">ਮੁੱਖ ਪੰਨਾ</a>
@@ -284,63 +287,21 @@
 <div class="container">
     <div class="section-header-box">
         <div>
-            <h2>🎬 Instagram ਤਾਜ਼ਾ ਰੀਲਜ਼ ਤੇ ਗਰਾਊਂਡ ਵੀਡੀਓਜ਼</h2>
-            <p style="color: var(--text-meta); font-size: 0.95rem;">Punjab Live Now ਦੇ ਅਧਿਕਾਰਤ Instagram ਹੈਂਡਲ ਤੋਂ ਸਿੱਧੀਆਂ ਵੀਡੀਓ ਰਿਪੋਰਟਾਂ</p>
+            <h2>🎬 Instagram ਆਟੋਮੈਟਿਕ ਰੀਲਜ਼ ਤੇ ਵੀਡੀਓ ਫੀਡ</h2>
+            <p style="color: var(--text-meta); font-size: 0.95rem;">ਸਾਡੇ ਅਧਿਕਾਰਤ Instagram (@punjablivenow) ਤੋਂ ਆਪਣੇ-ਆਪ ਅੱਪਡੇਟ ਹੋਣ ਵਾਲੀ ਲਾਈਵ ਫੀਡ</p>
         </div>
         <a href="https://www.instagram.com/punjablivenow" target="_blank" class="insta-follow-btn">
             📸 Follow @punjablivenow
         </a>
     </div>
     
-    <div class="reels-grid">
-        <div class="reel-card">
-            <span class="reel-badge">NEWLY ADDED REEL</span>
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DcxHwscSGEA/" data-instgrm-version="14" style="width:100%; margin:0 auto; min-height:480px;">
-                <div style="padding:16px; text-align:center;">
-                    <a href="https://www.instagram.com/reel/DcxHwscSGEA/" target="_blank" style="color:var(--brand-red); font-family:sans-serif; font-size:14px; font-weight:bold; text-decoration:none;">
-                        ▶ Punjab Live Now (PLN) ਨਵੀਂ ਰੀਲ ਲੋਡ ਹੋ ਰਹੀ ਹੈ...
-                    </a>
-                </div>
-            </blockquote>
-        </div>
-
-        <div class="reel-card">
-            <span class="reel-badge">LATEST REEL</span>
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DcxSPaBxDQb/" data-instgrm-version="14" style="width:100%; margin:0 auto; min-height:480px;">
-                <div style="padding:16px; text-align:center;">
-                    <a href="https://www.instagram.com/reel/DcxSPaBxDQb/" target="_blank" style="color:var(--brand-red); font-family:sans-serif; font-size:14px; font-weight:bold; text-decoration:none;">
-                        ▶ Punjab Live Now (PLN) ਰੀਲ ਲੋਡ ਹੋ ਰਹੀ ਹੈ...
-                    </a>
-                </div>
-            </blockquote>
-        </div>
-
-        <div class="reel-card">
-            <span class="reel-badge">TRENDING REEL</span>
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DcxTXJDxYVX/" data-instgrm-version="14" style="width:100%; margin:0 auto; min-height:480px;">
-                <div style="padding:16px; text-align:center;">
-                    <a href="https://www.instagram.com/reel/DcxTXJDxYVX/" target="_blank" style="color:var(--brand-red); font-family:sans-serif; font-size:14px; font-weight:bold; text-decoration:none;">
-                        ▶ Punjab Live Now (PLN) ਰੀਲ ਲੋਡ ਹੋ ਰਹੀ ਹੈ...
-                    </a>
-                </div>
-            </blockquote>
-        </div>
-
-        <div class="reel-card">
-            <span class="reel-badge">POPULAR REEL</span>
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DcxTwLox0JX/" data-instgrm-version="14" style="width:100%; margin:0 auto; min-height:480px;">
-                <div style="padding:16px; text-align:center;">
-                    <a href="https://www.instagram.com/reel/DcxTwLox0JX/" target="_blank" style="color:var(--brand-red); font-family:sans-serif; font-size:14px; font-weight:bold; text-decoration:none;">
-                        ▶ Punjab Live Now (PLN) ਵੀਡੀਓ ਲੋਡ ਹੋ ਰਹੀ ਹੈ...
-                    </a>
-                </div>
-            </blockquote>
-        </div>
+    <!-- ⚡ TRUSTINDEX AUTO REELS CONTAINER -->
+    <div class="trustindex-wrapper">
+        <div class="ti-widget" data-widget-id="78f3041803d563370c56cd8fec1"></div>
     </div>
 </div>
 
-<script async src="//www.instagram.com/embed.js"></script>
-
+<!-- 1. SEND NEWS POPUP MODAL -->
 <div class="modal-overlay" id="newsModal" onclick="closeNewsOnOutside(event)">
     <div class="modal-box">
         <button type="button" class="modal-close" onclick="closeNewsModal()">&times;</button>
@@ -350,19 +311,19 @@
         </div>
         <form onsubmit="handleNewsSubmit(event)">
             <div class="form-group">
-                <label>ਤੁਹਾਡਾ ਨਾਮ (Your Name)</label>
+                <label>ਤੁਹਾਡਾ ਨਾਮ</label>
                 <input type="text" id="newsSenderName" required placeholder="ਆਪਣਾ ਪੂਰਾ ਨਾਮ ਲਿਖੋ">
             </div>
             <div class="form-group">
-                <label>ਮੋਬਾਈਲ ਨੰਬਰ (WhatsApp Number)</label>
+                <label>ਮੋਬਾਈਲ ਨੰਬਰ (WhatsApp)</label>
                 <input type="tel" id="newsSenderPhone" required placeholder="ਆਪਣਾ 10 ਅੰਕਾਂ ਦਾ ਮੋਬਾਈਲ ਨੰਬਰ">
             </div>
             <div class="form-group">
-                <label>ਜ਼ਿਲ੍ਹਾ ਤੇ ਸ਼ਹਿਰ/ਪਿੰਡ (Location)</label>
+                <label>ਜ਼ਿਲ੍ਹਾ ਤੇ ਸ਼ਹਿਰ/ਪਿੰਡ</label>
                 <input type="text" id="newsLocation" required placeholder="ਜਿਵੇਂ: ਗੁਰੂ ਹਰਸਹਾਏ, ਫ਼ਿਰੋਜ਼ਪੁਰ">
             </div>
             <div class="form-group">
-                <label>ਖ਼ਬਰ ਦੀ ਕਿਸਮ (Category)</label>
+                <label>ਖ਼ਬਰ ਦੀ ਕਿਸਮ</label>
                 <select id="newsCategory">
                     <option value="ਤਾਜ਼ਾ ਬ੍ਰੇਕਿੰਗ ਨਿਊਜ਼">🚨 ਤਾਜ਼ਾ ਬ੍ਰੇਕਿੰਗ ਨਿਊਜ਼</option>
                     <option value="ਸੜਕ / ਪਿੰਡ ਦੀ ਸਮੱਸਿਆ">⚠️ ਸੜਕ / ਪਿੰਡ / ਇਲਾਕੇ ਦੀ ਸਮੱਸਿਆ</option>
@@ -372,7 +333,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <label>ਖ਼ਬਰ ਦਾ ਪੂਰਾ ਵੇਰਵਾ (News Details)</label>
+                <label>ਖ਼ਬਰ ਦਾ ਪੂਰਾ ਵੇਰਵਾ</label>
                 <textarea id="newsDetails" rows="4" required placeholder="ਘਟਨਾ ਬਾਰੇ ਪੂਰੀ ਜਾਣਕਾਰੀ ਲਿਖੋ..."></textarea>
             </div>
             <button type="submit" class="btn-submit-app">
@@ -382,6 +343,7 @@
     </div>
 </div>
 
+<!-- 2. LIVE TV MODAL -->
 <div class="modal-overlay" id="liveTVModal" onclick="closeLiveTVOnOutside(event)">
     <div class="modal-box" style="background:#0f172a; border-color:#c1121f; color:#fff; text-align:center;">
         <button type="button" class="modal-close" style="color:#94a3b8;" onclick="closeLiveTVModal()">&times;</button>
@@ -396,6 +358,7 @@
     </div>
 </div>
 
+<!-- 3. REPORTER MODAL -->
 <div class="modal-overlay" id="reporterModal" onclick="closeReporterOnOutside(event)">
     <div class="modal-box">
         <button type="button" class="modal-close" onclick="closeReporterForm()">&times;</button>
@@ -434,38 +397,27 @@
 </footer>
 
 <script>
-    /* LIVE CLOCK */
     function updateLiveClockWithSeconds() {
         const now = new Date();
         const days = ['ਐਤਵਾਰ', 'ਸੋਮਵਾਰ', 'ਮੰਗਲਵਾਰ', 'ਬੁੱਧਵਾਰ', 'ਵੀਰਵਾਰ', 'ਸ਼ੁੱਕਰਵਾਰ', 'ਸ਼ਨੀਵਾਰ'];
         const months = ['ਜਨਵਰੀ', 'ਫ਼ਰਵਰੀ', 'ਮਾਰਚ', 'ਅਪ੍ਰੈਲ', 'ਮਈ', 'ਜੂਨ', 'ਜੁਲਾਈ', 'ਅਗਸਤ', 'ਸਤੰਬਰ', 'ਅਕਤੂਬਰ', 'ਨਵੰਬਰ', 'ਦਸੰਬਰ'];
-        
         const dayName = days[now.getDay()];
         const date = now.getDate();
         const monthName = months[now.getMonth()];
         const year = now.getFullYear();
-
         let hrs = now.getHours();
         const mins = now.getMinutes().toString().padStart(2, '0');
         const secs = now.getSeconds().toString().padStart(2, '0');
         const ampm = hrs >= 12 ? 'PM' : 'AM';
-        
-        hrs = hrs % 12;
-        hrs = hrs ? hrs : 12;
+        hrs = hrs % 12; hrs = hrs ? hrs : 12;
         const strHrs = hrs.toString().padStart(2, '0');
-
         const fullString = `${dayName}, ${date} ${monthName} ${year} | ${strHrs}:${mins}:${secs} ${ampm}`;
-        
         const clockElem = document.getElementById('liveDateTime');
-        if (clockElem) {
-            clockElem.innerText = fullString;
-        }
+        if (clockElem) { clockElem.innerText = fullString; }
     }
-
     updateLiveClockWithSeconds();
     setInterval(updateLiveClockWithSeconds, 1000);
 
-    /* Reporter Modal */
     function openReporterForm() {
         const modal = document.getElementById('reporterModal');
         if (modal) { modal.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
@@ -489,7 +441,6 @@
         closeReporterForm();
     }
 
-    /* Live TV Modal */
     function openLiveTVModal() {
         const modal = document.getElementById('liveTVModal');
         if (modal) { modal.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
@@ -500,7 +451,6 @@
     }
     function closeLiveTVOnOutside(e) { if (e.target.id === 'liveTVModal') closeLiveTVModal(); }
 
-    /* News Modal */
     function openNewsModal() {
         const modal = document.getElementById('newsModal');
         if (modal) { modal.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
@@ -518,9 +468,7 @@
         const loc = document.getElementById('newsLocation').value;
         const cat = document.getElementById('newsCategory').value;
         const details = document.getElementById('newsDetails').value;
-
-        const msg = `*🚨 ਨਵੀਂ ਖ਼ਬਰ ਅਲਰਟ (PLN ਨਿਊਜ਼ਰੂਮ)*%0A%0A*ਭੇਜਣ ਵਾਲਾ:* ${name}%0A*ਮੋਬਾਈਲ:* ${phone}%0A*ਜਗ੍ਹਾ:* ${loc}%0A*ਕਿਸਮ:* ${cat}%0A*ਵੇਰਵਾ:* ${details}%0A%0A_(ਫੋਟੋ/ਵੀਡੀਓ ਨਾਲ ਅਟੈਚ ਕਰ ਰਹੇ ਹਾਂ)_`;
-        
+        const msg = `*🚨 ਨਵੀਂ ਖ਼ਬਰ ਅਲਰਟ (PLN ਨਿਊਜ਼ਰੂਮ)*%0A%0A*ਭੇਜਣ ਵਾਲਾ:* ${name}%0A*ਮੋਬਾਈਲ:* ${phone}%0A*ਜਗ੍ਹਾ:* ${loc}%0A*ਕਿਸਮ:* ${cat}%0A*ਵੇਰਵਾ:* ${details}`;
         window.open(`https://api.whatsapp.com/send?phone=919876543210&text=${msg}`, '_blank');
         closeNewsModal();
     }
