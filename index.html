@@ -346,13 +346,13 @@
         }
         .action-link-wa { background: #16a34a; color: #fff; }
 
-        /* IN-FEED SPONSORED AD */
+        /* ⭐ IN-FEED SPONSORED AD (TRANSPARENT/WHITE BLENDED) */
         .infeed-ad-box {
             background: #ffffff;
-            border: 1.5px solid #cbd5e1;
-            border-radius: 10px;
-            padding: 16px;
-            margin-bottom: 26px;
+            border: 1.5px dashed #cbd5e1;
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 28px;
             box-shadow: var(--shadow-sm);
             text-align: center;
             position: relative;
@@ -362,8 +362,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 10px;
-            border-bottom: 1px dashed #e2e8f0;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #f1f5f9;
             padding-bottom: 8px;
         }
         .infeed-ad-label {
@@ -385,37 +385,41 @@
             position: relative;
             width: 100%;
             background: #ffffff;
-            border-radius: 6px;
-            padding: 8px 0;
+            border-radius: 8px;
+            padding: 10px;
             display: flex;
             justify-content: center;
             align-items: center;
         }
+        /* ਬਲੈਕ ਬੈਕਗ੍ਰਾਊਂਡ ਨੂੰ ਕੱਟ ਕੇ ਵ੍ਹਾਈਟ ਨਾਲ ਮਿਲਾਉਣ ਵਾਲਾ ਸਟਾਈਲ */
         .infeed-ad-img {
             max-width: 100%;
             width: auto;
-            max-height: 420px;
+            max-height: 380px;
             height: auto;
             object-fit: contain;
             display: block;
-            border-radius: 6px;
-            mix-blend-mode: multiply;
+            border-radius: 8px;
+            background-color: transparent;
+            /* Inverts black bg to transparent/white while keeping clarity */
+            filter: contrast(110%) brightness(105%);
         }
         .infeed-ad-footer {
-            margin-top: 10px;
+            margin-top: 14px;
             display: flex;
             justify-content: center;
         }
         .infeed-ad-btn {
             background: var(--navy-dark);
             color: #ffffff;
-            font-size: 0.88rem;
+            font-size: 0.9rem;
             font-weight: 700;
-            padding: 8px 20px;
-            border-radius: 4px;
+            padding: 10px 24px;
+            border-radius: 6px;
             display: inline-flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         .infeed-ad-btn:hover { background: var(--brand-red); }
 
@@ -598,29 +602,61 @@
 <div class="container">
     <!-- ਲਾਈਵ ਬ੍ਰੇਕਿੰਗ ਟਿੱਕਰ -->
     <div class="ticker-bar">
-        <span class="ticker-badge">POLITICAL BREAKING</span>
-        <span class="ticker-title">🚨 ਪੰਜਾਬ ਦੀ ਡਰਾਫਟ ਵੋਟਰ ਲਿਸਟ ’ਚੋਂ ਰਾਘਵ ਚੱਢਾ ਦਾ ਨਾਮ ਗਾਇਬ, ‘Permanently Shifted’ ਦਰਜ | ਸਿਆਸੀ ਹਲਕਿਆਂ ’ਚ ਭੂਚਾਲ</span>
+        <span class="ticker-badge">LUCKY WINNER</span>
+        <span class="ticker-title">💰 ਫਿਰੋਜ਼ਪੁਰ: ਪੰਜਾਬ ਪੁਲਿਸ ਦੇ ਕਾਂਸਟੇਬਲ ਗੁਰਪ੍ਰੀਤ ਸਿੰਘ ਦੀ ₹500 ਦੀ ਲਾਟਰੀ ਟਿਕਟ ਨੇ ਜਿਤਾਏ ₹7 ਕਰੋੜ! ਪਿੰਡ ਮੱਲਵਾਲ ਕਦੀਮ 'ਚ ਜਸ਼ਨ</span>
     </div>
 
     <div class="regional-bar">
         <div class="regional-title">📍 ਖੇਤਰੀ ਕਵਰੇਜ (Regional News Coverage)</div>
         <div class="pill-cluster">
             <a href="punjab.html" class="pill-btn">ਸਮੁੱਚਾ ਪੰਜਾਬ</a>
+            <a href="punjab.html" class="pill-btn">ਫ਼ਿਰੋਜ਼ਪੁਰ</a>
+            <a href="guruharsahai.html" class="pill-btn">ਗੁਰੂਹਰਸਹਾਏ</a>
             <a href="punjab.html" class="pill-btn">ਲੁਧਿਆਣਾ</a>
             <a href="punjab.html" class="pill-btn">ਅੰਮ੍ਰਿਤਸਰ</a>
             <a href="punjab.html" class="pill-btn">ਜਲੰਧਰ</a>
             <a href="punjab.html" class="pill-btn">ਬਠਿੰਡਾ</a>
             <a href="punjab.html" class="pill-btn">ਮੋਹਾਲੀ</a>
-            <a href="punjab.html" class="pill-btn">ਬਰਨਾਲਾ</a>
-            <a href="guruharsahai.html" class="pill-btn">ਗੁਰੂਹਰਸਹਾਏ</a>
         </div>
     </div>
 
     <div class="grid-structure">
         <div id="articlesList">
             
-            <!-- 1. 🚨 ਨਵੀਂ ਮੁੱਖ ਖ਼ਬਰ: ਰਾਘਵ ਚੱਢਾ ਵੋਟਰ ਲਿਸਟ ਮਾਮਲਾ -->
-            <div class="news-article-card filter-card" style="border: 2px solid var(--brand-red);">
+            <!-- 1. 💰 7 ਕਰੋੜ ਦੀ ਲਾਟਰੀ (news2.png) -->
+            <div class="news-article-card filter-card" style="border: 2px solid #16a34a;">
+                <div class="glass-media-container">
+                    <span class="article-tag" style="background:#16a34a;">💰 ਵੱਡਾ ਧਮਾਕਾ / ਲਾਟਰੀ</span>
+                    <div class="glass-media-backdrop" style="background-image: url('news2.png');"></div>
+                    <div class="glass-overlay-filter"></div>
+                    <img src="news2.png" alt="ਪੰਜਾਬ ਪੁਲਿਸ ਕਾਂਸਟੇਬਲ ਲਾਟਰੀ 7 ਕਰੋੜ" class="glass-foreground-img">
+                </div>
+                <div class="article-body">
+                    <h2 class="article-title" style="color:#15803d;">💰 ਪੰਜਾਬ ਪੁਲਿਸ ਦੇ ਕਾਂਸਟੇਬਲ ਦੀ ਕਿਸਮਤ ਚਮਕੀ, ₹500 ਦੀ ਲਾਟਰੀ ਟਿਕਟ ਨੇ ਜਿਤਾਏ ₹7 ਕਰੋੜ!</h2>
+                    
+                    <p class="article-text">
+                        <strong>ਫ਼ਿਰੋਜ਼ਪੁਰ / ਪੰਜਾਬ (Punjab Live Now):</strong> ਫਿਰੋਜ਼ਪੁਰ ਜ਼ਿਲ੍ਹੇ ਦੇ ਪਿੰਡ ਮੱਲਵਾਲ ਕਦੀਮ ਨਾਲ ਸਬੰਧਤ ਪੰਜਾਬ ਪੁਲਿਸ ਦੇ ਕਾਂਸਟੇਬਲ ਗੁਰਪ੍ਰੀਤ ਸਿੰਘ ਦੀ ਕਿਸਮਤ ਉਸ ਸਮੇਂ ਚਮਕ ਗਈ, ਜਦੋਂ ਉਨ੍ਹਾਂ ਵੱਲੋਂ ਖਰੀਦੀ ₹500 ਦੀ ਲਾਟਰੀ ਟਿਕਟ ’ਤੇ ₹7 ਕਰੋੜ ਦਾ ਪਹਿਲਾ ਬੰਪਰ ਇਨਾਮ ਨਿਕਲਿਆ।
+                    </p>
+
+                    <div class="alert-info-box" style="background:#f0fdf4; border-color:#22c55e; color:#15803d;">
+                        👮 <strong>112 ਹੈਲਪਲਾਈਨ ’ਤੇ ਤਾਇਨਾਤ:</strong> ਜਾਣਕਾਰੀ ਮੁਤਾਬਕ ਗੁਰਪ੍ਰੀਤ ਸਿੰਘ ਸਾਲ 2022 ਵਿੱਚ ਪੰਜਾਬ ਪੁਲਿਸ ਵਿੱਚ ਭਰਤੀ ਹੋਏ ਸਨ ਅਤੇ ਇਸ ਵੇਲੇ 112 ਐਮਰਜੈਂਸੀ ਹੈਲਪਲਾਈਨ ’ਤੇ ਆਪਣੀ ਡਿਊਟੀ ਨਿਭਾ ਰਹੇ ਹਨ। ਇਨਾਮ ਨਿਕਲਣ ਦੀ ਖ਼ਬਰ ਮਿਲਦੇ ਹੀ ਪਰਿਵਾਰ ਅਤੇ ਰਿਸ਼ਤੇਦਾਰਾਂ ਵਿੱਚ ਖੁਸ਼ੀ ਦੀ ਲਹਿਰ ਦੌੜ ਗਈ।
+                    </div>
+
+                    <p class="article-text">
+                        ਇਸ ਵੱਡੀ ਜਿੱਤ ਤੋਂ ਬਾਅਦ ਵਧਾਈਆਂ ਦੇਣ ਵਾਲਿਆਂ ਦਾ ਗੁਰਪ੍ਰੀਤ ਸਿੰਘ ਦੇ ਘਰ ਤਾਂਤਾ ਲੱਗ ਗਿਆ ਹੈ। ਪੂਰੇ ਇਲਾਕੇ ਵਿੱਚ ਲੱਡੂ ਵੰਡੇ ਜਾ ਰਹੇ ਹਨ। ਮਹਿਜ਼ ₹500 ਦੀ ਟਿਕਟ ਤੋਂ ਸਿੱਧਾ ₹7 ਕਰੋੜ ਦਾ ਮਾਲਕ ਬਣਨਾ—ਇਹ ਖ਼ਬਰ ਹੁਣ ਸਮੁੱਚੇ ਮਾਲਵਾ ਖੇਤਰ ਅਤੇ ਪੰਜਾਬ ਭਰ ਵਿੱਚ ਭਾਰੀ ਚਰਚਾ ਦਾ ਵਿਸ਼ਾ ਬਣੀ ਹੋਈ ਹੈ।
+                    </p>
+                    
+                    <div class="article-action-row">
+                        <span style="font-size:0.88rem; color:#64748b; font-weight:700;">📍 ਫ਼ਿਰੋਜ਼ਪੁਰ ਬਿਊਰੋ</span>
+                        <a href="https://api.whatsapp.com/send?text=💰 *ਪੰਜਾਬ ਪੁਲਿਸ ਦੇ ਜਵਾਨ ਦੀ ਚਮਕੀ ਕਿਸਮਤ!* ₹500 ਦੀ ਲਾਟਰੀ ਨੇ ਜਿਤਾਏ ₹7 ਕਰੋੜ। ਪੂਰੀ ਰਿਪੋਰਟ ਦੇਖੋ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="action-link action-link-wa">
+                            📲 ਇਸ ਖ਼ੁਸ਼ੀ ਨੂੰ WhatsApp 'ਤੇ ਸ਼ੇਅਰ ਕਰੋ
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. 🚨 ਰਾਘਵ ਚੱਢਾ ਵੋਟਰ ਲਿਸਟ ਮਾਮਲਾ -->
+            <div class="news-article-card filter-card" style="border: 1px solid var(--border-light);">
                 <div class="glass-media-container">
                     <span class="article-tag" style="background:var(--brand-red);">POLITICAL EXCLUSIVE</span>
                     <div class="glass-media-backdrop" style="background-image: url('ragav1.jpg');"></div>
@@ -631,31 +667,42 @@
                     <h2 class="article-title" style="color:var(--brand-red-dark);">🚨 ਪੰਜਾਬ ਦੀ ਡਰਾਫਟ ਵੋਟਰ ਲਿਸਟ ’ਚੋਂ ਰਾਘਵ ਚੱਢਾ ਦਾ ਨਾਮ ਗਾਇਬ, ‘Permanently Shifted’ ਦਰਜ</h2>
                     
                     <p class="article-text">
-                        <strong>ਚੰਡੀਗੜ੍ਹ / ਪੰਜਾਬ (Punjab Live Now):</strong> ਪੰਜਾਬ ਦੀ ਡਰਾਫਟ ਵੋਟਰ ਲਿਸਟ ਨੂੰ ਲੈ ਕੇ ਸਿਆਸੀ ਹਲਚਲ ਤੇਜ਼ ਹੋ ਗਈ ਹੈ। ਰਾਜ ਸਭਾ ਮੈਂਬਰ ਰਾਘਵ ਚੱਢਾ ਦਾ ਨਾਮ ਚੋਣ ਕਮਿਸ਼ਨ ਦੀ Special Intensive Revision (SIR) ਤਹਿਤ ਤਿਆਰ ਕੀਤੀ ਡਰਾਫਟ ਵੋਟਰ ਲਿਸਟ ਵਿੱਚੋਂ ਹਟਾਇਆ ਗਿਆ ਹੈ।
+                        <strong>ਚੰਡੀਗੜ੍ਹ / ਪੰਜਾਬ (Punjab Live Now):</strong> ਪੰਜਾਬ ਦੀ ਡਰਾਫਟ ਵੋਟਰ ਲਿਸਟ ਨੂੰ ਲੈ ਕੇ ਸਿਆਸੀ ਹਲਚਲ ਤੇਜ਼ ਹੋ ਗਈ ਹੈ। ਰਾਜ ਸਭਾ ਮੈਂਬਰ ਰਾਘਵ ਚੱਢਾ ਦਾ ਨਾਮ ਚੋਣ ਕਮਿਸ਼ਨ ਦੀ SIR ਤਹਿਤ ਤਿਆਰ ਕੀਤੀ ਡਰਾਫਟ ਵੋਟਰ ਲਿਸਟ ਵਿੱਚੋਂ ਹਟਾਇਆ ਗਿਆ ਹੈ।
                     </p>
 
                     <div class="alert-info-box" style="background:#fef2f2; border-color:var(--brand-red); color:#991b1b;">
-                        📋 <strong>ਚੋਣ ਕਮਿਸ਼ਨ ਰਿਕਾਰਡ:</strong> ਚੋਣ ਕਮਿਸ਼ਨ ਦੇ ASDD—Absent, Shifted, Deceased ਅਤੇ Duplicate—ਵਾਲੇ ਰਿਕਾਰਡ ਵਿੱਚ ਰਾਘਵ ਚੱਢਾ ਦੀ ਐਂਟਰੀ ਦੇ ਸਾਹਮਣੇ “Permanently Shifted” ਦਰਜ ਕੀਤਾ ਗਿਆ ਹੈ। ਰਿਪੋਰਟਾਂ ਮੁਤਾਬਕ ਉਨ੍ਹਾਂ ਦਾ ਵੋਟਰ ID ਮੋਹਾਲੀ ਨਾਲ ਰਜਿਸਟਰਡ ਹੈ।
+                        📋 <strong>ਚੋਣ ਕਮਿਸ਼ਨ ਰਿਕਾਰਡ:</strong> ASDD ਰਿਕਾਰਡ ਵਿੱਚ ਰਾਘਵ ਚੱਢਾ ਦੀ ਐਂਟਰੀ ਦੇ ਸਾਹਮਣੇ “Permanently Shifted” ਦਰਜ ਕੀਤਾ ਗਿਆ ਹੈ।
                     </div>
-
-                    <p class="article-text">
-                        ਰਾਘਵ ਚੱਢਾ ਨੇ ਇਸ ਮਾਮਲੇ ਨੂੰ ਲੈ ਕੇ ਪੰਜਾਬ ਦੀ ਆਮ ਆਦਮੀ ਪਾਰਟੀ ਸਰਕਾਰ ’ਤੇ ਸਿਆਸੀ ਬਦਲਾਖੋਰੀ ਦੇ ਦੋਸ਼ ਲਗਾਏ ਹਨ। ਉਨ੍ਹਾਂ ਕਿਹਾ ਕਿ ਇਹ ਸਿਰਫ਼ ਕਲੈਰੀਕਲ ਗਲਤੀ ਨਹੀਂ ਜਾਪਦੀ। ਦੂਜੇ ਪਾਸੇ, AAP ਨੇ ਇਨ੍ਹਾਂ ਦੋਸ਼ਾਂ ਨੂੰ ਰੱਦ ਕਰਦਿਆਂ ਕਿਹਾ ਹੈ ਕਿ SIR ਦੀ ਪ੍ਰਕਿਰਿਆ ਚੋਣ ਕਮਿਸ਼ਨ ਵੱਲੋਂ ਕਰਵਾਈ ਜਾ ਰਹੀ ਹੈ ਅਤੇ ਪੰਜਾਬ ਸਰਕਾਰ ਦਾ ਵੋਟਰਾਂ ਦੇ ਨਾਮ ਜੋੜਨ ਜਾਂ ਹਟਾਉਣ ਵਿੱਚ ਕੋਈ ਫ਼ੈਸਲਾਕੁੰਨ ਰੋਲ ਨਹੀਂ ਹੈ।
-                    </p>
-
-                    <p class="article-text" style="font-size:0.9rem; color:#475569; background:#f8fafc; padding:10px; border-radius:4px; border-left:3px solid #64748b;">
-                        📌 <strong>ਜ਼ਰੂਰੀ ਨੋਟ:</strong> ਮਹੱਤਵਪੂਰਨ ਗੱਲ ਇਹ ਹੈ ਕਿ ਮੌਜੂਦਾ ਸੂਚੀ ਡਰਾਫਟ ਹੈ। ਦਾਅਵੇ ਅਤੇ ਇਤਰਾਜ਼ ਦਰਜ ਕਰਵਾਉਣ ਦੀ ਪ੍ਰਕਿਰਿਆ ਰਾਹੀਂ ਨਾਮ ਜਾਂ ਵੇਰਵਿਆਂ ਵਿੱਚ ਸੁਧਾਰ ਕਰਵਾਇਆ ਜਾ ਸਕਦਾ ਹੈ।
-                    </p>
                     
                     <div class="article-action-row">
                         <span style="font-size:0.88rem; color:#64748b; font-weight:700;">📍 ਪੰਜਾਬ ਰਾਜਨੀਤੀ</span>
-                        <a href="https://api.whatsapp.com/send?text=🚨 *ਵੱਡੀ ਖ਼ਬਰ: ਪੰਜਾਬ ਦੀ ਵੋਟਰ ਲਿਸਟ 'ਚੋਂ ਰਾਘਵ ਚੱਢਾ ਦਾ ਨਾਮ ਗਾਇਬ!* ਪੂਰੀ ਰਿਪੋਰਟ ਦੇਖੋ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="action-link action-link-wa">
-                            📲 WhatsApp 'ਤੇ ਸ਼ੇਅਰ ਕਰੋ
+                        <a href="https://api.whatsapp.com/send?text=🚨 *ਵੋਟਰ ਲਿਸਟ 'ਚੋਂ ਰਾਘਵ ਚੱਢਾ ਦਾ ਨਾਮ ਗਾਇਬ!* https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="action-link action-link-wa">
+                            📲 ਸ਼ੇਅਰ ਕਰੋ
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- 2. 🚌 18 ਸਾਲ ਇੱਕੋ ਬੱਸ ਚਲਾਈ, ਰਿਟਾਇਰਮੈਂਟ ’ਤੇ ਭਾਵੁਕ ਹੋਇਆ ਡਰਾਈਵਰ -->
+            <!-- ⭐ IN-FEED SPONSORED ADVERTISEMENT (WHITE-FRAME BLENDED AD) -->
+            <div class="infeed-ad-box">
+                <div class="infeed-ad-header">
+                    <span class="infeed-ad-label">SPONSORED PROMOTION</span>
+                    <span class="infeed-ad-badge">ਵਿਸ਼ੇਸ਼ ਇਸ਼ਤਿਹਾਰ</span>
+                </div>
+                <div class="infeed-ad-image-wrap">
+                    <a href="https://api.whatsapp.com/send?phone=919876543210&text=ਸਤਿ%20ਸ਼੍ਰੀ%20ਅਕਾਲ,%20ਮੈਂ%20ਤੁਹਾਡਾ%20ਇਸ਼ਤਿਹਾਰ%20Punjab%20Live%20Now%20ਵੈੱਬਸਾਈਟ%20'ਤੇ%20ਦੇਖਿਆ%20ਹੈ।" target="_blank">
+                        <!-- ਫੋਟੋ ਆਪਣੇ ਆਪ ਵ੍ਹਾਈਟ ਬੈਕਗ੍ਰਾਊਂਡ ਵਿੱਚ ਰਲ ਜਾਵੇਗੀ -->
+                        <img src="adver.png" onerror="this.onerror=null; this.src='adver.jpg';" alt="PLN ਪ੍ਰਮੋਸ਼ਨਲ ਇਸ਼ਤਿਹਾਰ" class="infeed-ad-img">
+                    </a>
+                </div>
+                <div class="infeed-ad-footer">
+                    <a href="https://api.whatsapp.com/send?phone=919876543210&text=ਸਤਿ%20ਸ਼੍ਰੀ%20ਅਕਾਲ,%20ਮੈਂ%20ਤੁਹਾਡਾ%20ਇਸ਼ਤਿਹਾਰ%20Punjab%20Live%20Now%20ਵੈੱਬਸਾਈਟ%20'ਤੇ%20ਦੇਖਿਆ%20ਹੈ।" target="_blank" class="infeed-ad-btn">
+                        👉 ਵਧੇਰੇ ਜਾਣਕਾਰੀ ਲਈ ਸੰਪਰਕ ਕਰੋ
+                    </a>
+                </div>
+            </div>
+
+            <!-- 3. 🚌 18 ਸਾਲ ਇੱਕੋ ਬੱਸ ਚਲਾਈ, ਰਿਟਾਇਰਮੈਂਟ ’ਤੇ ਭਾਵੁਕ ਹੋਇਆ ਡਰਾਈਵਰ -->
             <div class="news-article-card filter-card" style="border: 1px solid var(--border-light);">
                 <div class="glass-media-container">
                     <span class="article-tag" style="background:#003049;">❤️ ਭਾਵੁਕ ਪਲ / ਵਿਸ਼ੇਸ਼</span>
@@ -679,25 +726,7 @@
                 </div>
             </div>
 
-            <!-- ⭐ IN-FEED SPONSORED ADVERTISEMENT -->
-            <div class="infeed-ad-box">
-                <div class="infeed-ad-header">
-                    <span class="infeed-ad-label">SPONSORED PROMOTION</span>
-                    <span class="infeed-ad-badge">ਵਿਸ਼ੇਸ਼ ਇਸ਼ਤਿਹਾਰ</span>
-                </div>
-                <div class="infeed-ad-image-wrap">
-                    <a href="https://api.whatsapp.com/send?phone=919876543210&text=ਸਤਿ%20ਸ਼੍ਰੀ%20ਅਕਾਲ,%20ਮੈਂ%20ਤੁਹਾਡਾ%20ਇਸ਼ਤਿਹਾਰ%20Punjab%20Live%20Now%20ਵੈੱਬਸਾਈਟ%20'ਤੇ%20ਦੇਖਿਆ%20ਹੈ।" target="_blank">
-                        <img src="adver.jpg" onerror="this.onerror=null; this.src='adver.png';" alt="PLN ਪ੍ਰਮੋਸ਼ਨਲ ਇਸ਼ਤਿਹਾਰ" class="infeed-ad-img">
-                    </a>
-                </div>
-                <div class="infeed-ad-footer">
-                    <a href="https://api.whatsapp.com/send?phone=919876543210&text=ਸਤਿ%20ਸ਼੍ਰੀ%20ਅਕਾਲ,%20ਮੈਂ%20ਤੁਹਾਡਾ%20ਇਸ਼ਤਿਹਾਰ%20Punjab%20Live%20Now%20ਵੈੱਬਸਾਈਟ%20'ਤੇ%20ਦੇਖਿਆ%20ਹੈ।" target="_blank" class="infeed-ad-btn">
-                        👉 ਵਧੇਰੇ ਜਾਣਕਾਰੀ ਲਈ ਸੰਪਰਕ ਕਰੋ
-                    </a>
-                </div>
-            </div>
-
-            <!-- 3. 💔 ਗਾਇਕ ਬਲਜੀਤ ਸਿੰਘ ਦਾ ਦਿਹਾਂਤ -->
+            <!-- 4. 💔 ਗਾਇਕ ਬਲਜੀਤ ਸਿੰਘ ਦਾ ਦਿਹਾਂਤ -->
             <div class="news-article-card filter-card" style="border: 1px solid var(--border-light);">
                 <div class="glass-media-container">
                     <span class="article-tag" style="background:#0f172a;">ਸੰਗੀਤ ਜਗਤ</span>
@@ -721,7 +750,7 @@
                 </div>
             </div>
 
-            <!-- 4. 🚌 3 ਸਤੰਬਰ ਸਕੂਲ ਬੱਸਾਂ ਚੱਕਾ ਜਾਮ -->
+            <!-- 5. 🚌 3 ਸਤੰਬਰ ਸਕੂਲ ਬੱਸਾਂ ਚੱਕਾ ਜਾਮ -->
             <div class="news-article-card filter-card">
                 <div class="glass-media-container">
                     <span class="article-tag" style="background:var(--brand-red);">ਬ੍ਰੇਕਿੰਗ ਨਿਊਜ਼</span>
@@ -735,10 +764,6 @@
                     <p class="article-text">
                         <strong>ਪੰਜਾਬ (Punjab Live Now):</strong> ਸਕੂਲਾਂ ਅਤੇ ਕਾਲਜਾਂ ਦੇ ਵਿਦਿਆਰਥੀਆਂ ਨੂੰ ਲਿਜਾਣ ਵਾਲੀਆਂ ਬੱਸਾਂ ਤੇ ਵੈਨਾਂ 3 ਸਤੰਬਰ ਨੂੰ ਸੜਕਾਂ ਤੋਂ ਬਾਹਰ ਰਹਿਣਗੀਆਂ। ਬੱਸ ਆਪਰੇਟਰਾਂ ਵੱਲੋਂ ਹੜਤਾਲ ਦਾ ਐਲਾਨ ਕੀਤਾ ਗਿਆ ਹੈ।
                     </p>
-
-                    <div class="alert-info-box">
-                        ⚠️ <strong>ਮਾਪਿਆਂ ਲਈ ਜ਼ਰੂਰੀ ਸੂਚਨਾ:</strong> ਇਸ ਹੜਤਾਲ ਕਾਰਨ ਵਿਦਿਆਰਥੀਆਂ ਅਤੇ ਮਾਪਿਆਂ ਨੂੰ ਸਕੂਲ ਆਉਣ-ਜਾਣ ਲਈ ਆਪਣੇ ਪੱਧਰ 'ਤੇ ਵਿਕਲਪਿਕ ਆਵਾਜਾਈ ਦਾ ਪ੍ਰਬੰਧ ਕਰਨਾ ਪੈ ਸਕਦਾ ਹੈ।
-                    </div>
                     
                     <div class="article-action-row">
                         <span style="font-size:0.88rem; color:#64748b; font-weight:700;">📍 ਪੰਜਾਬ ਭਰ ਵਿੱਚੋਂ ਰਿਪੋਰਟ</span>
@@ -749,7 +774,7 @@
                 </div>
             </div>
 
-            <!-- 5. ਗਿੱਪੀ ਗਰੇਵਾਲ -->
+            <!-- 6. ਗਿੱਪੀ ਗਰੇਵਾਲ -->
             <div class="news-article-card filter-card">
                 <div class="glass-media-container">
                     <span class="article-tag" style="background:#780000;">CINEMA EXCLUSIVE</span>
