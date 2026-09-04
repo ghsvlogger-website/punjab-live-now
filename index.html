@@ -73,7 +73,6 @@
 
         .loc-tag { color: #fdf0d5; font-weight: 700; }
         
-        /* 🟢 ACTIVE LIVE READERS */
         .live-readers-pill {
             background: rgba(22, 163, 74, 0.2);
             color: #4ade80;
@@ -90,7 +89,6 @@
             width: 7px; height: 7px; background: #4ade80; border-radius: 50%; animation: pulse-live 1s infinite;
         }
 
-        /* 👥 TOTAL VISITOR COUNT */
         .visitor-pill {
             background: rgba(253, 240, 213, 0.15);
             color: #fdf0d5;
@@ -320,11 +318,6 @@
             position: absolute; top: 14px; left: 14px; background: var(--brand-red);
             color: #fff; font-size: 0.78rem; padding: 4px 10px; border-radius: 3px; font-weight: 800; z-index: 10;
         }
-        .reward-tag {
-            position: absolute; top: 14px; right: 14px; background: #16a34a;
-            color: #fff; font-size: 0.82rem; padding: 4px 12px; border-radius: 3px; font-weight: 800; z-index: 10;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-        }
 
         .article-body { padding: 24px; }
         .article-title {
@@ -343,11 +336,6 @@
             padding: 12px 16px; margin-bottom: 16px; color: var(--brand-red-dark); font-weight: 700; font-size: 0.95rem;
         }
 
-        .reward-alert-box {
-            background: #fefce8; border: 1.5px dashed #ca8a04; border-radius: 6px;
-            padding: 12px 16px; margin-bottom: 16px; color: #854d0e; font-weight: 700; font-size: 0.95rem;
-        }
-
         .article-action-row {
             display: flex; justify-content: space-between; align-items: center;
             border-top: 1px solid var(--border-light); padding-top: 16px; flex-wrap: wrap; gap: 10px;
@@ -357,6 +345,81 @@
             display: inline-flex; align-items: center; gap: 6px;
         }
         .action-link-wa { background: #16a34a; color: #fff; }
+
+        /* IN-FEED SPONSORED AD STYLING */
+        .infeed-ad-box {
+            background: #ffffff;
+            border: 1.5px solid #cbd5e1;
+            border-radius: 10px;
+            padding: 16px;
+            margin-bottom: 26px;
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .infeed-ad-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            border-bottom: 1px dashed #e2e8f0;
+            padding-bottom: 8px;
+        }
+        .infeed-ad-label {
+            font-size: 0.72rem;
+            font-weight: 800;
+            color: #94a3b8;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .infeed-ad-badge {
+            background: #f1f5f9;
+            color: #475569;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 3px;
+        }
+        .infeed-ad-image-wrap {
+            position: relative;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 6px;
+            padding: 8px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .infeed-ad-img {
+            max-width: 100%;
+            width: auto;
+            max-height: 420px;
+            height: auto;
+            object-fit: contain;
+            display: block;
+            border-radius: 6px;
+            mix-blend-mode: multiply;
+        }
+        .infeed-ad-footer {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        .infeed-ad-btn {
+            background: var(--navy-dark);
+            color: #ffffff;
+            font-size: 0.88rem;
+            font-weight: 700;
+            padding: 8px 20px;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .infeed-ad-btn:hover {
+            background: var(--brand-red);
+        }
 
         /* Sidebar Hub */
         .sidebar-hub { display: flex; flex-direction: column; gap: 15px; }
@@ -458,7 +521,6 @@
 </head>
 <body>
 
-<!-- TOP STRIP -->
 <div class="top-bar">
     <div class="top-bar-inner">
         <div class="meta-cluster">
@@ -486,7 +548,6 @@
     </div>
 </div>
 
-<!-- COVER HEADER -->
 <header class="fb-header-cover">
     <div class="punjab-map-watermark"></div>
     <div class="header-cover-inner">
@@ -517,7 +578,6 @@
     </div>
 </header>
 
-<!-- NAVIGATION BAR -->
 <nav>
     <div class="nav-wrapper">
         <div class="nav-inner">
@@ -535,7 +595,6 @@
 </nav>
 
 <div class="container">
-    <!-- ਲਾਈਵ ਬ੍ਰੇਕਿੰਗ ਟਿੱਕਰ -->
     <div class="ticker-bar">
         <span class="ticker-badge">SPECIAL STORY</span>
         <span class="ticker-title">🚌 18 ਸਾਲ ਇੱਕੋ ਬੱਸ ਚਲਾਈ… ਰਿਟਾਇਰਮੈਂਟ ’ਤੇ ਆਪਣੀ ਬੱਸ ਨੂੰ ਆਖਰੀ ਵਾਰ ਵੇਖ ਕੇ ਭਾਵੁਕ ਹੋਇਆ ਪੰਜਾਬ ਰੋਡਵੇਜ਼ ਡਰਾਈਵਰ</span>
@@ -558,7 +617,6 @@
     <div class="grid-structure">
         <div id="articlesList">
             
-            <!-- 1. 🚌 ਨਵੀਂ ਮੁੱਖ ਖ਼ਬਰ: 18 ਸਾਲ ਇੱਕੋ ਬੱਸ ਚਲਾਈ, ਰਿਟਾਇਰਮੈਂਟ ’ਤੇ ਭਾਵੁਕ ਹੋਇਆ ਡਰਾਈਵਰ -->
             <div class="news-article-card filter-card" style="border: 2px solid #003049;">
                 <div class="glass-media-container">
                     <span class="article-tag" style="background:#003049;">❤️ ਭਾਵੁਕ ਪਲ / ਵਿਸ਼ੇਸ਼</span>
@@ -594,7 +652,23 @@
                 </div>
             </div>
 
-            <!-- 2. 💔 ਗਾਇਕ ਬਲਜੀਤ ਸਿੰਘ ਦਾ ਦਿਹਾਂਤ -->
+            <div class="infeed-ad-box">
+                <div class="infeed-ad-header">
+                    <span class="infeed-ad-label">SPONSORED PROMOTION</span>
+                    <span class="infeed-ad-badge">ਵਿਸ਼ੇਸ਼ ਇਸ਼ਤਿਹਾਰ</span>
+                </div>
+                <div class="infeed-ad-image-wrap">
+                    <a href="https://api.whatsapp.com/send?phone=919876543210&text=ਸਤਿ%20ਸ਼੍ਰੀ%20ਅਕਾਲ,%20ਮੈਂ%20ਤੁਹਾਡਾ%20ਇਸ਼ਤਿਹਾਰ%20Punjab%20Live%20Now%20ਵੈੱਬਸਾਈਟ%20'ਤੇ%20ਦੇਖਿਆ%20ਹੈ।" target="_blank">
+                        <img src="adver.jpg" onerror="this.onerror=null; this.src='adver.png';" alt="PLN ਪ੍ਰਮੋਸ਼ਨਲ ਇਸ਼ਤਿਹਾਰ" class="infeed-ad-img">
+                    </a>
+                </div>
+                <div class="infeed-ad-footer">
+                    <a href="https://api.whatsapp.com/send?phone=919876543210&text=ਸਤਿ%20ਸ਼੍ਰੀ%20ਅਕਾਲ,%20ਮੈਂ%20ਤੁਹਾਡਾ%20ਇਸ਼ਤਿਹਾਰ%20Punjab%20Live%20Now%20ਵੈੱਬਸਾਈਟ%20'ਤੇ%20ਦੇਖਿਆ%20ਹੈ।" target="_blank" class="infeed-ad-btn">
+                        👉 ਵਧੇਰੇ ਜਾਣਕਾਰੀ ਲਈ ਸੰਪਰਕ ਕਰੋ
+                    </a>
+                </div>
+            </div>
+
             <div class="news-article-card filter-card" style="border: 1px solid var(--border-light);">
                 <div class="glass-media-container">
                     <span class="article-tag" style="background:#0f172a;">ਸੰਗੀਤ ਜਗਤ</span>
@@ -608,6 +682,10 @@
                     <p class="article-text">
                         <strong>ਲੁਧਿਆਣਾ / ਪੰਜਾਬ (Punjab Live Now):</strong> ਪੰਜਾਬੀ ਸੰਗੀਤ ਜਗਤ ਤੋਂ ਇੱਕ ਬੇਹੱਦ ਮੰਦਭਾਗੀ ਖ਼ਬਰ ਸਾਹਮਣੇ ਆਈ ਹੈ। ਗਾਇਕ ਅਤੇ ਗੀਤਕਾਰ ਬਲਜੀਤ ਸਿੰਘ ਦੀ ਲੁਧਿਆਣਾ ਦੇ ਸੁਧਾਰ ਇਲਾਕੇ ਵਿੱਚ ਸਥਿਤ ਘਰੋਂ ਮ੍ਰਿਤਕ ਦੇਹ ਬਰਾਮਦ ਹੋਈ ਹੈ।
                     </p>
+
+                    <p class="article-text">
+                        ਰਿਪੋਰਟਾਂ ਮੁਤਾਬਕ ਬਲਜੀਤ ਸਿੰਘ ਪਿਛਲੇ ਕਰੀਬ 4-5 ਦਿਨਾਂ ਤੋਂ ਪਰਿਵਾਰਕ ਮੈਂਬਰਾਂ ਦੇ ਸੰਪਰਕ ਵਿੱਚ ਨਹੀਂ ਸਨ। ਇਸ ਤੋਂ ਬਾਅਦ ਰਿਸ਼ਤੇਦਾਰਾਂ ਵੱਲੋਂ ਘਰ ਪਹੁੰਚਣ ’ਤੇ ਮਾਮਲਾ ਸਾਹਮਣੇ ਆਇਆ। ਪੋਸਟਮਾਰਟਮ ਰਿਪੋਰਟ ਅਨੁਸਾਰ ਮੌਤ ਦਾ ਕਾਰਨ ਦਿਲ ਦਾ ਦੌਰਾ ਸਾਹਮਣੇ ਆਇਆ ਹੈ।
+                    </p>
                     
                     <div class="article-action-row">
                         <span style="font-size:0.88rem; color:#64748b; font-weight:700;">📍 ਲੁਧਿਆਣਾ ਬਿਊਰੋ</span>
@@ -618,7 +696,6 @@
                 </div>
             </div>
 
-            <!-- 3. 🚌 3 ਸਤੰਬਰ ਸਕੂਲ ਬੱਸਾਂ ਚੱਕਾ ਜਾਮ -->
             <div class="news-article-card filter-card">
                 <div class="glass-media-container">
                     <span class="article-tag" style="background:var(--brand-red);">ਬ੍ਰੇਕਿੰਗ ਨਿਊਜ਼</span>
@@ -632,6 +709,10 @@
                     <p class="article-text">
                         <strong>ਪੰਜਾਬ (Punjab Live Now):</strong> ਸਕੂਲਾਂ ਅਤੇ ਕਾਲਜਾਂ ਦੇ ਵਿਦਿਆਰਥੀਆਂ ਨੂੰ ਲਿਜਾਣ ਵਾਲੀਆਂ ਬੱਸਾਂ ਤੇ ਵੈਨਾਂ 3 ਸਤੰਬਰ ਨੂੰ ਸੜਕਾਂ ਤੋਂ ਬਾਹਰ ਰਹਿਣਗੀਆਂ। ਬੱਸ ਆਪਰੇਟਰਾਂ ਵੱਲੋਂ ਹੜਤਾਲ ਦਾ ਐਲਾਨ ਕੀਤਾ ਗਿਆ ਹੈ।
                     </p>
+
+                    <div class="alert-info-box">
+                        ⚠️ <strong>ਮਾਪਿਆਂ ਲਈ ਜ਼ਰੂਰੀ ਸੂਚਨਾ:</strong> ਇਸ ਹੜਤਾਲ ਕਾਰਨ ਵਿਦਿਆਰਥੀਆਂ ਅਤੇ ਮਾਪਿਆਂ ਨੂੰ ਸਕੂਲ ਆਉਣ-ਜਾਣ ਲਈ ਆਪਣੇ ਪੱਧਰ 'ਤੇ ਵਿਕਲਪਿਕ ਆਵਾਜਾਈ ਦਾ ਪ੍ਰਬੰਧ ਕਰਨਾ ਪੈ ਸਕਦਾ ਹੈ।
+                    </div>
                     
                     <div class="article-action-row">
                         <span style="font-size:0.88rem; color:#64748b; font-weight:700;">📍 ਪੰਜਾਬ ਭਰ ਵਿੱਚੋਂ ਰਿਪੋਰਟ</span>
@@ -642,34 +723,6 @@
                 </div>
             </div>
 
-            <!-- 4. ਰਾਹੁਲ ਘਾਰੂ ਗੁੰਮਸ਼ੁਦਾ ਰਿਪੋਰਟ -->
-            <div class="news-article-card filter-card" style="border: 1px solid var(--border-light);">
-                <div class="glass-media-container">
-                    <span class="article-tag">🚨 ਗੁੰਮਸ਼ੁਦਾ ਦੀ ਭਾਲ</span>
-                    <span class="reward-tag">💰 ₹20,000 ਨਕਦ ਇਨਾਮ</span>
-                    <div class="glass-media-backdrop" style="background-image: url('rahulnews1.jpg');"></div>
-                    <div class="glass-overlay-filter"></div>
-                    <img src="rahulnews1.jpg" alt="ਰਾਹੁਲ ਘਾਰੂ ਗੁੰਮਸ਼ੁਦਾ" class="glass-foreground-img">
-                </div>
-                <div class="article-body">
-                    <h2 class="article-title" style="color:var(--brand-red);">🚨 ਗੁੰਮਸ਼ੁਦਾ ਦੀ ਭਾਲ: ਰਾਹੁਲ ਘਾਰੂ ਦੀ ਤਲਾਸ਼ ਜਾਰੀ, ਪਰਿਵਾਰ ਨੇ ਲਗਾਈ ਮਦਦ ਦੀ ਗੁਹਾਰ</h2>
-                    
-                    <p class="article-text"><strong>ਪੰਜਾਬ (Punjab Live Now):</strong> ਰਾਹੁਲ ਘਾਰੂ ਆਪਣੇ ਘਰ ਤੋਂ ਅਚਾਨਕ ਲਾਪਤਾ ਹੋ ਗਿਆ ਹੈ। ਪਰਿਵਾਰ ਵੱਲੋਂ ਉਸਦੀ ਲਗਾਤਾਰ ਭਾਲ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ। ਪ੍ਰਾਪਤ ਜਾਣਕਾਰੀ ਮੁਤਾਬਕ, ਰਾਹੁਲ ਘਰੋਂ 5 ਲੱਖ ਰੁਪਏ ਲੈ ਕੇ ਚਲਾ ਗਿਆ ਹੈ।</p>
-                    
-                    <div class="reward-alert-box">
-                        💰 <strong>ਵਿਸ਼ੇਸ਼ ਇਨਾਮ:</strong> ਰਾਹੁਲ ਨੂੰ ਲੱਭ ਕੇ ਸਹੀ ਜਾਣਕਾਰੀ ਦੇਣ ਵਾਲੇ ਨੂੰ ₹20,000 ਰੁਪਏ ਨਕਦ ਇਨਾਮ ਦਿੱਤਾ ਜਾਵੇਗਾ।
-                    </div>
-                    
-                    <div class="article-action-row">
-                        <span style="font-size:0.88rem; color:#64748b; font-weight:700;">📍 ਲੋਕ ਹਿੱਤ ਵਿੱਚ ਜਾਰੀ</span>
-                        <a href="https://api.whatsapp.com/send?text=🚨 *ਗੁੰਮਸ਼ੁਦਾ ਦੀ ਭਾਲ (ਰਾਹੁਲ ਘਾਰੂ)* https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="action-link action-link-wa">
-                            📲 ਸ਼ੇਅਰ ਕਰੋ
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 5. ਗਿੱਪੀ ਗਰੇਵਾਲ -->
             <div class="news-article-card filter-card">
                 <div class="glass-media-container">
                     <span class="article-tag" style="background:#780000;">CINEMA EXCLUSIVE</span>
@@ -683,14 +736,13 @@
                     <div class="article-action-row">
                         <span style="font-size:0.88rem; color:#64748b; font-weight:700;">📍 ਪੰਜਾਬੀ ਸਿਨੇਮਾ</span>
                         <a href="https://api.whatsapp.com/send?text=ਗਿੱਪੀ ਗਰੇਵਾਲ ਦਾ ਵੱਡਾ ਖੁਲਾਸਾ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="action-link action-link-wa">
-                            📲 ਸ਼ੇਅਰ ਕਰੋ
+                            📲 WhatsApp 'ਤੇ ਸ਼ੇਅਰ ਕਰੋ
                         </a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Sidebar Hub -->
         <div class="sidebar-hub">
             <div class="sidebar-card">
                 <div class="sidebar-heading">🎬 PLN ਵੀਡੀਓ ਹੱਬ</div>
@@ -708,12 +760,10 @@
     </div>
 </div>
 
-<!-- FLOATING QUICK WHATSAPP BUTTON -->
 <a href="https://api.whatsapp.com/send?phone=919876543210&text=ਸਤਿ%20ਸ਼੍ਰੀ%20ਅਕਾਲ%20PLN,%20ਮੈਂ%20ਜਾਣਕਾਰੀ%20ਲੈਣਾ%20ਚਾਹੁੰਦਾ/ਚਾਹੁੰਦੀ%20ਹਾਂ।" target="_blank" class="floating-quick-btn" title="ਸਿੱਧਾ WhatsApp ਕਰੋ">
     💬
 </a>
 
-<!-- POPUPS: NEWS, LIVE TV, REPORTER -->
 <div class="modal-overlay" id="newsModal" onclick="closeNewsOnOutside(event)">
     <div class="modal-box">
         <button type="button" class="modal-close" onclick="closeNewsModal()">&times;</button>
