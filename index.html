@@ -73,7 +73,7 @@
 
         .loc-tag { color: #fdf0d5; font-weight: 700; }
         
-        /* 🟢 ACTIVE LIVE READERS PILL */
+        /* 🟢 ACTIVE LIVE READERS */
         .live-readers-pill {
             background: rgba(22, 163, 74, 0.2);
             color: #4ade80;
@@ -90,7 +90,7 @@
             width: 7px; height: 7px; background: #4ade80; border-radius: 50%; animation: pulse-live 1s infinite;
         }
 
-        /* 👥 TOTAL VISITOR COUNT BADGE */
+        /* 👥 TOTAL VISITOR COUNT */
         .visitor-pill {
             background: rgba(253, 240, 213, 0.15);
             color: #fdf0d5;
@@ -132,7 +132,7 @@
         }
         .font-tool-btn:hover { background: var(--brand-red); }
 
-        /* Cover Header */
+        /* Facebook Cover Header */
         .fb-header-cover {
             position: relative;
             width: 100%;
@@ -458,25 +458,22 @@
 </head>
 <body>
 
-<!-- TOP STRIP WITH LIVE READERS & TOTAL VISITOR COUNT -->
+<!-- TOP STRIP -->
 <div class="top-bar">
     <div class="top-bar-inner">
         <div class="meta-cluster">
             <span class="live-tag"><span class="live-dot"></span> LIVE 24x7</span>
             <span class="loc-tag">📍 ਗੁਰੂ ਹਰਸਹਾਏ</span>
             
-            <!-- 1. ਇਸ ਵੇਲੇ ਲਾਈਵ ਪੜ੍ਹ ਰਹੇ ਪਾਠਕ (Active Readers) -->
             <span class="live-readers-pill" title="ਇਸ ਵੇਲੇ ਵੈੱਬਸਾਈਟ 'ਤੇ ਐਕਟਿਵ ਪਾਠਕ">
                 <span class="green-pulse-dot"></span>
                 <span id="activeLiveCount">248</span> ਲੋਕ ਲਾਈਵ ਪੜ੍ਹ ਰਹੇ ਹਨ
             </span>
 
-            <!-- 2. ਕੁੱਲ ਦੇਖ ਚੁੱਕੇ ਲੋਕ (Total Visitors) -->
             <span class="visitor-pill" title="ਕੁੱਲ ਪਾਠਕਾਂ ਦੀ ਗਿਣਤੀ">
                 👥 ਕੁੱਲ ਪਾਠਕ: <span class="visitor-count-number" id="visitorCounter">1,24,682</span>
             </span>
 
-            <!-- ਲਾਈਵ ਘੜੀ, ਦਿਨ ਅਤੇ ਤਾਰੀਖ਼ -->
             <span class="time-tag" id="liveDateTime">...</span>
         </div>
         <div class="top-tools">
@@ -538,9 +535,10 @@
 </nav>
 
 <div class="container">
+    <!-- ਲਾਈਵ ਬ੍ਰੇਕਿੰਗ ਟਿੱਕਰ -->
     <div class="ticker-bar">
         <span class="ticker-badge">BREAKING NEWS</span>
-        <span class="ticker-title">🚌 3 ਸਤੰਬਰ ਨੂੰ ਪੰਜਾਬ ’ਚ ਸਕੂਲ-ਕਾਲਜ ਬੱਸਾਂ ਤੇ ਵੈਨਾਂ ਦਾ ਚੱਕਾ ਜਾਮ | ਵਿਦਿਆਰਥੀਆਂ ਦੀ ਆਵਾਜਾਈ ਰਹੇਗੀ ਪ੍ਰਭਾਵਿਤ</span>
+        <span class="ticker-title">💔 ਦੁਖਦਾਈ ਖ਼ਬਰ: ਮਸ਼ਹੂਰ ਪੰਜਾਬੀ ਗਾਇਕ ਤੇ ਗੀਤਕਾਰ ਬਲਜੀਤ ਸਿੰਘ ਦਾ ਦਿਹਾਂਤ, ਸੰਗੀਤ ਜਗਤ 'ਚ ਸੋਗ ਦੀ ਲਹਿਰ</span>
     </div>
 
     <div class="regional-bar">
@@ -560,8 +558,44 @@
     <div class="grid-structure">
         <div id="articlesList">
             
-            <!-- 1. 3 ਸਤੰਬਰ ਬੱਸ ਹੜਤਾਲ ਖ਼ਬਰ -->
+            <!-- 1. 💔 ਨਵੀਂ ਮੁੱਖ ਖ਼ਬਰ: ਗਾਇਕ ਬਲਜੀਤ ਸਿੰਘ ਦਾ ਦਿਹਾਂਤ -->
             <div class="news-article-card filter-card" style="border: 2px solid var(--brand-red);">
+                <div class="glass-media-container">
+                    <span class="article-tag" style="background:#0f172a;">ਸੰਗੀਤ ਜਗਤ</span>
+                    <div class="glass-media-backdrop" style="background-image: url('deathbaljit.jpg');"></div>
+                    <div class="glass-overlay-filter"></div>
+                    <img src="deathbaljit.jpg" alt="ਪੰਜਾਬੀ ਗਾਇਕ ਬਲਜੀਤ ਸਿੰਘ ਦੇਹਾਂਤ" class="glass-foreground-img">
+                </div>
+                <div class="article-body">
+                    <h2 class="article-title" style="color:var(--brand-red-dark);">💔 ਪੰਜਾਬੀ ਗਾਇਕ ਬਲਜੀਤ ਸਿੰਘ ਦੀ ਮੌਤ, ਲੁਧਿਆਣਾ ਸਥਿਤ ਘਰ ’ਚੋਂ ਮਿਲੀ ਮ੍ਰਿਤਕ ਦੇਹ</h2>
+                    
+                    <p class="article-text">
+                        <strong>ਲੁਧਿਆਣਾ / ਪੰਜਾਬ (Punjab Live Now):</strong> ਪੰਜਾਬੀ ਸੰਗੀਤ ਜਗਤ ਤੋਂ ਇੱਕ ਬੇਹੱਦ ਮੰਦਭਾਗੀ ਅਤੇ ਦੁਖਦਾਈ ਖ਼ਬਰ ਸਾਹਮਣੇ ਆਈ ਹੈ। ਮਸ਼ਹੂਰ ਗਾਇਕ ਅਤੇ ਗੀਤਕਾਰ ਬਲਜੀਤ ਸਿੰਘ ਦੀ ਲੁਧਿਆਣਾ ਦੇ ਸੁਧਾਰ ਇਲਾਕੇ ਵਿੱਚ ਸਥਿਤ ਉਨ੍ਹਾਂ ਦੇ ਘਰੋਂ ਮ੍ਰਿਤਕ ਦੇਹ ਬਰਾਮਦ ਹੋਈ ਹੈ।
+                    </p>
+
+                    <p class="article-text">
+                        ਪ੍ਰਾਪਤ ਰਿਪੋਰਟਾਂ ਮੁਤਾਬਕ ਬਲਜੀਤ ਸਿੰਘ ਪਿਛਲੇ ਕਰੀਬ 4-5 ਦਿਨਾਂ ਤੋਂ ਆਪਣੇ ਪਰਿਵਾਰਕ ਮੈਂਬਰਾਂ ਦੇ ਸੰਪਰਕ ਵਿੱਚ ਨਹੀਂ ਸਨ। ਜਦੋਂ ਕਾਫ਼ੀ ਸਮਾਂ ਕੋਈ ਗੱਲਬਾਤ ਨਾ ਹੋ ਸਕੀ, ਤਾਂ ਰਿਸ਼ਤੇਦਾਰਾਂ ਵੱਲੋਂ ਘਰ ਪਹੁੰਚਣ ’ਤੇ ਇਸ ਦੁਖਦਾਈ ਘਟਨਾ ਦਾ ਪਤਾ ਲੱਗਾ।
+                    </p>
+
+                    <div class="alert-info-box" style="background:#f8fafc; border-color:#64748b; color:var(--navy-deep);">
+                        ⚖️ <strong>ਪੁਲਿਸ ਜਾਂਚ ਤੇ ਰਿਪੋਰਟ:</strong> ਸੂਚਨਾ ਮਿਲਦੇ ਹੀ ਪੁਲਿਸ ਵੱਲੋਂ ਮੌਕੇ ’ਤੇ ਪਹੁੰਚ ਕੇ ਪੜਤਾਲ ਕੀਤੀ ਗਈ ਅਤੇ ਫੋਰੈਂਸਿਕ ਟੀਮਾਂ ਨੂੰ ਵੀ ਬੁਲਾਇਆ ਗਿਆ। ਪੋਸਟਮਾਰਟਮ ਤੋਂ ਬਾਅਦ ਪੁਲਿਸ ਅਧਿਕਾਰੀ ਨੇ ਦੱਸਿਆ ਕਿ ਮੌਤ ਦਾ ਕਾਰਨ ਦਿਲ ਦਾ ਦੌਰਾ (Heart Attack) ਸਾਹਮਣੇ ਆਇਆ ਹੈ ਅਤੇ ਫਿਲਹਾਲ ਕਿਸੇ ਤਰ੍ਹਾਂ ਦੀ ਗੜਬੜ ਦੀ ਪੁਸ਼ਟੀ ਨਹੀਂ ਹੋਈ।
+                    </div>
+                    
+                    <p class="article-text" style="font-weight:700; color:var(--text-body);">
+                        ਬਲਜੀਤ ਸਿੰਘ ਦੇ ਅਚਾਨਕ ਚਲੇ ਜਾਣ ਦੀ ਖ਼ਬਰ ਨਾਲ ਪੰਜਾਬੀ ਸੰਗੀਤ ਜਗਤ ਅਤੇ ਉਨ੍ਹਾਂ ਦੇ ਚਾਹੁਣ ਵਾਲਿਆਂ ਵਿੱਚ ਡੂੰਘੇ ਸੋਗ ਦੀ ਲਹਿਰ ਦੌੜ ਗਈ ਹੈ। ਵੱਖ-ਵੱਖ ਸੰਗੀਤਕਾਰਾਂ ਅਤੇ ਪ੍ਰਸ਼ੰਸਕਾਂ ਵੱਲੋਂ ਦੁੱਖ ਦਾ ਪ੍ਰਗਟਾਵਾ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ।
+                    </p>
+                    
+                    <div class="article-action-row">
+                        <span style="font-size:0.88rem; color:#64748b; font-weight:700;">📍 ਲੁਧਿਆਣਾ ਬਿਊਰੋ</span>
+                        <a href="https://api.whatsapp.com/send?text=💔 *ਪੰਜਾਬੀ ਗਾਇਕ ਬਲਜੀਤ ਸਿੰਘ ਦੀ ਮੌਤ!* ਲੁਧਿਆਣਾ ਸਥਿਤ ਘਰ 'ਚੋਂ ਮਿਲੀ ਮ੍ਰਿਤਕ ਦੇਹ। ਪੂਰੀ ਰਿਪੋਰਟ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="action-link action-link-wa">
+                            📲 WhatsApp 'ਤੇ ਸ਼ੇਅਰ ਕਰੋ
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. 🚌 3 ਸਤੰਬਰ ਸਕੂਲ ਬੱਸਾਂ ਚੱਕਾ ਜਾਮ -->
+            <div class="news-article-card filter-card">
                 <div class="glass-media-container">
                     <span class="article-tag" style="background:var(--brand-red);">ਬ੍ਰੇਕਿੰਗ ਨਿਊਜ਼</span>
                     <div class="glass-media-backdrop" style="background-image: url('3septemberband.jpeg');"></div>
@@ -579,24 +613,16 @@
                         ⚠️ <strong>ਮਾਪਿਆਂ ਲਈ ਜ਼ਰੂਰੀ ਸੂਚਨਾ:</strong> ਇਸ ਹੜਤਾਲ ਕਾਰਨ ਵਿਦਿਆਰਥੀਆਂ ਅਤੇ ਮਾਪਿਆਂ ਨੂੰ ਸਕੂਲ ਆਉਣ-ਜਾਣ ਲਈ ਆਪਣੇ ਪੱਧਰ 'ਤੇ ਵਿਕਲਪਿਕ ਆਵਾਜਾਈ ਦਾ ਪ੍ਰਬੰਧ ਕਰਨਾ ਪੈ ਸਕਦਾ ਹੈ।
                     </div>
                     
-                    <p class="article-text">
-                        ਆਪਰੇਟਰਾਂ ਦਾ ਕਹਿਣਾ ਹੈ ਕਿ ਵਾਹਨਾਂ ਦੀ ਪਾਸਿੰਗ ਅਤੇ ਟੈਕਸਾਂ ਨਾਲ ਜੁੜੇ ਮਸਲਿਆਂ ਸਮੇਤ ਉਨ੍ਹਾਂ ਦੀਆਂ ਕਈ ਮੰਗਾਂ ਲੰਬੇ ਸਮੇਂ ਤੋਂ ਲਟਕ ਰਹੀਆਂ ਹਨ। ਸਰਕਾਰ ਵੱਲੋਂ ਕੋਈ ਠੋਸ ਹੱਲ ਨਾ ਕੱਢੇ ਜਾਣ ਦੇ ਵਿਰੋਧ ਵਿੱਚ 3 ਸਤੰਬਰ ਨੂੰ ਬੱਸਾਂ-ਵੈਨਾਂ ਬੰਦ ਰੱਖਣ ਦਾ ਫੈਸਲਾ ਲਿਆ ਗਿਆ ਹੈ।
-                    </p>
-
-                    <p class="article-text" style="font-size:0.88rem; color:#475569; background:#f8fafc; padding:10px; border-radius:4px; border-left:3px solid #94a3b8;">
-                        📌 <strong>ਨੋਟ:</strong> ਉਪਲਬਧ ਰਿਪੋਰਟਾਂ ਮੁਤਾਬਕ ਹੜਤਾਲ ਦਾ ਐਲਾਨ ਪੰਜਾਬ ਪੱਧਰ ’ਤੇ ਕੀਤਾ ਗਿਆ ਹੈ, ਜਦਕਿ ਬਠਿੰਡਾ, ਮਾਨਸਾ ਅਤੇ ਬਰਨਾਲਾ ਜ਼ਿਲ੍ਹਿਆਂ ਵਿੱਚ ਬੱਸਾਂ ਮੁਕੰਮਲ ਬੰਦ ਰਹਿਣ ਦੀ ਵਿਸ਼ੇਸ਼ ਜਾਣਕਾਰੀ ਮਿਲੀ ਹੈ।
-                    </p>
-                    
                     <div class="article-action-row">
                         <span style="font-size:0.88rem; color:#64748b; font-weight:700;">📍 ਪੰਜਾਬ ਭਰ ਵਿੱਚੋਂ ਰਿਪੋਰਟ</span>
-                        <a href="https://api.whatsapp.com/send?text=🚌 *3 ਸਤੰਬਰ ਨੂੰ ਪੰਜਾਬ 'ਚ ਸਕੂਲ-ਕਾਲਜ ਬੱਸਾਂ ਦਾ ਚੱਕਾ ਜਾਮ!* ਮਾਪਿਆਂ ਤੇ ਵਿਦਿਆਰਥੀਆਂ ਲਈ ਜ਼ਰੂਰੀ ਸੂਚਨਾ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="action-link action-link-wa">
+                        <a href="https://api.whatsapp.com/send?text=🚌 *3 ਸਤੰਬਰ ਨੂੰ ਪੰਜਾਬ 'ਚ ਸਕੂਲ-ਕਾਲਜ ਬੱਸਾਂ ਦਾ ਚੱਕਾ ਜਾਮ!* https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="action-link action-link-wa">
                             📲 ਮਾਪਿਆਂ ਨਾਲ ਸ਼ੇਅਰ ਕਰੋ
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- 2. ਰਾਹੁਲ ਘਾਰੂ ਗੁੰਮਸ਼ੁਦਾ ਰਿਪੋਰਟ -->
+            <!-- 3. ਰਾਹੁਲ ਘਾਰੂ ਗੁੰਮਸ਼ੁਦਾ ਰਿਪੋਰਟ -->
             <div class="news-article-card filter-card" style="border: 1px solid var(--border-light);">
                 <div class="glass-media-container">
                     <span class="article-tag">🚨 ਗੁੰਮਸ਼ੁਦਾ ਦੀ ਭਾਲ</span>
@@ -608,7 +634,7 @@
                 <div class="article-body">
                     <h2 class="article-title" style="color:var(--brand-red);">🚨 ਗੁੰਮਸ਼ੁਦਾ ਦੀ ਭਾਲ: ਰਾਹੁਲ ਘਾਰੂ ਦੀ ਤਲਾਸ਼ ਜਾਰੀ, ਪਰਿਵਾਰ ਨੇ ਲਗਾਈ ਮਦਦ ਦੀ ਗੁਹਾਰ</h2>
                     
-                    <p class="article-text"><strong>ਪੰਜਾਬ (Punjab Live Now):</strong> ਰਾਹੁਲ ਘਾਰੂ ਆਪਣੇ ਘਰ ਤੋਂ ਅਚਾਨਕ ਲਾਪਤਾ ਹੋ ਗਿਆ ਹੈ। ਪਰਿਵਾਰ ਵੱਲੋਂ ਉਸਦੀ ਲਗਾਤਾਰ ਭਾਲ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ। ਪ੍ਰਾਪਤ ਜਾਣਕਾਰੀ ਮੁਤਾਬਕ, ਰਾਹੁਲ ਘਰੋਂ 5 ਲੱਖ ਰੁਪਏ ਲੈ ਕੇ ਚਲਾ ਗਿਆ ਹੈ। ਪਰਿਵਾਰ ਵੱਲੋਂ ਮਦਦ ਦੀ ਅਪੀਲ ਕੀਤੀ ਗਈ ਹੈ।</p>
+                    <p class="article-text"><strong>ਪੰਜਾਬ (Punjab Live Now):</strong> ਰਾਹੁਲ ਘਾਰੂ ਆਪਣੇ ਘਰ ਤੋਂ ਅਚਾਨਕ ਲਾਪਤਾ ਹੋ ਗਿਆ ਹੈ। ਪਰਿਵਾਰ ਵੱਲੋਂ ਉਸਦੀ ਲਗਾਤਾਰ ਭਾਲ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ। ਪ੍ਰਾਪਤ ਜਾਣਕਾਰੀ ਮੁਤਾਬਕ, ਰਾਹੁਲ ਘਰੋਂ 5 ਲੱਖ ਰੁਪਏ ਲੈ ਕੇ ਚਲਾ ਗਿਆ ਹੈ।</p>
                     
                     <div class="reward-alert-box">
                         💰 <strong>ਵਿਸ਼ੇਸ਼ ਇਨਾਮ:</strong> ਰਾਹੁਲ ਨੂੰ ਲੱਭ ਕੇ ਸਹੀ ਜਾਣਕਾਰੀ ਦੇਣ ਵਾਲੇ ਨੂੰ ₹20,000 ਰੁਪਏ ਨਕਦ ਇਨਾਮ ਦਿੱਤਾ ਜਾਵੇਗਾ।
@@ -616,14 +642,14 @@
                     
                     <div class="article-action-row">
                         <span style="font-size:0.88rem; color:#64748b; font-weight:700;">📍 ਲੋਕ ਹਿੱਤ ਵਿੱਚ ਜਾਰੀ</span>
-                        <a href="https://api.whatsapp.com/send?text=🚨 *ਗੁੰਮਸ਼ੁਦਾ ਦੀ ਭਾਲ (ਰਾਹੁਲ ਘਾਰੂ)* ਪੂਰੀ ਰਿਪੋਰਟ: https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="action-link action-link-wa">
+                        <a href="https://api.whatsapp.com/send?text=🚨 *ਗੁੰਮਸ਼ੁਦਾ ਦੀ ਭਾਲ (ਰਾਹੁਲ ਘਾਰੂ)* https://ghsvlogger-website.github.io/punjab-live-now/" target="_blank" class="action-link action-link-wa">
                             📲 ਵੱਧ ਤੋਂ ਵੱਧ ਸ਼ੇਅਰ ਕਰੋ
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- 3. ਗਿੱਪੀ ਗਰੇਵਾਲ -->
+            <!-- 4. ਗਿੱਪੀ ਗਰੇਵਾਲ -->
             <div class="news-article-card filter-card">
                 <div class="glass-media-container">
                     <span class="article-tag" style="background:#780000;">CINEMA EXCLUSIVE</span>
@@ -746,7 +772,7 @@
 </footer>
 
 <script>
-    /* 1. REAL-TIME CLOCK, DAY & DATE ENGINE */
+    /* 1. REAL-TIME CLOCK, DAY & DATE */
     function renderLiveClock() {
         const now = new Date();
         const days = ['ਐਤਵਾਰ', 'ਸੋਮਵਾਰ', 'ਮੰਗਲਵਾਰ', 'ਬੁੱਧਵਾਰ', 'ਵੀਰਵਾਰ', 'ਸ਼ੁੱਕਰਵਾਰ', 'ਸ਼ਨੀਵਾਰ'];
@@ -777,7 +803,7 @@
     renderLiveClock();
     setInterval(renderLiveClock, 1000);
 
-    /* 2. 🟢 REAL-TIME ACTIVE READERS (ਜੋ ਇਸ ਵੇਲੇ ਵੈੱਬਸਾਈਟ ਦੇਖ ਰਹੇ ਹਨ) */
+    /* 2. 🟢 REAL-TIME ACTIVE LIVE READERS */
     function initActiveReaders() {
         let liveCount = 240 + Math.floor(Math.random() * 25);
         const liveElem = document.getElementById('activeLiveCount');
@@ -785,9 +811,8 @@
             liveElem.innerText = liveCount;
         }
 
-        // ਹਰ 6 ਸਕਿੰਟਾਂ ਬਾਅਦ ਗਿਣਤੀ ਕੁਦਰਤੀ ਤਰੀਕੇ ਨਾਲ ਥੋੜ੍ਹੀ ਉੱਪਰ-ਥੱਲੇ ਹੋਵੇਗੀ
         setInterval(() => {
-            const change = Math.floor(Math.random() * 7) - 3; // -3 ਤੋਂ +3
+            const change = Math.floor(Math.random() * 7) - 3;
             liveCount = Math.max(210, Math.min(380, liveCount + change));
             if (liveElem) {
                 liveElem.innerText = liveCount;
@@ -796,7 +821,7 @@
     }
     initActiveReaders();
 
-    /* 3. 👥 TOTAL VISITOR COUNT (ਜੋ ਹੁਣ ਤੱਕ ਵੈੱਬਸਾਈਟ ਦੇਖ ਚੁੱਕੇ ਹਨ) */
+    /* 3. 👥 TOTAL VISITOR COUNT */
     function initVisitorCounter() {
         const BASE_COUNT = 124580;
         let count = localStorage.getItem('pln_visitor_count');
